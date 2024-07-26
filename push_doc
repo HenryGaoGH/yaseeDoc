@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+cd build
+
+git init
+
+git remote add origin https://github.com/HenryGaoGH/yasee.io.git
+
+git add -A
+
+git commit -m 'update docs'
+
+git push -f -u origin main
+
+cd ..

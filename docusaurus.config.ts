@@ -11,7 +11,7 @@ const config: Config = {
   url: ' https://henrygaogh.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/yasee-doc.io/',
+  baseUrl: '/yasee.io/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -61,7 +61,7 @@ const config: Config = {
       title: 'Yasee',
       logo: {
         alt: 'Yasee',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
