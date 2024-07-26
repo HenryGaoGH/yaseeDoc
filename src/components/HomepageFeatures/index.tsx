@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: '更容易使用',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Yasee SDK 是 Yasee 移动端 SDK 的 Java、Swift 实现。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '更标准的协议集成',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        在移动端 SDK 的基础上，可以使用 Yasee SDK 进行标准的协议集成。通过 标准协议 更好更快速的集成多家设备
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '基于 React 打造的文档系统',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        基于 React 打造的文档系统,可以更好的阅读体验
       </>
     ),
   },
