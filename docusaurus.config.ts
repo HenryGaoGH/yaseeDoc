@@ -121,7 +121,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Yasee Mobile Group, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Yasee Mobile Group, Inc.`,
     },
     prism: {
       theme: prismThemes.github,

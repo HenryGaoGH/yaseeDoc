@@ -122,7 +122,7 @@ sidebar_position: 2
   导入 AAR 包主要有两种方式：本地导入和远程导入。选择适合你的项目需求的方法，并在 build.gradle 文件中进行相应的配置。完成配置后，同步项目，Android Studio 将会自动导入并解析 AAR 包中的内容。
 
 
-4. 需要 在没有事例的情况下,查阅 **[完整文档](https://henrygaogh.github.io/yasee.io/)**
+4. 需要 在没有事例的情况下,查阅 **[完整文档](https://henrygaogh.github.io/yasee-doc.io/)**
 
 ---
 
@@ -133,9 +133,9 @@ sidebar_position: 2
   - 声明权限
   - 运行时请求权限
 - 初始化 Yasee SDK
-  - 蓝牙配置信息 (BleConfig)
-  - Android相关的上下文信息 (Yasee)
-  - 人员配置信息 (User)
+  - 蓝牙配置信息 (``BleConfig``)
+  - Android相关的上下文信息 (``Yasee``)
+  - 人员配置信息 (``User``)
 - 蓝牙相关操作
   - 搜索 Yasee 设备
   - 连接 Yasee 设备
@@ -150,24 +150,35 @@ sidebar_position: 2
 
 ## 正式开始
 
-#### 初始化 Yasee SDK
+### 初始化 Yasee SDK
+初始化操作是必须要做的操作,集成Yasee SDK第一步 却是以下内容步.
 ```java
+/// 设置整个SDK所使用到的上下文环境
 Yasee.getSingle().context = getApplicationContext();
+/// 设置搜索自动暂停的时间
 Yasee.getSingle().bleConfig = new BleConfig(5);
+/// 设置人员信息
 Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 ```
 
-#### 蓝牙相关操作
+:::warning
+设置当前的人员信息,主要的功能是为了 肺功能 和 体脂中的人员信息设置! 如果没有这两种检测项的测量可忽略
+:::
+
+
+### 蓝牙相关操作
+蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送信息
 ```java
-  // - 连接 Yasee 设备
-  // - 获取 设备 支持 检测项
-  // - 获取 检测项 支持的 指令
-  // - 收发 与 外设的 双向指令
 // 搜索蓝牙
-Ble.getSingle().scan();
+Ble.getSingle().scan();  // 后期可能会隐藏实现可以用一下方式扫描
+Yasee.getSingle().scan();
 
 // 连接设备
 (BleDevice) device.connect();
+
+// 通过 mac 地址和 设备名称连接一个位置设备
+BleDevice device = new BleDevice("MAC","Y917-005F");
+device.connect();
 
 // 断开设备
 (BleDevice) device.disconnect();
@@ -186,13 +197,13 @@ List<Check> Products.supportChecks((BleDevice) device);
 
 
 
-#### 通知相关内容
+### 通知相关内容
 所有的有关Yasee SDK 的 通知 和 数据交互,都是通过 Notify来处理的,包含但未来不限于:
-- [x] 设备的绑定与解绑
-- [x] 设备的连接与断开
-- [x] 设备的通讯数据
+- [x] 设备的绑定与解绑 (``NotifyType.device``)
+- [x] 设备的连接与断开 (``NotifyType.link``)
+- [x] 设备的通讯数据  (``NotifyType.data``)
 
-首先我们需要了解的是 通知的类型:
+首先我们需要了解的是通知的类型,只有了解了通知的类型才能更好的监听来自SDK的各类信息通知:
 ```java
 /**
  * 信息类型
@@ -213,3 +224,53 @@ public enum NotifyType {
 }
 ```
 可以通过 消息通知的类型,来区分数据的类型是什么, 并且使用什么类型的数据来接收数据类型
+[数据类型](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/NotifyContent.html), 主要包含:
+- ``NotifyContent.BleLink``
+    - 连接状态
+    - 被操作的设备
+
+- ``NotifyContent.BleNotifyData``
+    - 数据解析的对象
+    - 被操作的设备
+    - 交互使用的原始数据帧
+
+
+- ``NotifyContent.BleSearch`` (暂未使用)
+
+
+
+### 设置默认的绑定列表
+Yasee SDK 支持 初始化绑定列表,并根据初始化的设备列表进行[自动连接操作](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/configs/BleConfig.html#reconnect);首先我们需要获取一个``List<BleDecive>``对象;
+:::warning
+自动连接功能取决于初始化设备的设置,由BleConfig中的reconnect字段控制,如果需要设置自动连接,需要配置此属性,默认情况不支持自动连接!!
+:::
+
+以下为设备初始化:
+```java
+
+/// 获得List<BleDevice> 数组
+
+
+/// 获取 设备管理对象
+Devices single = Devices.getSingle()
+
+
+/// 设置初始化 默认的设备,此操作可以让设备进入自动连接(前提是配置了自动连接)
+single.initDevices(List<BleDevice>);
+
+
+```
+
+
+
+
+
+
+
+
+
+
+## Demo 下载
+
+
+
