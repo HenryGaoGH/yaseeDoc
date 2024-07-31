@@ -86,7 +86,7 @@ const config: Config = {
           items: [
             {
               label: 'Yasee 移动端SDK',
-              to: '/docs/intro',
+              to: '/docs/yasee_sdk/intro',
             },
           ],
         },
