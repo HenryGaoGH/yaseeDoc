@@ -128,6 +128,15 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  scripts: [
+    {
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      async: true,
+      crossorigin: 'anonymous',
+      'data-ad-client': 'ca-pub-8213337084986125',
+    }
+  ]
 };
 
 export default config;
