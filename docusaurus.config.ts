@@ -127,6 +127,12 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    metadata: [
+      {
+        name: 'google-adsense-account',
+        content: 'ca-pub-8213337084986125',
+      }
+    ]
   } satisfies Preset.ThemeConfig,
 
   scripts: [
