@@ -19,7 +19,7 @@ const sidebars: SidebarsConfig = {
     {
       type: 'doc',
       label: '欢迎👏',
-      id: 'welcome',
+      id: 'welcome_yasee',
     },
     {
       type: 'category',
@@ -40,6 +40,23 @@ const sidebars: SidebarsConfig = {
       ],
     }
   ],
+  thirdId: [
+    {
+      type: 'doc',
+      label: '欢迎👏',
+      id: 'welcome_third',
+    },
+    {
+      type: 'doc',
+      label: '统一协议方式',
+      id: 'third/ble_protol',
+    },
+    {
+      type: 'doc',
+      label: '完整BLE交互流程Hook',
+      id: 'third/ble_hook',
+    },
+  ]
 };
 
 export default sidebars;
