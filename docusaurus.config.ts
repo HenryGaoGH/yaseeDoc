@@ -71,6 +71,12 @@ const config: Config = {
           label: '移动端文档',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'thirdId',
+          position: 'left',
+          label: '三方对接规范',
+        },
+        {
           href: 'https://github.com/HenryGaoGH/yasee.io',
           label: 'GitHub',
           position: 'right',
@@ -85,7 +91,7 @@ const config: Config = {
           items: [
             {
               label: 'Yasee 移动端SDK',
-              to: '/docs/welcome',
+              to: '/docs/welcome_yasee',
             },
           ],
         },
