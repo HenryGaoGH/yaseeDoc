@@ -19,7 +19,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/yasee_sdk/menu">
+            to="/docs/yasee_android/baogao">
             快速查看 功能概览报告
           </Link>
         </div>
