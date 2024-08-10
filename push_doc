@@ -10,6 +10,8 @@ git add -A
 
 git commit -m 'update docs'
 
+git config http.postBuffer 31457280
+
 git push -f -u origin main
 
 cd ..

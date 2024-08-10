@@ -4,14 +4,14 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Yasee 文档中心.',
-  tagline: 'Yasee 移动平台官方文档中心. 欢迎您的到来',
+  tagline: 'Yasee 移动平台文档中心. 欢迎您的到来',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: ' https://henrygaogh.github.io',
+  url: 'http://henrygao.hopto.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/yasee.io/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -66,32 +66,31 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'mobileSidebarId',
           position: 'left',
           label: '移动端文档',
         },
-        // {to: '/blog', label: 'Blog', position: 'left'},
-        // {
-        //   href: 'https://github.com/facebook/docusaurus',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
+        {
+          href: 'https://github.com/HenryGaoGH/yasee.io',
+          label: 'GitHub',
+          position: 'right',
+        },
       ],
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档中心',
           items: [
             {
               label: 'Yasee 移动端SDK',
-              to: '/docs/yasee_sdk/intro',
+              to: '/docs/welcome',
             },
           ],
         },
         {
-          title: 'Community',
+          title: '其余产品',
           items: [
             {
               label: 'Yasee 慢病管理平台',
@@ -108,16 +107,16 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: '更多关于',
           items: [
             // {
             //   label: 'Blog',
             //   to: '/blog',
             // },
-            // {
-            //   label: 'GitHub',
-            //   href: 'https://github.com/facebook/docusaurus',
-            // },
+            {
+              label: 'HenryGao(作者✍️)',
+              href: 'https://github.com/henrygaoGH',
+            },
           ],
         },
       ],
@@ -131,6 +130,9 @@ const config: Config = {
       {
         name: 'google-adsense-account',
         content: 'ca-pub-8213337084986125',
+      },{
+        name: 'google-site-verification',
+        content: 'yop1-8-1a8M9AeoRBn8SMjSDJ-oVVo5qvUiZyhSwllc',
       }
     ]
   } satisfies Preset.ThemeConfig,
