@@ -1,10 +1,12 @@
-# 欢迎您, 我的朋友
+# 欢迎您, 供应商们
 --- 
 
-这里不仅是学习交流的平台, 更是让您了解Yasee,展现自己知识的地方. 尽情享受和共建这里吧!
+在这里, 您可以了解到 Yasee 的供应商对接标准,我们提供了两种对接方式:
+- 使用标准协议规范
+- 使用Hook机制
 
 ### 目录
 
-- [Git 工作流程](git_process/mobile_branch.md)
-- [Yasee SDK(Android)](yasee_android/baogao.md)
+- [使用标准协议规范](third/ble_protol.md)
+- [使用Hook机制](third/ble_hook.md)
 
