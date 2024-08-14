@@ -9,10 +9,10 @@
 
 ## 目录
 
-- [使用标准协议规范](third/ble_protol.md)
-- [使用Hook机制](third/ble_hook.md)
+- [协议对接方式(推荐)](third/ble_protol.md)
+- [Ble Hook 方式(不推荐)](third/ble_hook.md)
 
 ## 图例,名词解释 
 - 方案商提供的SDK - 算法库(之后简称 `算法库`)
 - 连接的方案商ble设备(如:心电仪、脉诊、体脂等等设备),之后简称 `外设`
-- Yasee SDK 提供 蓝牙的一体化管理, 以后简称 `Yasee`
+- Yasee SDK 提供 蓝牙的一体化管理, 之后简称 `Yasee`
