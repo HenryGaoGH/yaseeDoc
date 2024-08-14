@@ -48,6 +48,11 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'doc',
+      label: '了解 Yasee 协议模块设计理念',
+      id: 'third/yasee_third_process',
+    },
+    {
+      type: 'doc',
       label: '协议对接方式(推荐)',
       id: 'third/ble_protol',
     },

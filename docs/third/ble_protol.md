@@ -7,44 +7,61 @@ import Tag from '@site/src/components/Tag';
 
 
 
-# 遵循协议,协议方式对接
+# 协议方式对接(推荐)
 --- 
 
-<Tag color="orange" text="遵循协议,协议方式对接 " />
+如果还不了解, 供应商模块的逻辑流程请阅读 [Yasee SDK 供应商模块(协议模块) 理念剖析](yasee_third_process.md),先了解设计理念有助于更好的集成.
 
 
 
 ## 概要说明
-对于数据通讯交互流程,需要遵循以下部分:
-1. AdvertisementData 数据处理 (广播数据)
-2. 服务特征列表 (包含什么服务、特征,分别是干什么用的)
-3. 交互数据的解析 (主要是 硬件上传过程中的数据)
-4. App 发送到 外设 的数据
-5. 签名、校验
-因此, 协议流程 需要 三方提供以上数据获取的方法, 并出具调用文档,
+接下来, 将分平台来带领方案商们 如何定制自己的 `算法库` 并暴露方法给Yasee.
+首先查看 Yasee 对方案商的统一协议内容:
+因此,按照目前协议约定内容,方案商的 `算法库` 中需要包含以下能力:
+1. 通过 AdvertisementData 获取 MAC地址的能力
+2. `外设` 上传的数据解析能力
+3. 对 上传、发送数据的签名、校验能力
+4. 服务、特征的基础数据
+5. 发送的数据内容
 
-综述 - <Tag color="orange" text="方案商,需要做的内容" /> 为: 
+## 事例展示和说明
+1. 对于不可变的数据(服务&特征、App发送的静态指令)可以直接提供的方式进行给予,或者 封装在自己的 `算法库` 中, 暴露出获取方法, 按照TMD方案商模块事例:
+```swift
+// 对于 静态数据内容
+// 服务 & 特征 按照 直接提供的方式由 Yasee 直接硬编码到模块中
+var service: [BleService] {[
+    BleService(uuid: UUID(uuidString: "XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")!, chars: [
+        BleChars("用于App发送命令","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.writeCmd),
+        BleChars("用于App接收 Notify 数据","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.notifyCmd),
+    ]),
+    BleService(uuid: UUID(uuidString: "XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")!, chars: [
+        BleChars("设备制造商的信息","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.read),
+        BleChars("设备型号信息","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.read),
+        BleChars("序列号信息","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.read),
+    ]),
+]}
 
-封装自己的算法库(之后简称 `算法库`),其中包含如下功能: 
-1. Yasee 提供 AdvertisementData 数据 传递给 算法库, 算法库经过处理之后返回 `有用的信息(例如:MAC地址、功能列表、等等自定义信息)` 给 Yasee,
-2. 获取设备的服务特征列表,此过程可直接提供,也可 暴露方法获取
-3. **交互数据解析** - 算法库提供数据解析功能, Yasee 端提供硬件设备上传的原始数据给到 算法库, 算法库返回解析后的结构化数据给Yasee. Yasee 不干预解析过程
-4. `算法库` 需要发送给 `外设` 的数据, 可直接提供,也可 调用获取.
-5. 签名、校验, `Yasee` 提供与 `外设` 交互产生的原始数据, `算法库` 返回是不是校验通过
+```
+2. 数据 校验和 签名 逻辑 (非必需)
+``` swift
+// 对 发送到 外设的指令或者数据 进行验证
+func sign(_ raw: [Int]) throws -> Data {
+    // 方案商的 签名逻辑
+}
+func check(_ raw: Data) throws -> Bool { 
+    // 方案商的 校验逻辑
+}
+```
 
-![对接流程图鉴](/img/yasee_fangan_link.png "")
-
---- 
-
-
-## iOS
-
-需要准备 XX 几个方面的内容:
-- 获取 设备 MAC的逻辑 
-- 
-
-
-
-## Android
-
-敬请期待~
+3. 数据解析 和 获取 (因与外设的交互数据为敏感数据,所以对解析过程 Yasee 不做干预,只做转发)
+``` swift
+// 目前仅仅是获取了 MAC 信息, 不排除后期会扩展更多内容的可能性
+func mac(_ avdData: AdvertisementData?) -> String? {
+    // 方案商 获取MAC 的逻辑
+}
+    
+/// 获取交互数据
+func data(raw: Data) throws -> [String : String] {
+    // 方案商 处理 转发的原始数据逻辑 
+}
+```
