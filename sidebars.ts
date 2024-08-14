@@ -38,6 +38,13 @@ const sidebars: SidebarsConfig = {
         'yasee_android/menu',
         'yasee_android/tmdVSwl',
       ],
+    },
+    {
+      type: 'category',
+      label: 'Yasee SDK(iOS)',
+      items: [
+        'yasee_ios/welcome_ios',
+      ],
     }
   ],
   thirdId: [
