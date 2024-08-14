@@ -48,12 +48,12 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'doc',
-      label: '统一协议方式',
+      label: '协议对接方式(推荐)',
       id: 'third/ble_protol',
     },
     {
       type: 'doc',
-      label: '完整BLE交互流程Hook',
+      label: 'BLE Hook 方式(不推荐)',
       id: 'third/ble_hook',
     },
   ]
