@@ -16,7 +16,7 @@ import Tag from '@site/src/components/Tag';
 
 
 ## 概要说明
-对于 Hook 的方式, Yasee 提供了 **有限的 BLE 操作回调** <sup>⚠️</sup>,因此 记下来将带方案商们来见证在此规则下的 <Tag text="最佳实践" /> 策略
+对于 Hook 的方式, Yasee 提供了 **有限的 BLE 操作回调** <sup>⚠️</sup>,因此 接下来将带方案商们来见证在此规则下的 <Tag text="最佳实践" /> 策略
 :::warning
 有限的 BLE 操作回调:
 
@@ -34,4 +34,25 @@ import Tag from '@site/src/components/Tag';
 
 
 ## 事例展示和说明
+```swift 
+/// 获取到 服务
+public func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: (any Error)?) {
+    // Yasee 方 通知 方案商
+}
 
+/// 获取到 特征
+public func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: (any Error)?) {
+    // Yasee 方 通知 方案商
+}
+
+/// 获取到值变化
+public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: (any Error)?) {
+    // Yasee 方 通知 方案商
+}
+
+/// 设置 通知之后
+public func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: (any Error)?) {
+    // Yasee 方 通知 方案商
+}
+... 等等Hook
+```
