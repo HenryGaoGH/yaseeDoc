@@ -2,12 +2,17 @@
 sidebar_position: 2
 ---
 
-# Yasee SDK(Android端)
+import ImgText from '@site/src/components/ImgText/ImgText';
+
+
+# 使用文档
 ---
 
 ## 准备工作
 :::warning
 这部分的内容是尤为重要的, 决定了是否可以使用蓝牙、以及各种问题!!!
+
+!! 没有事例的情况下,查阅 **[完整Api文档](https://henrygaogh.github.io/yasee-doc.io/)** 
 :::
 
 首先,对接雅思SDK 需要遵循以下条件: 
@@ -150,16 +155,44 @@ sidebar_position: 2
 
 ## 正式开始
 
+
+### 异常处理情况 & 参数情况
+对于一个SDK而言,👉[**完整的Api文档**](https://henrygaogh.github.io/yasee-doc.io)👈是必不可少的;\
+在 处理异常和参数理解上有重要的意义,
+因此, SDK在使用中会有可视化的参数提示,如:
+<ImgText width={100} src="/img/alert_used.png" text="在编码过程中,可以查看详细的参数信息" />
+在获取数据对象和模型对象的时候,常规的异常捕获需要做到:
+``` java
+// 空值判断
+if (value == null) return;
+
+// try 异常捕获
+try {
+    // 概率下可存在 奔溃的情况
+} catch (ArithmeticException err) {
+    // 失败的逻辑处理
+}
+```
+
 ### 初始化 Yasee SDK
 初始化操作是必须要做的操作,集成Yasee SDK第一步 却是以下内容步.
 ```java
 /// 设置整个SDK所使用到的上下文环境
 Yasee.getSingle().context = getApplicationContext();
-/// 设置搜索自动暂停的时间
+
+/// 设置搜索自动暂停的时间 (秒级)
+/// BleConfig(Integer scanTimer)
 Yasee.getSingle().bleConfig = new BleConfig(5);
+
 /// 设置人员信息
+/// 设置当前的使用人, 
+/// 主要是为了 肺功能 和 体脂上的人员信息设置 
+/// User(Integer sex(1-男,2-女), Integer age, Integer smoking(1-抽,0-不), Integer height(cm), Integer weight(cm))
 Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 ```
+对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+- 详细请点击 [User](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/configs/User.html "详细了解")
+- 详细请点击 [BleConfig](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/BleDevice.html "详细了解")
 
 :::warning
 设置当前的人员信息,主要的功能是为了 肺功能 和 体脂中的人员信息设置! 如果没有这两种检测项的测量可忽略
@@ -170,20 +203,23 @@ Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送信息
 ```java
 // 搜索蓝牙
-Ble.getSingle().scan();  // 后期可能会隐藏实现可以用一下方式扫描
 Yasee.getSingle().scan();
 
 // 连接设备
 (BleDevice) device.connect();
 
 // 通过 mac 地址和 设备名称连接一个位置设备
+// 主要是在 设备已经缓存了设备信息在本地时使用, 如 重连、缓存器拾取等
+// BleDevice(String mac, String model)
 BleDevice device = new BleDevice("MAC","Y917-005F");
+// 这里可以使用 空值判断来中断异常
+if (device == null) throw new IllegalArgumentException("获取设备失败");
 device.connect();
 
 // 断开设备
 (BleDevice) device.disconnect();
 
-//获取 设备 支持 检测项
+//获取 设备 支持的 检测项列表
 List<Check> Products.supportChecks((BleDevice) device);
 
 //获取 检测项 支持的 指令 (暂无)
@@ -193,7 +229,10 @@ List<Check> Products.supportChecks((BleDevice) device);
 (BleDevice) device.send(); // 发送 接收使用 Notify 通知
 
 ```
-
+对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+- 详细请点击 [BleDevice](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/BleDevice.html "详细了解")
+- 详细请点击 [Check](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/Check.html "详细了解")
+- 详细请点击 [Products](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/tools/Products.html "详细了解")
 
 
 
@@ -237,6 +276,9 @@ public enum NotifyType {
 
 - ``NotifyContent.BleSearch`` (暂未使用)
 
+对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+- 详细请点击 [NotifyContent](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/NotifyContent.html "详细了解")
+
 
 
 ### 设置默认的绑定列表
@@ -249,7 +291,7 @@ Yasee SDK 支持 初始化绑定列表,并根据初始化的设备列表进行[�
 ```java
 
 /// 获得List<BleDevice> 数组
-
+List<BleDevice> alls = Devices.getSingle().getDevices()
 
 /// 获取 设备管理对象
 Devices single = Devices.getSingle()
@@ -260,8 +302,8 @@ single.initDevices(List<BleDevice>);
 
 
 ```
-
-
+对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+- 详细请点击 [Devices](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/Devices.html "详细了解")
 
 
 

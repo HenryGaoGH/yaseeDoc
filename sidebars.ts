@@ -32,10 +32,10 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Yasee SDK(Android)',
       items: [
-        'yasee_android/baogao',
-        'yasee_android/demo_word',
-        'yasee_android/intro',
         'yasee_android/menu',
+        'yasee_android/intro',
+        'yasee_android/demo_word',
+        'yasee_android/baogao',
         'yasee_android/tmdVSwl',
       ],
     },
@@ -43,7 +43,10 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Yasee SDK(iOS)',
       items: [
-        'yasee_ios/welcome_ios',
+        'yasee_ios/menu',
+        'yasee_ios/used_doc',
+        'yasee_ios/demo',
+        'yasee_ios/power_doc',
       ],
     }
   ],
