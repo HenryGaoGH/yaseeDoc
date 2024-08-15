@@ -192,7 +192,7 @@ Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [User](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/configs/User.html "详细了解")
-- 详细请点击 [BleConfig](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/BleDevice.html "详细了解")
+- 详细请点击 [BleConfig](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/configs/BleConfig.html "详细了解")
 
 :::warning
 设置当前的人员信息,主要的功能是为了 肺功能 和 体脂中的人员信息设置! 如果没有这两种检测项的测量可忽略
