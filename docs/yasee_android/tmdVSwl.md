@@ -3,7 +3,7 @@ sidebar_position: 5
 ---
 
 
-# TMD 设备 VS. 沃莱(体脂秤)设备
+# TMD 设备 VS. 体脂秤 设备
 --- 
 
 
