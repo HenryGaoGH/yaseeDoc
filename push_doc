@@ -27,9 +27,9 @@ git push -f -u origin main
 
 
 # 推送到 10.0.0.61 服务器
-rsync -avz --progress ./ root@10.0.0.61:/yasee/page/documents1 <<EOF
-systemctl restart nginx
-EOF
+rsync -avz --progress ./ root@10.0.0.61:/yasee/page/documents
+
+ssh root@10.0.0.61 "systemctl restart nginx"
 
 echo "Files have been uploaded to 10.0.0.61:/yasee/page/documents1"
 
