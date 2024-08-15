@@ -187,7 +187,7 @@ Yasee.getSingle().bleConfig = new BleConfig(5);
 /// 设置人员信息
 /// 设置当前的使用人, 
 /// 主要是为了 肺功能 和 体脂上的人员信息设置 
-/// User(Integer sex(1-男,2-女), Integer age, Integer smoking(1-抽,0-不), Integer height(cm), Integer weight(cm))
+/// User(Integer sex(1-男,2-女), Integer age, Integer smoking(1-抽,0-不), Integer height(cm), Integer weight(kg))
 Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
