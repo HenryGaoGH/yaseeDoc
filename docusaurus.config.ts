@@ -74,7 +74,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'thirdId',
           position: 'left',
-          label: '三方对接规范',
+          label: '方案商对接规范',
         },
         {
           href: 'https://github.com/HenryGaoGH/yasee.io',
