@@ -2,7 +2,8 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+
+import Block from '@site/src/components/Block';
 import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
@@ -36,7 +37,9 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        {/* <HomepageFeatures /> */}
+        <Block right={true} title="更容易使用" desc="Yasee SDK 是 Yasee 移动端 SDK 的 Java、Swift 实现。" color='orange' />
+        <Block right={false} title="更标准的协议集成" desc="在移动端 SDK 的基础上，可以使用 Yasee SDK 进行标准的协议集成。通过 标准协议 更好更快速的集成多家设备" color='black' />
       </main>
     </Layout>
   );

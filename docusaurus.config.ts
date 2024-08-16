@@ -58,7 +58,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Yasee Mobile Groups',
+      title: 'Yasee',
       logo: {
         alt: 'Yasee',
         src: 'img/logo.png',
@@ -76,11 +76,11 @@ const config: Config = {
           position: 'left',
           label: '方案商对接规范',
         },
-        {
-          href: 'https://github.com/HenryGaoGH/yasee.io',
-          label: 'GitHub',
-          position: 'right',
-        },
+        // {
+        //   href: 'https://github.com/HenryGaoGH',
+        //   label: 'GitHub',
+        //   position: 'right',
+        // },
       ],
     },
     footer: {
@@ -92,6 +92,10 @@ const config: Config = {
             {
               label: 'Yasee 移动端SDK',
               to: '/docs/welcome_yasee',
+            },
+            {
+              label: '方案商对接规范',
+              to: '/docs/welcome_third',
             },
           ],
         },
