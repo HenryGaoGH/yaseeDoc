@@ -58,7 +58,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Yasee',
+      title: 'Yasee Mobile Groups',
       logo: {
         alt: 'Yasee',
         src: 'img/logo.png',
