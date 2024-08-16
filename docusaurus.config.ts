@@ -119,9 +119,13 @@ const config: Config = {
             //   label: 'Blog',
             //   to: '/blog',
             // },
+            // {
+            //   label: 'HenryGao(作者✍️)',
+            //   href: 'https://github.com/henrygaoGH',
+            // },
             {
-              label: 'HenryGao(作者✍️)',
-              href: 'https://github.com/henrygaoGH',
+              label: 'Yasee(作者✍️)',
+              href: 'https://www.yasee-med.com',
             },
           ],
         },
