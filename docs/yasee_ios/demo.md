@@ -15,4 +15,12 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 
 
 ## 缓存绑定列表
-<ImgText width={360} src="/img/绑定设备.gif" text="<h2>步骤解释:</h2>1. 打开App展示的是已绑定设备列表<br><br>2.点击右上角 搜索 按钮进入搜索页面<br><br>3.在搜索到的设备中找到想要连接的设备<br><br>4.点击 链接 按钮 绑定&连接 设备<br><br>5. 已绑列表 已存在绑定设备" right={true}/>
+<ImgText width={360} src="/img/缓存绑定.gif" text="<h2>步骤解释:</h2>1. 打开App展示的是已绑定设备列表<br><br>2.如果之前已经绑定过设备,这里会首先展示已缓存的设备<br><br>" right={true}/>
+
+
+## 删除绑定列表(包含缓存)
+<ImgText width={360} src="/img/删除绑定.gif" text="<h2>步骤解释:</h2>1. 打开App展示的是已绑定设备列表<br><br>2.如果之前已经绑定过设备,这里会首先展示已缓存的设备<br><br>3.如果希望删除绑定列表,可左滑删除" />
+
+
+## 与 外设 交互
+<ImgText width={360} src="/img/外设交互.gif" text="<h2>步骤解释:</h2>1. 打开App展示的是已绑定设备列表<br><br>2.点击想要交互的外设设备,此时进入设备详情页面;在此可展示交互的详细信息<br><br>3.底部检测项菜单为此设备支持的检测项目,<br><br>4. 底部的检测项目长按可以呼出交互的指令<br><br>5. 电极指令可进行设备交互" right={true} />
