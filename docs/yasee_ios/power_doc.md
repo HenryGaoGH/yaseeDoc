@@ -20,7 +20,7 @@ import Tag from '@site/src/components/Tag';
 
 ## SDK VS. App 连接速度
 
-### 正常环境下
+<!-- ### 正常环境下
 **四台设备,进行20次冷启动;记录连接完成的时间**
 <Tag text="SDK - 蓝色" color='deepskyblue' />
 <Tag text="App - 绿色" color='green' />
@@ -40,4 +40,4 @@ import Tag from '@site/src/components/Tag';
 <Tag text="App - 蓝色" color='deepskyblue' />
 <Tag text="SDK - 橙色" color='orange' />
 <Tag text="SDK - 绿色" color='green' />
-![体脂秤 VS. TMD](/img/ios_wl_vs_tmd.png "体脂秤 VS. TMD")
+![体脂秤 VS. TMD](/img/ios_wl_vs_tmd.png "体脂秤 VS. TMD") -->

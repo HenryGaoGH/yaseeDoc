@@ -1,6 +1,6 @@
 # Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+欢迎您,我的朋友, 这是Yasee 文档中心仓库,需要极其小心的操作此仓库, 会影响其他的 正在观阅的其他读者,
 
 ### Installation
 
