@@ -21,9 +21,9 @@ git add -A
 
 git commit -m 'update docs'
 
-git config http.postBuffer 31457280
+git config http.postBuffer 41943040
 
-git push -f -u origin main
+git push -f origin main
 
 
 # 推送到 10.0.0.61 服务器
