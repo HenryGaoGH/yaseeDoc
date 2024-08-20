@@ -65,3 +65,14 @@ func data(raw: Data) throws -> [String : String] {
     // 方案商 处理 转发的原始数据逻辑 
 }
 ```
+
+4. 指令发送
+``` swift 
+获取所有发送指令信息
+func cmds() {
+    return [
+        Cmd(unsign: [Uint8], step: .start, desc: "开始测量"),
+        Cmd(unsign: [Uint8], step: .end, desc: "结束测量"),
+    ]
+}
+```
