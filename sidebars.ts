@@ -48,6 +48,13 @@ const sidebars: SidebarsConfig = {
         'yasee_ios/demo',
         'yasee_ios/power_doc',
       ],
+    },
+    {
+      type: 'category',
+      label: 'Yasee Plugin(Flutter)',
+      items: [
+        'yasee_flutter/used_doc'
+      ],
     }
   ],
   thirdId: [
