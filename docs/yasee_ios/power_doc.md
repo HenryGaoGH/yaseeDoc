@@ -27,12 +27,26 @@ import Tag from '@site/src/components/Tag';
 ![连接速度](/img/ios_speed_sdk_app.png "连接速度")
 
 ### 复杂环境
+:::warning
 所谓复杂环境是 在生产车间中,非常多的设备在发射信号
+:::
+**四台设备,进行20次冷启动;记录连接完成的时间**
+
+<Tag text="SDK - 蓝色" color='deepskyblue' />
+<Tag text="App - 绿色" color='green' />
+![连接速度](/img/ios_speed_sdk_app_kn.png "连接速度")
 
 
 ## 设备平均速度
+
+### 设备平均速度 - 正常
 **四台设备,进行20次冷启动;记录连接完成的时间;设备平均速度**
 ![连接速度](/img/ios_avg.png "连接速度")
+
+
+### 设备平均速度 - 复杂
+**四台设备,进行20次冷启动;记录连接完成的时间;设备平均速度**
+![连接速度](/img/ios_avg_kn.png "连接速度")
 
 
 
