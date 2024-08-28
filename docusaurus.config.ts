@@ -68,13 +68,13 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'mobileSidebarId',
           position: 'left',
-          label: '移动端文档',
+          label: '移动端文档(对内)',
         },
         {
           type: 'docSidebar',
           sidebarId: 'thirdId',
           position: 'left',
-          label: '方案商对接规范',
+          label: '方案商对接规范(对方案商)',
         },
         // {
         //   href: 'https://github.com/HenryGaoGH',
