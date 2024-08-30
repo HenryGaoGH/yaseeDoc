@@ -313,6 +313,6 @@ single.initDevices(List<BleDevice>);
 
 
 ## Demo 下载
-- [Android下载](/app-debug.apk)
+- [Android下载](/files/app-debug.apk)
 
 

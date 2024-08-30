@@ -81,3 +81,7 @@ import Tag from '@site/src/components/Tag';
     **速度方面;有大约5倍的差别! 体脂秤设备更为快速**
 ### 数据 图表
 ![体脂秤 VS. TMD](/img/ios_wl_vs_tmd.png "体脂秤 VS. TMD")
+
+
+### 原始数据下载
+- [原始数据](/files/raw_data.zip)
