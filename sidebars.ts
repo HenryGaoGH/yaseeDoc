@@ -53,7 +53,8 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Yasee Plugin(Flutter)',
       items: [
-        'yasee_flutter/used_doc'
+        'yasee_flutter/used_doc',
+        'yasee_flutter/demo'
       ],
     }
   ],
