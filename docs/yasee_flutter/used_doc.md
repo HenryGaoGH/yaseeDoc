@@ -81,8 +81,8 @@ Yasee.configBle(reconnect: true,scanTime: 5);
 Yasee.configUser(sex, age, smoking, height, weight)
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [configUser](http://henrygao.hopto.org/flutter_doc/ "详细了解")
-- 详细请点击 [BleConfig](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/bleconfig "详细了解")
+- 详细请点击 [configUser](http://henrygao.hopto.org/flutter_doc/yasee_plugin_method_channel/MethodChannelYaseePlugin/configUser.html "详细了解")
+- 详细请点击 [configBle](http://henrygao.hopto.org/flutter_doc/yasee_plugin_method_channel/MethodChannelYaseePlugin/configBle.html "详细了解")
 
 :::warning
 设置当前的人员信息,主要的功能是为了 肺功能 和 体脂中的人员信息设置! 如果没有这两种检测项的测量可忽略
@@ -93,109 +93,92 @@ Yasee.configUser(sex, age, smoking, height, weight)
 蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送信息
 ```swift
 // 搜索蓝牙
-Yasee.single.scan()
+Yasee.scan()
 
 // 连接设备
-(device as BleDevice).connect();
+(device as DeviceEntity).connect();
 
 // 断开设备
-(device as BleDevice).cancel()
+(device as DeviceEntity).cancel();
 
 //获取 设备 支持的 检测项列表
-let cheks: [Check] = (device as BleDevice).supportChecks
+Future<List<CheckEntity>?> cheks = (device as DeviceEntity).supportChecks;
 
 //获取 检测项 支持的 指令
-let cheks: [Cmd] = (check as Check).cmds
+Future<List<CmdEntity>?> cmds = (check as CheckEntity).cmds
 
 // 收发 与 外设的 双向指令
-try? device.send(cmd.unsign) // 发送 接收使用 Notify 通知
+try? device.send(checkId,cmdId) // 发送 接收使用 Notify 通知
 
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [BleDevice](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/bledevice "详细了解")
-- 详细请点击 [Check](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/check "详细了解")
-- 详细请点击 [Cmd](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/cmd "详细了解")
+- 详细请点击 [DeviceEntity](http://henrygao.hopto.org/flutter_doc/models_device_entity/DeviceEntity-class.html "详细了解")
+- 详细请点击 [CheckEntity](http://henrygao.hopto.org/flutter_doc/models_check_entity/CheckEntity-class.html "详细了解")
+- 详细请点击 [CmdEntity](http://henrygao.hopto.org/flutter_doc/models_cmd_entity/CmdEntity-class.html "详细了解")
 
 
 
 ### 通知相关内容
-所有的有关Yasee SDK 的 通知 和 数据交互,都是通过 Notify来处理的,包含但未来不限于:
-- [x] 设备的绑定与解绑 (``NotifyBleDevice``)
-- [x] 设备的连接与断开 (``NotifyLink``)
-- [x] 设备的通讯数据  (``NotifyDeviceData``)
+所有的有关Yasee Flutter Plugin 的 通知 和 数据交互,都是通过 Stream 来处理的,包含但未来不限于:
+- [x] 设备的绑定与解绑 (``notifyBindDevices``)
+- [x] 设备的搜索 (``notifySearchDevices``)
+- [x] 设备的蓝牙状态 (``notifyBleState``)
+- [x] 设备的通讯数据  (``notifyDeviceData``)
 
 首先我们需要了解的是通知的类型,只有了解了通知的类型才能更好的监听来自SDK的各类信息通知:
-```swift 
+```dart
 /// 通知的类型
-enum NotifyType : String {
-    /// 设备蓝牙状态
-    case bleState
-    /// 设备搜索列表
-    case searchDevices
-    /// 设备绑定列表
-    case bindDevices
-    /// 设备连接状态
-    case deviceLink
-    /// 设备传输数据
-    case deviceData
-}
+NotifyDevicesEntity         /// 绑定列表 & 搜索列表
+NotifyBleStateEntity        /// 设备状态
+NotifyDeviceDataEntity      /// 设备数据收发内容
+
 
 // 获取蓝牙状态
-let call : NotifyCall<NotifyBleState> = { res in 
-    // 处理蓝牙状态信息
-}
-Notify.single.listen(call)
+Yasee.notifyBleState.listen((state)=>{
 
+});
+
+
+// 获取 绑定列表
+Yasee.notifyBindDevices.listen((data)=>{
+    
+});
+
+// 获取 搜索列表
+Yasee.notifySearchDevices.listen((data)=>{
+    
+});
 
 // 获取 外设 交互信息
-let call : NotifyCall<NotifyDeviceData> = { res in 
-    // 处理 外设 交互信息
-}
-Notify.single.listen(call)
-
-
-// 获取 外设 交互信息
-let call : NotifyCall<NotifyDeviceData> = { res in 
-    // 处理 外设 交互信息
-}
-Notify.single.listen(call)
+Yasee.notifyDeviceData.listen((data)=>{
+    
+});
 
 
 ```
 
 
 ### 设置默认的绑定列表
-Yasee SDK 支持 初始化绑定列表,并根据初始化的设备列表进行**自动连接操作**;首先我们需要获取一个``[BleDecive]``对象;
+Yasee Flutter Plugin 支持 初始化绑定列表,并根据初始化的设备列表进行**自动连接操作**;首先我们需要获取一个``[DeviceEntity]``对象;
 :::warning
 自动连接功能取决于初始化设备的设置,由BleConfig中的reconnect字段控制,如果需要设置自动连接,需要配置此属性,默认情况不支持自动连接!!
 :::
 
 以下为设备初始化:
-```swift
-/// lds 为 持久化的数据
-do {
-    let jdds = try JSONDecoder().decode([BleDevice].self, from: lds)
-    dds.initDevice(jdds)
-} catch let err {
-    print("Yasee-SDK: 错误: \(err.localizedDescription)")
-}
+```dart
 
-
-/// 获取 设备管理对象
-let single = Devices.single
+/// 设备绑定列表 (需要自己维护 本地存储逻辑!!)
+static late List<dynamic> bindsObj = [];
 
 
 /// 设置初始化 默认的设备,此操作可以让设备进入自动连接(前提是配置了自动连接)
-single.initDevice([BleDevice]);
-
+Yasee.configDevices(bindsObj);
 
 ```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [Devices](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/devices "详细了解")
 
 
 
 ## 大功告成!
 请敬请探索 Yasee 为您带来的丰富功能吧~
 
-如果需要更多功能实现,可查阅 [iOS 完整 Api 文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios "Api 文档")
+如果需要更多功能实现,可查阅 [Yasee Flutter Plugin Api 文档](http://henrygao.hopto.org/flutter_doc/)
