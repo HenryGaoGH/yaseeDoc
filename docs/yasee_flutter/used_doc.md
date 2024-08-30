@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 import ImgText from '@site/src/components/ImgText/ImgText';
@@ -8,85 +8,24 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 --- 
 
 
-敬请期待~~
+## 导读
+本篇文章展示的是Flutter的集成使用,因为 Flutter插件底层是依赖于 iOS 和 Android平台的原生代码,所以对于不同手机系统的限制条件可以去阅读 [iOS使用文档](../yasee_ios/used_doc.md) 和 [Android使用文档](../yasee_android/intro.md)
 
+最后如果想更多了解Api内容 可以查阅 [Yasee Flutter Plugin Api文档](http://henrygao.hopto.org/flutter_doc/)
 
-<!-- ## 导读
-本篇文章将带领大家一起集成 iOS 端的Yasee SDK, 如果想要了解更多Yasee SDK支持的功能;请查阅 [完整的功能清单](./menu.md),来了解支持的功能.\
-如果您关注的是Android设备的对接,请移步[Android对接文档](../yasee_android/intro.md).\
-那么接下来我将带大家一起了解和使用Yasee SDK iOS端对接步骤和注意事项, Let's go!
-
-:::danger
-在iOS系统中,因为隐私防护的原因,无法获取到物理设备的真实MAC地址,可通过在广播数据中提供! 其次,也是因为隐私防护政策,连接外设 使用的是系统编排的UUID字符串(效果等同于MAC),
-
-因此自动重连的稳定性不如Android.主要原因为Remote ID 过期或无效:
-1.	外设设备重置或固件更新：如果设备的固件进行了更新或设备被重置，设备的某些内部参数可能会改变，这可能导致 UUID 发生变化。
-2.	系统重启或蓝牙重启：在极少数情况下，如果设备的操作系统重启或蓝牙模块重新启动，之前存储的 UUID 可能会变得无效或不再可用。
-3.	设备长时间不活跃：如果某个设备在很长一段时间内不被使用，它的缓存信息可能会被系统清除，从而导致 UUID 无法再次被恢复使用。
-4.	与系统缓存相关的问题：iOS 系统可能会对一些设备信息进行缓存，尤其是在 CoreBluetooth 中。当系统缓存数据被清除时，存储的 UUID 可能会失效。
-5.	外设的 MAC 地址改变：虽然在 BLE 连接中不直接使用 MAC 地址，但一些底层实现可能依赖于设备的 MAC 地址进行标识。如果设备的 MAC 地址改变（例如在某些硬件配置下发生变化），可能会导致对应的 UUID 也随之改变。
-:::
-
+其次 Flutter中的Api 完全来之不同的平台原生代码,因此 如有定制化的需求可以阅读相关的原生文档!
 
 ## 准备工作
-[iOS 完整 Api 文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios "Api 文档")
 :::warning
-这部分的内容是必须的! 
-
-
-在没有事例的情况下,可以查阅 [详细的Api文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios)
+准备工作的内容完全需要满足iOS 、Android端的要求.具体请查看 !!
 :::
 
-首先,Yasee SDK 对接需要完成以下不部分的声明和要求:
-- 手机系统版本
-```
-需要系统在 iOS 13.0 及以上(目前最新的版本为iOS18)
-```
-- 必要权限
-```
-// 这里只列出键
-Privacy - Bluetooth Always Usage Description
-Privacy - Bluetooth Peripheral Usage Description
-NSBluetoothWhileInUseUsageDescription
-```
-- 后台模式 (可选)
+[iOS使用文档](../yasee_ios/used_doc.md) 和 [Android使用文档](../yasee_android/intro.md)
 
-    需要设置 Background Modes
-
-
-- [隐私权先声明 (Apple 24/5/1 正式实施)](https://developer.apple.com/documentation/bundleresources/privacy_manifest_files/describing_use_of_required_reason_api)
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Reasons</th>
-<th>SDK使用原因</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>User Defaults</td>
-<td>CA92.1: Access info from same app, per documentation</td>
-<td>用于缓存蓝牙扫描到的设备信息，以加快连接</td>
-</tr>
-<tr>
-<td>File Timestamp</td>
-<td>C617.1: Inside app or group container, per documentation</td>
-<td>使用stat函数获取SDK日志文件的大小和时间，以达到自动清除SDK日志文件</td>
-</tr>
-<tr>
-<td>System Boot Time</td>
-<td>35F9.1: Measure time on-device, per documentation</td>
-<td>使用mach_absolute_time函数，用于记录输出日志的时间</td>
-</tr>
-</tbody>
-</table>
-
+[Yasee Flutter Plugin Api文档](http://henrygao.hopto.org/flutter_doc/)
 
 ## 大纲
-接下来,我们将分为以下几个步骤,带领您集成、以及使用Yasee 官方 SDK.
-- 准备工作
-  - 声明权限
+接下来,我们将分为以下几个步骤,带领您集成、以及使用Yasee Flutter 版本插件.
 - 初始化 Yasee SDK
   - 蓝牙配置信息 (``BleConfig``)
   - 人员配置信息 (``User``)
@@ -102,50 +41,47 @@ NSBluetoothWhileInUseUsageDescription
   - 设备 绑定 变更通知
 
 ## 正式开始
-对于一个SDK而言,👉[**完整的Api文档**](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios)👈是必不可少的.\
+对于一个SDK而言,👉[**完整的Api文档**](http://henrygao.hopto.org/flutter_doc/)👈是必不可少的.\
 在处理异常和参数理解上有重要的意义,
 因此, SDK在使用中会有可视化的参数提示,如:
-<ImgText width={100} src="/img/ios_alert_used.png" text="在编码过程中,可以查看详细的参数信息<br>以及对每一个参数的具体说明" />
-得益于swift强大的异常处理能力,在swift中您有多重方式来避免您的程序出现异常情况:
-``` swift
+<ImgText width={100} src="/img/flutter_alert_used.png" text="在编码过程中,可以查看详细的参数信息<br>以及对每一个参数的具体说明" />
+对于异常处理,在dart中您可以使用try..catch的方式来捕获异常:
+``` dart
 // 空值判断
-if value == nil { return }
-
-// 可选拆包
-if case let ok = Bool? {}
-
-// guard解包
-guard let value = T? else { return }
-
+if (value == null) { return }
 
 // do 异常捕获
-do {
+try {
     // 概率下可存在 奔溃的情况
-} catch let err {
+} catch (err) {
     // 失败的逻辑处理
 }
 ```
 
 ### 初始化 Yasee SDK
-初始化操作是必须要做的操作,iOS支持一步初始化,只需要 一步即可初始化完成.\
-集成Yasee SDK第一步 却是以下内容步.
-```swift
-// 初始化 Yasee | 默认只需要这一步就可以初始化完成啦
-let _ = Yasee.single
+:::warning
+对于 Flutter的插件来讲,初始化的步骤已经在 内部实现了, 
+使用者可以无需关注插件的初始化步骤!
 
+直接使用提供的Api即可.
+:::
+
+### 配置相关的信息
+```dart
+
+/// 是否重连 (Boolean) | 可选默认是true  
 /// 设置搜索自动暂停的时间 (秒级) | 可选默认是 10秒
-Yasee.single.bleConfig.scanTime = 5
-/// 是否重连 (Boolean) | 可选默认是true
-Yasee.single.bleConfig.reconnect = true
+Yasee.configBle(reconnect: true,scanTime: 5);
+
 
 /// 设置人员信息
 /// 设置当前的使用人, 
 /// 主要是为了 肺功能 和 体脂上的人员信息设置 
 /// User(Integer sex(1-男,2-女), Integer age, Integer smoking(1-抽,0-不), Integer height(cm), Integer weight(kg))
-Yasee.single.currentUser = User(sex: 1, age: 24, smoking: 1, height: 178, weight: 65)
+Yasee.configUser(sex, age, smoking, height, weight)
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [User](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/user "详细了解")
+- 详细请点击 [configUser](http://henrygao.hopto.org/flutter_doc/ "详细了解")
 - 详细请点击 [BleConfig](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/bleconfig "详细了解")
 
 :::warning
@@ -262,4 +198,4 @@ single.initDevice([BleDevice]);
 ## 大功告成!
 请敬请探索 Yasee 为您带来的丰富功能吧~
 
-如果需要更多功能实现,可查阅 [iOS 完整 Api 文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios "Api 文档") -->
+如果需要更多功能实现,可查阅 [iOS 完整 Api 文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios "Api 文档")
