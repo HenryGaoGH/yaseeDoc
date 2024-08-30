@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the $CheckDataEntityFromJson function from the check_data_entity.g library, for the Dart programming language.">
+  <title>$CheckDataEntityFromJson function - check_data_entity.g library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">yasee_plugin</a></li>
+    <li><a href="../generated_json_check_data_entity.g/generated_json_check_data_entity.g-library.html">generated&#47;json&#47;check_data_entity.g.dart</a></li>
+    <li class="self-crumb">$CheckDataEntityFromJson function</li>
+  </ol>
+  <div class="self-name">$CheckDataEntityFromJson</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div
+      id="dartdoc-main-content"
+      class="main-content"
+      data-above-sidebar="generated_json_check_data_entity.g&#47;generated_json_check_data_entity.g-library-sidebar.html"
+      data-below-sidebar="">
+      <div>
+<h1><span class="kind-function">$CheckDataEntityFromJson</span> function 
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype"><a href="../models_check_data_entity/CheckDataEntity-class.html">CheckDataEntity</a></span>
+<span class="name ">$CheckDataEntityFromJson</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="$CheckDataEntityFromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span></li>
+</ol>)
+
+        
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">CheckDataEntity $CheckDataEntityFromJson(Map&lt;String, dynamic&gt; json) {
+  final CheckDataEntity checkDataEntity = CheckDataEntity();
+  final String? checkStep = jsonConvert.convert&lt;String&gt;(json[&#39;checkStep&#39;]);
+  if (checkStep != null) {
+    checkDataEntity.checkStep = checkStep;
+  }
+  final String? checkCode = jsonConvert.convert&lt;String&gt;(json[&#39;checkCode&#39;]);
+  if (checkCode != null) {
+    checkDataEntity.checkCode = checkCode;
+  }
+  final String? check = jsonConvert.convert&lt;String&gt;(json[&#39;check&#39;]);
+  if (check != null) {
+    checkDataEntity.check = check;
+  }
+  final String? value = jsonConvert.convert&lt;String&gt;(json[&#39;value&#39;]);
+  if (value != null) {
+    checkDataEntity.value = value;
+  }
+  final String? battery = jsonConvert.convert&lt;String&gt;(json[&#39;battery&#39;]);
+  if (battery != null) {
+    checkDataEntity.battery = battery;
+  }
+  final String? temp = jsonConvert.convert&lt;String&gt;(json[&#39;temp&#39;]);
+  if (temp != null) {
+    checkDataEntity.temp = temp;
+  }
+  final String? message = jsonConvert.convert&lt;String&gt;(json[&#39;message&#39;]);
+  if (message != null) {
+    checkDataEntity.message = message;
+  }
+  final String? suggestion = jsonConvert.convert&lt;String&gt;(json[&#39;suggestion&#39;]);
+  if (suggestion != null) {
+    checkDataEntity.suggestion = suggestion;
+  }
+  final String? code = jsonConvert.convert&lt;String&gt;(json[&#39;code&#39;]);
+  if (code != null) {
+    checkDataEntity.code = code;
+  }
+  final String? press = jsonConvert.convert&lt;String&gt;(json[&#39;press&#39;]);
+  if (press != null) {
+    checkDataEntity.press = press;
+  }
+  final String? diastolic = jsonConvert.convert&lt;String&gt;(json[&#39;diastolic&#39;]);
+  if (diastolic != null) {
+    checkDataEntity.diastolic = diastolic;
+  }
+  final String? systolic = jsonConvert.convert&lt;String&gt;(json[&#39;systolic&#39;]);
+  if (systolic != null) {
+    checkDataEntity.systolic = systolic;
+  }
+  final String? heartAnomaly = jsonConvert.convert&lt;String&gt;(
+      json[&#39;heartAnomaly&#39;]);
+  if (heartAnomaly != null) {
+    checkDataEntity.heartAnomaly = heartAnomaly;
+  }
+  final String? pulse = jsonConvert.convert&lt;String&gt;(json[&#39;pulse&#39;]);
+  if (pulse != null) {
+    checkDataEntity.pulse = pulse;
+  }
+  final String? heart = jsonConvert.convert&lt;String&gt;(json[&#39;heart&#39;]);
+  if (heart != null) {
+    checkDataEntity.heart = heart;
+  }
+  final String? glu = jsonConvert.convert&lt;String&gt;(json[&#39;glu&#39;]);
+  if (glu != null) {
+    checkDataEntity.glu = glu;
+  }
+  final String? ma = jsonConvert.convert&lt;String&gt;(json[&#39;ma&#39;]);
+  if (ma != null) {
+    checkDataEntity.ma = ma;
+  }
+  final String? ca = jsonConvert.convert&lt;String&gt;(json[&#39;ca&#39;]);
+  if (ca != null) {
+    checkDataEntity.ca = ca;
+  }
+  final String? sg = jsonConvert.convert&lt;String&gt;(json[&#39;sg&#39;]);
+  if (sg != null) {
+    checkDataEntity.sg = sg;
+  }
+  final String? leu = jsonConvert.convert&lt;String&gt;(json[&#39;leu&#39;]);
+  if (leu != null) {
+    checkDataEntity.leu = leu;
+  }
+  final String? pro = jsonConvert.convert&lt;String&gt;(json[&#39;pro&#39;]);
+  if (pro != null) {
+    checkDataEntity.pro = pro;
+  }
+  final String? nit = jsonConvert.convert&lt;String&gt;(json[&#39;nit&#39;]);
+  if (nit != null) {
+    checkDataEntity.nit = nit;
+  }
+  final String? bld = jsonConvert.convert&lt;String&gt;(json[&#39;bld&#39;]);
+  if (bld != null) {
+    checkDataEntity.bld = bld;
+  }
+  final String? ubg = jsonConvert.convert&lt;String&gt;(json[&#39;ubg&#39;]);
+  if (ubg != null) {
+    checkDataEntity.ubg = ubg;
+  }
+  final String? bil = jsonConvert.convert&lt;String&gt;(json[&#39;bil&#39;]);
+  if (bil != null) {
+    checkDataEntity.bil = bil;
+  }
+  final String? ket = jsonConvert.convert&lt;String&gt;(json[&#39;ket&#39;]);
+  if (ket != null) {
+    checkDataEntity.ket = ket;
+  }
+  final String? vc = jsonConvert.convert&lt;String&gt;(json[&#39;vc&#39;]);
+  if (vc != null) {
+    checkDataEntity.vc = vc;
+  }
+  final String? ph = jsonConvert.convert&lt;String&gt;(json[&#39;ph&#39;]);
+  if (ph != null) {
+    checkDataEntity.ph = ph;
+  }
+  final String? cr = jsonConvert.convert&lt;String&gt;(json[&#39;cr&#39;]);
+  if (cr != null) {
+    checkDataEntity.cr = cr;
+  }
+  final String? tg = jsonConvert.convert&lt;String&gt;(json[&#39;tg&#39;]);
+  if (tg != null) {
+    checkDataEntity.tg = tg;
+  }
+  final String? tc = jsonConvert.convert&lt;String&gt;(json[&#39;tc&#39;]);
+  if (tc != null) {
+    checkDataEntity.tc = tc;
+  }
+  final String? ldl = jsonConvert.convert&lt;String&gt;(json[&#39;ldl&#39;]);
+  if (ldl != null) {
+    checkDataEntity.ldl = ldl;
+  }
+  final String? hdl = jsonConvert.convert&lt;String&gt;(json[&#39;hdl&#39;]);
+  if (hdl != null) {
+    checkDataEntity.hdl = hdl;
+  }
+  final String? tc_hdl = jsonConvert.convert&lt;String&gt;(json[&#39;tc_hdl&#39;]);
+  if (tc_hdl != null) {
+    checkDataEntity.tc_hdl = tc_hdl;
+  }
+  final String? spoz = jsonConvert.convert&lt;String&gt;(json[&#39;spoz&#39;]);
+  if (spoz != null) {
+    checkDataEntity.spoz = spoz;
+  }
+  final String? pi = jsonConvert.convert&lt;String&gt;(json[&#39;pi&#39;]);
+  if (pi != null) {
+    checkDataEntity.pi = pi;
+  }
+  final String? prBpm = jsonConvert.convert&lt;String&gt;(json[&#39;prBpm&#39;]);
+  if (prBpm != null) {
+    checkDataEntity.prBpm = prBpm;
+  }
+  final String? pefPredict = jsonConvert.convert&lt;String&gt;(json[&#39;pefPredict&#39;]);
+  if (pefPredict != null) {
+    checkDataEntity.pefPredict = pefPredict;
+  }
+  final String? fef50Predict = jsonConvert.convert&lt;String&gt;(
+      json[&#39;fef50Predict&#39;]);
+  if (fef50Predict != null) {
+    checkDataEntity.fef50Predict = fef50Predict;
+  }
+  final String? fef75Predict = jsonConvert.convert&lt;String&gt;(
+      json[&#39;fef75Predict&#39;]);
+  if (fef75Predict != null) {
+    checkDataEntity.fef75Predict = fef75Predict;
+  }
+  final String? fev1Predict = jsonConvert.convert&lt;String&gt;(json[&#39;fev1Predict&#39;]);
+  if (fev1Predict != null) {
+    checkDataEntity.fev1Predict = fev1Predict;
+  }
+  final String? fev0 = jsonConvert.convert&lt;String&gt;(json[&#39;fev0&#39;]);
+  if (fev0 != null) {
+    checkDataEntity.fev0 = fev0;
+  }
+  final String? fef2575Predict = jsonConvert.convert&lt;String&gt;(
+      json[&#39;fef2575Predict&#39;]);
+  if (fef2575Predict != null) {
+    checkDataEntity.fef2575Predict = fef2575Predict;
+  }
+  final String? fvcPredict = jsonConvert.convert&lt;String&gt;(json[&#39;fvcPredict&#39;]);
+  if (fvcPredict != null) {
+    checkDataEntity.fvcPredict = fvcPredict;
+  }
+  final String? fef25Predict = jsonConvert.convert&lt;String&gt;(
+      json[&#39;fef25Predict&#39;]);
+  if (fef25Predict != null) {
+    checkDataEntity.fef25Predict = fef25Predict;
+  }
+  final String? fev1FvcPredict = jsonConvert.convert&lt;String&gt;(
+      json[&#39;fev1FvcPredict&#39;]);
+  if (fev1FvcPredict != null) {
+    checkDataEntity.fev1FvcPredict = fev1FvcPredict;
+  }
+  final String? fev1Fvc = jsonConvert.convert&lt;String&gt;(json[&#39;fev1Fvc&#39;]);
+  if (fev1Fvc != null) {
+    checkDataEntity.fev1Fvc = fev1Fvc;
+  }
+  final String? fef50 = jsonConvert.convert&lt;String&gt;(json[&#39;fef50&#39;]);
+  if (fef50 != null) {
+    checkDataEntity.fef50 = fef50;
+  }
+  final String? fef75 = jsonConvert.convert&lt;String&gt;(json[&#39;fef75&#39;]);
+  if (fef75 != null) {
+    checkDataEntity.fef75 = fef75;
+  }
+  final String? fev1 = jsonConvert.convert&lt;String&gt;(json[&#39;fev1&#39;]);
+  if (fev1 != null) {
+    checkDataEntity.fev1 = fev1;
+  }
+  final String? fvc = jsonConvert.convert&lt;String&gt;(json[&#39;fvc&#39;]);
+  if (fvc != null) {
+    checkDataEntity.fvc = fvc;
+  }
+  final String? fef25 = jsonConvert.convert&lt;String&gt;(json[&#39;fef25&#39;]);
+  if (fef25 != null) {
+    checkDataEntity.fef25 = fef25;
+  }
+  final String? fef2575 = jsonConvert.convert&lt;String&gt;(json[&#39;fef2575&#39;]);
+  if (fef2575 != null) {
+    checkDataEntity.fef2575 = fef2575;
+  }
+  final String? pef = jsonConvert.convert&lt;String&gt;(json[&#39;pef&#39;]);
+  if (pef != null) {
+    checkDataEntity.pef = pef;
+  }
+  final String? speed = jsonConvert.convert&lt;String&gt;(json[&#39;speed&#39;]);
+  if (speed != null) {
+    checkDataEntity.speed = speed;
+  }
+  final String? point = jsonConvert.convert&lt;String&gt;(json[&#39;point&#39;]);
+  if (point != null) {
+    checkDataEntity.point = point;
+  }
+  final String? time = jsonConvert.convert&lt;String&gt;(json[&#39;time&#39;]);
+  if (time != null) {
+    checkDataEntity.time = time;
+  }
+  final String? capacity = jsonConvert.convert&lt;String&gt;(json[&#39;capacity&#39;]);
+  if (capacity != null) {
+    checkDataEntity.capacity = capacity;
+  }
+  return checkDataEntity;
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+    <li><a href="../index.html">yasee_plugin</a></li>
+    <li><a href="../generated_json_check_data_entity.g/generated_json_check_data_entity.g-library.html">check_data_entity.g</a></li>
+    <li class="self-crumb">$CheckDataEntityFromJson function</li>
+</ol>
+
+
+    <h5>check_data_entity.g library</h5>
+    <div id="dartdoc-sidebar-left-content"></div>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    yasee_plugin
+      0.0.1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
