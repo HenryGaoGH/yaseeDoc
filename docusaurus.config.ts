@@ -53,7 +53,15 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  plugins: ['@docusaurus/plugin-sitemap'],
+  plugins: [
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        id: 'customSitemap',  // 这是自定义的实例，具有不同的配置
+        changefreq: 'daily',
+      },
+    ]
+  ],
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
