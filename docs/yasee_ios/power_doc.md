@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+keywords: [欢迎, Yasee, 供应商, SDK, 集成, BLE, 交互, Hook, 协议]
 ---
 
 import Tag from '@site/src/components/Tag';
