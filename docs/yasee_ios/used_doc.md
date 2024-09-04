@@ -5,11 +5,11 @@ keywords: [欢迎, Yasee, 供应商, SDK, 集成, BLE, 交互, Hook, 协议]
 
 import ImgText from '@site/src/components/ImgText/ImgText';
 
-# 使用文档
+# 集成文档
 --- 
 
 ## 导读
-本篇文章将带领大家一起集成 iOS 端的Yasee SDK, 如果想要了解更多Yasee SDK支持的功能;请查阅 [完整的功能清单](./menu.md),来了解支持的功能.\
+本篇文章将带领大家一起集成 iOS 端的Yasee SDK, 如果想要了解更多Yasee SDK支持的功能;请查阅 [完整的功能清单](/docs/welcome_yasee.md#yasee-sdk-功能清单),来了解支持的功能.\
 如果您关注的是Android设备的对接,请移步[Android对接文档](../yasee_android/intro.md).\
 那么接下来我将带大家一起了解和使用Yasee SDK iOS端对接步骤和注意事项, Let's go!
 
@@ -87,16 +87,16 @@ NSBluetoothWhileInUseUsageDescription
 - 初始化 Yasee SDK
   - 蓝牙配置信息 (``BleConfig``)
   - 人员配置信息 (``User``)
+- 数据通知相关
+  - 设备连接 通知 
+  - 设备收发信息通知
+  - 设备 绑定 变更通知
 - 蓝牙相关操作
   - 搜索 Yasee 设备
   - 连接 Yasee 设备
   - 获取 设备 支持 检测项
   - 获取 检测项 支持的 指令
   - 收发 与 外设的 双向指令
-- 数据通知相关
-  - 设备连接 通知 
-  - 设备收发信息通知
-  - 设备 绑定 变更通知
 
 ## 正式开始
 对于一个SDK而言,👉[**完整的Api文档**](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios)👈是必不可少的.\
@@ -150,34 +150,6 @@ Yasee.single.currentUser = User(sex: 1, age: 24, smoking: 1, height: 178, weight
 :::
 
 
-### 蓝牙相关操作
-蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送信息
-```swift
-// 搜索蓝牙
-Yasee.single.scan()
-
-// 连接设备
-(device as BleDevice).connect();
-
-// 断开设备
-(device as BleDevice).cancel()
-
-//获取 设备 支持的 检测项列表
-let cheks: [Check] = (device as BleDevice).supportChecks
-
-//获取 检测项 支持的 指令
-let cheks: [Cmd] = (check as Check).cmds
-
-// 收发 与 外设的 双向指令
-try? device.send(cmd.unsign) // 发送 接收使用 Notify 通知
-
-```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [BleDevice](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/bledevice "详细了解")
-- 详细请点击 [Check](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/check "详细了解")
-- 详细请点击 [Cmd](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/cmd "详细了解")
-
-
 
 ### 通知相关内容
 所有的有关Yasee SDK 的 通知 和 数据交互,都是通过 Notify来处理的,包含但未来不限于:
@@ -225,6 +197,36 @@ Notify.single.listen(call)
 ```
 
 
+
+### 蓝牙相关操作
+蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送信息
+```swift
+// 搜索蓝牙
+Yasee.single.scan()
+
+// 连接设备
+(device as BleDevice).connect();
+
+// 断开设备
+(device as BleDevice).cancel()
+
+//获取 设备 支持的 检测项列表
+let cheks: [Check] = (device as BleDevice).supportChecks
+
+//获取 检测项 支持的 指令
+let cheks: [Cmd] = (check as Check).cmds
+
+// 收发 与 外设的 双向指令
+try? device.send(cmd.unsign) // 发送 接收使用 Notify 通知
+
+```
+对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+- 详细请点击 [BleDevice](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/bledevice "详细了解")
+- 详细请点击 [Check](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/check "详细了解")
+- 详细请点击 [Cmd](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/cmd "详细了解")
+
+
+
 ### 设置默认的绑定列表
 Yasee SDK 支持 初始化绑定列表,并根据初始化的设备列表进行**自动连接操作**;首先我们需要获取一个``[BleDecive]``对象;
 :::warning
@@ -256,7 +258,7 @@ single.initDevice([BleDevice]);
 
 
 
-## 大功告成!
+## 集成成功!
 请敬请探索 Yasee 为您带来的丰富功能吧~
 
 如果需要更多功能实现,可查阅 [iOS 完整 Api 文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios "Api 文档")

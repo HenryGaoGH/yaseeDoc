@@ -21,18 +21,17 @@ const sidebars: SidebarsConfig = {
       label: '欢迎👏',
       id: 'welcome_yasee',
     },
-    {
-      type: 'category',
-      label: 'Git 工作流程',
-      items: [
-        'git_process/mobile_branch'
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Git 工作流程',
+    //   items: [
+    //     'git_process/mobile_branch'
+    //   ],
+    // },
     {
       type: 'category',
       label: 'Yasee SDK(Android)',
       items: [
-        'yasee_android/menu',
         'yasee_android/intro',
         'yasee_android/demo_word',
         'yasee_android/baogao',
@@ -43,7 +42,6 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Yasee SDK(iOS)',
       items: [
-        'yasee_ios/menu',
         'yasee_ios/used_doc',
         'yasee_ios/demo',
         'yasee_ios/power_doc',
@@ -78,6 +76,13 @@ const sidebars: SidebarsConfig = {
       type: 'doc',
       label: 'BLE Hook 方式(不推荐)',
       id: 'third/ble_hook',
+    },
+  ],
+  widgetsId:[
+    {
+      type: 'doc',
+      label: '欢迎👏',
+      id: 'widgets/all_widgets',
     },
   ]
 };

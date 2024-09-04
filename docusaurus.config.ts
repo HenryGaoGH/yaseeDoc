@@ -76,19 +76,20 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'mobileSidebarId',
           position: 'left',
-          label: '移动端文档(对内)',
+          label: '集成文档(对下游集成方)',
         },
         {
           type: 'docSidebar',
           sidebarId: 'thirdId',
           position: 'left',
-          label: '方案商对接规范(对方案商)',
+          label: '对接规范(对上游方案商)',
         },
-        // {
-        //   href: 'https://github.com/HenryGaoGH',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
+        {
+          type: 'docSidebar',
+          sidebarId: 'widgetsId',
+          position: 'right',
+          label: '共建组件',
+        },
       ],
     },
     footer: {

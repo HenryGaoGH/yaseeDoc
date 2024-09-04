@@ -5,7 +5,7 @@ sidebar_position: 2
 import ImgText from '@site/src/components/ImgText/ImgText';
 
 
-# 使用文档
+# 集成文档
 ---
 
 ## 准备工作
@@ -141,16 +141,16 @@ import ImgText from '@site/src/components/ImgText/ImgText';
   - 蓝牙配置信息 (``BleConfig``)
   - Android相关的上下文信息 (``Yasee``)
   - 人员配置信息 (``User``)
+- 数据通知相关
+  - 设备连接 通知 
+  - 设备收发信息通知
+  - 设备 绑定 变更通知
 - 蓝牙相关操作
   - 搜索 Yasee 设备
   - 连接 Yasee 设备
   - 获取 设备 支持 检测项
   - 获取 检测项 支持的 指令
   - 收发 与 外设的 双向指令
-- 数据通知相关
-  - 设备连接 通知 
-  - 设备收发信息通知
-  - 设备 绑定 变更通知
 
 
 ## 正式开始
@@ -199,42 +199,6 @@ Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 :::
 
 
-### 蓝牙相关操作
-蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送信息
-```java
-// 搜索蓝牙
-Yasee.getSingle().scan();
-
-// 连接设备
-(BleDevice) device.connect();
-
-// 通过 mac 地址和 设备名称连接一个位置设备
-// 主要是在 设备已经缓存了设备信息在本地时使用, 如 重连、缓存器拾取等
-// BleDevice(String mac, String model)
-BleDevice device = new BleDevice("MAC","Y917-005F");
-// 这里可以使用 空值判断来中断异常
-if (device == null) throw new IllegalArgumentException("获取设备失败");
-device.connect();
-
-// 断开设备
-(BleDevice) device.disconnect();
-
-//获取 设备 支持的 检测项列表
-List<Check> Products.supportChecks((BleDevice) device);
-
-//获取 检测项 支持的 指令 (暂无)
-
-
-// 收发 与 外设的 双向指令
-(BleDevice) device.send(); // 发送 接收使用 Notify 通知
-
-```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [BleDevice](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/BleDevice.html "详细了解")
-- 详细请点击 [Check](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/Check.html "详细了解")
-- 详细请点击 [Products](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/tools/Products.html "详细了解")
-
-
 
 ### 通知相关内容
 所有的有关Yasee SDK 的 通知 和 数据交互,都是通过 Notify来处理的,包含但未来不限于:
@@ -279,6 +243,44 @@ public enum NotifyType {
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [NotifyContent](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/NotifyContent.html "详细了解")
 
+
+
+
+
+### 蓝牙相关操作
+蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送信息
+```java
+// 搜索蓝牙
+Yasee.getSingle().scan();
+
+// 连接设备
+(BleDevice) device.connect();
+
+// 通过 mac 地址和 设备名称连接一个位置设备
+// 主要是在 设备已经缓存了设备信息在本地时使用, 如 重连、缓存器拾取等
+// BleDevice(String mac, String model)
+BleDevice device = new BleDevice("MAC","Y917-005F");
+// 这里可以使用 空值判断来中断异常
+if (device == null) throw new IllegalArgumentException("获取设备失败");
+device.connect();
+
+// 断开设备
+(BleDevice) device.disconnect();
+
+//获取 设备 支持的 检测项列表
+List<Check> Products.supportChecks((BleDevice) device);
+
+//获取 检测项 支持的 指令 (暂无)
+
+
+// 收发 与 外设的 双向指令
+(BleDevice) device.send(); // 发送 接收使用 Notify 通知
+
+```
+对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+- 详细请点击 [BleDevice](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/BleDevice.html "详细了解")
+- 详细请点击 [Check](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/Check.html "详细了解")
+- 详细请点击 [Products](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/tools/Products.html "详细了解")
 
 
 ### 设置默认的绑定列表
