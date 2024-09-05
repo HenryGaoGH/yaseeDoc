@@ -8,7 +8,7 @@ keywords: [欢迎, Yasee, 供应商, SDK, 集成, BLE, 交互, Hook, 协议]
 import Tag from '@site/src/components/Tag';
 
 
-# 欢迎您, 集成方
+# 欢迎您, 客户集成方
 --- 
 
 :::warning
