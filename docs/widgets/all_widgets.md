@@ -18,7 +18,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 ## 共建准则
 共建需要遵循的准则:
 - 文档归类清晰
-- 内容尽量包含事例
+- 内容尽量包含示例
 - 自定义组件说明&展示
 
 ## Tag组件

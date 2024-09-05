@@ -12,7 +12,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 :::warning
 这部分的内容是尤为重要的, 决定了是否可以使用蓝牙, 没有蓝牙权限是无法使用Yasee SDK!!!
 
-!! 没有事例的情况下,查阅 **[完整Api文档](https://henrygaogh.github.io/yasee-doc.io/)** 
+!! 没有示例的情况下,查阅 **[完整Api文档](https://henrygaogh.github.io/yasee-doc.io/)** 
 :::
 
 首先,对接Yasee SDK 需要遵循以下条件: 
@@ -58,7 +58,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
     android:required="true"/>
 
 ```
-声明完成之后,需要在App中动态申请权限,以下为申请权限事例代码:
+声明完成之后,需要在App中动态申请权限,以下为申请权限示例代码:
 ```java 
     private boolean checkBLEConnectionPermission() {
         boolean isGranted = false;
@@ -127,7 +127,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
   导入 AAR 包主要有两种方式：本地导入和远程导入。选择适合你的项目需求的方法，并在 build.gradle 文件中进行相应的配置。完成配置后，同步项目，Android Studio 将会自动导入并解析 AAR 包中的内容。
 
 
-4. 需要 在没有事例的情况下,查阅 **[完整文档](https://henrygaogh.github.io/yasee-doc.io/)**
+4. 需要 在没有示例的情况下,查阅 **[完整文档](https://henrygaogh.github.io/yasee-doc.io/)**
 
 ---
 
@@ -190,7 +190,7 @@ Yasee.getSingle().bleConfig = new BleConfig(5);
 /// User(Integer sex(1-男,2-女), Integer age, Integer smoking(1-抽,0-不), Integer height(cm), Integer weight(kg))
 Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 ```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+对于示例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [User](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/configs/User.html "详细了解")
 - 详细请点击 [BleConfig](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/configs/BleConfig.html "详细了解")
 
@@ -240,7 +240,7 @@ public enum NotifyType {
 
 - ``NotifyContent.BleSearch`` (暂未使用)
 
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+对于示例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [NotifyContent](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/NotifyContent.html "详细了解")
 
 
@@ -277,7 +277,7 @@ List<Check> Products.supportChecks((BleDevice) device);
 (BleDevice) device.send(); // 发送 接收使用 Notify 通知
 
 ```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+对于示例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [BleDevice](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/BleDevice.html "详细了解")
 - 详细请点击 [Check](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/Check.html "详细了解")
 - 详细请点击 [Products](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/tools/Products.html "详细了解")
@@ -304,7 +304,7 @@ single.initDevices(List<BleDevice>);
 
 
 ```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+对于示例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [Devices](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/Devices.html "详细了解")
 
 

@@ -77,7 +77,7 @@ Yasee.configBle(reconnect: true,scanTime: 5);
 /// User(Integer sex(1-男,2-女), Integer age, Integer smoking(1-抽,0-不), Integer height(cm), Integer weight(kg))
 Yasee.configUser(sex, age, smoking, height, weight)
 ```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+对于示例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [configUser](https://doc.yasee.com.cn/flutter_doc/yasee_plugin_method_channel/MethodChannelYaseePlugin/configUser.html "详细了解")
 - 详细请点击 [configBle](https://doc.yasee.com.cn/flutter_doc/yasee_plugin_method_channel/MethodChannelYaseePlugin/configBle.html "详细了解")
 
@@ -152,7 +152,7 @@ Future<List<CmdEntity>?> cmds = (check as CheckEntity).cmds
 try? device.send(checkId,cmdId) // 发送 接收使用 Notify 通知
 
 ```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+对于示例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [DeviceEntity](https://doc.yasee.com.cn/flutter_doc/models_device_entity/DeviceEntity-class.html "详细了解")
 - 详细请点击 [CheckEntity](https://doc.yasee.com.cn/flutter_doc/models_check_entity/CheckEntity-class.html "详细了解")
 - 详细请点击 [CmdEntity](https://doc.yasee.com.cn/flutter_doc/models_cmd_entity/CmdEntity-class.html "详细了解")

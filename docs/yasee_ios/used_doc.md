@@ -31,7 +31,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 这部分的内容是必须的! 
 
 
-在没有事例的情况下,可以查阅 [详细的Api文档](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios)
+在没有示例的情况下,可以查阅 [详细的Api文档](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios)
 :::
 
 首先,Yasee SDK 对接需要完成以下不部分的声明和要求:
@@ -141,7 +141,7 @@ Yasee.single.bleConfig.reconnect = true
 /// User(Integer sex(1-男,2-女), Integer age, Integer smoking(1-抽,0-不), Integer height(cm), Integer weight(kg))
 Yasee.single.currentUser = User(sex: 1, age: 24, smoking: 1, height: 178, weight: 65)
 ```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+对于示例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [User](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/user "详细了解")
 - 详细请点击 [BleConfig](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/bleconfig "详细了解")
 
@@ -220,7 +220,7 @@ let cheks: [Cmd] = (check as Check).cmds
 try? device.send(cmd.unsign) // 发送 接收使用 Notify 通知
 
 ```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+对于示例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [BleDevice](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/bledevice "详细了解")
 - 详细请点击 [Check](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/check "详细了解")
 - 详细请点击 [Cmd](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/cmd "详细了解")
@@ -253,7 +253,7 @@ single.initDevice([BleDevice]);
 
 
 ```
-对于事例中的模型,如有理解歧义,可查看详细的注释说明:
+对于示例中的模型,如有理解歧义,可查看详细的注释说明:
 - 详细请点击 [Devices](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/devices "详细了解")
 
 
