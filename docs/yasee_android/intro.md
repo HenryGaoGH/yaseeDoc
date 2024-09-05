@@ -10,12 +10,12 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 
 ## 准备工作
 :::warning
-这部分的内容是尤为重要的, 决定了是否可以使用蓝牙、以及各种问题!!!
+这部分的内容是尤为重要的, 决定了是否可以使用蓝牙, 没有蓝牙权限是无法使用Yasee SDK!!!
 
 !! 没有事例的情况下,查阅 **[完整Api文档](https://henrygaogh.github.io/yasee-doc.io/)** 
 :::
 
-首先,对接雅思SDK 需要遵循以下条件: 
+首先,对接Yasee SDK 需要遵循以下条件: 
 1. 需要您的手机Android 版本在 Q 以上,也就是 **Android 10** 版本及以上,使用以下方式可以查看版本的信息
   ```java
   public class DeviceInfo {
@@ -202,7 +202,7 @@ Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 
 ### 通知相关内容
 所有的有关Yasee SDK 的 通知 和 数据交互,都是通过 Notify来处理的,包含但未来不限于:
-- [x] 设备的绑定与解绑 (``NotifyType.device``)
+- [x] 设备的绑定、解绑与搜索 (``NotifyType.device``)
 - [x] 设备的连接与断开 (``NotifyType.link``)
 - [x] 设备的通讯数据  (``NotifyType.data``)
 

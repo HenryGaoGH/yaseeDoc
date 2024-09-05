@@ -11,18 +11,15 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 ## 导读
 本篇文章展示的是Flutter的集成使用,因为 Flutter插件底层是依赖于 iOS 和 Android平台的原生代码,所以对于不同手机系统的限制条件可以去阅读 [iOS使用文档](../yasee_ios/used_doc.md) 和 [Android使用文档](../yasee_android/intro.md)
 
-最后如果想更多了解Api内容 可以查阅 [Yasee Flutter Plugin Api文档](http://henrygao.hopto.org/flutter_doc/)
+最后如果想更多了解Api内容 可以查阅 [Yasee Flutter Plugin Api文档](https://doc.yasee.com.cn/flutter_doc/)
 
 其次 Flutter中的Api 完全来之不同的平台原生代码,因此 如有定制化的需求可以阅读相关的原生文档!
 
 ## 准备工作
 :::warning
-准备工作的内容完全需要满足iOS 、Android端的要求.具体请查看 !!
+准备工作的内容完全需要满足iOS 、Android端的要求.具体请查看 [iOS使用文档](../yasee_ios/used_doc.md) 和 [Android使用文档](../yasee_android/intro.md)!! 
+如果想要了解更多的 flutter API 可以查阅 [Yasee Flutter Plugin Api文档](https://doc.yasee.com.cn/flutter_doc/)
 :::
-
-[iOS使用文档](../yasee_ios/used_doc.md) 和 [Android使用文档](../yasee_android/intro.md)
-
-[Yasee Flutter Plugin Api文档](http://henrygao.hopto.org/flutter_doc/)
 
 ## 大纲
 接下来,我们将分为以下几个步骤,带领您集成、以及使用Yasee Flutter 版本插件.
@@ -41,7 +38,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
   - 收发 与 外设的 双向指令
 
 ## 正式开始
-对于一个SDK而言,👉[**完整的Api文档**](http://henrygao.hopto.org/flutter_doc/)👈是必不可少的.\
+对于一个SDK而言,👉[**完整的Api文档**](https://doc.yasee.com.cn/flutter_doc/)👈是必不可少的.\
 在处理异常和参数理解上有重要的意义,
 因此, SDK在使用中会有可视化的参数提示,如:
 <ImgText width={100} src="/img/flutter_alert_used.png" text="在编码过程中,可以查看详细的参数信息<br>以及对每一个参数的具体说明" />
@@ -81,8 +78,8 @@ Yasee.configBle(reconnect: true,scanTime: 5);
 Yasee.configUser(sex, age, smoking, height, weight)
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [configUser](http://henrygao.hopto.org/flutter_doc/yasee_plugin_method_channel/MethodChannelYaseePlugin/configUser.html "详细了解")
-- 详细请点击 [configBle](http://henrygao.hopto.org/flutter_doc/yasee_plugin_method_channel/MethodChannelYaseePlugin/configBle.html "详细了解")
+- 详细请点击 [configUser](https://doc.yasee.com.cn/flutter_doc/yasee_plugin_method_channel/MethodChannelYaseePlugin/configUser.html "详细了解")
+- 详细请点击 [configBle](https://doc.yasee.com.cn/flutter_doc/yasee_plugin_method_channel/MethodChannelYaseePlugin/configBle.html "详细了解")
 
 :::warning
 设置当前的人员信息,主要的功能是为了 肺功能 和 体脂中的人员信息设置! 如果没有这两种检测项的测量可忽略
@@ -156,9 +153,9 @@ try? device.send(checkId,cmdId) // 发送 接收使用 Notify 通知
 
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [DeviceEntity](http://henrygao.hopto.org/flutter_doc/models_device_entity/DeviceEntity-class.html "详细了解")
-- 详细请点击 [CheckEntity](http://henrygao.hopto.org/flutter_doc/models_check_entity/CheckEntity-class.html "详细了解")
-- 详细请点击 [CmdEntity](http://henrygao.hopto.org/flutter_doc/models_cmd_entity/CmdEntity-class.html "详细了解")
+- 详细请点击 [DeviceEntity](https://doc.yasee.com.cn/flutter_doc/models_device_entity/DeviceEntity-class.html "详细了解")
+- 详细请点击 [CheckEntity](https://doc.yasee.com.cn/flutter_doc/models_check_entity/CheckEntity-class.html "详细了解")
+- 详细请点击 [CmdEntity](https://doc.yasee.com.cn/flutter_doc/models_cmd_entity/CmdEntity-class.html "详细了解")
 
 
 
@@ -185,6 +182,5 @@ Yasee.configDevices(bindsObj);
 
 
 ## 集成成功!
-请敬请探索 Yasee 为您带来的丰富功能吧~
 
-如果需要更多功能实现,可查阅 [Yasee Flutter Plugin Api 文档](http://henrygao.hopto.org/flutter_doc/)
+如果需要更多功能实现,可查阅 [Yasee Flutter Plugin Api 文档](https://doc.yasee.com.cn/flutter_doc/)
