@@ -18,23 +18,23 @@ import Tag from '@site/src/components/Tag';
 
 
 ## Yasee SDK 介绍
-Yasee SDK 是一款功能强大、针对于支持Yasee系列产品的开发工具包，
+Yasee SDK 是一款针对于支持Yasee系列产品的开发工具包，
 专注于Yasee支持设备的蓝牙连接和管理。是Yasee 对外开放产品的底层支持,集成了Yasee SDK,\
-就可以无缝的支持 **功能清单** 中罗列的完整检测产品以及检测项目.
+就可以便捷的支持 **功能清单** 中罗列的完整检测产品以及检测项目.
 
 通过 Yasee SDK，开发者可以轻松实现设备的蓝牙连接、绑定及管理，包括搜索设备、设备重连、以及高效的设备指令收发功能。\
-无论是设备的初始配置，还是后续的连接管理、数据收发，Yasee SDK 都提供了全面的支持，帮助开发者快速集成和控制多种蓝牙设备，\
+无论是设备的初始配置，还是后续的连接管理、数据收发，Yasee SDK 都提供了较为全面的支持，帮助开发者快速集成和控制多种蓝牙设备，\
 为用户提供流畅的智能设备体验。
 
 集成 Yasee SDK 的优势包括：
 
-1. **快速集成**：Yasee SDK 提供了简洁易用的接口，开发者可以快速集成蓝牙连接和设备管理功能，大大缩短开发周期。
+1. **快速集成**：Yasee SDK 提供了简洁易用的接口，开发者可以快速集成蓝牙连接和设备管理功能，较为明显的缩短开发周期。
 
-2. **稳定可靠**：Yasee SDK 经过测试，能够在各种设备和环境下保持稳定的连接和高效的设备管理，确保用户体验的连续性和可靠性。
+2. **稳定可靠**：Yasee SDK 经过测试，能够在多干扰环境下保持稳定的连接和高效的设备管理，确保用户体验的连续性和可靠性。
 
-3. **全面功能**：SDK 支持设备的搜索、绑定、连接、重连及指令收发等全方位的功能，使得开发者无需额外编写复杂的逻辑，就能实现Yasee智能设备的全面控制。
+3. **全面功能**：SDK 支持设备的搜索、绑定、连接、重连及指令收发等功能，使得开发者无需额外编写复杂的逻辑，就能实现Yasee智能设备控制。
 
-4. **高兼容性**：Yasee SDK 适用于Yasee全品类蓝牙设备和应用场景，提供了良好的兼容性和扩展性，帮助开发者应对多样化的需求。
+4. **高兼容性**：Yasee SDK 适用于Yasee 蓝牙设备的应用场景，提供了良好的兼容性和扩展性，帮助开发者应对多样化的需求。
 
 5. **技术支持**：集成 SDK 后，开发者可以获得专业的技术支持，快速解决开发过程中遇到的问题，确保项目顺利推进。
 
@@ -87,8 +87,8 @@ Yasee SDK 提供了广泛的设备支持和检测功能，涵盖多个健康监�
 - [ ] ~~动态体温检测~~
 
 
-### 脉诊 设备支持的检测项
-- [ ] 脉诊检测
+### ~~脉诊 设备支持的检测项~~
+- [ ] ~~脉诊检测~~
 
 --- 
 
@@ -113,15 +113,15 @@ Yasee SDK 提供了广泛的设备支持和检测功能，涵盖多个健康监�
 2. 了解 Yasee SDK 提供的功能
 
     - 如果您是 iOS 平台集成, 可以在此处查看Demo演示了解功能支持情况[iOS Demo演示](yasee_ios/demo.md), \
-    如果您是技术人员也可以查阅 **[iOS 完整 Api 文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios "Api 文档")**
+    如果您是技术人员也可以查阅 **[iOS 完整 Api 文档](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios "Api 文档")**
     - 如果您是 Android 平台集成, 可以在此处查看Demo演示了解功能支持情况[Android Demo演示](yasee_android/demo_word.md), \
     如果您是技术人员也可以查阅 **[Android 完整Api文档](https://henrygaogh.github.io/yasee-doc.io/)** 
     - 如果您是 Flutter 平台集成, 可以在此处查看Demo演示了解功能支持情况[Flutter Demo演示](yasee_flutter/demo.md), \
-    如果您是技术人员也可以查阅 **[Yasee Flutter Plugin Api文档](http://henrygao.hopto.org/flutter_doc/)**
+    如果您是技术人员也可以查阅 **[Yasee Flutter Plugin Api文档](https://doc.yasee.com.cn/flutter_doc/)**
 3. 熟悉 Yasee 接口设计理念 以及 Api使用方式
 
-    对于 Yasee SDK 接口设计来讲, 三端(iOS、Android、Flutter) 都保持高度的一致性, 主要包含两个要点:
-    1. 完全遵循 OOP 
+    对于 Yasee SDK 接口设计来讲, 三端(iOS、Android、Flutter) 都保持一致性调用, 主要包含两个要点:
+    1. 遵循 OOP 
     2. 单一原则 SRP
     
     比如, 如果想要知道 设备连接状态怎么办?     - 找 Notify\

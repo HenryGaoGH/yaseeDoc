@@ -9,9 +9,9 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 --- 
 
 ## 导读
-本篇文章将带领大家一起集成 iOS 端的Yasee SDK, 如果想要了解更多Yasee SDK支持的功能;请查阅 [完整的功能清单](/docs/welcome_yasee.md#yasee-sdk-功能清单),来了解支持的功能.\
+本篇文章将带领大家一起集成 iOS 端的Yasee SDK, 如果想要了解更多Yasee SDK支持的功能;请查阅 [完整的功能清单](/docs/welcome_yasee.md#yasee-sdk-功能清单) 来了解支持的功能.\
 如果您关注的是Android设备的对接,请移步[Android对接文档](../yasee_android/intro.md).\
-那么接下来我将带大家一起了解和使用Yasee SDK iOS端对接步骤和注意事项, Let's go!
+那么接下来我将带大家一起了解和使用Yasee SDK iOS端对接步骤和注意事项!
 
 :::danger
 在iOS系统中,因为隐私防护的原因,无法获取到物理设备的真实MAC地址,可通过在广播数据中提供! 其次,也是因为隐私防护政策,连接外设 使用的是系统编排的UUID字符串(效果等同于MAC),
@@ -26,12 +26,12 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 
 
 ## 准备工作
-[iOS 完整 Api 文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios "Api 文档")
+[iOS 完整 Api 文档](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios "Api 文档")
 :::warning
 这部分的内容是必须的! 
 
 
-在没有事例的情况下,可以查阅 [详细的Api文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios)
+在没有事例的情况下,可以查阅 [详细的Api文档](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios)
 :::
 
 首先,Yasee SDK 对接需要完成以下不部分的声明和要求:
@@ -99,11 +99,11 @@ NSBluetoothWhileInUseUsageDescription
   - 收发 与 外设的 双向指令
 
 ## 正式开始
-对于一个SDK而言,👉[**完整的Api文档**](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios)👈是必不可少的.\
+对于一个SDK而言,👉[**完整的Api文档**](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios)👈是必不可少的.\
 在处理异常和参数理解上有重要的意义,
 因此, SDK在使用中会有可视化的参数提示,如:
 <ImgText width={100} src="/img/ios_alert_used.png" text="在编码过程中,可以查看详细的参数信息<br>以及对每一个参数的具体说明" />
-得益于swift强大的异常处理能力,在swift中您有多重方式来避免您的程序出现异常情况:
+得益于swift优秀的异常处理能力,在swift中您有多种方式来避免您的程序出现异常情况:
 ``` swift
 // 空值判断
 if value == nil { return }
@@ -142,8 +142,8 @@ Yasee.single.bleConfig.reconnect = true
 Yasee.single.currentUser = User(sex: 1, age: 24, smoking: 1, height: 178, weight: 65)
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [User](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/user "详细了解")
-- 详细请点击 [BleConfig](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/bleconfig "详细了解")
+- 详细请点击 [User](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/user "详细了解")
+- 详细请点击 [BleConfig](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/bleconfig "详细了解")
 
 :::warning
 设置当前的人员信息,主要的功能是为了 肺功能 和 体脂中的人员信息设置! 如果没有这两种检测项的测量可忽略
@@ -221,9 +221,9 @@ try? device.send(cmd.unsign) // 发送 接收使用 Notify 通知
 
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [BleDevice](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/bledevice "详细了解")
-- 详细请点击 [Check](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/check "详细了解")
-- 详细请点击 [Cmd](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/cmd "详细了解")
+- 详细请点击 [BleDevice](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/bledevice "详细了解")
+- 详细请点击 [Check](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/check "详细了解")
+- 详细请点击 [Cmd](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/cmd "详细了解")
 
 
 
@@ -254,11 +254,11 @@ single.initDevice([BleDevice]);
 
 ```
 对于事例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [Devices](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios/devices "详细了解")
+- 详细请点击 [Devices](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios/devices "详细了解")
 
 
 
 ## 集成成功!
 请敬请探索 Yasee 为您带来的丰富功能吧~
 
-如果需要更多功能实现,可查阅 [iOS 完整 Api 文档](http://henrygao.hopto.org/ios_doc/documentation/yasee_ios "Api 文档")
+如果需要更多功能实现,可查阅 [iOS 完整 Api 文档](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios "Api 文档")
