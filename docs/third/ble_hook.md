@@ -37,7 +37,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 ## 流程图鉴
 <ImgText src="/img/hook_process.png" />
 
-## 事例展示和说明
+## 示例展示和说明
 
 当选择 Hook 方式, 方案商们需要接管设备连接成功之后的所有步骤, 包括但不限于:
 1. 发现特征(需要合适的时机调用,并传递服务信息)
