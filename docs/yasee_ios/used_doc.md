@@ -259,6 +259,5 @@ single.initDevice([BleDevice]);
 
 
 ## 集成成功!
-请敬请探索 Yasee 为您带来的丰富功能吧~
 
 如果需要更多功能实现,可查阅 [iOS 完整 Api 文档](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios "Api 文档")
