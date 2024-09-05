@@ -72,18 +72,18 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'mobileSidebarId',
-          position: 'left',
-          label: '集成文档(对客户)',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'thirdId',
-          position: 'left',
-          label: '对接规范(生态合作伙伴)',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'mobileSidebarId',
+        //   position: 'left',
+        //   label: '集成文档(对客户)',
+        // },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'thirdId',
+        //   position: 'left',
+        //   label: '对接规范(生态合作伙伴)',
+        // },
         {
           type: 'docSidebar',
           sidebarId: 'widgetsId',
@@ -95,19 +95,19 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: '文档中心',
-          items: [
-            {
-              label: 'Yasee 移动端SDK',
-              to: '/docs/welcome_yasee',
-            },
-            {
-              label: '生态合作伙伴对接规范',
-              to: '/docs/welcome_third',
-            },
-          ],
-        },
+        // {
+        //   title: '文档中心',
+        //   items: [
+        //     {
+        //       label: 'Yasee 移动端SDK',
+        //       to: '/docs/welcome_yasee',
+        //     },
+        //     {
+        //       label: '生态合作伙伴对接规范',
+        //       to: '/docs/welcome_third',
+        //     },
+        //   ],
+        // },
         {
           title: '其余产品',
           items: [
