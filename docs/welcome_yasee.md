@@ -5,6 +5,9 @@ keywords: [欢迎, Yasee, 供应商, SDK, 集成, BLE, 交互, Hook, 协议]
 ---
 
 
+import Tag from '@site/src/components/Tag';
+
+
 # 欢迎您, 集成方
 --- 
 
@@ -94,6 +97,7 @@ Yasee SDK 提供了广泛的设备支持和检测功能，涵盖多个健康监�
 
 ## Yasee SDK 架构设计
 为了更好的了解 Yasee SDK 的运行机制,可以查阅当前的架构设计,加深对Yasee SDK的理解.
+<Tag text="红色框为无须部分" color="red"/>
 ![架构设计](/img/yasee_jgt.png)
 
 
