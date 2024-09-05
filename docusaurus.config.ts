@@ -76,13 +76,13 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'mobileSidebarId',
           position: 'left',
-          label: '集成文档(对下游集成方)',
+          label: '集成文档(对客户)',
         },
         {
           type: 'docSidebar',
           sidebarId: 'thirdId',
           position: 'left',
-          label: '对接规范(对上游方案商)',
+          label: '对接规范(生态合作伙伴)',
         },
         {
           type: 'docSidebar',
