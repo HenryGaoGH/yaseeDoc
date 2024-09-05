@@ -12,7 +12,7 @@ import Tag from '@site/src/components/Tag';
 
 
 ## 导读
-为了更好的令方案商集成进入Yasee SDK体系,本片文档会根据目前的Yasee协议模块部分分析和说明
+为了更好的令生态合作伙伴集成进入Yasee SDK体系,本片文档会根据目前的Yasee协议模块部分分析和说明
 
 
 ## 概要说明
@@ -26,7 +26,7 @@ import Tag from '@site/src/components/Tag';
 
 因此, 协议流程 需要 三方提供以上数据获取的方法, 并出具调用文档,
 
-综述 - <Tag color="orange" text="方案商,需要做的内容" /> 为: 
+综述 - <Tag color="orange" text="生态合作伙伴,需要做的内容" /> 为: 
 
 封装自己的算法库(之后简称 `算法库`),其中包含如下功能: 
 1. Yasee 提供 AdvertisementData 数据 传递给 算法库, 算法库经过处理之后返回 `有用的信息(例如:MAC地址、功能列表、等等自定义信息)` 给 Yasee,
@@ -40,7 +40,7 @@ import Tag from '@site/src/components/Tag';
 
 ## 整体流程
 
-- <Tag color="green" text="绿色部分为 - 方案商需要做的内容" />
+- <Tag color="green" text="绿色部分为 - 生态合作伙伴需要做的内容" />
 - <Tag color="orange" text="橙色部分为 - 协议对接方式 需要双方处理部分" />
 - <Tag color="gray" text="其余部分为 - Yasee 已完成内容" />
 

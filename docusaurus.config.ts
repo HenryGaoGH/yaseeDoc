@@ -103,7 +103,7 @@ const config: Config = {
               to: '/docs/welcome_yasee',
             },
             {
-              label: '方案商对接规范',
+              label: '生态合作伙伴对接规范',
               to: '/docs/welcome_third',
             },
           ],
