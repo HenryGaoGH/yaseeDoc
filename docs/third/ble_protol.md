@@ -10,7 +10,7 @@ import Tag from '@site/src/components/Tag';
 # 协议方式对接(推荐)
 --- 
 
-如果还不了解, 供应商模块的逻辑流程请阅读 [Yasee SDK 供应商模块(协议模块) 理念剖析](yasee_third_process.md),先了解设计理念有助于更好的集成.
+如果还不了解, 生态合作伙伴模块的逻辑流程请阅读 [Yasee SDK 生态合作伙伴模块(协议模块) 理念剖析](yasee_third_process.md),先了解设计理念有助于更好的集成.
 
 
 

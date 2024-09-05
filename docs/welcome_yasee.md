@@ -1,14 +1,14 @@
 ---
-title: 欢迎您, 集成方
+title: 欢迎您, 客户(集成方)
 description: 欢迎来到Yasee 文档中心
-keywords: [欢迎, Yasee, 供应商, SDK, 集成, BLE, 交互, Hook, 协议]
+keywords: [欢迎, Yasee, 生态合作伙伴, SDK, 集成, BLE, 交互, Hook, 协议]
 ---
 
 
 import Tag from '@site/src/components/Tag';
 
 
-# 欢迎您, 客户集成方
+# 欢迎您, 客户(集成方)
 --- 
 
 :::warning
