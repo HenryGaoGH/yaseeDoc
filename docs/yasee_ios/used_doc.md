@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-keywords: [欢迎, Yasee, 供应商, SDK, 集成, BLE, 交互, Hook, 协议]
+keywords: [欢迎, Yasee, 生态合作伙伴, SDK, 集成, BLE, 交互, Hook, 协议]
 ---
 
 import ImgText from '@site/src/components/ImgText/ImgText';

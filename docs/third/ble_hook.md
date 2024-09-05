@@ -9,7 +9,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 # 有限BLE交互流程Hook
 ---
 
-如果还不了解, 供应商模块的逻辑流程请阅读 [Yasee SDK 供应商模块(协议模块) 理念剖析](yasee_third_process.md),先了解设计理念有助于更好的集成.
+如果还不了解, 生态合作伙伴模块的逻辑流程请阅读 [Yasee SDK 生态合作伙伴模块(协议模块) 理念剖析](yasee_third_process.md),先了解设计理念有助于更好的集成.
 
 :::warning
 目前非必需的情况下 Yasee 推荐 使用 **协议方式** 对接
@@ -21,7 +21,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 :::warning
 有限的 BLE 操作回调:
 
-仅限于Gatt连接成功后的操作内容,因为 供应商无权操作设备的连接、断开以及重连过程!!
+仅限于Gatt连接成功后的操作内容,因为 生态合作伙伴无权操作设备的连接、断开以及重连过程!!
 
 还需要注意 iOS 和 Android的方法、以及调用差异, 总结来说 就是 外设连接成功之后的hook内容
 :::

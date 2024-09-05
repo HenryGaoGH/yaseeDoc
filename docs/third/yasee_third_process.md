@@ -7,7 +7,7 @@ import Tag from '@site/src/components/Tag';
 
 
 
-# Yasee SDK 供应商模块(协议模块) 理念剖析
+# Yasee SDK 生态合作伙伴模块(协议模块) 理念剖析
 --- 
 
 
