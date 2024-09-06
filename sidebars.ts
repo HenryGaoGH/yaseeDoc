@@ -84,7 +84,21 @@ const sidebars: SidebarsConfig = {
       label: '欢迎👏',
       id: 'widgets/all_widgets',
     },
-  ]
+  ],
+  innerId :[
+    {
+      type: 'doc',
+      label: '欢迎👏',
+      id: 'inner/welcome_inner',
+    },
+    {
+      type: 'category',
+      label: '报告',
+      items: [
+        'inner/reports/replace_yasee_sdk'
+      ],
+    },
+  ],
 };
 
 export default sidebars;
