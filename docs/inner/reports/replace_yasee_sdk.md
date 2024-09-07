@@ -47,13 +47,13 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 
 多设备同时检测:
 
-<ImgText text="多设备同时检测" src="/img/inner/global_data.gif" width={100} />
+<ImgText text="多设备同时检测" src="/img/inner/more_devices.gif" width={100} />
 
 
 <ImgText text="全局蓝牙开关检测 (无须额外代码):" src="/img/inner/global_ble_state.gif" right={true} width={100} />
 
 
-<ImgText text="全局数据接收发送的能力" src="/img/inner/more_devices.gif" width={100} />
+<ImgText text="全局数据接收发送的能力" src="/img/inner/global_data.gif" width={100} />
 
 
 
