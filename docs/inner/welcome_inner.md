@@ -10,7 +10,7 @@ keywords: [欢迎, Yasee, 同事, 领导, SDK, 集成, BLE, 交互, Hook, 协议
 # 汇总 & 目录
 
 ## 分析&报告
-- [现阶段 替换 Yasee SDK 分析报告](./reports/replace_yasee_sdk)
+- [现阶段 替换 Yasee SDK 分析报告](/docs/inner/reports/replace_yasee_sdk.md)
 
 
 ## 方案内容
