@@ -29,3 +29,8 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 :::warning
 提示：当前为启动页面默认展示绑定设备列表。未绑定设备会显示空页面，搜索时会替换当前页面，返回只能重启app。当前清除按钮只能清除所有设备，
 :::
+
+
+
+## Demo 工程下载 
+[Android Demo 工程下载](/files/android_demo.zip)
