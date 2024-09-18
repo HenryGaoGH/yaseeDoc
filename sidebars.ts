@@ -95,7 +95,8 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: '报告',
       items: [
-        'inner/reports/replace_yasee_sdk'
+        'inner/reports/replace_yasee_sdk',
+        'inner/reports/replace_yasee',
       ],
     },
   ],
