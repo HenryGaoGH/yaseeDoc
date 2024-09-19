@@ -320,7 +320,8 @@ single.initDevices(List<BleDevice>);
 
 
 
-## AAR 下载(建议对接前使用 Demo体验或者查阅本文档)
+## AAR 下载
+**建议对接前使用 Demo体验或者查阅本文档**
 - [AAR下载](/files/yasee.aar)
 
 
