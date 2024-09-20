@@ -16,8 +16,8 @@ import {GanttTask} from '@site/src/components/GanttTask';
 **17天**
 
 比实际多 **3天** 时间; 比理想多 **5天**. 目前 缩短工期可想到的做法为:
-1. 增加工作时间, 将休息日和假期最后一天利用起来. 大概可节约 **3天**
-2. 协调 贾工 两天时间 帮我画画页面 
+1. 增加工作时间, 目前预计将休息日和假期最后一天利用起来. 大概可增加 **3天**
+2. 晚间加班时间继续保持至假期前
 3. 快速跟进项目情况 动态调整
 
 
@@ -30,6 +30,7 @@ import {GanttTask} from '@site/src/components/GanttTask';
 5. 展会 - 好络纬云平台对接
 
 ## 项目 进度 估算
+1、2、3、4、5 是 任务执行顺序
 ![项目工时计划](/img/inner/gantt_plan.png)
 ![项目工时日历](/img/inner/gantt_calendar.png)
 
