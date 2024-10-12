@@ -99,6 +99,13 @@ const sidebars: SidebarsConfig = {
         'inner/reports/replace_yasee',
       ],
     },
+    {
+      type: 'category',
+      label: '项目',
+      items: [
+        'inner/pms/pm_24_10'
+      ],
+    },
   ],
 };
 
