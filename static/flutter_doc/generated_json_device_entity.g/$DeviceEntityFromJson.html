@@ -99,6 +99,14 @@
   if (advertisementData != null) {
     deviceEntity.advertisementData = advertisementData;
   }
+  final bool? firstLoad = jsonConvert.convert&lt;bool&gt;(json[&#39;firstLoad&#39;]);
+  if (firstLoad != null) {
+    deviceEntity.firstLoad = firstLoad;
+  }
+  final int? createTime = jsonConvert.convert&lt;int&gt;(json[&#39;createTime&#39;]);
+  if (createTime != null) {
+    deviceEntity.createTime = createTime;
+  }
   return deviceEntity;
 }</code></pre>
 </section>
@@ -133,7 +141,7 @@
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.0.1
+      0.9.52
   </span>
 
   

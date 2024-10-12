@@ -316,6 +316,50 @@
   if (capacity != null) {
     checkDataEntity.capacity = capacity;
   }
+  final String? seq = jsonConvert.convert&lt;String&gt;(json[&#39;seq&#39;]);
+  if (seq != null) {
+    checkDataEntity.seq = seq;
+  }
+  final String? isLeadOff = jsonConvert.convert&lt;String&gt;(json[&#39;isLeadOff&#39;]);
+  if (isLeadOff != null) {
+    checkDataEntity.isLeadOff = isLeadOff;
+  }
+  final String? rr = jsonConvert.convert&lt;String&gt;(json[&#39;rr&#39;]);
+  if (rr != null) {
+    checkDataEntity.rr = rr;
+  }
+  final String? heartRate = jsonConvert.convert&lt;String&gt;(json[&#39;heartRate&#39;]);
+  if (heartRate != null) {
+    checkDataEntity.heartRate = heartRate;
+  }
+  final String? temperature = jsonConvert.convert&lt;String&gt;(json[&#39;temperature&#39;]);
+  if (temperature != null) {
+    checkDataEntity.temperature = temperature;
+  }
+  final String? ecgData = jsonConvert.convert&lt;String&gt;(json[&#39;ecgData&#39;]);
+  if (ecgData != null) {
+    checkDataEntity.ecgData = ecgData;
+  }
+  final String? filePath = jsonConvert.convert&lt;String&gt;(json[&#39;filePath&#39;]);
+  if (filePath != null) {
+    checkDataEntity.filePath = filePath;
+  }
+  final String? hasTime = jsonConvert.convert&lt;String&gt;(json[&#39;hasTime&#39;]);
+  if (hasTime != null) {
+    checkDataEntity.hasTime = hasTime;
+  }
+  final String? progress = jsonConvert.convert&lt;String&gt;(json[&#39;progress&#39;]);
+  if (progress != null) {
+    checkDataEntity.progress = progress;
+  }
+  final String? length = jsonConvert.convert&lt;String&gt;(json[&#39;length&#39;]);
+  if (length != null) {
+    checkDataEntity.length = length;
+  }
+  final String? countNum = jsonConvert.convert&lt;String&gt;(json[&#39;countNum&#39;]);
+  if (countNum != null) {
+    checkDataEntity.countNum = countNum;
+  }
   return checkDataEntity;
 }</code></pre>
 </section>
@@ -350,7 +394,7 @@
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.0.1
+      0.9.52
   </span>
 
   

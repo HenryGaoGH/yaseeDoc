@@ -64,25 +64,33 @@
       
 
 <span class="returntype">void</span>
-<span class="name ">send</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="send-param-handwareId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">handwareId</span>, </span></li>
-<li><span class="parameter" id="send-param-cmdId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">cmdId</span></span></li>
-</ol>)
+<span class="name ">send</span>(<wbr><ol class="parameter-list"> <li><span class="parameter" id="send-param-handwareId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">handwareId</span>, </span></li>
+<li><span class="parameter" id="send-param-cmdId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">cmdId</span>, {</span></li>
+<li><span class="parameter" id="send-param-obj"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">obj</span>, </span></li>
+</ol>})
 
       
 
     </section>
     
 <section class="desc markdown">
-  <p>发送信息
-@parms handwareId 检测项ID
-@parms cmdId 指令ID</p>
+  <p>发送信息</p>
+<ul>
+<li>handwareId 检测项ID</li>
+<li>cmdId 指令ID</li>
+<li>obj 携带的参数:
+<ul>
+<li>心电测量 携带 时间 time: 30(秒)</li>
+</ul>
+</li>
+</ul>
 </section>
 
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">void send(int handwareId,String cmdId) =&gt; YaseePluginPlatform.instance.send(mac,handwareId,cmdId);</code></pre>
+  <pre class="language-dart"><code class="language-dart">void send(int handwareId,String cmdId,{Map&lt;String,dynamic&gt;? obj}) =&gt; YaseePluginPlatform.instance.send(mac,handwareId,cmdId,obj: obj);</code></pre>
 </section>
 
 
@@ -116,7 +124,7 @@
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.0.1
+      0.9.52
   </span>
 
   
