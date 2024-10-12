@@ -82,7 +82,9 @@
   data[&#39;mac&#39;] = entity.mac;
   data[&#39;cUuid&#39;] = entity.cUuid;
   data[&#39;state&#39;] = entity.state;
-  data[&#39;advertisementData&#39;] = entity.advertisementData.toJson();
+  data[&#39;advertisementData&#39;] = entity.advertisementData?.toJson();
+  data[&#39;firstLoad&#39;] = entity.firstLoad;
+  data[&#39;createTime&#39;] = entity.createTime;
   return data;
 }</code></pre>
 </section>
@@ -117,7 +119,7 @@
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.0.1
+      0.9.52
   </span>
 
   

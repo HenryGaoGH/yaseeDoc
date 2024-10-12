@@ -122,6 +122,17 @@
 <li><span class="parameter" id="copyWith-param-point"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">point</span>, </span></li>
 <li><span class="parameter" id="copyWith-param-time"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">time</span>, </span></li>
 <li><span class="parameter" id="copyWith-param-capacity"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">capacity</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-seq"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">seq</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-isLeadOff"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">isLeadOff</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-rr"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">rr</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-heartRate"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">heartRate</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-temperature"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">temperature</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-ecgData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ecgData</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-filePath"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">filePath</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-hasTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">hasTime</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-progress"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">progress</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-length"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">length</span>, </span></li>
+<li><span class="parameter" id="copyWith-param-countNum"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">countNum</span>, </span></li>
 </ol>})
 
       
@@ -192,6 +203,17 @@
   String? point,
   String? time,
   String? capacity,
+  String? seq,
+  String? isLeadOff,
+  String? rr,
+  String? heartRate,
+  String? temperature,
+  String? ecgData,
+  String? filePath,
+  String? hasTime,
+  String? progress,
+  String? length,
+  String? countNum,
 }) {
   return CheckDataEntity()
     ..checkStep = checkStep ?? this.checkStep
@@ -251,7 +273,18 @@
     ..speed = speed ?? this.speed
     ..point = point ?? this.point
     ..time = time ?? this.time
-    ..capacity = capacity ?? this.capacity;
+    ..capacity = capacity ?? this.capacity
+    ..seq = seq ?? this.seq
+    ..isLeadOff = isLeadOff ?? this.isLeadOff
+    ..rr = rr ?? this.rr
+    ..heartRate = heartRate ?? this.heartRate
+    ..temperature = temperature ?? this.temperature
+    ..ecgData = ecgData ?? this.ecgData
+    ..filePath = filePath ?? this.filePath
+    ..hasTime = hasTime ?? this.hasTime
+    ..progress = progress ?? this.progress
+    ..length = length ?? this.length
+    ..countNum = countNum ?? this.countNum;
 }</code></pre>
 </section>
 
@@ -286,7 +319,7 @@
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.0.1
+      0.9.52
   </span>
 
   

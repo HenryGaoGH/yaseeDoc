@@ -62,7 +62,15 @@
 
     <section class="multi-line-signature">
       
-      <span class="name ">DeviceAdvertisementData</span>(<wbr>)
+      <span class="name ">DeviceAdvertisementData</span>(<wbr>{<ol class="parameter-list"> <li><span class="parameter" id="-param-kCBAdvDataManufacturerData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">kCBAdvDataManufacturerData</span> = <span class="default-value">&#39;&#39;</span>, </span></li>
+<li><span class="parameter" id="-param-kCBAdvDataTimestamp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">kCBAdvDataTimestamp</span>, </span></li>
+<li><span class="parameter" id="-param-kCBAdvDataLocalName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">kCBAdvDataLocalName</span> = <span class="default-value">&#39;&#39;</span>, </span></li>
+<li><span class="parameter" id="-param-kCBAdvDataIsConnectable"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">kCBAdvDataIsConnectable</span> = <span class="default-value">false</span>, </span></li>
+<li><span class="parameter" id="-param-kCBAdvDataRemoteId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">kCBAdvDataRemoteId</span> = <span class="default-value">&#39;&#39;</span>, </span></li>
+<li><span class="parameter" id="-param-kCBAdvDataRxSecondaryPHY"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">kCBAdvDataRxSecondaryPHY</span> = <span class="default-value">0</span>, </span></li>
+<li><span class="parameter" id="-param-kCBAdvDataRxPrimaryPHY"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">kCBAdvDataRxPrimaryPHY</span> = <span class="default-value">0</span>, </span></li>
+<li><span class="parameter" id="-param-kCBAdvDataServiceUUIDs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">kCBAdvDataServiceUUIDs</span> = <span class="default-value">const []</span>, </span></li>
+</ol>})
     </section>
 
     
@@ -71,7 +79,12 @@
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">DeviceAdvertisementData();</code></pre>
+  <pre class="language-dart"><code class="language-dart">DeviceAdvertisementData({
+	this.kCBAdvDataManufacturerData=&#39;&#39;,double? kCBAdvDataTimestamp,
+	this.kCBAdvDataLocalName=&#39;&#39;,this.kCBAdvDataIsConnectable=false,
+	this.kCBAdvDataRemoteId=&#39;&#39;,this.kCBAdvDataRxSecondaryPHY=0,
+	this.kCBAdvDataRxPrimaryPHY=0,this.kCBAdvDataServiceUUIDs=const [],
+}) : kCBAdvDataTimestamp = kCBAdvDataTimestamp ?? DateTime.now().millisecondsSinceEpoch &#47; 1000;</code></pre>
 </section>
 
 
@@ -105,7 +118,7 @@
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.0.1
+      0.9.52
   </span>
 
   
