@@ -21,7 +21,7 @@ git add -A
 
 git commit -m 'update docs'
 
-git config http.postBuffer 61943040
+git config http.postBuffer 71943040
 
 git push -f origin main
 
