@@ -8,7 +8,7 @@ import {GanttTask} from '@site/src/components/GanttTask';
 
 
 
-## 冲刺结论
+## 冲刺总结
 目前 **实际工时** 为 **14天(9月18号~10月10号)**, 减去两天缓冲期 剩余 **12天**.
 
 预计总工时: 
@@ -36,4 +36,4 @@ import {GanttTask} from '@site/src/components/GanttTask';
 
 
 ## 整体甘特计划
-<GanttTask />
+<GanttTask year={24} month={9} height={350} />
