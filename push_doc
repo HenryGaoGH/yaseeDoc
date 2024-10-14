@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+
+read -p "Please input Choose with push Choice [1 - all, 2 - only inner, 3 - only github]:" choose
+
+echo "pushing to ${choose}"
+
 # 先提交目前的内容
 
 git add -A
@@ -10,27 +15,48 @@ git pull
 
 git push -f
 
-# 然后将build内容推送到远程
+# 定位到 build 文件夹
 cd build
 
-git init
 
-git remote add origin https://github.com/HenryGaoGH/yasee.io.git
 
-git add -A
+# 然后将build内容推送到远程
+push2github() {
+    git init
 
-git commit -m 'update docs'
+    git remote add origin https://github.com/HenryGaoGH/yasee.io.git
 
-git config http.postBuffer 71943040
+    git add -A
 
-git push -f origin main
+    git commit -m 'update docs'
+
+    git config http.postBuffer 71943040
+
+    git push -f origin main
+
+    echo "Github 处理成功"
+}
 
 
 # 推送到 10.0.0.61 服务器
-# rsync -avz ./ root@10.0.0.61:/yasee/page/documents
+push2Inner() {
+    rsync -avz ./ root@10.0.0.61:/yasee/page/documents
 
-# ssh root@10.0.0.61 "systemctl restart nginx && exit"
+    ssh root@10.0.0.61 "systemctl restart nginx && exit"
 
-# echo "Files have been uploaded to 10.0.0.61:/yasee/page/documents"
+    echo "Files have been uploaded to 10.0.0.61:/yasee/page/documents | 处理成功"   
+}
 
+
+if [[ ${choose} -eq 1 ]]; then
+    push2github
+    push2Inner
+elif [[ ${choose} -eq 2 ]]; then
+    push2Inner
+elif [[ ${choose} -eq 3 ]]; then
+    push2github
+fi
+
+
+# 返回上层
 cd ..
