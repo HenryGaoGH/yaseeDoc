@@ -81,7 +81,7 @@ let _24_09: Task[] = [
 let _24_10: Task[] = [
     {
       start: new Date(2024, 9, 14),
-      end: new Date(2024, 10, 6),
+      end: new Date(2024, 10, 9),
       name: 'SDK 架构替换',
       id: 'project',
       type:'project',
@@ -121,8 +121,8 @@ let _24_10: Task[] = [
       isDisabled: true,
       styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: "#FFB6C1" },
     },{
-      start: new Date(2024, 9, 19),
-      end: new Date(2024, 9, 20),
+      start: new Date(2024, 9, 21),
+      end: new Date(2024, 9, 22),
       name: 'SDK替换 - 蓝牙状态更新',
       id: 'task-3',
       project: 'project',
@@ -131,8 +131,8 @@ let _24_10: Task[] = [
       isDisabled: true,
       styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: 'purple' },
     },{
-      start: new Date(2024, 9, 21),
-      end: new Date(2024, 10, 1),
+      start: new Date(2024, 9, 22),
+      end: new Date(2024, 10, 2),
       name: 'SDK替换 - 检测修改(TMD)',
       id: 'task-4',
       project: 'project',
@@ -141,8 +141,18 @@ let _24_10: Task[] = [
       isDisabled: true,
       styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: 'orange' },
     },{
-      start: new Date(2024, 10, 1),
-      end: new Date(2024, 10, 3),
+      start: new Date(2024, 10, 4),
+      end: new Date(2024, 10, 6),
+      name: 'SDK替换 - 多弹窗检测',
+      id: 'task-4',
+      project: 'project',
+      type:'task',
+      progress: 0,
+      isDisabled: true,
+      styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: 'blue' },
+    },{
+      start: new Date(2024, 10, 6),
+      end: new Date(2024, 10, 8),
       name: 'SDK替换 - 测量数据存储',
       id: 'task-4',
       project: 'project',
@@ -151,8 +161,8 @@ let _24_10: Task[] = [
       isDisabled: true,
       styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: 'blue' },
     },{
-        start: new Date(2024, 10, 4),
-        end: new Date(2024, 10, 6),
+        start: new Date(2024, 10, 7),
+        end: new Date(2024, 10, 9),
         name: 'SDK替换 - 玉成SDK & Yasee SDK共存兼容',
         id: 'task-4',
         project: 'project',
