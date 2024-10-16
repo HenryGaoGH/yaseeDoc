@@ -16,7 +16,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 :::
 
 首先,对接Yasee SDK 需要遵循以下条件: 
-1. 需要您的手机Android 版本在 Q 以上,也就是 **Android 10** 版本及以上,使用以下方式可以查看版本的信息
+1. 需要您的手机Android 版本在 Pie 及以上,也就是 **Android 9** 版本及以上,使用以下方式可以查看版本的信息
   ```java
   public class DeviceInfo {
       public static void logDeviceInfo() {
@@ -315,7 +315,7 @@ single.initDevices(List<BleDevice>);
 
 
 ## Demo 下载
-- [Android下载](/files/app-debug.apk)
+- [Android下载](/files/yasee.apk)
 
 
 
