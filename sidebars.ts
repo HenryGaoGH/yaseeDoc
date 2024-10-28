@@ -97,7 +97,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'inner/reports/replace_yasee_sdk',
         'inner/reports/replace_yasee',
-        
+        'inner/reports/report_yucheng',
       ],
     },
     {
