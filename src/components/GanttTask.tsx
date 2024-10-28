@@ -12,6 +12,7 @@ export function GanttTask(props: {year: number, month: number}) {
       tasks={tasks} locale='zh' 
       listCellWidth='0' ganttHeight={(tasks.length+1) * 45} viewMode={ViewMode.Day} 
       TaskListHeader={ () => <></> }
+      
     />
   )
 }
