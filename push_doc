@@ -13,7 +13,7 @@ git commit -m 'update docs'
 
 git pull
 
-git push -f
+git push
 
 # 定位到 build 文件夹
 cd build
