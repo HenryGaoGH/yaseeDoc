@@ -8,6 +8,7 @@ import Tag from '@site/src/components/Tag';
 
 # 玉成对接 问题与方案
 
+## 现情况分析
 目前 Yasee SDK 替换阶段,暴漏出一个与 玉成相关的问题; 由于玉成方的配合工作不到位, 导致Yasee SDK 未能统一封装玉成SDK功能.
 但现阶段 百合医功能上还有依赖玉成产品的内容,比如:
 1. 手表 - 心电 (目前 HLW可平替)
@@ -22,6 +23,7 @@ import Tag from '@site/src/components/Tag';
 | T9(心电贴)   | 心电(静、动态) | HLW  |
 | T20(动态体温) | 动态体温     | -    |
 
+## 对应方案
 现通过考虑 有两个方案:
 1. <Tag text="建议" color="green"/> 尝试沟通 动态体温(T20)  集成到Yasee SDK 工作; 如玉成可配合则 对接进入Yasee 体系; 否则 直接全系砍掉 玉成 相关产品,需再找 动态心电 的生态合作伙伴
    1. <Tag text="优势" color="orange"/> 规范&统一 Yasee 生态合作体系对接方式 完整的SDK 对外对内的开发&集成体验 
