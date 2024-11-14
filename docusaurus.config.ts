@@ -72,24 +72,24 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'mobileSidebarId',
-        //   position: 'left',
-        //   label: '集成文档(对客户)',
-        // },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'thirdId',
-        //   position: 'left',
-        //   label: '对接规范(生态合作伙伴)',
-        // },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'innerId',
-        //   position: 'left',
-        //   label: '项目计划(内部)',
-        // },
+        {
+          type: 'docSidebar',
+          sidebarId: 'mobileSidebarId',
+          position: 'left',
+          label: '集成文档(对客户)',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'thirdId',
+          position: 'left',
+          label: '对接规范(生态合作伙伴)',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'innerId',
+          position: 'left',
+          label: '项目计划(内部)',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'widgetsId',
@@ -104,14 +104,14 @@ const config: Config = {
         {
           title: '文档中心',
           items: [
-            // {
-            //   label: 'Yasee 移动端SDK',
-            //   to: '/docs/welcome_yasee',
-            // },
-            // {
-            //   label: '生态合作伙伴对接规范',
-            //   to: '/docs/welcome_third',
-            // },
+            {
+              label: 'Yasee 移动端SDK',
+              to: '/docs/welcome_yasee',
+            },
+            {
+              label: '生态合作伙伴对接规范',
+              to: '/docs/welcome_third',
+            },
           ],
         },
         {
@@ -121,31 +121,19 @@ const config: Config = {
               label: 'Yasee 慢病管理平台',
               href: 'https://wechat.yasee.com.cn',
             },
-            // {
-            //   label: 'Discord',
-            //   href: 'https://discordapp.com/invite/docusaurus',
-            // },
-            // {
-            //   label: 'Twitter',
-            //   href: 'https://twitter.com/docusaurus',
-            // },
           ],
         },
         {
           title: '更多关于',
           items: [
-            // {
-            //   label: 'Blog',
-            //   to: '/blog',
-            // },
-            // {
-            //   label: 'HenryGao(作者✍️)',
-            //   href: 'https://github.com/henrygaoGH',
-            // },
             {
-              label: 'Yasee(作者✍️)',
-              href: 'https://www.yasee-med.com',
+              label: 'HenryGao(作者✍️)',
+              href: 'https://github.com/henrygaoGH',
             },
+            // {
+            //   label: 'Yasee(作者✍️)',
+            //   href: 'https://www.yasee-med.com',
+            // },
           ],
         },
       ],
