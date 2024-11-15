@@ -99,13 +99,15 @@ const sidebars: SidebarsConfig = {
         'inner/reports/replace_yasee',
         'inner/reports/report_yucheng',
         'inner/reports/report_battery_pullout',
+        'inner/reports/replace_merge_bhy',
       ],
     },
     {
       type: 'category',
       label: '项目',
       items: [
-        'inner/pms/pm_24_10'
+        'inner/pms/pm_24_10',
+        'inner/pms/pm_24_11'
       ],
     },
   ],
