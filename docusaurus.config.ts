@@ -72,30 +72,30 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'mobileSidebarId',
-          position: 'left',
-          label: '集成文档(对客户)',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'thirdId',
-          position: 'left',
-          label: '对接规范(生态合作伙伴)',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'innerId',
-          position: 'left',
-          label: '项目计划(内部)',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'widgetsId',
-          position: 'right',
-          label: '共建组件',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'mobileSidebarId',
+        //   position: 'left',
+        //   label: '集成文档(对客户)',
+        // },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'thirdId',
+        //   position: 'left',
+        //   label: '对接规范(生态合作伙伴)',
+        // },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'innerId',
+        //   position: 'left',
+        //   label: '项目计划(内部)',
+        // },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'widgetsId',
+        //   position: 'right',
+        //   label: '共建组件',
+        // },
       ],
     },
     footer: {
@@ -104,14 +104,14 @@ const config: Config = {
         {
           title: '文档中心',
           items: [
-            {
-              label: 'Yasee 移动端SDK',
-              to: '/docs/welcome_yasee',
-            },
-            {
-              label: '生态合作伙伴对接规范',
-              to: '/docs/welcome_third',
-            },
+            // {
+            //   label: 'Yasee 移动端SDK',
+            //   to: '/docs/welcome_yasee',
+            // },
+            // {
+            //   label: '生态合作伙伴对接规范',
+            //   to: '/docs/welcome_third',
+            // },
           ],
         },
         {
@@ -126,14 +126,14 @@ const config: Config = {
         {
           title: '更多关于',
           items: [
-            {
-              label: 'HenryGao(作者✍️)',
-              href: 'https://github.com/henrygaoGH',
-            },
             // {
-            //   label: 'Yasee(作者✍️)',
-            //   href: 'https://www.yasee-med.com',
+            //   label: 'HenryGao(作者✍️)',
+            //   href: 'https://github.com/henrygaoGH',
             // },
+            {
+              label: 'Yasee(作者✍️)',
+              href: 'https://www.yasee-med.com',
+            },
           ],
         },
       ],

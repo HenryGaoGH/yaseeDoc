@@ -175,7 +175,48 @@ let _24_10: Task[] = [
 ]
 
 
-
+let _24_11: Task[] = [
+  {
+    start: new Date(2024, 10, 18),
+    end: new Date(2024, 10, 23),
+    name: '11月份计划',
+    id: 'project',
+    type:'project',
+    progress: 0,
+    isDisabled: true,
+    styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d' },
+  },{
+    start: new Date(2024, 10, 18),
+    end: new Date(2024, 10, 19),
+    name: '三合一双插',
+    id: 'task-0',
+    project: 'project',
+    type:'task',
+    progress: 0,
+    isDisabled: true,
+    styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: "#FFB6C1"},
+  },{
+    start: new Date(2024, 10, 19),
+    end: new Date(2024, 10, 22),
+    name: '合并百合医',
+    id: 'task-0',
+    project: 'project',
+    type:'task',
+    progress: 0,
+    isDisabled: true,
+    styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: "red"},
+  },{
+    start: new Date(2024, 10, 22),
+    end: new Date(2024, 10, 23),
+    name: '包体积优化',
+    id: 'task-0',
+    project: 'project',
+    type:'task',
+    progress: 0,
+    isDisabled: true,
+    styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: "green"},
+  }
+]
 
 
 
@@ -185,5 +226,6 @@ export const task_data = (year: number, month: number) => {
     return {
         "24_09": _24_09,
         "24_10": _24_10,
+        "24_11": _24_11,
     }[key];
 }
