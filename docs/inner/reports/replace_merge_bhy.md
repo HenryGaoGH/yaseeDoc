@@ -4,36 +4,64 @@ description: 领导及同事, 这里是我们内部的文档中心,可以通过�
 keywords: [欢迎, Yasee, 同事, 领导, SDK, 集成, BLE, 交互, Hook, 协议]
 ---
 
-import {GanttTask} from '@site/src/components/GanttTask';
+import Tag from '@site/src/components/Tag'; 
+
+# 百合医 合并
+
+
+## 现状分析
+
+目前百合医分为两个版本:
+1. 目前正常迭代版本 (业务版本)  - 以下简称 **业务版**
+2. Yasee SDK 替换完毕的版本   -  以下简称 **新版**
+
+其中 **新版** 和 **业务版** 差别两个 迭代内容, 具体内容主要为:
+1. IM替换版本 
+2. 众测版本 
+3. 颗粒度较小的修改(文字、提示、颜色等等)
+4. 删减、位移的部分内容.
+
+其中 差异化 内容包含如下:
+- <Tag text="新增" color="#009ad6" />
+- <Tag text="删除" color="green" />
+- <Tag text="修改" color="gray" />
+
+![两个版本差异化分析](/img/inner/diff_new_old.png)
 
 
 
-## 冲刺总结
-目前 **实际工时** 为 **14天(9月18号~10月10号)**, 减去两天缓冲期 剩余 **12天**.
-
-预计总工时: 
-
-**17天**
-
-比实际多 **3天** 时间; 比理想多 **5天**. 目前 缩短工期可想到的做法为:
-1. 增加工作时间, 目前预计将休息日和假期最后一天利用起来. 大概可增加 **3天**
-2. 晚间加班时间继续保持至假期前
-3. 快速跟进项目情况 动态调整
+欲合并冲突文件分析:
+- <Tag text="Dart" color="#009ad6" />
+- <Tag text="pbxproj" color="green" />
+- <Tag text="png" color="gray" />
+- <Tag text="svg" color="orange" />
+- <Tag text="xcscheme" color="red" />
+- <Tag text="yaml" color="#8552a1" />
+![欲合并冲突文件分析](/img/inner/diff_u.png)
 
 
-## 任务分解
-目前将任务分解为以下内容:
-1. 展会 - 百合医|绑定&搜索&蓝牙 功能(集成到百合医)
-2. 展会 - 百合医心电UI
-3. 展会 - Android SDK 接入 Yasee SDK
-4. 展会 - Flutter插件对接
-5. 展会 - 好络纬云平台对接
-
-## 项目 进度 估算
-1、2、3、4、5 是 任务执行顺序
-![项目工时计划](/img/inner/gantt_plan.png)
-![项目工时日历](/img/inner/gantt_calendar.png)
 
 
-## 整体甘特计划
-<GanttTask year={24} month={9} height={350} />
+
+## 原始记录信息
+- [main_expo 记录](/files/main_expo_log.log)
+- [最新版本 记录](/files/main_expo_log.log)
+
+
+
+
+## 方案
+
+从以下方面考虑:
+- 时间方面
+    1. 业务版本上线时间 (预计本周二)
+    2. 新版(三合一插拔新指令 SDK 集成, 预计周一完成)
+优先保证线上版本发布时间节点.
+
+- 需求完成程度
+    1. 尽可能在各自分支中处理完成 需求功能, 尽可能的避免需求交叉.
+
+
+因此,得出如下内容:
+1. 合并时间 预计为 **本周二(11月19号)**, 合并时间预计为 2天
+2. 保证 各自 需求尽量完善

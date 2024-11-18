@@ -178,7 +178,7 @@ let _24_10: Task[] = [
 let _24_11: Task[] = [
   {
     start: new Date(2024, 10, 18),
-    end: new Date(2024, 10, 23),
+    end: new Date(2024, 10, 22),
     name: '11月份计划',
     id: 'project',
     type:'project',
@@ -197,7 +197,7 @@ let _24_11: Task[] = [
     styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: "#FFB6C1"},
   },{
     start: new Date(2024, 10, 19),
-    end: new Date(2024, 10, 22),
+    end: new Date(2024, 10, 21),
     name: '合并百合医',
     id: 'task-0',
     project: 'project',
@@ -206,8 +206,8 @@ let _24_11: Task[] = [
     isDisabled: true,
     styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: "red"},
   },{
-    start: new Date(2024, 10, 22),
-    end: new Date(2024, 10, 23),
+    start: new Date(2024, 10, 21),
+    end: new Date(2024, 10, 22),
     name: '包体积优化',
     id: 'task-0',
     project: 'project',
