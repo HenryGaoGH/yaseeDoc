@@ -59,7 +59,16 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 
 
 调整后流程为:
-![调整之后的重连流程](/img/inner/ios_reconnnect_best_way_progress.png)
+
+<ImgText src="/img/inner/ios_reconnnect_best_way_progress.png" text="<br/>1. 首先, iOS SDK级别增加 根据设备名称(广播名称)进行重新连接的方法.
+<br/><br/>2. Flutter端增加 判定设备逻辑, 如iOS设备则 触发重新扫描周边设备, 重新连接的逻辑.
+<br/><br/>3. iOS端 连接并更新设备RemoteID" width={700} />
+
+
+
+## 实施
+
+
 
 
 
