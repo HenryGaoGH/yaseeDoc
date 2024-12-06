@@ -26,7 +26,10 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 - **iOS设备**
     - iPhone手机重启手机或者蓝牙重启的情况, (极少数情况,目前Apple也没有具体的情况说明)
         - **正常的重启手机 和 蓝牙重启是不会出现的**
-    - 系统蓝牙栈缓存数据被清除时, (极少数情况下, 目前Apple也没有具体的情况)
+    - 系统蓝牙栈缓存数据因蓝牙模块Crash、系统异常重建被清除时, (极少数情况下, 目前Apple也没有具体的情况)
+
+
+对于,目前客户提出的连接不上的情况, 需要澄清的是, 程序问题导致的重连不上, 并非是达到了上述iOS的重连限制. 本次的方案, 重点关注的是这个极端情况下的重连限制.
 
 
 ## 推荐的最佳实践做法
@@ -51,22 +54,25 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 	3. 权限开关
 
 - 增加流程
-	1. 完整扫描周边设备, 重新连接
+	1. 重新连接 - 完整扫描周边设备,
 
 触发条件:
 
 用户点击**重新连接**, 会触发重新扫描周边设备, 重新连接. (目前只有iOS端有这个操作), Android端 点击 **重新连接** 保持现状不做修改
 
+:::info
+为什么选择让用户自动点击 重新连接?  
+因为重连过程决定因素很多. 如遇一下情况并不是因为iOS设备的重连限制, 只是因为其他原因导致:
+- **主机关机状态**
+- **主机被别人连接了**
+- **主机出现异常了**
+:::
 
 调整后流程为:
-
-<ImgText src="/img/inner/ios_reconnnect_best_way_progress.png" text="<br/>1. 首先, iOS SDK级别增加 根据设备名称(广播名称)进行重新连接的方法.
+<ImgText src="/img/inner/ios_reconnnect_best_way_progress.png" text="<br/>1. 首先, iOS SDK级别增加 根据设备名称(广播名称、MAC)进行重新连接的方法.
 <br/><br/>2. Flutter端增加 判定设备逻辑, 如iOS设备则 触发重新扫描周边设备, 重新连接的逻辑.
-<br/><br/>3. iOS端 连接并更新设备RemoteID" width={700} />
+<br/><br/>3. iOS端 连接并更新设备RemoteID" width={600} />
 
-
-
-## 实施
 
 
 
