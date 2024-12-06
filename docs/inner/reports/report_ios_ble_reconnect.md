@@ -1,6 +1,6 @@
 ---
-title: iOS端蓝牙重连,丝滑体验~
-description: iOS端蓝牙重连,丝滑体验~ iOS重连限制,
+title: iOS端蓝牙重连补偿
+description: iOS端蓝牙重连,iOS重连限制,
 keywords: [欢迎, Yasee, 同事, 领导, SDK, 集成, BLE, 重连, 限制, iOS, 卸载重装]
 ---
 
