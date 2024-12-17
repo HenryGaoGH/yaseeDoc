@@ -12,7 +12,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 :::warning
 这部分的内容是尤为重要的, 决定了是否可以使用蓝牙, 没有蓝牙权限是无法使用Yasee SDK!!!
 
-!! 没有示例的情况下,查阅 **[完整Api文档](https://henrygaogh.github.io/yasee-doc.io/)** 
+!! 没有示例的情况下,查阅 **[完整Api文档](https://doc.yasee.com.cn/android_doc/index.html)** 
 :::
 
 首先,对接Yasee SDK 需要遵循以下条件: 
@@ -127,7 +127,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
   导入 AAR 包主要有两种方式：本地导入和远程导入。选择适合你的项目需求的方法，并在 build.gradle 文件中进行相应的配置。完成配置后，同步项目，Android Studio 将会自动导入并解析 AAR 包中的内容。
 
 
-4. 需要 在没有示例的情况下,查阅 **[完整文档](https://henrygaogh.github.io/yasee-doc.io/)**
+4. 需要 在没有示例的情况下,查阅 **[完整文档](https://doc.yasee.com.cn/android_doc/index.html)**
 
 ---
 
@@ -191,8 +191,8 @@ Yasee.getSingle().bleConfig = new BleConfig(5);
 Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 ```
 对于示例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [User](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/configs/User.html "详细了解")
-- 详细请点击 [BleConfig](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/configs/BleConfig.html "详细了解")
+- 详细请点击 [User](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/configs/User.html "详细了解")
+- 详细请点击 [BleConfig](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/configs/BleConfig.html "详细了解")
 
 :::warning
 设置当前的人员信息,主要的功能是为了 肺功能 和 体脂中的人员信息设置! 如果没有这两种检测项的测量可忽略
@@ -210,24 +210,49 @@ Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 ```java
 /**
  * 信息类型
+ * /// 通知的类型
+ *     /// 设备蓝牙状态
+ *     case bleState
+ *     /// 设备搜索列表
+ *     case searchDevices
+ *     /// 设备绑定列表
+ *     case bindDevices
+ *     /// 设备连接状态
+ *     case deviceLink
+ *     /// 设备传输数据
+ *     case deviceData
  */
 public enum NotifyType {
+
+    /*
+    * 设备蓝牙状态
+    * */
+    bleState,
+
     /**
-     * 设备数量变化
+     * 设备搜索列表
      */
-    device,     // 设备数量变化
+    searchDevices,
+
+    /**
+     * 设备绑定列表
+     */
+    bindDevices,
+
     /**
      * 设备连接变化
      */
-    link,       // 设备连接变化
+    deviceLink,
+
+
     /**
      * 设备数据内容 Notify
      */
-    data       // 设备数据内容 Notify
+    deviceData       // 设备数据内容 Notify
 }
 ```
 可以通过 消息通知的类型,来区分数据的类型是什么, 并且使用什么类型的数据来接收数据类型
-[数据类型](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/NotifyContent.html), 主要包含:
+[数据类型](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/models/NotifyContent.html), 主要包含:
 - ``NotifyContent.BleLink``
     - 连接状态
     - 被操作的设备
@@ -241,16 +266,43 @@ public enum NotifyType {
 - ``NotifyContent.BleSearch`` (暂未使用)
 
 对于示例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [NotifyContent](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/NotifyContent.html "详细了解")
+- 详细请点击 [NotifyContent](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/models/NotifyContent.html "详细了解")
+
+
+```java 
+// 以 接收数据为例. 首先创建 监听接收接口:
+
+NotifyInterface _ni = new NotifyInterface() {
+    @Override
+    public NotifyType getType() {
+        // 想要接收的数据类型
+        return NotifyType.deviceData;
+    }
+
+    @Override
+    public void message(NotifyResp data) {
+        NotifyResp.BleNotifyData data = (NotifyResp.BleNotifyData) data.data;
+        HashMap _m = (HashMap) data.data;
+        String text = String.format("%s\n start============\n  原始: %s\n  指令类型:%s \n  指令可视化数据:%s\nend================\n", binding.sendData.getText(),Arrays.toString(data.raw),data.step.name(), _m==null ? "" : _m.toString());
+        Logs.print(text);
+        new Handler(Looper.getMainLooper()).post(new Runnable() {
+            @Override
+            public void run() {
+                // 更新操作
+            }
+        });
+    }
+};
+
+```
 
 
 
 
-
-### 蓝牙相关操作
+### 设备控制相关操作
 蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送信息
 ```java
-// 搜索蓝牙
+// 搜索设备
 Yasee.getSingle().scan();
 
 // 连接设备
@@ -259,7 +311,7 @@ Yasee.getSingle().scan();
 // 通过 mac 地址和 设备名称连接一个位置设备
 // 主要是在 设备已经缓存了设备信息在本地时使用, 如 重连、缓存器拾取等
 // BleDevice(String mac, String model)
-BleDevice device = new BleDevice("MAC","Y917-005F");
+BleDevice device = new BleDevice("MAC",Avdadata);
 // 这里可以使用 空值判断来中断异常
 if (device == null) throw new IllegalArgumentException("获取设备失败");
 device.connect();
@@ -267,24 +319,26 @@ device.connect();
 // 断开设备
 (BleDevice) device.disconnect();
 
-//获取 设备 支持的 检测项列表
-List<Check> Products.supportChecks((BleDevice) device);
+// 获取 设备 支持的 检测项列表
+List<Check> checks = Products.supportChecks((BleDevice) device);
 
-//获取 检测项 支持的 指令 (暂无)
+// 获取 检测项 支持的 指令 (暂无)
+List<Cmd> cmds = checks.get(0).getCmds();
 
+// 发送 控制命令 (测量、停止、 获取Code 等等 )
+(BleDevice) device.send(ccs.get(0).handwareCode,cs.get(0).id,null); 
 
-// 收发 与 外设的 双向指令
-(BleDevice) device.send(); // 发送 接收使用 Notify 通知
+// 发送 接收使用 Notify 通知
 
 ```
 对于示例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [BleDevice](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/BleDevice.html "详细了解")
-- 详细请点击 [Check](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/models/Check.html "详细了解")
-- 详细请点击 [Products](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/tools/Products.html "详细了解")
+- 详细请点击 [BleDevice](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/ble/BleDevice.html "详细了解")
+- 详细请点击 [Check](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/models/Check.html "详细了解")
+- 详细请点击 [Products](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/tools/Products.html "详细了解")
 
 
 ### 设置默认的绑定列表
-Yasee SDK 支持 初始化绑定列表,并根据初始化的设备列表进行[自动连接操作](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/core/configs/BleConfig.html#reconnect);首先我们需要获取一个``List<BleDecive>``对象;
+Yasee SDK 支持 初始化绑定列表,并根据初始化的设备列表进行[自动连接操作](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/configs/BleConfig.html#reconnect);首先我们需要获取一个``List<BleDecive>``对象;
 :::warning
 自动连接功能取决于初始化设备的设置,由BleConfig中的reconnect字段控制,如果需要设置自动连接,需要配置此属性,默认情况不支持自动连接!!
 :::
@@ -305,7 +359,7 @@ single.initDevices(List<BleDevice>);
 
 ```
 对于示例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [Devices](https://henrygaogh.github.io/yasee-doc.io/com/yasee/yasee/ble/Devices.html "详细了解")
+- 详细请点击 [Devices](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/ble/Devices.html "详细了解")
 
 
 

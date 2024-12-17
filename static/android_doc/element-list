@@ -1,0 +1,13 @@
+com.yasee.yasee
+com.yasee.yasee.ble
+com.yasee.yasee.core.abstracts
+com.yasee.yasee.core.configs
+com.yasee.yasee.core.enums
+com.yasee.yasee.core.interfaces
+com.yasee.yasee.core.models
+com.yasee.yasee.core.receivers
+com.yasee.yasee.core.tools
+com.yasee.yasee.protocols.hlw
+com.yasee.yasee.protocols.tmd
+com.yasee.yasee.protocols.welland
+com.yasee.yasee.protocols.yucheng
