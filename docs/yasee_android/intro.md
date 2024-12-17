@@ -310,8 +310,8 @@ Yasee.getSingle().scan();
 
 // 通过 mac 地址和 设备名称连接一个位置设备
 // 主要是在 设备已经缓存了设备信息在本地时使用, 如 重连、缓存器拾取等
-// BleDevice(String mac, String model)
-BleDevice device = new BleDevice("MAC",Avdadata);
+// BleDevice(String mac, AdvertisementData Avdadata)
+BleDevice device = new BleDevice("MAC",AdvertisementData);
 // 这里可以使用 空值判断来中断异常
 if (device == null) throw new IllegalArgumentException("获取设备失败");
 device.connect();
