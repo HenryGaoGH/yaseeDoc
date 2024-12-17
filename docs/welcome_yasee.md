@@ -122,7 +122,7 @@ Yasee SDK 提供了广泛的设备支持和检测功能，涵盖多个健康监�
     - 如果您是 iOS 平台集成, 可以在此处查看Demo演示了解功能支持情况[iOS Demo演示](yasee_ios/demo.md), \
     如果您是技术人员也可以查阅 **[iOS 完整 Api 文档](https://doc.yasee.com.cn/ios_doc/documentation/yasee_ios "Api 文档")**
     - 如果您是 Android 平台集成, 可以在此处查看Demo演示了解功能支持情况[Android Demo演示](yasee_android/demo_word.md), \
-    如果您是技术人员也可以查阅 **[Android 完整Api文档](https://henrygaogh.github.io/yasee-doc.io/)** 
+    如果您是技术人员也可以查阅 **[Android 完整Api文档](https://doc.yasee.com.cn/android_doc/index.html)** 
     - 如果您是 Flutter 平台集成, 可以在此处查看Demo演示了解功能支持情况[Flutter Demo演示](yasee_flutter/demo.md), \
     如果您是技术人员也可以查阅 **[Yasee Flutter Plugin Api文档](https://doc.yasee.com.cn/flutter_doc/)**
 3. 熟悉 Yasee 接口设计理念 以及 Api使用方式
