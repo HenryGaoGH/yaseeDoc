@@ -252,7 +252,7 @@ public enum NotifyType {
 }
 ```
 可以通过 消息通知的类型,来区分数据的类型是什么, 并且使用什么类型的数据来接收数据类型
-[数据类型](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/models/NotifyContent.html), 主要包含:
+[数据类型](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/models/NotifyResp.BleNotifyData.html), 主要包含:
 - ``NotifyContent.BleLink``
     - 连接状态
     - 被操作的设备
@@ -266,7 +266,7 @@ public enum NotifyType {
 - ``NotifyContent.BleSearch`` (暂未使用)
 
 对于示例中的模型,如有理解歧义,可查看详细的注释说明:
-- 详细请点击 [NotifyContent](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/models/NotifyContent.html "详细了解")
+- 详细请点击 [NotifyContent](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/models/NotifyResp.BleNotifyData.html "详细了解")
 
 
 ```java 
