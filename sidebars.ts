@@ -108,7 +108,8 @@ const sidebars: SidebarsConfig = {
       label: '项目',
       items: [
         'inner/pms/pm_24_10',
-        'inner/pms/pm_24_11'
+        'inner/pms/pm_24_11',
+        'inner/pms/pm_24_12',
       ],
     },
   ],
