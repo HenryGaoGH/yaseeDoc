@@ -112,6 +112,13 @@ const sidebars: SidebarsConfig = {
         'inner/pms/pm_24_12',
       ],
     },
+    {
+      type: 'category',
+      label: '协议',
+      items: [
+        'inner/protocols/protocol_ble',
+      ],
+    },
   ],
 };
 
