@@ -101,7 +101,7 @@ const sidebars: SidebarsConfig = {
         'inner/reports/report_battery_pullout',
         'inner/reports/replace_merge_bhy',
         'inner/reports/report_ios_ble_reconnect',
-        // 'inner/reports/report_serial',
+        'inner/reports/report_serial',
         
       ],
     },
