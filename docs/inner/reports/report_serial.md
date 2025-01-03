@@ -63,3 +63,8 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 3. 检测项测试(血糖、尿酸、血酮); 是否完整支持
 4. 流程完备性测试 (错误、返回值、等)
 
+
+
+## Demo 工程下载
+
+[Android Demo Apk下载](/files/yasee.apk)
