@@ -94,7 +94,9 @@ loadScripts(document, 'script');</script>
      /// 设备连接状态
      case deviceLink
      /// 设备传输数据
-     case deviceData</div>
+     case deviceData
+      /// 测量历史数据
+     case testHistory</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,7 +125,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><code><a href="#deviceData" class="member-name-link">deviceData</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">设备数据内容 Notify</div>
+<div class="block">设备数据内容 Notify (检测过程)</div>
 </div>
 <div class="col-first odd-row-color"><code><a href="#deviceLink" class="member-name-link">deviceLink</a></code></div>
 <div class="col-last odd-row-color">
@@ -132,6 +134,10 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color"><code><a href="#searchDevices" class="member-name-link">searchDevices</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">设备搜索列表</div>
+</div>
+<div class="col-first odd-row-color"><code><a href="#testHistory" class="member-name-link">testHistory</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">历史数据 (测量历史数据)</div>
 </div>
 </div>
 </section>
@@ -209,7 +215,14 @@ the order they are declared.</div>
 <section class="detail" id="deviceData">
 <h3>deviceData</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="NotifyType.html" title="enum class in com.yasee.yasee.core.enums">NotifyType</a></span>&nbsp;<span class="element-name">deviceData</span></div>
-<div class="block">设备数据内容 Notify</div>
+<div class="block">设备数据内容 Notify (检测过程)</div>
+</section>
+</li>
+<li>
+<section class="detail" id="testHistory">
+<h3>testHistory</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="NotifyType.html" title="enum class in com.yasee.yasee.core.enums">NotifyType</a></span>&nbsp;<span class="element-name">testHistory</span></div>
+<div class="block">历史数据 (测量历史数据)</div>
 </section>
 </li>
 </ul>
