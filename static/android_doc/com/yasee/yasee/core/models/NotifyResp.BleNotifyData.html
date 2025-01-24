@@ -15,7 +15,11 @@
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
-<script type="text/javascript">var pathtoroot = "../../../../../";
+<script type="text/javascript">var evenRowColor = "even-row-color";
+var oddRowColor = "odd-row-color";
+var tableTab = "table-tab";
+var activeTableTab = "active-table-tab";
+var pathtoroot = "../../../../../";
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -48,7 +52,7 @@ loadScripts(document, 'script');</script>
 <li>Detail:&nbsp;</li>
 <li><a href="#field-detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
-<li>Method</li>
+<li><a href="#method-detail">Method</a></li>
 </ul>
 </div>
 <div class="nav-list-search"><label for="search-input">SEARCH:</label>
@@ -64,10 +68,10 @@ loadScripts(document, 'script');</script>
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.yasee.yasee.core.models</a></div>
-<h1 title="Class NotifyResp.BleNotifyData" class="title">Class NotifyResp.BleNotifyData</h1>
+<h1 title="Class NotifyResp.BleNotifyData" class="title">Class NotifyResp.BleNotifyData&lt;T extends <a href="../abstracts/Device.html" title="class in com.yasee.yasee.core.abstracts">Device</a>,<wbr>D&gt;</h1>
 </div>
 <div class="inheritance" title="Inheritance Tree"><a href="https://developer.android.com/reference/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
-<div class="inheritance">com.yasee.yasee.core.models.NotifyResp.BleNotifyData</div>
+<div class="inheritance">com.yasee.yasee.core.models.NotifyResp.BleNotifyData&lt;T,<wbr>D&gt;</div>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
@@ -75,9 +79,9 @@ loadScripts(document, 'script');</script>
 <dd><a href="NotifyResp.html" title="class in com.yasee.yasee.core.models">NotifyResp</a>&lt;<a href="NotifyResp.html" title="type parameter in NotifyResp">T</a>&gt;</dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public static final class </span><span class="element-name type-name-label">NotifyResp.BleNotifyData</span>
+<div class="type-signature"><span class="modifiers">public static final class </span><span class="element-name type-name-label">NotifyResp.BleNotifyData&lt;T extends <a href="../abstracts/Device.html" title="class in com.yasee.yasee.core.abstracts">Device</a>,<wbr>D&gt;</span>
 <span class="extends-implements">extends <a href="https://developer.android.com/reference/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">交互数据类 <br/></div>
+<div class="block">交互数据类 (测量过程) <br/></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -90,12 +94,12 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>final <a href="https://developer.android.com/reference/java/util/HashMap.html" title="class or interface in java.util" class="external-link">HashMap</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
+<div class="col-first even-row-color"><code>final <a href="NotifyResp.BleNotifyData.html" title="type parameter in NotifyResp.BleNotifyData">D</a></code></div>
 <div class="col-second even-row-color"><code><a href="#data" class="member-name-link">data</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">解析数据对象</div>
 </div>
-<div class="col-first odd-row-color"><code>final <a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a></code></div>
+<div class="col-first odd-row-color"><code>final <a href="NotifyResp.BleNotifyData.html" title="type parameter in NotifyResp.BleNotifyData">T</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#device" class="member-name-link">device</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">交互使用的设备</div>
@@ -119,10 +123,10 @@ loadScripts(document, 'script');</script>
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(com.yasee.yasee.ble.BleDevice,byte%5B%5D,com.yasee.yasee.core.enums.CmdType,java.util.HashMap)" class="member-name-link">BleNotifyData</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(T,byte%5B%5D,com.yasee.yasee.core.enums.CmdType,D)" class="member-name-link">BleNotifyData</a><wbr>(<a href="NotifyResp.BleNotifyData.html" title="type parameter in NotifyResp.BleNotifyData">T</a>&nbsp;device,
  byte[]&nbsp;raw,
  <a href="../enums/CmdType.html" title="enum class in com.yasee.yasee.core.enums">CmdType</a>&nbsp;step,
- <a href="https://developer.android.com/reference/java/util/HashMap.html" title="class or interface in java.util" class="external-link">HashMap</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;clearData)</code></div>
+ <a href="NotifyResp.BleNotifyData.html" title="type parameter in NotifyResp.BleNotifyData">D</a>&nbsp;clearData)</code></div>
 <div class="col-last even-row-color">
 <div class="block">实例化交互数据类</div>
 </div>
@@ -133,6 +137,21 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
+<div id="method-summary-table">
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#dataToJson()" class="member-name-link">dataToJson</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">将数据转换为 json 字符串</div>
+</div>
+</div>
+</div>
+</div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://developer.android.com/reference/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://developer.android.com/reference/java/lang/Object.html#clone--" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#equals-java.lang.Object-" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#finalize--" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#getClass--" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#hashCode--" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#notify--" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#notifyAll--" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#toString--" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#wait--" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#wait-long-" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://developer.android.com/reference/java/lang/Object.html#wait-long-int-" title="class or interface in java.lang" class="external-link">wait</a></code></div>
@@ -150,7 +169,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="device">
 <h3>device</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a></span>&nbsp;<span class="element-name">device</span></div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="NotifyResp.BleNotifyData.html" title="type parameter in NotifyResp.BleNotifyData">T</a> extends <a href="../abstracts/Device.html" title="class in com.yasee.yasee.core.abstracts">Device</a></span>&nbsp;<span class="element-name">device</span></div>
 <div class="block">交互使用的设备</div>
 </section>
 </li>
@@ -170,7 +189,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="data">
 <h3>data</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/java/util/HashMap.html" title="class or interface in java.util" class="external-link">HashMap</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">data</span></div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="NotifyResp.BleNotifyData.html" title="type parameter in NotifyResp.BleNotifyData">D</a></span>&nbsp;<span class="element-name">data</span></div>
 <div class="block">解析数据对象</div>
 </section>
 </li>
@@ -183,12 +202,12 @@ loadScripts(document, 'script');</script>
 <h2>Constructor Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="&lt;init&gt;(com.yasee.yasee.ble.BleDevice,byte[],com.yasee.yasee.core.enums.CmdType,java.util.HashMap)">
-<h3>BleNotifyData</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BleNotifyData</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<section class="detail" id="&lt;init&gt;(T,byte[],com.yasee.yasee.core.enums.CmdType,D)">
+<h3 id="&lt;init&gt;(com.yasee.yasee.core.abstracts.Device,byte[],com.yasee.yasee.core.enums.CmdType,java.lang.Object)">BleNotifyData</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">BleNotifyData</span><wbr><span class="parameters">(<a href="NotifyResp.BleNotifyData.html" title="type parameter in NotifyResp.BleNotifyData">T</a>&nbsp;device,
  byte[]&nbsp;raw,
  <a href="../enums/CmdType.html" title="enum class in com.yasee.yasee.core.enums">CmdType</a>&nbsp;step,
- <a href="https://developer.android.com/reference/java/util/HashMap.html" title="class or interface in java.util" class="external-link">HashMap</a>&lt;<a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>,<wbr><a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;clearData)</span></div>
+ <a href="NotifyResp.BleNotifyData.html" title="type parameter in NotifyResp.BleNotifyData">D</a>&nbsp;clearData)</span></div>
 <div class="block">实例化交互数据类</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -196,6 +215,21 @@ loadScripts(document, 'script');</script>
 <dd><code>raw</code> - 真实的数据</dd>
 <dd><code>clearData</code> - 解析数据</dd>
 </dl>
+</section>
+</li>
+</ul>
+</section>
+</li>
+<!-- ============ METHOD DETAIL ========== -->
+<li>
+<section class="method-details" id="method-detail">
+<h2>Method Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="dataToJson()">
+<h3>dataToJson</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">dataToJson</span>()</div>
+<div class="block">将数据转换为 json 字符串</div>
 </section>
 </li>
 </ul>

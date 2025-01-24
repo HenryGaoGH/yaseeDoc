@@ -106,22 +106,25 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bytesToUtf8(byte%5B%5D)" class="member-name-link">bytesToUtf8</a><wbr>(byte[]&nbsp;bytes)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bytesToHex(byte%5B%5D)" class="member-name-link">bytesToHex</a><wbr>(byte[]&nbsp;bytes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getManufacturerSpecificString(byte%5B%5D)" class="member-name-link">getManufacturerSpecificString</a><wbr>(byte[]&nbsp;advertisementData)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#bytesToUtf8(byte%5B%5D)" class="member-name-link">bytesToUtf8</a><wbr>(byte[]&nbsp;bytes)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://developer.android.com/reference/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#highLow(byte,byte)" class="member-name-link">highLow</a><wbr>(byte&nbsp;high,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getManufacturerSpecificString(byte%5B%5D)" class="member-name-link">getManufacturerSpecificString</a><wbr>(byte[]&nbsp;advertisementData)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://developer.android.com/reference/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#highLow(byte,byte)" class="member-name-link">highLow</a><wbr>(byte&nbsp;high,
  byte&nbsp;low)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">高位 低位
  获取 值</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://developer.android.com/reference/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;byte[]&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#splitWithPrefix(byte%5B%5D,byte%5B%5D)" class="member-name-link">splitWithPrefix</a><wbr>(byte[]&nbsp;data,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://developer.android.com/reference/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;byte[]&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#splitWithPrefix(byte%5B%5D,byte%5B%5D)" class="member-name-link">splitWithPrefix</a><wbr>(byte[]&nbsp;data,
  byte[]&nbsp;delimiter)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -173,6 +176,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="bytesToUtf8(byte[])">
 <h3>bytesToUtf8</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">bytesToUtf8</span><wbr><span class="parameters">(byte[]&nbsp;bytes)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="bytesToHex(byte[])">
+<h3>bytesToHex</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://developer.android.com/reference/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">bytesToHex</span><wbr><span class="parameters">(byte[]&nbsp;bytes)</span></div>
 </section>
 </li>
 <li>

@@ -118,7 +118,7 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -129,68 +129,68 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">是不是使用 gatt hook功能</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onCharacteristicsDiscovered(com.yasee.yasee.ble.BleDevice,java.util.UUID,java.util.List)" class="member-name-link">onCharacteristicsDiscovered</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#onCharacteristicsDiscovered(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,java.util.List)" class="member-name-link">onCharacteristicsDiscovered</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;serviceUuid,
  <a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BleInterface.BleInterfaceCD.html" title="class in com.yasee.yasee.core.interfaces">BleInterface.BleInterfaceCD</a>&gt;&nbsp;characteristics)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">获取到服务内容 hook</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onCharacteristicUploadData(com.yasee.yasee.ble.BleDevice,java.util.UUID,java.util.UUID,byte%5B%5D)" class="member-name-link">onCharacteristicUploadData</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#onCharacteristicUploadData(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,java.util.UUID,byte%5B%5D)" class="member-name-link">onCharacteristicUploadData</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;serviceUuid,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;characteristicUuid,
  byte[]&nbsp;data)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">上载、通知、等等硬件过来的数据</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onCharacteristicWrite(com.yasee.yasee.ble.BleDevice,java.util.UUID,java.util.UUID,boolean)" class="member-name-link">onCharacteristicWrite</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#onCharacteristicWrite(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,java.util.UUID,boolean)" class="member-name-link">onCharacteristicWrite</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;serviceUuid,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;characteristicUuid,
  boolean&nbsp;success)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">写入是不是成功的hook</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onConnectionStateChange(com.yasee.yasee.ble.BleDevice,boolean)" class="member-name-link">onConnectionStateChange</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onConnectionStateChange(com.yasee.yasee.protocols.ble.BleDevice,boolean)" class="member-name-link">onConnectionStateChange</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  boolean&nbsp;connectState)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">哪一台设备 连接状态是什么</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onDescriptorWrite(com.yasee.yasee.ble.BleDevice,java.util.UUID,boolean)" class="member-name-link">onDescriptorWrite</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#onDescriptorWrite(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,boolean)" class="member-name-link">onDescriptorWrite</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;characteristicUuid,
  boolean&nbsp;success)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">配置项是不是生效</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onMtuChanged(com.yasee.yasee.ble.BleDevice,int,boolean)" class="member-name-link">onMtuChanged</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#onMtuChanged(com.yasee.yasee.protocols.ble.BleDevice,int,boolean)" class="member-name-link">onMtuChanged</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  int&nbsp;mtu,
  boolean&nbsp;success)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">配置MTU大小</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onServicesDiscovered(com.yasee.yasee.ble.BleDevice,java.util.List)" class="member-name-link">onServicesDiscovered</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#onServicesDiscovered(com.yasee.yasee.protocols.ble.BleDevice,java.util.List)" class="member-name-link">onServicesDiscovered</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;&nbsp;serviceUuids)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">获取到服务内容 hook</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onUpdateNotificationState(com.yasee.yasee.ble.BleDevice,java.util.UUID,java.util.UUID,boolean,boolean)" class="member-name-link">onUpdateNotificationState</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#onUpdateNotificationState(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,java.util.UUID,boolean,boolean)" class="member-name-link">onUpdateNotificationState</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;serviceUuid,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;characteristicUuid,
  boolean&nbsp;enable,
  boolean&nbsp;success)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">配置通知是不是OK</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#onUploadRssi(com.yasee.yasee.ble.BleDevice,int)" class="member-name-link">onUploadRssi</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#onUploadRssi(com.yasee.yasee.protocols.ble.BleDevice,int)" class="member-name-link">onUploadRssi</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  int&nbsp;rssi)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">上传rssi</div>
 </div>
 </div>
@@ -235,22 +235,24 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="onConnectionStateChange(com.yasee.yasee.ble.BleDevice,boolean)">
+<section class="detail" id="onConnectionStateChange(com.yasee.yasee.protocols.ble.BleDevice,boolean)">
 <h3>onConnectionStateChange</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onConnectionStateChange</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">onConnectionStateChange</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  boolean&nbsp;connectState)</span></div>
 <div class="block">哪一台设备 连接状态是什么</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>device</code> - the device</dd>
 <dd><code>connectState</code> - the connect state</dd>
+<dt>Returns:</dt>
+<dd>boolean 是否继续往下执行的判定逻辑</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="onServicesDiscovered(com.yasee.yasee.ble.BleDevice,java.util.List)">
+<section class="detail" id="onServicesDiscovered(com.yasee.yasee.protocols.ble.BleDevice,java.util.List)">
 <h3>onServicesDiscovered</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onServicesDiscovered</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onServicesDiscovered</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&gt;&nbsp;serviceUuids)</span></div>
 <div class="block">获取到服务内容 hook</div>
 <dl class="notes">
@@ -261,9 +263,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="onCharacteristicsDiscovered(com.yasee.yasee.ble.BleDevice,java.util.UUID,java.util.List)">
+<section class="detail" id="onCharacteristicsDiscovered(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,java.util.List)">
 <h3>onCharacteristicsDiscovered</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onCharacteristicsDiscovered</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onCharacteristicsDiscovered</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;serviceUuid,
  <a href="https://developer.android.com/reference/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BleInterface.BleInterfaceCD.html" title="class in com.yasee.yasee.core.interfaces">BleInterface.BleInterfaceCD</a>&gt;&nbsp;characteristics)</span></div>
 <div class="block">获取到服务内容 hook</div>
@@ -276,9 +278,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="onCharacteristicUploadData(com.yasee.yasee.ble.BleDevice,java.util.UUID,java.util.UUID,byte[])">
+<section class="detail" id="onCharacteristicUploadData(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,java.util.UUID,byte[])">
 <h3>onCharacteristicUploadData</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onCharacteristicUploadData</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onCharacteristicUploadData</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;serviceUuid,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;characteristicUuid,
  byte[]&nbsp;data)</span></div>
@@ -293,9 +295,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="onCharacteristicWrite(com.yasee.yasee.ble.BleDevice,java.util.UUID,java.util.UUID,boolean)">
+<section class="detail" id="onCharacteristicWrite(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,java.util.UUID,boolean)">
 <h3>onCharacteristicWrite</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onCharacteristicWrite</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onCharacteristicWrite</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;serviceUuid,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;characteristicUuid,
  boolean&nbsp;success)</span></div>
@@ -310,9 +312,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="onDescriptorWrite(com.yasee.yasee.ble.BleDevice,java.util.UUID,boolean)">
+<section class="detail" id="onDescriptorWrite(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,boolean)">
 <h3>onDescriptorWrite</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onDescriptorWrite</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onDescriptorWrite</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;characteristicUuid,
  boolean&nbsp;success)</span></div>
 <div class="block">配置项是不是生效</div>
@@ -325,9 +327,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="onUploadRssi(com.yasee.yasee.ble.BleDevice,int)">
+<section class="detail" id="onUploadRssi(com.yasee.yasee.protocols.ble.BleDevice,int)">
 <h3>onUploadRssi</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onUploadRssi</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onUploadRssi</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  int&nbsp;rssi)</span></div>
 <div class="block">上传rssi</div>
 <dl class="notes">
@@ -338,9 +340,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="onMtuChanged(com.yasee.yasee.ble.BleDevice,int,boolean)">
+<section class="detail" id="onMtuChanged(com.yasee.yasee.protocols.ble.BleDevice,int,boolean)">
 <h3>onMtuChanged</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onMtuChanged</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onMtuChanged</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  int&nbsp;mtu,
  boolean&nbsp;success)</span></div>
 <div class="block">配置MTU大小</div>
@@ -353,9 +355,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="onUpdateNotificationState(com.yasee.yasee.ble.BleDevice,java.util.UUID,java.util.UUID,boolean,boolean)">
+<section class="detail" id="onUpdateNotificationState(com.yasee.yasee.protocols.ble.BleDevice,java.util.UUID,java.util.UUID,boolean,boolean)">
 <h3>onUpdateNotificationState</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">onUpdateNotificationState</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">onUpdateNotificationState</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;serviceUuid,
  <a href="https://developer.android.com/reference/java/util/UUID.html" title="class or interface in java.util" class="external-link">UUID</a>&nbsp;characteristicUuid,
  boolean&nbsp;enable,

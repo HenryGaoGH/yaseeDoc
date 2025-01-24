@@ -51,7 +51,6 @@ loadScripts(document, 'script');</script>
 <span class="package-hierarchy-label">Package Hierarchies:</span>
 <ul class="horizontal">
 <li><a href="com/yasee/yasee/package-tree.html">com.yasee.yasee</a>, </li>
-<li><a href="com/yasee/yasee/ble/package-tree.html">com.yasee.yasee.ble</a>, </li>
 <li><a href="com/yasee/yasee/core/abstracts/package-tree.html">com.yasee.yasee.core.abstracts</a>, </li>
 <li><a href="com/yasee/yasee/core/configs/package-tree.html">com.yasee.yasee.core.configs</a>, </li>
 <li><a href="com/yasee/yasee/core/enums/package-tree.html">com.yasee.yasee.core.enums</a>, </li>
@@ -59,10 +58,15 @@ loadScripts(document, 'script');</script>
 <li><a href="com/yasee/yasee/core/models/package-tree.html">com.yasee.yasee.core.models</a>, </li>
 <li><a href="com/yasee/yasee/core/receivers/package-tree.html">com.yasee.yasee.core.receivers</a>, </li>
 <li><a href="com/yasee/yasee/core/tools/package-tree.html">com.yasee.yasee.core.tools</a>, </li>
-<li><a href="com/yasee/yasee/protocols/hlw/package-tree.html">com.yasee.yasee.protocols.hlw</a>, </li>
-<li><a href="com/yasee/yasee/protocols/tmd/package-tree.html">com.yasee.yasee.protocols.tmd</a>, </li>
-<li><a href="com/yasee/yasee/protocols/welland/package-tree.html">com.yasee.yasee.protocols.welland</a>, </li>
-<li><a href="com/yasee/yasee/protocols/yucheng/package-tree.html">com.yasee.yasee.protocols.yucheng</a></li>
+<li><a href="com/yasee/yasee/platforms/elva/package-tree.html">com.yasee.yasee.platforms.elva</a>, </li>
+<li><a href="com/yasee/yasee/platforms/hlw/package-tree.html">com.yasee.yasee.platforms.hlw</a>, </li>
+<li><a href="com/yasee/yasee/platforms/masschip/package-tree.html">com.yasee.yasee.platforms.masschip</a>, </li>
+<li><a href="com/yasee/yasee/platforms/tmd/package-tree.html">com.yasee.yasee.platforms.tmd</a>, </li>
+<li><a href="com/yasee/yasee/platforms/welland/package-tree.html">com.yasee.yasee.platforms.welland</a>, </li>
+<li><a href="com/yasee/yasee/platforms/yucheng/package-tree.html">com.yasee.yasee.platforms.yucheng</a>, </li>
+<li><a href="com/yasee/yasee/protocols/ble/package-tree.html">com.yasee.yasee.protocols.ble</a>, </li>
+<li><a href="com/yasee/yasee/protocols/serial/package-tree.html">com.yasee.yasee.protocols.serial</a>, </li>
+<li><a href="com/yasee/yasee/protocols/wifi/package-tree.html">com.yasee.yasee.protocols.wifi</a></li>
 </ul>
 </div>
 <section class="hierarchy">
@@ -71,9 +75,8 @@ loadScripts(document, 'script');</script>
 <li class="circle">java.lang.<a href="https://developer.android.com/reference/java/lang/Object.html" class="type-name-link external-link" title="class or interface in java.lang">Object</a>
 <ul>
 <li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/AdvertisementData.html" class="type-name-link" title="class in com.yasee.yasee.core.models">AdvertisementData</a> (implements java.io.<a href="https://developer.android.com/reference/java/io/Serializable.html" title="class or interface in java.io" class="external-link">Serializable</a>)</li>
-<li class="circle">com.yasee.yasee.ble.<a href="com/yasee/yasee/ble/Ble.html" class="type-name-link" title="class in com.yasee.yasee.ble">Ble</a></li>
+<li class="circle">com.yasee.yasee.protocols.ble.<a href="com/yasee/yasee/protocols/ble/Ble.html" class="type-name-link" title="class in com.yasee.yasee.protocols.ble">Ble</a></li>
 <li class="circle">com.yasee.yasee.core.configs.<a href="com/yasee/yasee/core/configs/BleConfig.html" class="type-name-link" title="class in com.yasee.yasee.core.configs">BleConfig</a></li>
-<li class="circle">com.yasee.yasee.ble.<a href="com/yasee/yasee/ble/BleDevice.html" class="type-name-link" title="class in com.yasee.yasee.ble">BleDevice</a></li>
 <li class="circle">com.yasee.yasee.core.interfaces.<a href="com/yasee/yasee/core/interfaces/BleInterface.BleInterfaceCD.html" class="type-name-link" title="class in com.yasee.yasee.core.interfaces">BleInterface.BleInterfaceCD</a></li>
 <li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/BleService.html" class="type-name-link" title="class in com.yasee.yasee.core.models">BleService</a></li>
 <li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/BleService.BleCharacteristic.html" class="type-name-link" title="class in com.yasee.yasee.core.models">BleService.BleCharacteristic</a></li>
@@ -86,47 +89,78 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/Check.html" class="type-name-link" title="class in com.yasee.yasee.core.models">Check</a></li>
 <li class="circle">com.yasee.yasee.core.abstracts.<a href="com/yasee/yasee/core/abstracts/CheckSign.html" class="type-name-link" title="class in com.yasee.yasee.core.abstracts">CheckSign</a>
 <ul>
-<li class="circle">com.yasee.yasee.protocols.tmd.<a href="com/yasee/yasee/protocols/tmd/CheckSignTMD.html" class="type-name-link" title="class in com.yasee.yasee.protocols.tmd">CheckSignTMD</a></li>
-<li class="circle">com.yasee.yasee.protocols.yucheng.<a href="com/yasee/yasee/protocols/yucheng/CheckSignYc.html" class="type-name-link" title="class in com.yasee.yasee.protocols.yucheng">CheckSignYc</a></li>
+<li class="circle">com.yasee.yasee.platforms.tmd.<a href="com/yasee/yasee/platforms/tmd/CheckSignTMD.html" class="type-name-link" title="class in com.yasee.yasee.platforms.tmd">CheckSignTMD</a></li>
 </ul>
 </li>
 <li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/Cmd.html" class="type-name-link" title="class in com.yasee.yasee.core.models">Cmd</a></li>
-<li class="circle">com.yasee.yasee.protocols.yucheng.<a href="com/yasee/yasee/protocols/yucheng/CmdsYc.html" class="type-name-link" title="class in com.yasee.yasee.protocols.yucheng">CmdsYc</a></li>
-<li class="circle">com.yasee.yasee.core.abstracts.<a href="com/yasee/yasee/core/abstracts/DecodeCmd.html" class="type-name-link" title="class in com.yasee.yasee.core.abstracts">DecodeCmd</a>
+<li class="circle">com.yasee.yasee.platforms.yucheng.<a href="com/yasee/yasee/platforms/yucheng/CmdsYc.html" class="type-name-link" title="class in com.yasee.yasee.platforms.yucheng">CmdsYc</a></li>
+<li class="circle">android.content.<a href="https://developer.android.com/reference/android/content/Context.html" class="type-name-link external-link" title="class or interface in android.content">Context</a>
 <ul>
-<li class="circle">com.yasee.yasee.protocols.hlw.<a href="com/yasee/yasee/protocols/hlw/DecodeHlw.html" class="type-name-link" title="class in com.yasee.yasee.protocols.hlw">DecodeHlw</a> (implements com.yyh.sdk.ecg.biz.DynamicEcgCallback, com.yyh.sdk.ecg.biz.StaticEcgCallback)</li>
-<li class="circle">com.yasee.yasee.protocols.tmd.<a href="com/yasee/yasee/protocols/tmd/DecodeTmd.html" class="type-name-link" title="class in com.yasee.yasee.protocols.tmd">DecodeTmd</a></li>
-<li class="circle">com.yasee.yasee.protocols.welland.<a href="com/yasee/yasee/protocols/welland/DecodeWl.html" class="type-name-link" title="class in com.yasee.yasee.protocols.welland">DecodeWl</a></li>
-<li class="circle">com.yasee.yasee.protocols.yucheng.<a href="com/yasee/yasee/protocols/yucheng/DecodeYc.html" class="type-name-link" title="class in com.yasee.yasee.protocols.yucheng">DecodeYc</a></li>
+<li class="circle">android.content.<a href="https://developer.android.com/reference/android/content/ContextWrapper.html" class="type-name-link external-link" title="class or interface in android.content">ContextWrapper</a>
+<ul>
+<li class="circle">android.view.<a href="https://developer.android.com/reference/android/view/ContextThemeWrapper.html" class="type-name-link external-link" title="class or interface in android.view">ContextThemeWrapper</a>
+<ul>
+<li class="circle">android.app.<a href="https://developer.android.com/reference/android/app/Activity.html" class="type-name-link external-link" title="class or interface in android.app">Activity</a> (implements android.content.<a href="https://developer.android.com/reference/android/content/ComponentCallbacks2.html" title="class or interface in android.content" class="external-link">ComponentCallbacks2</a>, android.view.<a href="https://developer.android.com/reference/android/view/KeyEvent.Callback.html" title="class or interface in android.view" class="external-link">KeyEvent.Callback</a>, android.view.<a href="https://developer.android.com/reference/android/view/LayoutInflater.Factory2.html" title="class or interface in android.view" class="external-link">LayoutInflater.Factory2</a>, android.view.<a href="https://developer.android.com/reference/android/view/View.OnCreateContextMenuListener.html" title="class or interface in android.view" class="external-link">View.OnCreateContextMenuListener</a>, android.view.<a href="https://developer.android.com/reference/android/view/Window.Callback.html" title="class or interface in android.view" class="external-link">Window.Callback</a>)
+<ul>
+<li class="circle">com.yasee.yasee.core.abstracts.<a href="com/yasee/yasee/core/abstracts/AbstractsSerialActivity.html" class="type-name-link" title="class in com.yasee.yasee.core.abstracts">AbstractsSerialActivity</a></li>
 </ul>
 </li>
-<li class="circle">com.yasee.yasee.ble.<a href="com/yasee/yasee/ble/Devices.html" class="type-name-link" title="class in com.yasee.yasee.ble">Devices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="circle">com.yasee.yasee.core.tools.<a href="com/yasee/yasee/core/tools/Debounce.html" class="type-name-link" title="class in com.yasee.yasee.core.tools">Debounce</a></li>
+<li class="circle">com.yasee.yasee.core.abstracts.<a href="com/yasee/yasee/core/abstracts/DecodeCmd.html" class="type-name-link" title="class in com.yasee.yasee.core.abstracts">DecodeCmd</a>
+<ul>
+<li class="circle">com.yasee.yasee.platforms.hlw.<a href="com/yasee/yasee/platforms/hlw/DecodeHlw.html" class="type-name-link" title="class in com.yasee.yasee.platforms.hlw">DecodeHlw</a> (implements com.yyh.sdk.ecg.biz.DynamicEcgCallback, com.yyh.sdk.ecg.biz.StaticEcgCallback)</li>
+<li class="circle">com.yasee.yasee.platforms.tmd.<a href="com/yasee/yasee/platforms/tmd/DecodeTmd.html" class="type-name-link" title="class in com.yasee.yasee.platforms.tmd">DecodeTmd</a></li>
+<li class="circle">com.yasee.yasee.platforms.welland.<a href="com/yasee/yasee/platforms/welland/DecodeWl.html" class="type-name-link" title="class in com.yasee.yasee.platforms.welland">DecodeWl</a></li>
+</ul>
+</li>
+<li class="circle">com.yasee.yasee.platforms.yucheng.<a href="com/yasee/yasee/platforms/yucheng/DecodeYc.html" class="type-name-link" title="class in com.yasee.yasee.platforms.yucheng">DecodeYc</a> (implements com.yucheng.ycbtsdk.response.BleAIDiagnosisResponse, com.yucheng.ycbtsdk.response.BleDataResponse, com.yucheng.ycbtsdk.response.BleRealDataResponse, com.yucheng.ycbtsdk.response.BleRealECGResponse)</li>
+<li class="circle">com.yasee.yasee.core.abstracts.<a href="com/yasee/yasee/core/abstracts/Device.html" class="type-name-link" title="class in com.yasee.yasee.core.abstracts">Device</a>
+<ul>
+<li class="circle">com.yasee.yasee.protocols.ble.<a href="com/yasee/yasee/protocols/ble/BleDevice.html" class="type-name-link" title="class in com.yasee.yasee.protocols.ble">BleDevice</a></li>
+<li class="circle">com.yasee.yasee.protocols.serial.<a href="com/yasee/yasee/protocols/serial/SerialDevice.html" class="type-name-link" title="class in com.yasee.yasee.protocols.serial">SerialDevice</a></li>
+<li class="circle">com.yasee.yasee.protocols.wifi.<a href="com/yasee/yasee/protocols/wifi/WifiDevice.html" class="type-name-link" title="class in com.yasee.yasee.protocols.wifi">WifiDevice</a></li>
+</ul>
+</li>
+<li class="circle">com.yasee.yasee.protocols.ble.<a href="com/yasee/yasee/protocols/ble/Devices.html" class="type-name-link" title="class in com.yasee.yasee.protocols.ble">Devices</a></li>
 <li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/ErrorObj.html" class="type-name-link" title="class in com.yasee.yasee.core.models">ErrorObj</a></li>
-<li class="circle">com.yasee.yasee.protocols.yucheng.<a href="com/yasee/yasee/protocols/yucheng/ErrorYc.html" class="type-name-link" title="class in com.yasee.yasee.protocols.yucheng">ErrorYc</a></li>
+<li class="circle">com.yasee.yasee.core.tools.<a href="com/yasee/yasee/core/tools/GenericsTool.html" class="type-name-link" title="class in com.yasee.yasee.core.tools">GenericsTool</a></li>
 <li class="circle">cn.icomon.icdevicemanager.ICBluetoothSystem
 <ul>
-<li class="circle">com.yasee.yasee.protocols.welland.<a href="com/yasee/yasee/protocols/welland/ICBleBridge.html" class="type-name-link" title="class in com.yasee.yasee.protocols.welland">ICBleBridge</a> (implements cn.icomon.icdevicemanager.ICDeviceManagerDelegate)</li>
+<li class="circle">com.yasee.yasee.platforms.welland.<a href="com/yasee/yasee/platforms/welland/ICBleBridge.html" class="type-name-link" title="class in com.yasee.yasee.platforms.welland">ICBleBridge</a> (implements cn.icomon.icdevicemanager.ICDeviceManagerDelegate)</li>
 </ul>
 </li>
 <li class="circle">com.yasee.yasee.core.tools.<a href="com/yasee/yasee/core/tools/Logs.html" class="type-name-link" title="class in com.yasee.yasee.core.tools">Logs</a></li>
 <li class="circle">com.yasee.yasee.<a href="com/yasee/yasee/Notify.html" class="type-name-link" title="class in com.yasee.yasee">Notify</a></li>
 <li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/NotifyResp.html" class="type-name-link" title="class in com.yasee.yasee.core.models">NotifyResp</a>&lt;T&gt;</li>
+<li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/NotifyResp.BleHistoryData.html" class="type-name-link" title="class in com.yasee.yasee.core.models">NotifyResp.BleHistoryData</a>&lt;T&gt;</li>
 <li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/NotifyResp.BleLink.html" class="type-name-link" title="class in com.yasee.yasee.core.models">NotifyResp.BleLink</a></li>
-<li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/NotifyResp.BleNotifyData.html" class="type-name-link" title="class in com.yasee.yasee.core.models">NotifyResp.BleNotifyData</a></li>
+<li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/NotifyResp.BleNotifyData.html" class="type-name-link" title="class in com.yasee.yasee.core.models">NotifyResp.BleNotifyData</a>&lt;T,<wbr>D&gt;</li>
+<li class="circle">com.yasee.yasee.core.models.<a href="com/yasee/yasee/core/models/ParmsModel.html" class="type-name-link" title="class in com.yasee.yasee.core.models">ParmsModel</a></li>
 <li class="circle">com.yasee.yasee.core.tools.<a href="com/yasee/yasee/core/tools/PermissionTool.html" class="type-name-link" title="class in com.yasee.yasee.core.tools">PermissionTool</a></li>
+<li class="circle">com.yasee.yasee.platforms.masschip.<a href="com/yasee/yasee/platforms/masschip/PlatformMasschip.html" class="type-name-link" title="class in com.yasee.yasee.platforms.masschip">PlatformMasschip</a></li>
 <li class="circle">com.yasee.yasee.core.abstracts.<a href="com/yasee/yasee/core/abstracts/Platforms.html" class="type-name-link" title="class in com.yasee.yasee.core.abstracts">Platforms</a>
 <ul>
-<li class="circle">com.yasee.yasee.protocols.hlw.<a href="com/yasee/yasee/protocols/hlw/PlatformHlw.html" class="type-name-link" title="class in com.yasee.yasee.protocols.hlw">PlatformHlw</a></li>
-<li class="circle">com.yasee.yasee.protocols.tmd.<a href="com/yasee/yasee/protocols/tmd/PlatformTmd.html" class="type-name-link" title="class in com.yasee.yasee.protocols.tmd">PlatformTmd</a></li>
-<li class="circle">com.yasee.yasee.protocols.welland.<a href="com/yasee/yasee/protocols/welland/PlatformWl.html" class="type-name-link" title="class in com.yasee.yasee.protocols.welland">PlatformWl</a></li>
-<li class="circle">com.yasee.yasee.protocols.yucheng.<a href="com/yasee/yasee/protocols/yucheng/PlatformYc.html" class="type-name-link" title="class in com.yasee.yasee.protocols.yucheng">PlatformYc</a></li>
+<li class="circle">com.yasee.yasee.platforms.elva.<a href="com/yasee/yasee/platforms/elva/PlatformElva.html" class="type-name-link" title="class in com.yasee.yasee.platforms.elva">PlatformElva</a></li>
+<li class="circle">com.yasee.yasee.platforms.hlw.<a href="com/yasee/yasee/platforms/hlw/PlatformHlw.html" class="type-name-link" title="class in com.yasee.yasee.platforms.hlw">PlatformHlw</a></li>
+<li class="circle">com.yasee.yasee.platforms.tmd.<a href="com/yasee/yasee/platforms/tmd/PlatformTmd.html" class="type-name-link" title="class in com.yasee.yasee.platforms.tmd">PlatformTmd</a></li>
+<li class="circle">com.yasee.yasee.platforms.welland.<a href="com/yasee/yasee/platforms/welland/PlatformWl.html" class="type-name-link" title="class in com.yasee.yasee.platforms.welland">PlatformWl</a></li>
+<li class="circle">com.yasee.yasee.platforms.yucheng.<a href="com/yasee/yasee/platforms/yucheng/PlatformYc.html" class="type-name-link" title="class in com.yasee.yasee.platforms.yucheng">PlatformYc</a> (implements com.yucheng.ycbtsdk.support.core.SupportSender)</li>
 </ul>
 </li>
 <li class="circle">com.yasee.yasee.core.tools.<a href="com/yasee/yasee/core/tools/Products.html" class="type-name-link" title="class in com.yasee.yasee.core.tools">Products</a></li>
+<li class="circle">com.yasee.yasee.core.configs.<a href="com/yasee/yasee/core/configs/SerialConfig.html" class="type-name-link" title="class in com.yasee.yasee.core.configs">SerialConfig</a></li>
+<li class="circle">com.yasee.yasee.protocols.serial.<a href="com/yasee/yasee/protocols/serial/SerialTool.html" class="type-name-link" title="class in com.yasee.yasee.protocols.serial">SerialTool</a></li>
 <li class="circle">com.yasee.yasee.core.abstracts.<a href="com/yasee/yasee/core/abstracts/ServiceUdid.html" class="type-name-link" title="class in com.yasee.yasee.core.abstracts">ServiceUdid</a> (implements com.yasee.yasee.core.interfaces.<a href="com/yasee/yasee/core/interfaces/Iterator.html" title="interface in com.yasee.yasee.core.interfaces">Iterator</a>&lt;T&gt;)
 <ul>
-<li class="circle">com.yasee.yasee.protocols.hlw.<a href="com/yasee/yasee/protocols/hlw/ServiceHlw.html" class="type-name-link" title="class in com.yasee.yasee.protocols.hlw">ServiceHlw</a></li>
-<li class="circle">com.yasee.yasee.protocols.yucheng.<a href="com/yasee/yasee/protocols/yucheng/ServiceYc.html" class="type-name-link" title="class in com.yasee.yasee.protocols.yucheng">ServiceYc</a></li>
+<li class="circle">com.yasee.yasee.platforms.elva.<a href="com/yasee/yasee/platforms/elva/ServiceElva.html" class="type-name-link" title="class in com.yasee.yasee.platforms.elva">ServiceElva</a></li>
+<li class="circle">com.yasee.yasee.platforms.hlw.<a href="com/yasee/yasee/platforms/hlw/ServiceHlw.html" class="type-name-link" title="class in com.yasee.yasee.platforms.hlw">ServiceHlw</a></li>
+<li class="circle">com.yasee.yasee.platforms.yucheng.<a href="com/yasee/yasee/platforms/yucheng/ServiceYc.html" class="type-name-link" title="class in com.yasee.yasee.platforms.yucheng">ServiceYc</a></li>
 </ul>
 </li>
 <li class="circle">com.google.gson.TypeAdapter&lt;T&gt;
@@ -136,6 +170,7 @@ loadScripts(document, 'script');</script>
 </li>
 <li class="circle">com.yasee.yasee.core.configs.<a href="com/yasee/yasee/core/configs/User.html" class="type-name-link" title="class in com.yasee.yasee.core.configs">User</a></li>
 <li class="circle">com.yasee.yasee.<a href="com/yasee/yasee/Yasee.html" class="type-name-link" title="class in com.yasee.yasee">Yasee</a></li>
+<li class="circle">com.yasee.yasee.core.tools.<a href="com/yasee/yasee/core/tools/YLocalBroadcast.html" class="type-name-link" title="class in com.yasee.yasee.core.tools">YLocalBroadcast</a></li>
 </ul>
 </li>
 </ul>
@@ -163,6 +198,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.yasee.yasee.core.enums.<a href="com/yasee/yasee/core/enums/LocalCheckEnum.html" class="type-name-link" title="enum class in com.yasee.yasee.core.enums">LocalCheckEnum</a></li>
 <li class="circle">com.yasee.yasee.core.enums.<a href="com/yasee/yasee/core/enums/NotifyType.html" class="type-name-link" title="enum class in com.yasee.yasee.core.enums">NotifyType</a></li>
 <li class="circle">com.yasee.yasee.core.enums.<a href="com/yasee/yasee/core/enums/PlatformType.html" class="type-name-link" title="enum class in com.yasee.yasee.core.enums">PlatformType</a></li>
+<li class="circle">com.yasee.yasee.core.enums.<a href="com/yasee/yasee/core/enums/ProtocolType.html" class="type-name-link" title="enum class in com.yasee.yasee.core.enums">ProtocolType</a></li>
 </ul>
 </li>
 </ul>

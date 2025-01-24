@@ -76,7 +76,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="../../protocols/hlw/PlatformHlw.html" title="class in com.yasee.yasee.protocols.hlw">PlatformHlw</a></code>, <code><a href="../../protocols/tmd/PlatformTmd.html" title="class in com.yasee.yasee.protocols.tmd">PlatformTmd</a></code>, <code><a href="../../protocols/welland/PlatformWl.html" title="class in com.yasee.yasee.protocols.welland">PlatformWl</a></code>, <code><a href="../../protocols/yucheng/PlatformYc.html" title="class in com.yasee.yasee.protocols.yucheng">PlatformYc</a></code></dd>
+<dd><code><a href="../../platforms/elva/PlatformElva.html" title="class in com.yasee.yasee.platforms.elva">PlatformElva</a></code>, <code><a href="../../platforms/hlw/PlatformHlw.html" title="class in com.yasee.yasee.platforms.hlw">PlatformHlw</a></code>, <code><a href="../../platforms/tmd/PlatformTmd.html" title="class in com.yasee.yasee.platforms.tmd">PlatformTmd</a></code>, <code><a href="../../platforms/welland/PlatformWl.html" title="class in com.yasee.yasee.platforms.welland">PlatformWl</a></code>, <code><a href="../../platforms/yucheng/PlatformYc.html" title="class in com.yasee.yasee.platforms.yucheng">PlatformYc</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Platforms</span>
@@ -94,7 +94,7 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code><a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a></code></div>
+<div class="col-first even-row-color"><code><a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a></code></div>
 <div class="col-second even-row-color"><code><a href="#linkDevice" class="member-name-link">linkDevice</a></code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
@@ -135,13 +135,14 @@ loadScripts(document, 'script');</script>
 <div class="block">平台校验方式</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="DecodeCmd.html" title="class in com.yasee.yasee.core.abstracts">DecodeCmd</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDecodeCmd(com.yasee.yasee.ble.BleDevice,byte%5B%5D)" class="member-name-link">getDecodeCmd</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDecodeCmd(com.yasee.yasee.protocols.ble.BleDevice,android.bluetooth.BluetoothGattCharacteristic,byte%5B%5D)" class="member-name-link">getDecodeCmd</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
+ <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic.html" title="class or interface in android.bluetooth" class="external-link">BluetoothGattCharacteristic</a>&nbsp;characteristic,
  byte[]&nbsp;raws)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">平台指令解析对象</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Platforms.html" title="class in com.yasee.yasee.core.abstracts">Platforms</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getPlatform(com.yasee.yasee.ble.BleDevice)" class="member-name-link">getPlatform</a><wbr>(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getPlatform(com.yasee.yasee.protocols.ble.BleDevice)" class="member-name-link">getPlatform</a><wbr>(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">获取平台</div>
 </div>
@@ -174,7 +175,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="linkDevice">
 <h3>linkDevice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a></span>&nbsp;<span class="element-name">linkDevice</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a></span>&nbsp;<span class="element-name">linkDevice</span></div>
 </section>
 </li>
 </ul>
@@ -200,9 +201,9 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getPlatform(com.yasee.yasee.ble.BleDevice)">
+<section class="detail" id="getPlatform(com.yasee.yasee.protocols.ble.BleDevice)">
 <h3>getPlatform</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Platforms.html" title="class in com.yasee.yasee.core.abstracts">Platforms</a></span>&nbsp;<span class="element-name">getPlatform</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="Platforms.html" title="class in com.yasee.yasee.core.abstracts">Platforms</a></span>&nbsp;<span class="element-name">getPlatform</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device)</span></div>
 <div class="block">获取平台</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -242,9 +243,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="getDecodeCmd(com.yasee.yasee.ble.BleDevice,byte[])">
+<section class="detail" id="getDecodeCmd(com.yasee.yasee.protocols.ble.BleDevice,android.bluetooth.BluetoothGattCharacteristic,byte[])">
 <h3>getDecodeCmd</h3>
-<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="DecodeCmd.html" title="class in com.yasee.yasee.core.abstracts">DecodeCmd</a></span>&nbsp;<span class="element-name">getDecodeCmd</span><wbr><span class="parameters">(<a href="../../ble/BleDevice.html" title="class in com.yasee.yasee.ble">BleDevice</a>&nbsp;device,
+<div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="DecodeCmd.html" title="class in com.yasee.yasee.core.abstracts">DecodeCmd</a></span>&nbsp;<span class="element-name">getDecodeCmd</span><wbr><span class="parameters">(<a href="../../protocols/ble/BleDevice.html" title="class in com.yasee.yasee.protocols.ble">BleDevice</a>&nbsp;device,
+ <a href="https://developer.android.com/reference/android/bluetooth/BluetoothGattCharacteristic.html" title="class or interface in android.bluetooth" class="external-link">BluetoothGattCharacteristic</a>&nbsp;characteristic,
  byte[]&nbsp;raws)</span></div>
 <div class="block">平台指令解析对象</div>
 <dl class="notes">

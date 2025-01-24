@@ -202,9 +202,10 @@ Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 
 ### 通知相关内容
 所有的有关Yasee SDK 的 通知 和 数据交互,都是通过 Notify来处理的,包含但未来不限于:
-- [x] 设备的绑定、解绑与搜索 (``NotifyType.device``)
-- [x] 设备的连接与断开 (``NotifyType.link``)
-- [x] 设备的通讯数据  (``NotifyType.data``)
+- [x] 设备的绑定、解绑与搜索 (``NotifyType.(searchDevices|bindDevices)``)
+- [x] 设备的连接与断开 (``NotifyType.deviceLink``)
+- [x] 设备的通讯数据  (``NotifyType.deviceData``)
+- [x] 设备的历史数据数据  (``NotifyType.testHistory``)
 
 首先我们需要了解的是通知的类型,只有了解了通知的类型才能更好的监听来自SDK的各类信息通知:
 ```java
@@ -221,6 +222,8 @@ Yasee.getSingle().currentUser = new User(1,20,0,178,75);
  *     case deviceLink
  *     /// 设备传输数据
  *     case deviceData
+ *     /// 设备历史数据
+ *     case testHistory
  */
 public enum NotifyType {
 
@@ -249,6 +252,11 @@ public enum NotifyType {
      * 设备数据内容 Notify
      */
     deviceData       // 设备数据内容 Notify
+
+    /**
+     * 设备历史数据内容 Notify
+     */
+    testHistory       // 设备数据内容 Notify
 }
 ```
 可以通过 消息通知的类型,来区分数据的类型是什么, 并且使用什么类型的数据来接收数据类型
@@ -275,7 +283,7 @@ public enum NotifyType {
 NotifyInterface _ni = new NotifyInterface() {
     @Override
     public NotifyType getType() {
-        // 想要接收的数据类型
+        // 想要接收的数据类型 (按照自己的需求来设置)
         return NotifyType.deviceData;
     }
 
@@ -322,7 +330,7 @@ device.connect();
 // 获取 设备 支持的 检测项列表
 List<Check> checks = Products.supportChecks((BleDevice) device);
 
-// 获取 检测项 支持的 指令 (暂无)
+// 获取 检测项 支持的 指令
 List<Cmd> cmds = checks.get(0).getCmds();
 
 // 发送 控制命令 (测量、停止、 获取Code 等等 )
@@ -340,7 +348,7 @@ List<Cmd> cmds = checks.get(0).getCmds();
 ### 设置默认的绑定列表
 Yasee SDK 支持 初始化绑定列表,并根据初始化的设备列表进行[自动连接操作](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/configs/BleConfig.html#reconnect);首先我们需要获取一个``List<BleDecive>``对象;
 :::warning
-自动连接功能取决于初始化设备的设置,由BleConfig中的reconnect字段控制,如果需要设置自动连接,需要配置此属性,默认情况不支持自动连接!!
+自动连接功能取决于初始化设备的设置,由BleConfig中的reconnect字段控制,如果需要设置自动连接,需要配置此属性,默认情况支持自动连接!!
 :::
 
 以下为设备初始化:
