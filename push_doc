@@ -1,7 +1,8 @@
 #!/bin/zsh
 
 
-read -p "Please input Choose with push Choice [1 - all, 2 - only inner, 3 - only github]:" choose
+echo "Please input Choose with push Choice [1 - all, 2 - only inner, 3 - only github]:" 
+read choose
 
 echo "pushing to ${choose}"
 
