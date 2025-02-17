@@ -112,6 +112,7 @@ const sidebars: SidebarsConfig = {
         'inner/pms/pm_24_10',
         'inner/pms/pm_24_11',
         'inner/pms/pm_24_12',
+        'inner/pms/pm_25_02',
       ],
     },
     {
