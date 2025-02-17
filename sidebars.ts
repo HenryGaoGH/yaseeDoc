@@ -119,6 +119,7 @@ const sidebars: SidebarsConfig = {
       label: '协议',
       items: [
         'inner/protocols/protocol_ble',
+        'inner/protocols/protocol_history',
       ],
     },
   ],
