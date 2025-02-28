@@ -103,6 +103,7 @@ const sidebars: SidebarsConfig = {
         'inner/reports/report_ios_ble_reconnect',
         'inner/reports/report_serial',
         'inner/reports/report_massship',
+        'inner/reports/report_maizhen',
       ],
     },
     {
