@@ -92,6 +92,12 @@ const config: Config = {
         // },
         // {
         //   type: 'docSidebar',
+        //   sidebarId: 'historyId',
+        //   position: 'left',
+        //   label: '修订记录',
+        // },
+        // {
+        //   type: 'docSidebar',
         //   sidebarId: 'widgetsId',
         //   position: 'right',
         //   label: '共建组件',

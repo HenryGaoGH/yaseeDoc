@@ -20,7 +20,7 @@ import Tag from '@site/src/components/Tag';
 
 定制款设备 只能搜索到 当前约定好的设备列表, 无法搜索到其他设备!!
 
-例如(GLM设备)就只能搜索到 GLM 设备
+例如(GLM设备)就只能搜索到 GLM 设备.
 
 :::
 
@@ -341,10 +341,13 @@ device.connect();
 // 断开设备
 (BleDevice) device.disconnect();
 
-// 获取 设备 支持的 检测项列表
+// 获取 设备 支持的 检测项列表 
+// 例如 GLM 设备 获取的仅有 (三合一) 血糖
 List<Check> checks = Products.supportChecks((BleDevice) device);
 
 // 获取 检测项 支持的 指令
+// 例如 GLM 设备 
+// 终止测量、 校时、 获取历史概览、 获取历史详情
 List<Cmd> cmds = checks.get(0).getCmds();
 
 // 发送 控制命令 (校时、 获取历史概览、 获取历史详情、 获取Code 等等 )
