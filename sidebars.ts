@@ -125,6 +125,16 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+  historyId: [
+    {
+      type: 'category',
+      label: 'Android',
+      items: [
+        'historys/android_intro_24_10_05',
+        'historys/android_intro_25_03_06',
+      ],
+    },
+  ],
 };
 
 export default sidebars;
