@@ -4,6 +4,8 @@ sidebar_position: 1
 
 
 import Tag from '@site/src/components/Tag';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 
 
@@ -26,53 +28,157 @@ import Tag from '@site/src/components/Tag';
 
 ## 示例展示和说明
 1. 对于不可变的数据(服务&特征、App发送的静态指令)可以直接提供的方式进行给予,或者 封装在自己的 `算法库` 中, 暴露出获取方法, 按照TMD生态合作伙伴模块示例:
-```swift
-// 对于 静态数据内容
-// 服务 & 特征 按照 直接提供的方式由 Yasee 直接硬编码到模块中
-var service: [BleService] {[
-    BleService(uuid: UUID(uuidString: "XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")!, chars: [
-        BleChars("用于App发送命令","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.writeCmd),
-        BleChars("用于App接收 Notify 数据","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.notifyCmd),
-    ]),
-    BleService(uuid: UUID(uuidString: "XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")!, chars: [
-        BleChars("设备制造商的信息","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.read),
-        BleChars("设备型号信息","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.read),
-        BleChars("序列号信息","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.read),
-    ]),
-]}
 
-```
+<Tabs>
+    <TabItem value="swift" label="iOS">
+    ```swift
+    // 对于 静态数据内容
+    // 服务 & 特征 按照 直接提供的方式由 Yasee 直接硬编码到模块中
+    var service: [BleService] {[
+        BleService(uuid: UUID(uuidString: "XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")!, chars: [
+            BleChars("用于App发送命令","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.writeCmd),
+            BleChars("用于App接收 Notify 数据","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.notifyCmd),
+        ]),
+        BleService(uuid: UUID(uuidString: "XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")!, chars: [
+            BleChars("设备制造商的信息","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.read),
+            BleChars("设备型号信息","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.read),
+            BleChars("序列号信息","XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",.read),
+        ]),
+    ]}
+    ```
+    </TabItem>
+    <TabItem value="java" label="Android">
+    ```java 
+    /**
+     * 配置信息
+     * */
+    private List<BleService> _sevices = Arrays.asList(
+       new BleService(
+         UUID.fromString("XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"),
+         Arrays.asList(
+           new BleService.BleCharacteristic(
+             "用于App发送命令",
+             UUID.fromString("XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"),
+             Arrays.asList(BleService.BleCharacteristicPt.write_nores),
+             true
+           )
+         )
+       ),
+        new BleService(
+            UUID.fromString("XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"),
+            Arrays.asList(
+                new BleService.BleCharacteristic(
+                    "读取&订阅通知",
+                    UUID.fromString("XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"),
+                    Arrays.asList(BleService.BleCharacteristicPt.read,BleService.BleCharacteristicPt.notify)
+                )
+            )
+        )
+    );
+    ```
+    </TabItem>
+</Tabs>
+
 2. 数据 校验和 签名 逻辑 (非必需)
-``` swift
-// 对 发送到 外设的指令或者数据 进行验证
-func sign(_ raw: [Int]) throws -> Data {
-    // 生态合作伙伴的 签名逻辑
-}
-func check(_ raw: Data) throws -> Bool { 
-    // 生态合作伙伴的 校验逻辑
-}
-```
+<Tabs>
+    <TabItem value="swift" label="iOS">
+    ``` swift
+    // 对 发送到 外设的指令或者数据 进行验证
+    func sign(_ raw: [Int]) throws -> Data {
+        // 生态合作伙伴的 签名逻辑
+    }
+    func check(_ raw: Data) throws -> Bool { 
+        // 生态合作伙伴的 校验逻辑
+    }
+    ```
+    </TabItem>
+    <TabItem value="java" label="Android">
+    ```java
+    // 对 发送到 外设的指令或者数据 进行验证
+    public class CheckSignTMD extends CheckSign {
+        // 省略.....
+
+        @Override
+        public byte[] sign(byte[] raws) {
+            return _sign(raws);
+        }
+
+        @Override
+        public boolean check(byte[] raws) {
+            return _check(raws);
+        }
+    }
+    ```
+    </TabItem>
+</Tabs>
 
 3. 数据解析 和 获取 (因与外设的交互数据为敏感数据,所以对解析过程 Yasee 不做干预,只做转发)
-``` swift
-// 目前仅仅是获取了 MAC 信息, 不排除后期会扩展更多内容的可能性
-func mac(_ avdData: AdvertisementData?) -> String? {
-    // 生态合作伙伴 获取MAC 的逻辑
-}
-    
-/// 获取交互数据
-func data(raw: Data) throws -> [String : String] {
-    // 生态合作伙伴 处理 转发的原始数据逻辑 
-}
-```
+<Tabs>
+    <TabItem value="swift" label="iOS">
+    ``` swift
+    // 目前仅仅是获取了 MAC 信息, 不排除后期会扩展更多内容的可能性
+    func mac(_ avdData: AdvertisementData?) -> String? {
+        // 生态合作伙伴 获取MAC 的逻辑
+    }
+        
+    /// 获取交互数据
+    func data(raw: Data) throws -> [String : String] {
+        // 生态合作伙伴 处理 转发的原始数据逻辑 
+    }
+    ```
+    </TabItem>
+    <TabItem value="java" label="Android">
+    ```java
+    /**
+    * 解析指令
+    * <p>分析出是什么指令 数据是什么</p>
+    */
+    public abstract class DecodeCmd {
+        // 省略.... 
+        /**
+        * 获取 解析完成的内容 这个地方就是对外暴露的可读性信息
+        * @example {"value":60}
+        * @return the decode data
+        */
+        abstract public void getDecodeData(DecodeInterface callback);
+    }
+    ```
+    </TabItem>
+</Tabs>
 
 4. 指令发送
-``` swift 
-获取所有发送指令信息
-func cmds() {
-    return [
-        Cmd(unsign: [Uint8], step: .start, desc: "开始测量"),
-        Cmd(unsign: [Uint8], step: .end, desc: "结束测量"),
-    ]
-}
-```
+
+<Tabs>
+    <TabItem value="swift" label="iOS">
+    ``` swift 
+    获取所有发送指令信息
+    func cmds() {
+        return [
+            Cmd(unsign: [Uint8], step: .start, desc: "开始测量"),
+            Cmd(unsign: [Uint8], step: .end, desc: "结束测量"),
+        ]
+    }
+    ```
+    </TabItem>
+    <TabItem value="java" label="Android">
+    ```java
+    /**
+     * 支持的指令信息
+     * */
+    public List<Cmd> sportCmds = Arrays.asList(
+            new Cmd(
+                    UUID.fromString("XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"), CmdType.unknown, "连接设备",
+                    new CmdInterface() {
+                        @SuppressLint("MissingPermission")
+                        @Override
+                        public void send(Device device, ParmsModel parms) {
+                        }
+                    }
+            ),
+            new Cmd(
+                    UUID.fromString("XXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"), CmdType.start, "开始测量",new byte[0]
+            )
+    );
+    ```
+    </TabItem>
+</Tabs>
