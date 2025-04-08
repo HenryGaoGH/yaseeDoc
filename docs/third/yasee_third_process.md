@@ -7,7 +7,7 @@ import Tag from '@site/src/components/Tag';
 
 
 
-# Yasee SDK 生态合作伙伴模块(协议模块) 理念剖析
+# 了解 Yasee 生态融合设计理念
 --- 
 
 
@@ -17,11 +17,11 @@ import Tag from '@site/src/components/Tag';
 
 ## 概要说明
 对于接入通讯交互流程中,需要关注的部分如下:
-1. AdvertisementData 数据处理 (广播数据)
+1. AdvertisementData 数据处理 (广播数据) 
 2. 服务特征列表 (包含什么服务、特征,分别是干什么用的)
 3. 交互数据的解析 (主要是 硬件上传过程中的数据)
 4. App 发送到 外设 的数据
-5. 签名、校验
+5. 签名、校验 (可选)
 
 
 因此, 协议流程 需要 三方提供以上数据获取的方法, 并出具调用文档,

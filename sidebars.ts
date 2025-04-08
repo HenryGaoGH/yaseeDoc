@@ -64,7 +64,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'doc',
-      label: '了解 Yasee 协议模块设计理念',
+      label: '了解 Yasee 生态融合设计理念',
       id: 'third/yasee_third_process',
     },
     {
