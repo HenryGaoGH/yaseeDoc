@@ -12,7 +12,7 @@ Yasee SDK 是一个聚合蓝牙交互,多家外部方案商的聚合SDK
   s.homepage         = 'http://henrygao.hopto.org'
   s.license          = { :file => 'LICENSE' }
   s.author           = { 'Henry Gao' => 'yoyohenrygao@163.com' }
-  s.source           = { :https => 'http://doc.yasee.com.cn/remote_deps/ios/pods/yasee.zip' }
+  s.source           = { :https => 'https://doc.yasee.com.cn/remote_deps/ios/pods/yasee.zip' }
 #  s.source_files = 'Classes/**/*'
 #  s.dependency 'Flutter'
   s.platform = :ios, '13.0'
