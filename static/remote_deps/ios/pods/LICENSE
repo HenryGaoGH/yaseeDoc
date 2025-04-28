@@ -1,0 +1,69 @@
+商业 SDK 授权协议 / Commercial SDK License Agreement
+=============================================
+
+1. 版权声明 / Copyright
+-----------------------
+版权所有 © 2025 [青岛雅斯生物科技有限公司]。保留所有权利。  
+Copyright © 2025 [青岛雅斯生物科技有限公司]. All rights reserved.
+
+本软件开发工具包（以下简称“SDK”）由 [青岛雅斯生物科技有限公司] 提供，并受著作权法及国际条约保护。  
+This Software Development Kit ("SDK") is provided by [青岛雅斯生物科技有限公司] and is protected by copyright laws and international treaties.
+
+2. 授权范围 / License Grant
+--------------------------
+[青岛雅斯生物科技有限公司]授予您一项非独占、不可转让、不可再授权的有限许可，仅限将本 SDK 集成于您的自有产品或应用程序中。  
+[青岛雅斯生物科技有限公司] grants you a non-exclusive, non-transferable, non-sublicensable limited license to integrate this SDK into your own products or applications.
+
+未经事先书面同意，您不得以任何方式公开发布、出售、出租、转让、再授权本 SDK。  
+You may not publish, sell, lease, transfer, or sublicense this SDK without prior written consent.
+
+禁止用于以下目的：  
+Prohibited uses include:
+- 代开发项目（如外包开发） / Outsourced development projects.
+- 与 [青岛雅斯生物科技有限公司] 竞争的产品或服务 / Products or services that compete with [青岛雅斯生物科技有限公司].
+
+3. 知识产权 / Intellectual Property
+-----------------------------------
+本 SDK 及其所有副本的所有权利，包括但不限于专利、著作权、商业秘密和其他知识产权，均归 [青岛雅斯生物科技有限公司] 所有。  
+All rights, title, and interest in and to this SDK, including without limitation all intellectual property rights, are owned by [青岛雅斯生物科技有限公司].
+
+4. 使用限制 / Restrictions
+--------------------------
+未经授权，您不得：  
+Without permission, you shall not:
+- 对 SDK 进行反编译、逆向工程、反汇编或试图提取源代码；  
+  Decompile, reverse engineer, disassemble, or otherwise attempt to derive source code from the SDK;
+- 移除或更改 SDK 中的任何版权、商标或其他权利声明；  
+  Remove or alter any proprietary notices on the SDK;
+- 将 SDK 单独提供给第三方使用。  
+  Distribute the SDK as a standalone product to third parties.
+
+5. 出口管制 / Export Control
+---------------------------
+您同意遵守适用的出口法律，不得将本 SDK 直接或间接出口或再出口至受限制国家或地区。  
+You agree to comply with applicable export laws and regulations and not export or re-export the SDK to restricted countries or regions.
+
+6. 审计权利 / Audit Rights
+-------------------------
+为确保遵守本协议，[青岛雅斯生物科技有限公司] 保留合理时间内对您的 SDK 使用情况进行审计的权利。  
+To ensure compliance, [青岛雅斯生物科技有限公司] reserves the right to audit your use of the SDK upon reasonable notice.
+
+7. 免责声明 / Disclaimer of Warranty
+-----------------------------------
+本 SDK 按“现状”提供，不附带任何明示或暗示的保证，包括但不限于适销性、适用于特定用途及无侵权的保证。  
+This SDK is provided "as is" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.
+
+8. 责任限制 / Limitation of Liability
+------------------------------------
+在任何情况下，[青岛雅斯生物科技有限公司] 对因使用本 SDK 而产生的任何直接、间接、偶然、特殊、惩罚性或后果性损害不承担责任。  
+In no event shall [青岛雅斯生物科技有限公司] be liable for any direct, indirect, incidental, special, punitive, or consequential damages arising out of the use of the SDK.
+
+9. 协议终止 / Termination
+------------------------
+若您违反本协议，本授权将自动终止。终止后，您必须销毁本 SDK 及其所有副本。  
+This license will terminate automatically if you fail to comply with any of the terms. Upon termination, you must destroy all copies of the SDK.
+
+10. 法律适用与争议解决 / Governing Law and Dispute Resolution
+------------------------------------------------------------
+本协议受中华人民共和国法律管辖。因本协议引起的争议应提交至 [青岛雅斯生物科技有限公司] 注册地有管辖权的法院解决。  
+This Agreement shall be governed by the laws of the People's Republic of China. Any disputes shall be submitted to the competent courts located in the jurisdiction where [青岛雅斯生物科技有限公司] is registered.
