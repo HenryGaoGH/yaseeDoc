@@ -1,0 +1,305 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name yasee_ios
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1
+import Combine
+import CoreBluetooth
+import Foundation
+import HlwToYasiSDK
+import ICDeviceManager
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_exported import yasee_ios
+public typealias BaseBlock = () -> Swift.Void
+public typealias BaseObjBlock = (_ obj: Foundation.Data) -> Swift.Void
+public typealias GattCall = (_ device: yasee_ios.BleDevice, _ write: CoreBluetooth.CBCharacteristic, _ obj: [Swift.String : Any]) -> Swift.Void
+public enum BleState : Swift.String, Swift.Codable {
+  case on
+  case off
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum NotifyType : Swift.String, Swift.Codable {
+  case bleState
+  case searchDevices
+  case bindDevices
+  case deviceLink
+  case deviceData
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Usage {
+  case writeCmd
+  case notifyCmd
+  case writeData
+  case read
+  public static func == (a: yasee_ios.Usage, b: yasee_ios.Usage) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PlatformType {
+  case `protocol`
+  case hook
+  public static func == (a: yasee_ios.PlatformType, b: yasee_ios.PlatformType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum CheckStep : Swift.String, Swift.Codable {
+  case battery
+  case timing
+  case history
+  case start
+  case end
+  case countDown
+  case result
+  case error
+  case message
+  case unknown
+  case join
+  case pullOut
+  case pwd
+  case standard
+  case thp_result
+  case points_result
+  case setUser
+  case callData
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct User {
+  public init(sex: Swift.Int, age: Swift.Int, smoking: Swift.Int, height: Swift.Int, weight: Swift.Int)
+}
+public struct LogConfig {
+}
+public protocol Device : Swift.Decodable, Swift.Encodable {
+}
+extension yasee_ios.Check : yasee_ios.CheckStepPtl {
+  public var cmds: [yasee_ios.Cmd] {
+    get
+  }
+}
+public struct AdvertisementData : Swift.Codable {
+}
+extension yasee_ios.AdvertisementData {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension yasee_ios.BleDevice {
+  public var name: Swift.String {
+    get
+  }
+  public var hMac: Swift.String {
+    get
+  }
+  public var precess: CoreBluetooth.CBPeripheralState {
+    get
+  }
+  public func connect()
+  public func reconnect()
+  public func cancel()
+  public func send(_ data: [Swift.Int]) throws
+  public func send(_ data: Foundation.Data) throws
+  public func send(_ handware: Swift.Int, _ cmdId: Swift.String, _ parms: [Swift.String : Any]? = nil) throws
+}
+extension yasee_ios.BleDevice : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+}
+extension CoreBluetooth.CBPeripheralState : Swift.Codable {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BleDevice : ObjectiveC.NSObject, yasee_ios.Device, Swift.Identifiable, Combine.ObservableObject {
+  public var startTime: Swift.Double
+  public var endTime: Swift.Double
+  @objc override dynamic public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public typealias ID = Swift.ObjectIdentifier
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public typealias NotifyCall<T> = (_ data: yasee_ios.NotifyResp<T>) -> () where T : Swift.Decodable, T : Swift.Encodable
+extension yasee_ios.Notify {
+  public func listen<T>(_ call: @escaping yasee_ios.NotifyCall<T>) where T : Swift.Decodable, T : Swift.Encodable
+  public func remove<T>(_ call: @escaping yasee_ios.NotifyCall<T>) where T : Swift.Decodable, T : Swift.Encodable
+}
+@_hasMissingDesignatedInitializers public class Notify {
+  public static let single: yasee_ios.Notify
+  @objc deinit
+}
+extension yasee_ios.Yasee {
+  public var info: Swift.String {
+    get
+  }
+  public func scan()
+  public func stop()
+  public func initDevices(_ devices: [yasee_ios.BleDevice])
+  public func unBinds(_ dds: [yasee_ios.BleDevice])
+}
+@_hasMissingDesignatedInitializers public class Yasee {
+  public static let single: yasee_ios.Yasee
+  public var bleConfig: yasee_ios.BleConfig {
+    get
+    set
+  }
+  public var logConfig: yasee_ios.LogConfig
+  public var user: yasee_ios.User {
+    get
+    set
+  }
+  public var isScaning: Swift.Bool
+  public var platfrom: (any yasee_ios.Platform)?
+  @objc deinit
+}
+public class Check : Swift.Identifiable, Swift.Codable {
+  final public let name: Swift.String
+  final public let handwareCode: Swift.Int
+  public init(_ name: Swift.String, _ handwareCode: Swift.Int)
+  public typealias ID = Swift.ObjectIdentifier
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public struct BleChars {
+}
+public struct BleService {
+}
+@_hasMissingDesignatedInitializers public class Devices : Foundation.ObservableObject {
+  public static let single: yasee_ios.Devices
+  @Combine.Published @_projectedValueProperty($allSearchs) public var allSearchs: [yasee_ios.BleDevice] {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $allSearchs: Combine.Published<[yasee_ios.BleDevice]>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($allBinds) public var allBinds: [yasee_ios.BleDevice] {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $allBinds: Combine.Published<[yasee_ios.BleDevice]>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct ErrObj : Swift.Codable {
+  public init(code: Swift.Int, desc: Swift.String, suggestion: Swift.String)
+  public var json: [Swift.String : Swift.String] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol CheckStepPtl {
+  var cmds: [yasee_ios.Cmd] { get }
+}
+public enum YError : Swift.Error {
+  case unConnect(_: yasee_ios.ErrObj = .init(code: 0x04, desc: "设备未连接成功", suggestion: "请重新连接设备重试!"))
+  case writeIsFail(_: yasee_ios.ErrObj = .init(code: 0x04, desc: "无写入服务", suggestion: "请重新设置写入服务后重试!"))
+  case servicesIsNil(_: yasee_ios.ErrObj = .init(code: 0x04, desc: "无服务", suggestion: "请重新连接设备后重试!"))
+  case protocolIsFail(_: yasee_ios.ErrObj = .init(code: 0x04, desc: "对接方式错误", suggestion: "使用的对接方式不正确"))
+}
+infix operator |<< : BitwiseShiftPrecedence
+infix operator ^<< : BitwiseShiftPrecedence
+extension yasee_ios.BleDevice {
+  public var supportChecks: [yasee_ios.Check] {
+    get
+  }
+}
+public protocol CheckSign {
+  var used: Swift.Bool { get }
+  func sign(_ raw: [Swift.Int]) throws -> Foundation.Data
+  func check(_ raw: Foundation.Data) throws -> Swift.Bool
+}
+public struct Cmd : Swift.Identifiable, Swift.Codable {
+  public var id: Foundation.UUID
+  public let unsign: [Swift.Int]
+  public let sendBack: yasee_ios.GattCall?
+  public let step: yasee_ios.CheckStep
+  public let desc: Swift.String
+  public init(id: Foundation.UUID, unsign: [Swift.Int], step: yasee_ios.CheckStep, desc: Swift.String, sendBack: yasee_ios.GattCall? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public typealias ID = Foundation.UUID
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public protocol DecodeCmd {
+  func data(device: yasee_ios.BleDevice, raw: Foundation.Data, callBack: yasee_ios.BaseObjBlock?)
+  func mac(_ avdData: yasee_ios.AdvertisementData?) -> Swift.String?
+}
+public struct BleConfig {
+  public var scanTime: Swift.Double
+  public let pattern: Swift.String
+  public var reconnect: Swift.Bool
+  public let filterWithServices: Swift.Bool
+  public let unVerfiPattern: Swift.String
+}
+public struct NotifyResp<T> : Swift.Codable where T : Swift.Decodable, T : Swift.Encodable {
+  public let success: Swift.Bool
+  public let message: Swift.String
+  public let data: T
+  public let notifyType: yasee_ios.NotifyType
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias NotifyBleState = yasee_ios.BleState
+public typealias NotifyBleDevice = [yasee_ios.BleDevice]
+public struct NotifyDeviceData : Swift.Codable {
+  public let device: yasee_ios.BleDevice
+  public let raw: [Swift.UInt8]
+  public let step: yasee_ios.CheckStep
+  public let data: Foundation.Data
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol Platform : CoreBluetooth.CBPeripheralDelegate, yasee_ios.CheckSign, yasee_ios.DecodeCmd {
+  var type: yasee_ios.PlatformType { get }
+  var description: Swift.String { get }
+  var service: [yasee_ios.BleService] { get }
+  var cmds: [yasee_ios.Cmd] { get }
+}
+public struct AnyCodable : Swift.Codable {
+  public let value: Any
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension yasee_ios.BleState : Swift.Equatable {}
+extension yasee_ios.BleState : Swift.Hashable {}
+extension yasee_ios.BleState : Swift.RawRepresentable {}
+extension yasee_ios.NotifyType : Swift.Equatable {}
+extension yasee_ios.NotifyType : Swift.Hashable {}
+extension yasee_ios.NotifyType : Swift.RawRepresentable {}
+extension yasee_ios.Usage : Swift.Equatable {}
+extension yasee_ios.Usage : Swift.Hashable {}
+extension yasee_ios.PlatformType : Swift.Equatable {}
+extension yasee_ios.PlatformType : Swift.Hashable {}
+extension yasee_ios.CheckStep : Swift.Equatable {}
+extension yasee_ios.CheckStep : Swift.Hashable {}
+extension yasee_ios.CheckStep : Swift.RawRepresentable {}

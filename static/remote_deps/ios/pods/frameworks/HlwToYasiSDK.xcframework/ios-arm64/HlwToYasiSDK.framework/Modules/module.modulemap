@@ -1,0 +1,6 @@
+framework module HlwToYasiSDK {
+  umbrella header "HlwToYasiSDK.h"
+  export *
+
+  module * { export * }
+}
