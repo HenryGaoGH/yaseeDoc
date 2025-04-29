@@ -1,0 +1,6 @@
+framework module yasee_ios {
+  umbrella header "yasee_ios.h"
+  export *
+
+  module * { export * }
+}
