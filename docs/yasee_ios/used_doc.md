@@ -83,6 +83,7 @@ NSBluetoothWhileInUseUsageDescription
 ## 大纲
 接下来,我们将分为以下几个步骤,带领您集成、以及使用Yasee 官方 SDK.
 - 准备工作
+  - 引入 Yasee iOS(三种方式: pod、 spm、 [手工])
   - 声明权限
 - 初始化 Yasee SDK
   - 蓝牙配置信息 (``BleConfig``)
@@ -122,6 +123,34 @@ do {
     // 失败的逻辑处理
 }
 ```
+
+### 引入 Yasee SDK
+
+- pod 方式
+```ruby
+# 在 Podfile中使用如下方式引入
+
+pod 'pod_yasee', :git => 'https://gitee.com/YoYoHenryGao/pod_yasee.git', :tag => '0.9.233'
+
+
+# 在主工程中 使用 
+import yasee_ios
+
+```
+
+
+- spm 方式
+```swift
+# 使用 spm方式使用; 请在xcode中 使用spm; 地址如下:
+
+https://gitee.com/YoYoHenryGao/spm_yasee.git
+
+# 在主工程中 使用 
+import yasee_ios
+
+```
+
+
 
 ### 初始化 Yasee SDK
 初始化操作是必须要做的操作,iOS支持一步初始化,只需要 一步即可初始化完成.\
