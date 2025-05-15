@@ -64,6 +64,11 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'doc',
+      label: '物料送寄规范(生态合作)',
+      id: 'third/yasee_ship_spec',
+    },
+    {
+      type: 'doc',
       label: '了解 Yasee 生态融合设计理念',
       id: 'third/yasee_third_process',
     },
