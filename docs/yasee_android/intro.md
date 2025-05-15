@@ -371,7 +371,53 @@ single.initDevices(List<BleDevice>);
 
 
 
+## 混淆规则
+```groovy
+-keep class com.yasee.gson.** { *; }
+-keep class com.yasee.yasee.Yasee { public *; }
+-keep class com.yasee.yasee.Notify { public *; }
+-keep class com.yasee.yasee.core.interfaces.NotifyInterface { public *; }
+-keep class com.yasee.yasee.core.models.** { public *; }
+-keep class com.yasee.yasee.core.configs.** { public *; }
+-keep class com.yasee.yasee.core.enums.** { public *; }
+-keep class com.yasee.yasee.core.receivers.** { public *; }
+-keep class com.yasee.yasee.core.tools.ByteTool { public *; }
+-keep class com.yasee.yasee.core.tools.BleDeviceTypeAdapter { public *; }
+-keep class com.yasee.yasee.core.tools.Products { public *; }
+-keep class com.yasee.yasee.core.tools.YLocalBroadcast { public *; }
+-keep class com.yasee.yasee.core.abstracts.AbstractsSerialActivity { public *; }
+-keep class com.yasee.yasee.core.abstracts.Device { public *; }
+-keep class com.yasee.yasee.core.abstracts.Platforms { public *; }
+-keep class com.yasee.yasee.protocols.ble.BleDevice { public *; }
+-keep class com.yasee.yasee.Devices { public *; }
+-keep class com.yasee.yasee.protocols.serial.SerialDevice { public *; }
+-keep class com.yasee.yasee.protocols.wifi.WifiDevice { public *; }
+-keep class com.yasee.yasee.platforms.** { <init>(); }
+-keepclassmembers class com.yasee.yasee.platforms.** { public <init>(); }
 
+-keep class com.yyh.sdk.ecg.ui.widget.**{*;}
+-keep class com.yyh.sdk.ecg.biz.**{*;}
+-keep class com.yyh.sdk.ecg.bean.**{*;}
+-keep class com.yyh.sdk.ecg.constant.**{*;}
+-keep class com.yyh.sdk.ecg.ble.*
+
+-keep class cn.icomon.icdevicemanager.ICDeviceManager { *; }
+-keep class cn.icomon.icdevicemanager.ICBluetoothSystem { *; }
+-keep public interface cn.icomon.icdevicemanager.ICBluetoothSystem$ICBluetoothDelegate { *; }
+-keep public class cn.icomon.icdevicemanager.ICBluetoothSystem$ICOPBleCharacteristic { *; }
+-keep public enum cn.icomon.icdevicemanager.ICBluetoothSystem$ICOPBleWriteDataType { *; }
+-keep class cn.icomon.icdevicemanager.manager.setting.ICSettingManagerImpl { *; }
+-keep class cn.icomon.icdevicemanager.manager.algorithms.ICBodyFatAlgorithmsImpl { *; }
+-keep class cn.icomon.icdevicemanager.ICDeviceManagerDelegate { *; }
+-keep class cn.icomon.icdevicemanager.model.** { *; }
+-keep class cn.icomon.icdevicemanager.ICDeviceManagerSettingManager { *; }
+-keep public interface cn.icomon.icdevicemanager.ICDeviceManagerSettingManager$ICSettingCallback { *; }
+-keep class com.icomon.icbodyfatalgorithms.** { *; }
+-keep class cn.icomon.icbleprotocol.** { *; }
+-keep class cn.icomon.icdevicemanager.ICBodyFatAlgorithmsManager { *; }
+-keep class cn.icomon.icdevicemanager.ICBluetoothSystem.** { *; }
+-keep class cn.icomon.icdevicemanager.callback.** { *; }
+```
 
 
 
