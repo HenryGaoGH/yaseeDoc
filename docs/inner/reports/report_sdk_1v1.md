@@ -14,6 +14,13 @@ import Tag from '@site/src/components/Tag';
 
 目前; 已通过 构建云服务、动态构建apk、签发license的方式; 为客户提供防盗用&含过期的SDK。
 
+签发的 **SDK** 具有以下特点:
+- 专门为 某个 B端客户App构建; 不同的App 不可使用; 做到了 1对1 的 防盗用作用
+- 包含 过期时间; 在过期时间内 正常使用SDK; 过期之后 不可用
+- 完全离线可用; 无需联网
+
+
+
 ## 整体流程
 ![](/img/inner/report_sdk_1v1.png)
 
