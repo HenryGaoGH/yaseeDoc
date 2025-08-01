@@ -9,7 +9,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 --- 
 
 ## 导读
-本篇文章将带领大家一起集成 iOS 端的Yasee SDK, 如果想要了解更多Yasee SDK支持的功能;请查阅 [完整的功能清单](/docs/welcome_yasee.md#yasee-sdk-功能清单) 来了解支持的功能.\
+本篇文章将带领大家一起集成 iOS 端的Yasee SDK, 如果想要了解更多Yasee SDK支持的功能;请查阅 [完整的功能清单](/docs/welcome_yasee.md#yasee-sdk-功能清单--features-list) 来了解支持的功能.\
 如果您关注的是Android设备的对接,请移步[Android对接文档](../yasee_android/intro.md).\
 那么接下来我将带大家一起了解和使用Yasee SDK iOS端对接步骤和注意事项!
 

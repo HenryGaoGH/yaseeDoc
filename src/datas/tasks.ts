@@ -263,6 +263,29 @@ let _24_12: Task[] = [
 ]
 
 
+let _25_05: Task[] = [
+  {
+    start: new Date(2025, 5, 1),
+    end: new Date(2025, 7, 1),
+    name: 'Yasee 开发平台',
+    id: 'project',
+    type:'project',
+    progress: 0,
+    isDisabled: false,
+    styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d' },
+  },{
+    start: new Date(2025, 5, 1),
+    end: new Date(2025, 5, 22),
+    name: '最小颗粒验证(全流程)',
+    id: 'task-0',
+    project: 'project',
+    type:'task',
+    progress: 0,
+    isDisabled: true,
+    styles: { progressColor: '#ffbb54', progressSelectedColor: '#ff9e0d', backgroundColor: "orange"},
+  }
+]
+
 
 
 export const task_data = (year: number, month: number) => {
@@ -271,6 +294,6 @@ export const task_data = (year: number, month: number) => {
         "24_09": _24_09,
         "24_10": _24_10,
         "24_11": _24_11,
-        "24_12": _24_12,
+        "25_05": _25_05,
     }[key];
 }
