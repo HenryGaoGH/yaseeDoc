@@ -373,7 +373,9 @@ single.initDevices(List<BleDevice>);
 
 ## 混淆规则
 ```groovy
+-keep class com.google.gson.** { *; }
 -keep class com.yasee.gson.** { *; }
+-keepclassmembers class * { @com.google.gson.annotations.SerializedName <fields>; }
 -keep class com.yasee.yasee.Yasee { public *; }
 -keep class com.yasee.yasee.Notify { public *; }
 -keep class com.yasee.yasee.core.interfaces.NotifyInterface { public *; }

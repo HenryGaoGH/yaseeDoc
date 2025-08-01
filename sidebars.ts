@@ -33,9 +33,13 @@ const sidebars: SidebarsConfig = {
       label: 'Yasee SDK(Android)',
       items: [
         'yasee_android/intro',
+        'yasee_android/intro_en',
         'yasee_android/demo_word',
+        'yasee_android/demo_word_en',
         'yasee_android/baogao',
+        'yasee_android/baogao_en',
         'yasee_android/tmdVSwl',
+        'yasee_android/tmdVSwl_en',
       ],
     },
     {
@@ -43,8 +47,11 @@ const sidebars: SidebarsConfig = {
       label: 'Yasee SDK(iOS)',
       items: [
         'yasee_ios/used_doc',
+        'yasee_ios/used_doc_en',
         'yasee_ios/demo',
+        'yasee_ios/demo_en',
         'yasee_ios/power_doc',
+        'yasee_ios/power_doc_en',
       ],
     },
     {
