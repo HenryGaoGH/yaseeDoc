@@ -21,13 +21,11 @@ const sidebars: SidebarsConfig = {
       label: '欢迎👏',
       id: 'welcome_yasee',
     },
-    // {
-    //   type: 'category',
-    //   label: 'Git 工作流程',
-    //   items: [
-    //     'git_process/mobile_branch'
-    //   ],
-    // },
+    {
+      type: 'doc',
+      label: '通用流程介绍',
+      id: 'comm/comm_third_process',
+    },
     {
       type: 'category',
       label: 'Yasee SDK(Android)',
