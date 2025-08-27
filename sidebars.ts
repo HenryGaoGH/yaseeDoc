@@ -27,6 +27,11 @@ const sidebars: SidebarsConfig = {
       id: 'comm/comm_third_process',
     },
     {
+      type: 'doc',
+      label: 'WIFI 设备 流程介绍',
+      id: 'comm/comm_third_process_wifi',
+    },
+    {
       type: 'category',
       label: 'Yasee SDK(Android)',
       items: [
