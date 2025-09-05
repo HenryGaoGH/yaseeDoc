@@ -373,9 +373,15 @@ single.initDevices(List<BleDevice>);
 
 ## 混淆规则
 ```groovy
+
+### Proguard
+# Yasee
+-keepattributes Signature
 -keep class com.google.gson.** { *; }
 -keep class com.yasee.gson.** { *; }
 -keepclassmembers class * { @com.google.gson.annotations.SerializedName <fields>; }
+-keep class com.google.gson.reflect.TypeToken { *; }
+
 -keep class com.yasee.yasee.Yasee { public *; }
 -keep class com.yasee.yasee.Notify { public *; }
 -keep class com.yasee.yasee.core.interfaces.NotifyInterface { public *; }
@@ -401,7 +407,7 @@ single.initDevices(List<BleDevice>);
 -keep class com.yyh.sdk.ecg.biz.**{*;}
 -keep class com.yyh.sdk.ecg.bean.**{*;}
 -keep class com.yyh.sdk.ecg.constant.**{*;}
--keep class com.yyh.sdk.ecg.ble.*
+-keep class com.yyh.sdk.ecg.ble.** {  <init>(...); }
 
 -keep class cn.icomon.icdevicemanager.ICDeviceManager { *; }
 -keep class cn.icomon.icdevicemanager.ICBluetoothSystem { *; }
@@ -419,6 +425,106 @@ single.initDevices(List<BleDevice>);
 -keep class cn.icomon.icdevicemanager.ICBodyFatAlgorithmsManager { *; }
 -keep class cn.icomon.icdevicemanager.ICBluetoothSystem.** { *; }
 -keep class cn.icomon.icdevicemanager.callback.** { *; }
+
+-keepattributes *Annotation*
+-keep class **.annotation.** { *; }
+-keep class javax.annotation.** { *; }
+-keep class org.jetbrains.annotations.** { *; }
+-keep class org.conscrypt.** { *; }
+-keep class org.codehaus.mojo.animal_sniffer.** { *; }
+
+
+# 禁用日志以保护敏感信息（可选）
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** e(...);
+    public static *** w(...);
+    public static *** i(...);
+    public static *** v(...);
+}
+
+# 尽可能地优化和缩小代码
+-optimizationpasses 5
+-overloadaggressively
+
+-allowaccessmodification
+
+# Preserve some attributes that may be required for reflection.
+-keepattributes AnnotationDefault,
+                EnclosingMethod,
+                InnerClasses,
+                RuntimeVisibleAnnotations,
+                RuntimeVisibleParameterAnnotations,
+                RuntimeVisibleTypeAnnotations,
+                Signature
+
+-dontnote com.android.vending.licensing.ILicensingService
+-dontnote com.google.vending.licensing.ILicensingService
+-dontnote com.google.android.vending.licensing.ILicensingService
+
+# For native methods, see https://www.guardsquare.com/manual/configuration/examples#native
+-keepclasseswithmembernames,includedescriptorclasses class * {
+    native <methods>;
+}
+
+# Keep setters in Views so that animations can still work.
+-keepclassmembers public class * extends android.view.View {
+    void set*(***);
+    *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick.
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+
+# For enumeration classes, see https://www.guardsquare.com/manual/configuration/examples#enumerations
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+# Preserve annotated Javascript interface methods.
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}
+
+-dontnote android.support.**
+-dontnote androidx.**
+-dontwarn android.support.**
+-dontwarn androidx.**
+
+# Understand the @Keep support annotation.
+
+# These classes are duplicated between android.jar and org.apache.http.legacy.jar.
+-dontnote org.apache.http.**
+-dontnote android.net.http.**
+
+# These classes are duplicated between android.jar and core-lambda-stubs.jar.
+-dontnote java.lang.invoke.**
+
+
+
+### ============== ConsumerProguardFiles
+-keep class com.google.gson.** { *; }
+-keep class com.yasee.gson.** { *; }
+
+
+-dontwarn java.beans.Transient
+-dontwarn javax.annotation.Nullable
+-dontwarn javax.annotation.concurrent.GuardedBy
+-dontwarn kycmr.org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+-dontwarn kycmr.org.conscrypt.Conscrypt$ProviderBuilder
+-dontwarn kycmr.org.conscrypt.Conscrypt
+-dontwarn kycmr.org.jetbrains.annotations.NotNull
+-dontwarn kycmr.org.jetbrains.annotations.Nullable
+-dontwarn kycmr.org.w3c.dom.Node
+
+
 ```
 
 
