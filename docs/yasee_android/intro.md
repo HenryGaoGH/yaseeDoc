@@ -426,6 +426,8 @@ single.initDevices(List<BleDevice>);
 -keep class cn.icomon.icdevicemanager.ICBluetoothSystem.** { *; }
 -keep class cn.icomon.icdevicemanager.callback.** { *; }
 
+
+
 -keepattributes *Annotation*
 -keep class **.annotation.** { *; }
 -keep class javax.annotation.** { *; }
