@@ -124,6 +124,7 @@ const sidebars: SidebarsConfig = {
         'inner/reports/report_serial',
         'inner/reports/report_massship',
         'inner/reports/report_maizhen',
+        'inner/reports/report_maizhen_luoji',
         'inner/reports/report_sdk_1v1',
       ],
     },
