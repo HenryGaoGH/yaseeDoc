@@ -12,10 +12,10 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 :::warning
 这部分的内容是尤为重要的, 决定了是否可以使用蓝牙, 没有蓝牙权限是无法使用Yasee SDK!!!
 
-!! 没有示例的情况下,查阅 **[完整Api文档](https://doc.yasee.com.cn/android_doc/index.html)** 
+!! 没有示例的情况下,查阅 **[完整Api文档](https://doc.yasee.com.cn/android_doc/index.html)**
 :::
 
-首先,对接Yasee SDK 需要遵循以下条件: 
+首先,对接Yasee SDK 需要遵循以下条件:
 1. 需要您的手机Android 版本在 Pie 及以上,也就是 **Android 9** 版本及以上,使用以下方式可以查看版本的信息
   ```java
   public class DeviceInfo {
@@ -34,32 +34,32 @@ import ImgText from '@site/src/components/ImgText/ImgText';
   ```
 2. 需要声明必要的**权限列表**,此处如有遇到问题,请查阅 [Android官方文档](https://developer.android.com/guide/topics/connectivity/bluetooth)
 ```xml
-<uses-permission 
+<uses-permission
     android:name="android.permission.BLUETOOTH"
     android:maxSdkVersion="30"/>
-<uses-permission 
-    android:name="android.permission.BLUETOOTH_ADMIN" 
-    android:maxSdkVersion="30"/>
-<uses-permission 
-    android:name="android.permission.ACCESS_COARSE_LOCATION" 
+<uses-permission
+    android:name="android.permission.BLUETOOTH_ADMIN"
     android:maxSdkVersion="30"/>
 <uses-permission
-     android:name="android.permission.ACCESS_FINE_LOCATION" 
+    android:name="android.permission.ACCESS_COARSE_LOCATION"
+    android:maxSdkVersion="30"/>
+<uses-permission
+     android:name="android.permission.ACCESS_FINE_LOCATION"
      android:maxSdkVersion="30"/>
-<uses-permission 
-    android:usesPermissionFlags="neverForLocation"  
+<uses-permission
+    android:usesPermissionFlags="neverForLocation"
     android:name="android.permission.BLUETOOTH_SCAN"/>
-<uses-permission 
+<uses-permission
     android:name="android.permission.BLUETOOTH_ADVERTISE" />
-<uses-permission 
+<uses-permission
     android:name="android.permission.BLUETOOTH_CONNECT" />
-<uses-feature 
-    android:name="android.hardware.bluetooth_le" 
+<uses-feature
+    android:name="android.hardware.bluetooth_le"
     android:required="true"/>
 
 ```
 声明完成之后,需要在App中动态申请权限,以下为申请权限示例代码:
-```java 
+```java
     private boolean checkBLEConnectionPermission() {
         boolean isGranted = false;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
@@ -142,7 +142,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
   - Android相关的上下文信息 (``Yasee``)
   - 人员配置信息 (``User``)
 - 数据通知相关
-  - 设备连接 通知 
+  - 设备连接 通知
   - 设备收发信息通知
   - 设备 绑定 变更通知
 - 蓝牙相关操作
@@ -185,8 +185,8 @@ Yasee.getSingle().context = getApplicationContext();
 Yasee.getSingle().bleConfig = new BleConfig(5);
 
 /// 设置人员信息
-/// 设置当前的使用人, 
-/// 主要是为了 肺功能 和 体脂上的人员信息设置 
+/// 设置当前的使用人,
+/// 主要是为了 肺功能 和 体脂上的人员信息设置
 /// User(Integer sex(1-男,2-女), Integer age, Integer smoking(1-抽,0-不), Integer height(cm), Integer weight(kg))
 Yasee.getSingle().currentUser = new User(1,20,0,178,75);
 ```
@@ -277,7 +277,7 @@ public enum NotifyType {
 - 详细请点击 [NotifyContent](https://doc.yasee.com.cn/android_doc/com/yasee/yasee/core/models/NotifyResp.BleNotifyData.html "详细了解")
 
 
-```java 
+```java
 // 以 接收数据为例. 首先创建 监听接收接口:
 
 NotifyInterface _ni = new NotifyInterface() {
@@ -308,7 +308,9 @@ NotifyInterface _ni = new NotifyInterface() {
 
 
 ### 设备控制相关操作
-蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送信息
+蓝牙相关的步骤,比较固定,基本包含 搜索、连接、发送控制指令
+
+具体检测项操作步骤可查阅 [👉 BLE检测流程详解](../comm/comm_third_process_ble)
 ```java
 // 搜索设备
 Yasee.getSingle().scan();
@@ -334,7 +336,7 @@ List<Check> checks = Products.supportChecks((BleDevice) device);
 List<Cmd> cmds = checks.get(0).getCmds();
 
 // 发送 控制命令 (测量、停止、 获取Code 等等 )
-(BleDevice) device.send(ccs.get(0).handwareCode,cs.get(0).id,null); 
+(BleDevice) device.send(ccs.get(0).handwareCode,cs.get(0).id,null);
 
 // 发送 接收使用 Notify 通知
 
@@ -541,5 +543,3 @@ single.initDevices(List<BleDevice>);
 ## AAR 下载
 **建议对接前使用 Demo体验或者查阅本文档**
 - [AAR下载](/files/yasee.aar)
-
-
