@@ -72,6 +72,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 ### 检测流程
 :::info
 Yasee 通用接口服务进行分析 [👉点击查看](comm_third_api)
+脉诊采集频率为 20 Hz;
 :::
 <ImgText width={300} src={"/img/comm_third_process_ble_maizhen.png"} cotents={[
     "1. 开机脉诊设备",
