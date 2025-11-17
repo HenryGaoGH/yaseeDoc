@@ -73,7 +73,7 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 :::info
 Yasee 通用接口服务进行分析 [👉点击查看](comm_third_api)
 :::
-<ImgText width={230} src={"/img/comm_third_process_ble_maizhen.png"} cotents={[
+<ImgText width={280} src={"/img/comm_third_process_ble_maizhen.png"} cotents={[
     "1. 开机脉诊设备",
     "2. 静止脉诊设备; 等待自定连接或者 扫描邦定连接",
     "3. App 操作开始检测脉诊; 结合自有业务流程 控制 波形数据的 开始开始发送和结束发送",
