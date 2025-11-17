@@ -33,6 +33,11 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "doc",
+      label: "BLE 检测流程详解",
+      id: "comm/comm_third_process_ble",
+    },
+    {
+      type: "doc",
       label: "线上分析接口",
       id: "comm/comm_third_api",
     },
