@@ -42,6 +42,11 @@ const sidebars: SidebarsConfig = {
       id: "comm/comm_third_api",
     },
     {
+      type: "doc",
+      label: "样机寄送规范",
+      id: "comm/comm_third_demo_process",
+    },
+    {
       type: "category",
       label: "Yasee SDK(Android)",
       items: [
