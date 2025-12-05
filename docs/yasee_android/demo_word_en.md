@@ -107,6 +107,4 @@ In the following content, frequently used terms are uniformly defined as:
 --- 
 
 ## Demo Project Download 
-- [Android Demo Project Download](/files/android_demo.zip)
-- [Android Apk Download](/files/yasee.apk)
-```
+[Link to](download)

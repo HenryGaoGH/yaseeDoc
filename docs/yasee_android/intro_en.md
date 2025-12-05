@@ -392,10 +392,5 @@ For the models in the example, if there is any ambiguity in understanding, pleas
 ```
 
 
-## Demo Download
-- [Android Download](/files/yasee.apk)
-
-## AAR Download
-**It is recommended to use the Demo experience or refer to this document before docking**
-- [AAR Download](/files/yasee.aar)
-
+## Demo Project & SDK download
+[Link To](download)
