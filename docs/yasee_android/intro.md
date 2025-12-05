@@ -534,12 +534,6 @@ single.initDevices(List<BleDevice>);
 
 
 
-## Demo 下载
-- [Android下载](/files/yasee.apk)
+## Demo工程 & SDK 下载
 
-
-
-
-## AAR 下载
-**建议对接前使用 Demo体验或者查阅本文档**
-- [AAR下载](/files/yasee.aar)
+[点我直达](download)
