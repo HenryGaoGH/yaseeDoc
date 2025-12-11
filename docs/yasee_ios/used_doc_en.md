@@ -294,4 +294,4 @@ If more functional implementations are needed, please refer to [iOS Complete API
 
 ## Framework download
 **It is recommended to read this document thoroughly before docking**
-- [framework download](/files/yasee.zip)
+- [framework download](/files/yasee_ios.zip)

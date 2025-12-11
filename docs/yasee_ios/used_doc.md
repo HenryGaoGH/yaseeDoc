@@ -294,4 +294,4 @@ single.initDevice([BleDevice]);
 
 ## Framework 下载
 **建议对接前完读本文档**
-- [framework下载](/files/yasee.zip)
+- [framework下载](/files/yasee_ios.zip)
