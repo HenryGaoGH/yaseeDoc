@@ -102,7 +102,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "doc",
-      label: "BLE Hook 方式(不推荐)",
+      label: "BLE Hook 方式",
       id: "third/ble_hook",
     },
   ],

@@ -41,13 +41,18 @@
 API路由:  
 `bio/pca/getReport`
 
+Hraders参数:
+| key | 值 | 说明 |
+|:----:|:----:|:----:|
+| tenant-id | 1 | 固定参数 |
+
 参数:
 ```json
 /// Key:Value - String:String 所有键值均为 String 类型
 {
   // ===== Yasee 提供
   "pcKey":                "联系Yasee取得",
-  "appid":                "联系Yasee取得",
+  "appId":                "联系Yasee取得",
   "security":             "联系Yasee取得",
   "niu":                  "通过 SDK 获取到的原始数据",
   // ====== 自有业务系统传递👇

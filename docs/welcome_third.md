@@ -17,7 +17,7 @@ keywords: [欢迎, Yasee, 生态合作伙伴, SDK, 集成, BLE, 交互, Hook, �
 ## 目录
 
 - [协议对接方式(推荐)](third/ble_protol.md)
-- [Ble Hook 方式(不推荐)](third/ble_hook.md)
+- [Ble Hook 方式](third/ble_hook.md)
 
 ## 图例,名词解释 
 - 生态合作伙伴提供的SDK - 算法库(之后简称 `算法库`)
