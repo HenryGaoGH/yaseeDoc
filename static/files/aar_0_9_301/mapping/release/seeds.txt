@@ -1,0 +1,868 @@
+com.yasee.yasee.platforms.yucheng.CmdsYc$26
+com.yasee.yasee.platforms.xm.CmdsXm$5
+com.yasee.yasee.platforms.yucheng.CmdsYc$34
+com.yasee.yasee.platforms.tmd.ErrorTmd$2
+com.yasee.yasee.Devices
+com.yasee.yasee.core.models.Check
+com.yasee.yasee.platforms.yucheng.PlatformYc$1
+com.yasee.yasee.platforms.yucheng.CmdsYc$22
+com.yasee.yasee.core.tools.BleDeviceTypeAdapter
+com.yasee.yasee.platforms.xm.CmdsXm$4
+com.yasee.yasee.core.configs.SerialConfig
+com.yasee.yasee.platforms.yucheng.CmdsYc$11
+com.yasee.yasee.platforms.hlw.DecodeHlw
+com.yasee.yasee.platforms.tmd.ErrorTmd$7
+com.yasee.yasee.platforms.breathalyzer.ServiceBreathalyzer
+com.yasee.yasee.platforms.ld.PlatformLd$1
+com.yasee.yasee.platforms.tmd.PlatformTmd
+com.yasee.yasee.Notify
+com.yasee.yasee.platforms.mz.PlatformMz$6
+com.yasee.yasee.platforms.ld.PlatformLd$4
+com.yasee.yasee.platforms.mz.DecodeMz
+com.yasee.yasee.core.abstracts.AbstractsSerialActivity
+com.yasee.yasee.platforms.mz.PlatformMz$5
+com.yasee.yasee.platforms.yucheng.CmdsYc$19
+com.yasee.yasee.platforms.ky.PlatformKy$1
+com.yasee.yasee.platforms.xm.CheckSignXm
+com.yasee.yasee.platforms.yucheng.CmdsYc$14
+com.yasee.yasee.platforms.yucheng.CmdsYc$17
+com.yasee.yasee.platforms.yucheng.CmdsYc$12
+com.yasee.yasee.core.models.BleService$BleCharacteristic
+com.yasee.yasee.platforms.ky.PlatformKy$2
+com.yasee.yasee.platforms.yucheng.CmdsYc$20
+com.yasee.yasee.core.models.ErrorObj
+com.yasee.yasee.platforms.yucheng.CmdsYc$33
+com.yasee.yasee.core.abstracts.Platforms
+com.yasee.yasee.platforms.tmd.ErrorTmd$8
+com.yasee.yasee.platforms.ky.PlatformKyReceiver
+com.yasee.yasee.platforms.tmd.ErrorTmd$6
+com.yasee.yasee.platforms.xm.CmdsXm$2
+com.yasee.yasee.platforms.yucheng.CmdsYc$25
+com.yasee.yasee.core.configs.LogConfig
+com.yasee.yasee.core.models.NotifyResp$BleHistoryData
+com.yasee.yasee.platforms.ky.PlatformKyModelItem
+com.yasee.yasee.platforms.elva.PlatformElva
+com.yasee.yasee.core.models.BleService
+com.yasee.yasee.R$layout
+com.yasee.yasee.platforms.tmd.MessageTmd$3
+com.yasee.yasee.core.models.NotifyResp$BleLink
+com.yasee.yasee.core.configs.User
+com.yasee.yasee.platforms.welland.PlatformWl$1
+com.yasee.yasee.platforms.ld.model.PlatformLdHistory
+com.yasee.yasee.core.models.NotifyResp$BleNotifyData
+com.yasee.yasee.platforms.ld.InfoLd$1
+com.yasee.yasee.platforms.masschip.PlatformMasschip$6
+com.yasee.yasee.platforms.masschip.PlatformMasschip$4
+com.yasee.yasee.platforms.ld.DecodeLd
+com.yasee.yasee.platforms.yucheng.CmdsYc$28
+com.yasee.yasee.platforms.yucheng.CmdsYc$27
+com.yasee.yasee.R$drawable
+com.yasee.yasee.R$style
+com.yasee.yasee.R$xml
+com.yasee.yasee.core.enums.PlatformType
+com.yasee.yasee.platforms.xm.InfoXm
+com.yasee.yasee.core.tools.Products
+com.yasee.yasee.core.models.Payload
+com.yasee.yasee.platforms.ld.model.PlatformLdBase
+com.yasee.yasee.core.models.KV
+com.yasee.yasee.core.tools.YLocalBroadcast
+com.yasee.yasee.core.models.YWifi
+com.yasee.yasee.platforms.tmd.ErrorTmd$4
+com.yasee.yasee.core.abstracts.Device
+com.yasee.yasee.core.enums.BleState
+com.yasee.yasee.platforms.yucheng.CmdsYc$23
+com.yasee.yasee.core.models.Check$1
+com.yasee.yasee.platforms.tmd.ErrorTmd$3
+com.yasee.yasee.platforms.yucheng.CmdsYc$29
+com.yasee.yasee.protocols.ble.BleDevice
+com.yasee.yasee.core.models.NotifyResp
+com.yasee.yasee.platforms.welland.PlatformWl$2
+com.yasee.yasee.core.enums.DeviceProcess
+com.yasee.yasee.platforms.tmd.CmdsTmd$6
+com.yasee.yasee.platforms.ld.PlatformLd$3
+com.yasee.yasee.platforms.tmd.MessageTmd$1
+com.yasee.yasee.platforms.yucheng.ErrorYc$1
+com.yasee.yasee.platforms.yucheng.DecodeYc
+com.yasee.yasee.core.models.Check$2
+com.yasee.yasee.platforms.tmd.CheckSignTMD
+com.yasee.yasee.platforms.xm.CmdsXm
+com.yasee.yasee.platforms.tmd.CmdsTmd$3
+com.yasee.yasee.platforms.welland.PlatformWl$4
+com.yasee.yasee.platforms.yucheng.StaticYc
+com.yasee.yasee.protocols.wifi.WifiDevice
+com.yasee.yasee.platforms.ld.PlatformLd$4$1
+com.yasee.yasee.platforms.tmd.MessageTmd$4
+com.yasee.yasee.platforms.ld.PlatformLd
+com.yasee.yasee.platforms.yucheng.ServiceYc
+com.yasee.yasee.core.models.AdvertisementData
+com.yasee.yasee.platforms.xm.ServiceXm
+com.yasee.yasee.platforms.yucheng.CmdsYc$2
+com.yasee.yasee.platforms.ld.InfoLd
+com.yasee.yasee.platforms.hlw.PlatformHlw
+com.yasee.yasee.platforms.yucheng.CmdsYc$4
+com.yasee.yasee.platforms.tmd.ErrorTmd$5
+com.yasee.yasee.core.models.ParmsModel$1
+com.yasee.yasee.core.enums.LocalCheckEnum
+com.yasee.yasee.platforms.ld.PlatformLd$5$1
+com.yasee.yasee.platforms.yucheng.CmdsYc$21
+com.yasee.yasee.platforms.hlw.ServiceHlw
+com.yasee.yasee.platforms.tmd.MessageTmd$2
+com.yasee.yasee.platforms.yucheng.CmdsYc$32
+com.yasee.yasee.Yasee
+com.yasee.yasee.platforms.yucheng.CmdsYc$15
+com.yasee.yasee.platforms.yucheng.CmdsYc$7
+com.yasee.yasee.platforms.ld.PlatformLd$3$1
+com.yasee.yasee.platforms.mz.StaticMz
+com.yasee.yasee.platforms.welland.ICBleBridge
+com.yasee.yasee.platforms.yucheng.CmdsYc$1
+com.yasee.yasee.R$integer
+com.yasee.yasee.platforms.xm.PlatformXm
+com.yasee.yasee.R$attr
+com.yasee.yasee.R$color
+com.yasee.yasee.core.models.ParmsModel$2
+com.yasee.yasee.platforms.tmd.CmdsTmd$2
+com.yasee.yasee.platforms.mz.FilterCleanMz
+com.yasee.yasee.platforms.hlw.PlatformHlw$2
+com.yasee.yasee.platforms.ld.PlatformLd$5
+com.yasee.yasee.platforms.elva.ServiceElva
+com.yasee.yasee.core.models.ParmsModel
+com.yasee.yasee.platforms.tmd.ServiceTmd
+com.yasee.yasee.platforms.tmd.CmdsTmd$5
+com.yasee.yasee.core.models.BleService$BleCharacteristicPt
+com.yasee.yasee.R$string
+com.yasee.yasee.platforms.yucheng.CmdsYc$10
+com.yasee.yasee.platforms.welland.PlatformWl$3
+com.yasee.yasee.platforms.yucheng.CmdsYc$30
+com.yasee.yasee.platforms.ld.PlatformLd$2
+com.yasee.yasee.core.tools.ByteTool
+com.yasee.yasee.platforms.ky.DecodeKy
+com.yasee.yasee.platforms.yucheng.CmdsYc
+com.yasee.yasee.platforms.yucheng.CmdsYc$8
+com.yasee.yasee.platforms.yucheng.ErrorYc
+com.yasee.yasee.core.models.HistoryOverview
+com.yasee.yasee.platforms.xm.CmdsXm$3
+com.yasee.yasee.platforms.mz.PlatformMz$4
+com.yasee.yasee.core.enums.CmdType
+com.yasee.yasee.core.interfaces.NotifyInterface
+com.yasee.yasee.platforms.yucheng.CmdsYc$16
+com.yasee.yasee.platforms.tmd.DecodeTmd$1
+com.yasee.yasee.platforms.breathalyzer.PlatformBreathalyzer
+com.yasee.yasee.platforms.xm.CmdsXm$6
+com.yasee.yasee.platforms.ld.PlatformLd$2$1
+com.yasee.yasee.platforms.yucheng.CmdsYc$9
+com.yasee.yasee.platforms.breathalyzer.PlatformBreathalyzer$2
+com.yasee.yasee.core.tools.VerifyTool$1
+com.yasee.yasee.platforms.masschip.PlatformMasschip$1
+com.yasee.yasee.platforms.mz.PlatformMz$1
+com.yasee.yasee.platforms.masschip.PlatformMasschip$2
+com.yasee.yasee.platforms.welland.PlatformWl
+com.yasee.yasee.platforms.yucheng.CmdsYc$31
+com.yasee.yasee.platforms.tmd.ErrorTmd$1
+com.yasee.yasee.platforms.mz.PlatformMz$2
+com.yasee.yasee.platforms.tmd.MessageTmd
+com.yasee.yasee.platforms.tmd.ErrorTmd$9
+com.yasee.yasee.platforms.tmd.CmdsTmd$1
+com.yasee.yasee.platforms.mz.PlatformMz
+com.yasee.yasee.core.configs.BleConfig
+com.yasee.yasee.core.enums.NotifyType
+com.yasee.yasee.platforms.masschip.PlatformMasschip
+com.yasee.yasee.platforms.xm.DecodeCmdXm
+com.yasee.yasee.platforms.masschip.PlatformMasschip$7
+com.yasee.yasee.platforms.ld.model.PlatformLdStatus
+com.yasee.yasee.platforms.xm.InfoXm$1
+com.yasee.yasee.platforms.ky.PlatformKyModelRoot
+com.yasee.yasee.platforms.tmd.DecodeTmd$2
+com.yasee.yasee.core.models.Check$3
+com.yasee.yasee.platforms.tmd.ErrorTmd
+com.yasee.yasee.protocols.serial.SerialDevice
+com.yasee.yasee.core.models.Cmd
+com.yasee.yasee.core.receivers.BleStateReceiver
+com.yasee.yasee.core.configs.CommConfig
+com.yasee.yasee.platforms.yucheng.CmdsYc$3
+com.yasee.yasee.platforms.hlw.PlatformHlw$1
+com.yasee.yasee.R$id
+com.yasee.yasee.platforms.masschip.PlatformMasschip$5
+com.yasee.yasee.platforms.yucheng.CmdsYc$13
+com.yasee.yasee.platforms.tmd.CmdsTmd
+com.yasee.yasee.platforms.yucheng.CmdsYc$24
+com.yasee.yasee.platforms.breathalyzer.PlatformBreathalyzer$1
+com.yasee.yasee.platforms.tmd.DecodeTmd$3
+com.yasee.yasee.platforms.yucheng.CmdsYc$6
+com.yasee.yasee.platforms.mz.PlatformMz$3
+com.yasee.yasee.platforms.yucheng.CmdsYc$18
+com.yasee.yasee.platforms.yucheng.CmdsYc$5
+com.yasee.yasee.platforms.tmd.DecodeTmd
+com.yasee.yasee.core.models.Check$4
+com.yasee.yasee.platforms.tmd.CmdsTmd$4
+com.yasee.yasee.R$styleable
+com.yasee.yasee.platforms.tmd.MessageTmd$5
+com.yasee.yasee.platforms.xm.CmdsXm$7
+com.yasee.yasee.platforms.ky.PlatformKyEnum
+com.yasee.yasee.platforms.ld.model.PlatformLdVersion
+com.yasee.yasee.platforms.masschip.PlatformMasschip$3
+com.yasee.yasee.platforms.xm.CmdsXm$1
+com.yasee.yasee.platforms.masschip.PlatformMasschip$7$1
+com.yasee.yasee.platforms.mz.ServiceMz
+com.yasee.yasee.core.enums.ProtocolType
+com.yasee.yasee.platforms.yucheng.PlatformYc
+com.yasee.yasee.R
+com.yasee.yasee.platforms.ky.PlatformKy
+com.yasee.yasee.R$string: int kysdk_str_scan_four
+com.yasee.yasee.R$string: int kysdk_str_error_code_irregular_product
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_laserColor
+com.yasee.yasee.core.models.NotifyResp: java.lang.String message
+com.yasee.yasee.R$integer: int kysdk_viewfinder_border_length
+com.yasee.yasee.core.models.NotifyResp$BleLink: com.yasee.yasee.core.enums.DeviceProcess process
+com.yasee.yasee.R$id: int kysdk_tv_hint
+com.yasee.yasee.R$string: int kysdk_str_scanning_success
+com.yasee.yasee.R$string: int kysdk_str_scan_error_three
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_finderOffset
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Cgm
+com.yasee.yasee.core.abstracts.Device: com.yasee.yasee.core.enums.ProtocolType protocolType
+com.yasee.yasee.R$id: int kysdk_iv_adjust_angle
+com.yasee.yasee.R$layout: int kysdk_activity_jkez_main
+com.yasee.yasee.R$string: int kysdk_str_pic_bg_color_error
+com.yasee.yasee.R$color: int kysdk_viewfinder_mask
+com.yasee.yasee.R$string: int kysdk_str_error_code_light_too_dark
+com.yasee.yasee.R$id: int kysdk_appbar
+com.yasee.yasee.core.models.ParmsModel: int tempInt
+com.yasee.yasee.core.models.BleService$BleCharacteristic: boolean isCmd
+com.yasee.yasee.R$string: int kysdk_str_scanning_failed
+com.yasee.yasee.R$string: int kysdk_str_help_test_detail
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType thp_result
+com.yasee.yasee.core.configs.LogConfig: boolean openReceive
+com.yasee.yasee.R$string: int kysdk_str_scan_hint_error_flash
+com.yasee.yasee.core.configs.User: java.lang.Integer height
+com.yasee.yasee.core.models.Payload: java.lang.String appId
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType join
+com.yasee.yasee.core.models.ParmsModel: int tempFloat
+com.yasee.yasee.R$id: int kysdk_iv_help_test
+com.yasee.yasee.R$drawable: int kysdk_selector_item_setting
+com.yasee.yasee.core.models.ParmsModel: int distanceUnit
+com.yasee.yasee.R$string: int kysdk_str_permission_prompt
+com.yasee.yasee.core.models.NotifyResp$BleNotifyData: byte[] raw
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer sleepMinute
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_squaredFinder
+com.yasee.yasee.core.models.NotifyResp$BleLink: com.yasee.yasee.core.abstracts.Device device
+com.yasee.yasee.core.enums.NotifyType: com.yasee.yasee.core.enums.NotifyType deviceLink
+com.yasee.yasee.R$string: int kysdk_str_ok
+com.yasee.yasee.R$string: int kysdk_str_close
+com.yasee.yasee.R$color: int kysdk_jkez_main_bg
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer historyType
+com.yasee.yasee.R$styleable: int[] CameraBridgeViewBase
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum BpD
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType timing
+com.yasee.yasee.R$attr: int finderOffset
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType success
+com.yasee.yasee.R$style: int kysdk_Notitle
+com.yasee.yasee.core.models.KV: java.lang.String key
+com.yasee.yasee.core.models.ParmsModel: int commEnum
+com.yasee.yasee.core.enums.PlatformType: com.yasee.yasee.core.enums.PlatformType wl
+com.yasee.yasee.core.enums.DeviceProcess: com.yasee.yasee.core.enums.DeviceProcess unlink
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer highHeart
+com.yasee.yasee.R$id: int kysdk_tv_toolbar_title
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType result
+com.yasee.yasee.R$attr: int maskColor
+com.yasee.yasee.core.configs.BleConfig: boolean filterWithServices
+com.yasee.yasee.core.configs.LogConfig: boolean open
+com.yasee.yasee.core.models.ParmsModel: java.lang.String lowTemp
+com.yasee.yasee.R$string: int kysdk_str_loading_for_get_result
+com.yasee.yasee.core.models.NotifyResp$BleNotifyData: com.yasee.yasee.core.enums.CmdType step
+com.yasee.yasee.core.models.ParmsModel: int temperatureUnit
+com.yasee.yasee.R$string: int kysdk_str_error_code_need_white_bg_and_light
+com.yasee.yasee.core.models.ParmsModel: int langType
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Bp
+com.yasee.yasee.R$layout: int kysdk_include_toolbar
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer lowHeart
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer sleepHour
+com.yasee.yasee.R$string: int kysdk_str_error_code_test_paper_analysis_failed
+com.yasee.yasee.R$id: int any
+com.yasee.yasee.R$string: int kysdk_str_scan_hint_yes
+com.yasee.yasee.R$drawable: int kysdk_jkez_title_back_btn
+com.yasee.yasee.core.models.ErrorObj: com.yasee.yasee.core.models.ErrorObj noRes
+com.yasee.yasee.R$string: int kysdk_str_error
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer sportSwitch
+com.yasee.yasee.core.models.Cmd: com.yasee.yasee.core.interfaces.CmdInterface customAction
+com.yasee.yasee.R$integer: int kysdk_viewfinder_border_width
+com.yasee.yasee.R$layout: int kysdk_dialog_toast
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType points_result
+com.yasee.yasee.core.enums.BleState: com.yasee.yasee.core.enums.BleState off
+com.yasee.yasee.R$color: int kysdk_viewfinder_laser
+com.yasee.yasee.R$string: int kysdk_str_scan_two
+com.yasee.yasee.protocols.ble.BleDevice: com.yasee.yasee.core.models.AdvertisementData advertisementData
+com.yasee.yasee.core.models.ParmsModel: long millis
+com.yasee.yasee.R$string: int kysdk_str_error_code_illegal_request
+com.yasee.yasee.R$id: int kysdk_ll_btn
+com.yasee.yasee.core.configs.User: java.lang.Integer weight
+com.yasee.yasee.R$drawable: int kysdk_jkez_btn_back_normal
+com.yasee.yasee.R$id: int kysdk_tvTip
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType countDown
+com.yasee.yasee.core.enums.ProtocolType: com.yasee.yasee.core.enums.ProtocolType serial
+com.yasee.yasee.R$id: int kysdk_fl_toolbar
+com.yasee.yasee.R$styleable: int CameraBridgeViewBase_show_fps
+com.yasee.yasee.R$id: int kysdk_tv_back
+com.yasee.yasee.R$drawable: int kysdk_adjust
+com.yasee.yasee.R$id: int kysdk_wv_use_tutorials
+com.yasee.yasee.R$color: int kysdk_transparent
+com.yasee.yasee.R$attr: int borderLength
+com.yasee.yasee.R$string: int kysdk_str_error_code_paper_test_invalid
+com.yasee.yasee.core.models.BleService$BleCharacteristicPt: com.yasee.yasee.core.models.BleService$BleCharacteristicPt indicate
+com.yasee.yasee.protocols.serial.SerialDevice: java.lang.String model
+com.yasee.yasee.core.models.ParmsModel: int minTempFloat
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType setUser
+com.yasee.yasee.Yasee: com.yasee.yasee.core.configs.LogConfig logConfig
+com.yasee.yasee.core.models.YWifi: java.lang.String password
+com.yasee.yasee.core.models.BleService$BleCharacteristicPt: com.yasee.yasee.core.models.BleService$BleCharacteristicPt write
+com.yasee.yasee.R$string: int kysdk_str_permission_prompt_message_camera
+com.yasee.yasee.R$id: int kysdk_fl_fragment
+com.yasee.yasee.core.models.ParmsModel: int uricAcidUnit
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer historyIndex
+com.yasee.yasee.R$string: int kysdk_str_error_code_no_imei
+com.yasee.yasee.core.enums.NotifyType: com.yasee.yasee.core.enums.NotifyType testHistory
+com.yasee.yasee.R$id: int kysdk_tv_three
+com.yasee.yasee.R$color: int kysdk_black
+com.yasee.yasee.R$string: int kysdk_str_scan_error_one
+com.yasee.yasee.R$string: int kysdk_str_error_code_product_expired
+com.yasee.yasee.core.configs.User: java.lang.Integer smoking
+com.yasee.yasee.R$attr: int show_fps
+com.yasee.yasee.core.enums.PlatformType: com.yasee.yasee.core.enums.PlatformType ys
+com.yasee.yasee.R$string: int kysdk_str_scan_check_background
+com.yasee.yasee.R$string: int kysdk_str_scan_hint_error
+com.yasee.yasee.R$attr: int camera_id
+com.yasee.yasee.R$string: int kysdk_str_scan_hint_no
+com.yasee.yasee.core.configs.LogConfig: boolean openRaw
+com.yasee.yasee.R$string: int kysdk_text_near
+com.yasee.yasee.R$string: int kysdk_str_go_setting
+com.yasee.yasee.R$color: int kysdk_blue10
+com.yasee.yasee.R$attr: int laserEnabled
+com.yasee.yasee.R$string: int kysdk_str_error_code_paper_test_drug_invalid
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType standard
+com.yasee.yasee.core.models.BleService$BleCharacteristic: android.bluetooth.BluetoothGattCharacteristic linkChar
+com.yasee.yasee.core.models.ParmsModel: int time
+com.yasee.yasee.R$string: int kysdk_str_error_code_need_white_bg
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType unknown
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType end
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType serial_out
+com.yasee.yasee.R$string: int kysdk_str_error_code_system_busy
+com.yasee.yasee.R$string: int kysdk_str_error_code_project_update
+com.yasee.yasee.R$drawable: int kysdk_dialog_waiting
+com.yasee.yasee.core.enums.NotifyType: com.yasee.yasee.core.enums.NotifyType searchDevices
+com.yasee.yasee.core.enums.PlatformType: com.yasee.yasee.core.enums.PlatformType yc
+com.yasee.yasee.R$id: int kysdk_tv_content
+com.yasee.yasee.R$string: int kysdk_str_pic_white_bg
+com.yasee.yasee.core.models.ParmsModel: int testType
+com.yasee.yasee.R$string: int ble_service_description
+com.yasee.yasee.core.models.BleService$BleCharacteristicPt: com.yasee.yasee.core.models.BleService$BleCharacteristicPt read
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer historyUser
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum BsCheck
+com.yasee.yasee.R$drawable: int kysdk_shape_use_instructions_top
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Eg
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType error
+com.yasee.yasee.core.models.NotifyResp$BleHistoryData: java.util.List data
+com.yasee.yasee.core.models.NotifyResp: java.lang.Object data
+com.yasee.yasee.R$id: int back
+com.yasee.yasee.R$string: int kysdk_str_error_code_test_sample_data
+com.yasee.yasee.R$color: int kysdk_jkez_title_color
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Ox
+com.yasee.yasee.core.models.KV: java.lang.String value
+com.yasee.yasee.R$color: int kysdk_red
+com.yasee.yasee.R$string: int kysdk_str_take_pictures_notes_one
+com.yasee.yasee.core.models.ParmsModel: boolean sportRealOpen
+com.yasee.yasee.R$string: int kysdk_str_change_distance
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_borderColor
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer weatherType
+com.yasee.yasee.R$string: int kysdk_str_error_code_photo_abnormal
+com.yasee.yasee.core.configs.CommConfig: java.util.List SPLITSTRS
+com.yasee.yasee.R$string: int kysdk_str_error_code_request_wrong
+com.yasee.yasee.core.models.BleService$BleCharacteristicPt: com.yasee.yasee.core.models.BleService$BleCharacteristicPt write_nores
+com.yasee.yasee.R$color: int kysdk_white
+com.yasee.yasee.core.enums.BleState: com.yasee.yasee.core.enums.BleState on
+com.yasee.yasee.core.configs.User: java.lang.Integer sex
+com.yasee.yasee.R$string: int kysdk_str_take_pictures_notes_four
+com.yasee.yasee.core.models.NotifyResp: com.yasee.yasee.core.enums.NotifyType notifyType
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_borderAlpha
+com.yasee.yasee.R$string: int kysdk_str_scan_error_no_flash
+com.yasee.yasee.R$layout: int kysdk_ui_temp
+com.yasee.yasee.core.enums.ProtocolType: com.yasee.yasee.core.enums.ProtocolType wifi
+com.yasee.yasee.R$layout: int kysdk_dialog_waiting
+com.yasee.yasee.R$string: int kysdk_str_error_code_need_white_light
+com.yasee.yasee.R$layout: int kysdk_layout_spirit
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Bf
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Pb
+com.yasee.yasee.core.configs.User: java.lang.Integer month
+com.yasee.yasee.R$drawable: int kysdk_help_circle
+com.yasee.yasee.R$id: int kysdk_tv_title
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType callData
+com.yasee.yasee.R$id: int kysdk_rl_title
+com.yasee.yasee.R$string: int kysdk_str_scan_three
+com.yasee.yasee.R$string: int app_name
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Tp
+com.yasee.yasee.R$layout: int kysdk_activity_use_tutorials
+com.yasee.yasee.core.models.NotifyResp$BleHistoryData: java.lang.String platform
+com.yasee.yasee.core.models.BleService$BleCharacteristicPt: com.yasee.yasee.core.models.BleService$BleCharacteristicPt notify
+com.yasee.yasee.R$string: int kysdk_str_error_code_device_unbound
+com.yasee.yasee.core.configs.BleConfig: boolean reconnect
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_shouldScaleToFill
+com.yasee.yasee.R$attr: int myborderWidth
+com.yasee.yasee.R$id: int kysdk_iv_toast
+com.yasee.yasee.R$string: int kysdk_str_instructions_for_use
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType history
+com.yasee.yasee.core.configs.User: java.lang.Integer day
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer interval
+com.yasee.yasee.R$style: int kysdk_BackgroundTransparent
+com.yasee.yasee.R$id: int kysdk_camera_view
+com.yasee.yasee.R$string: int kysdk_str_hold_focus_for_take_picture
+com.yasee.yasee.R$string: int kysdk_str_check_text
+com.yasee.yasee.core.models.YWifi: java.lang.String ssid
+com.yasee.yasee.core.models.NotifyResp$BleNotifyData: com.yasee.yasee.core.abstracts.Device device
+com.yasee.yasee.R$string: int kysdk_str_error_code_image_analysis_failed
+com.yasee.yasee.R$color: int kysdk_item_setting
+com.yasee.yasee.R$attr: int borderAlpha
+com.yasee.yasee.protocols.wifi.WifiDevice: java.lang.String SSID
+com.yasee.yasee.core.models.NotifyResp: boolean success
+com.yasee.yasee.R$string: int kysdk_str_has_on_sensor
+com.yasee.yasee.R$string: int kysdk_str_error_code_error_imei
+com.yasee.yasee.R$color: int kysdk_blue4
+com.yasee.yasee.R$string: int kysdk_str_error_code_need_good_light
+com.yasee.yasee.R$string: int kysdk_str_take_picture_toast
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_maskColor
+com.yasee.yasee.R$string: int kysdk_str_token_error
+com.yasee.yasee.R$id: int kysdk_btn_cancel
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_cornerRadius
+com.yasee.yasee.R$id: int kysdk_tv_one
+com.yasee.yasee.R$string: int kysdk_str_take_pictures_notes
+com.yasee.yasee.R$string: int kysdk_str_error_code_project_testing
+com.yasee.yasee.R$string: int kysdk_str_error_code_get_image_failed
+com.yasee.yasee.R$color: int kysdk_gray14
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_myborderWidth
+com.yasee.yasee.R$drawable: int kysdk_shape_use_instructions_bottom
+com.yasee.yasee.R$id: int kysdk_ll_item_fragment_me
+com.yasee.yasee.R$drawable: int kysdk_jkez_btn_back_pressed
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType wakeup
+com.yasee.yasee.R$drawable: int kysdk_selectore_btn_text_color
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Ch
+com.yasee.yasee.R$id: int kysdk_rl_dialog_receive
+com.yasee.yasee.R$style: int kysdk_MyDialog
+com.yasee.yasee.core.models.Payload: boolean isVerify
+com.yasee.yasee.R$color: int kysdk_jkez_white
+com.yasee.yasee.R$id: int kysdk_activity_main
+com.yasee.yasee.R$attr: int cornerRadius
+com.yasee.yasee.core.models.NotifyResp$BleHistoryData: com.yasee.yasee.core.abstracts.Device device
+com.yasee.yasee.core.models.ParmsModel: int weightUnit
+com.yasee.yasee.R$drawable: int kysdk_back
+com.yasee.yasee.R$id: int kysdk_tv_toolbar_right
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer sportType
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer alarmValue
+com.yasee.yasee.core.models.Cmd: byte[] unsign
+com.yasee.yasee.core.enums.DeviceProcess: com.yasee.yasee.core.enums.DeviceProcess rwIsOk
+com.yasee.yasee.core.enums.NotifyType: com.yasee.yasee.core.enums.NotifyType deviceData
+com.yasee.yasee.R$color: int kysdk_statusBar
+com.yasee.yasee.core.configs.SerialConfig: java.lang.String nodeFile
+com.yasee.yasee.R$color: int kysdk_blue13
+com.yasee.yasee.R$attr: int shouldScaleToFill
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Ub
+com.yasee.yasee.R$id: int kysdk_tv_hint_error
+com.yasee.yasee.core.enums.NotifyType: com.yasee.yasee.core.enums.NotifyType bleState
+com.yasee.yasee.R$id: int front
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum To
+com.yasee.yasee.R$string: int kysdk_str_warm_prompt
+com.yasee.yasee.R$string: int kysdk_str_scanning_error
+com.yasee.yasee.R$string: int kysdk_str_error_code_picture_distortion
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType ack
+com.yasee.yasee.core.configs.BleConfig: java.lang.Integer scanTimer
+com.yasee.yasee.core.models.ParmsModel: int maxTempInteger
+com.yasee.yasee.core.models.ParmsModel: int minTempInteger
+com.yasee.yasee.core.models.BleService$BleCharacteristic: java.lang.String info
+com.yasee.yasee.R$attr: int borderColor
+com.yasee.yasee.core.enums.NotifyType: com.yasee.yasee.core.enums.NotifyType bindDevices
+com.yasee.yasee.R$layout: int kysdk_fragment_take_pictrue
+com.yasee.yasee.R$string: int kysdk_str_take_pictures_notes_three
+com.yasee.yasee.R$string: int kysdk_str_error_code_light__abnormal
+com.yasee.yasee.R$id: int kysdk_btn_ok
+com.yasee.yasee.R$string: int kysdk_str_use_tutorials
+com.yasee.yasee.R$string: int kysdk_str_error_code_need_horizontally
+com.yasee.yasee.R$string: int kysdk_text_far
+com.yasee.yasee.R$string: int kysdk_str_cancel
+com.yasee.yasee.core.models.Check: java.lang.String name
+com.yasee.yasee.core.models.NotifyResp$BleNotifyData: java.lang.Object data
+com.yasee.yasee.Yasee: com.yasee.yasee.core.configs.SerialConfig serialConfig
+com.yasee.yasee.R$id: int kysdk_view_spirit
+com.yasee.yasee.core.models.Cmd: java.util.UUID id
+com.yasee.yasee.core.configs.LogConfig: boolean openSend
+com.yasee.yasee.R$drawable: int kysdk_selector_blue_rounded_rectangle_btn
+com.yasee.yasee.R$attr: int roundedCorner
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_borderLength
+com.yasee.yasee.core.models.ErrorObj: com.yasee.yasee.core.models.ErrorObj noFound
+com.yasee.yasee.core.models.ParmsModel: java.lang.String wifiName
+com.yasee.yasee.core.models.KV: java.lang.String name
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Gh
+com.yasee.yasee.R$color: int kysdk_blue11
+com.yasee.yasee.R$string: int kysdk_str_scan_hint
+com.yasee.yasee.core.models.ParmsModel: int bloodSugarUnit
+com.yasee.yasee.core.models.ErrorObj: com.yasee.yasee.core.models.ErrorObj writeFail
+com.yasee.yasee.R$layout: int kysdk_dialog_scan_instructions
+com.yasee.yasee.R$string: int kysdk_str_error_code_service_not_available
+com.yasee.yasee.core.models.ParmsModel: int timeFormat
+com.yasee.yasee.core.abstracts.Platforms: com.yasee.yasee.core.abstracts.ble.ACK ack
+com.yasee.yasee.R$layout: int kysdk_dialog_ask
+com.yasee.yasee.core.models.Payload: java.lang.String client
+com.yasee.yasee.core.models.ParmsModel: java.lang.String highTemp
+com.yasee.yasee.R$id: int kysdk_ll_bottom
+com.yasee.yasee.core.enums.DeviceProcess: com.yasee.yasee.core.enums.DeviceProcess linked
+com.yasee.yasee.R$id: int kysdk_iv_toolbar_back
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer dataType
+com.yasee.yasee.R$styleable: int[] kysdk_AbstractBarcodeScannerView
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType pwd
+com.yasee.yasee.R$attr: int laserColor
+com.yasee.yasee.R$string: int kysdk_str_take_pictures_notes_two
+com.yasee.yasee.core.configs.User: java.lang.Integer age
+com.yasee.yasee.R$id: int kysdk_tv_two
+com.yasee.yasee.R$drawable: int kysdk_shape_dialog_top
+com.yasee.yasee.core.models.Cmd: java.lang.String desc
+com.yasee.yasee.R$attr: int squaredFinder
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_roundedCorner
+com.yasee.yasee.R$string: int kysdk_str_error_code_product_not_online
+com.yasee.yasee.core.models.ErrorObj: java.lang.Integer code
+com.yasee.yasee.R$id: int kysdk_rl_content
+com.yasee.yasee.core.models.ParmsModel: boolean on_off
+com.yasee.yasee.R$xml: int network_security_config
+com.yasee.yasee.R$color: int kysdk_input_line_bg
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType message
+com.yasee.yasee.R$string: int kysdk_str_scan_error_two
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType battery
+com.yasee.yasee.R$id: int kysdk_btn_receive
+com.yasee.yasee.R$color: int kysdk_blue8
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType historyOv
+com.yasee.yasee.R$string: int kysdk_str_scan_seven
+com.yasee.yasee.core.models.ParmsModel: int temp
+com.yasee.yasee.R$id: int kysdk_title_layout
+com.yasee.yasee.core.models.ParmsModel: java.lang.String curTemp
+com.yasee.yasee.R$string: int kysdk_str_error_code_product_used
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer target
+com.yasee.yasee.core.models.BleService$BleCharacteristicPt: com.yasee.yasee.core.models.BleService$BleCharacteristicPt indicate_nores
+com.yasee.yasee.protocols.ble.BleDevice: com.yasee.yasee.core.enums.ProtocolType protocolType
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType serial_join
+com.yasee.yasee.R$id: int kysdk_tv_four
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType pullOut
+com.yasee.yasee.R$styleable: int CameraBridgeViewBase_camera_id
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer screenLevel
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum DDevice
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Bodyf
+com.yasee.yasee.R$string: int kysdk_str_error_code_need_best_focal_length
+com.yasee.yasee.R$styleable: int kysdk_AbstractBarcodeScannerView_laserEnabled
+com.yasee.yasee.R$id: int kysdk_rl_toolbar
+com.yasee.yasee.core.models.Check: java.lang.Integer handwareCode
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Pd
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer leftOrRight
+com.yasee.yasee.Yasee: com.yasee.yasee.core.configs.BleConfig bleConfig
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Tot
+com.yasee.yasee.core.models.Payload: java.lang.String expireAt
+com.yasee.yasee.R$string: int kysdk_str_permission_prompt_message
+com.yasee.yasee.core.models.ParmsModel: int maxTempFloat
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum Dt
+com.yasee.yasee.core.enums.ProtocolType: com.yasee.yasee.core.enums.ProtocolType ble
+com.yasee.yasee.R$string: int kysdk_str_error_code_wrong_paper_test
+com.yasee.yasee.R$color: int kysdk_white0
+com.yasee.yasee.R$string: int kysdk_str_error_code_urine_color_too_heavy
+com.yasee.yasee.core.models.Cmd: com.yasee.yasee.core.enums.CmdType step
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType start
+com.yasee.yasee.R$string: int kysdk_str_scan_five
+com.yasee.yasee.Yasee: com.yasee.yasee.core.configs.User getCurrentUser()
+com.yasee.yasee.platforms.xm.CheckSignXm: CheckSignXm()
+com.yasee.yasee.Notify: void listen(com.yasee.yasee.core.interfaces.NotifyInterface)
+com.yasee.yasee.platforms.yucheng.CmdsYc$6: CmdsYc$6()
+com.yasee.yasee.core.enums.LocalCheckEnum: java.lang.String getZhName()
+com.yasee.yasee.protocols.ble.BleDevice: java.lang.String getMac()
+com.yasee.yasee.core.tools.BleDeviceTypeAdapter: void write(com.google.gson.stream.JsonWriter,com.yasee.yasee.protocols.ble.BleDevice)
+com.yasee.yasee.core.enums.DeviceProcess: com.yasee.yasee.core.enums.DeviceProcess valueOf(java.lang.String)
+com.yasee.yasee.core.configs.SerialConfig: SerialConfig()
+com.yasee.yasee.core.models.AdvertisementData: void setkCBAdvDataTimestamp(double)
+com.yasee.yasee.core.models.AdvertisementData: AdvertisementData(android.bluetooth.le.ScanResult)
+com.yasee.yasee.platforms.tmd.ErrorTmd$2: ErrorTmd$2()
+com.yasee.yasee.platforms.mz.ServiceMz: ServiceMz()
+com.yasee.yasee.core.abstracts.Platforms: Platforms()
+com.yasee.yasee.platforms.xm.InfoXm: InfoXm()
+com.yasee.yasee.core.models.HistoryOverview: HistoryOverview(java.lang.String,int,int)
+com.yasee.yasee.core.tools.ByteTool: java.lang.String bytesToHex(byte[])
+com.yasee.yasee.platforms.yucheng.CmdsYc$14: CmdsYc$14()
+com.yasee.yasee.protocols.ble.BleDevice: void connect()
+com.yasee.yasee.core.enums.BleState: com.yasee.yasee.core.enums.BleState[] values()
+com.yasee.yasee.platforms.xm.CmdsXm$1: CmdsXm$1()
+com.yasee.yasee.core.tools.ByteTool: java.lang.Float bytes2Float(byte[],boolean)
+com.yasee.yasee.platforms.xm.CmdsXm$7: CmdsXm$7()
+com.yasee.yasee.core.enums.ProtocolType: com.yasee.yasee.core.enums.ProtocolType[] values()
+com.yasee.yasee.Yasee: com.yasee.yasee.Yasee getSingle()
+com.yasee.yasee.core.tools.ByteTool: ByteTool()
+com.yasee.yasee.core.tools.YLocalBroadcast: void push(java.lang.String)
+com.yasee.yasee.core.models.Cmd: Cmd(java.util.UUID,com.yasee.yasee.core.enums.CmdType,java.lang.String,com.yasee.yasee.core.interfaces.CmdInterface)
+com.yasee.yasee.platforms.xm.CmdsXm$4: CmdsXm$4()
+com.yasee.yasee.core.tools.ByteTool: byte[] int2Bytes(java.lang.Integer,boolean)
+com.yasee.yasee.platforms.yucheng.CmdsYc$18: CmdsYc$18()
+com.yasee.yasee.Devices: void initDevices(java.util.List)
+com.yasee.yasee.core.abstracts.Device: long getLastUpdateTime()
+com.yasee.yasee.core.models.Payload: Payload(java.lang.String,java.lang.String,java.util.List,java.lang.String)
+com.yasee.yasee.platforms.yucheng.CmdsYc$12: CmdsYc$12()
+com.yasee.yasee.core.models.AdvertisementData: double getkCBAdvDataTimestamp()
+com.yasee.yasee.Yasee: void setCurrentUser(com.yasee.yasee.core.configs.User)
+com.yasee.yasee.platforms.tmd.CmdsTmd$4: CmdsTmd$4()
+com.yasee.yasee.platforms.ky.DecodeKy: DecodeKy()
+com.yasee.yasee.core.tools.BleDeviceTypeAdapter: com.yasee.yasee.protocols.ble.BleDevice read(com.google.gson.stream.JsonReader)
+com.yasee.yasee.core.models.BleService: java.util.List getCharacteristics()
+com.yasee.yasee.Devices: void initWifiDevices(java.util.List)
+com.yasee.yasee.core.abstracts.Platforms: com.yasee.yasee.core.abstracts.Platforms getPlatform(com.yasee.yasee.core.abstracts.Device)
+com.yasee.yasee.platforms.tmd.CmdsTmd$1: CmdsTmd$1()
+com.yasee.yasee.core.tools.BleDeviceTypeAdapter: void write(com.google.gson.stream.JsonWriter,java.lang.Object)
+com.yasee.yasee.core.abstracts.Device: void send(byte[],boolean)
+com.yasee.yasee.core.models.Check: Check(java.lang.String,java.lang.Integer)
+com.yasee.yasee.core.tools.Crc16Tool$Crc16Type: com.yasee.yasee.core.tools.Crc16Tool$Crc16Type valueOf(java.lang.String)
+com.yasee.yasee.Notify: com.yasee.yasee.Notify getSingle()
+com.yasee.yasee.core.tools.YLocalBroadcast: void unReceiver(android.content.BroadcastReceiver)
+com.yasee.yasee.platforms.yucheng.CmdsYc$11: CmdsYc$11()
+com.yasee.yasee.core.enums.NotifyType: com.yasee.yasee.core.enums.NotifyType valueOf(java.lang.String)
+com.yasee.yasee.protocols.ble.BleDevice: java.lang.String getModel()
+com.yasee.yasee.Devices: void delWithMac(java.lang.String)
+com.yasee.yasee.platforms.tmd.ErrorTmd$7: ErrorTmd$7()
+com.yasee.yasee.core.models.Check$1: void send(com.yasee.yasee.core.abstracts.Device,com.yasee.yasee.core.models.ParmsModel)
+com.yasee.yasee.platforms.tmd.CmdsTmd$5: CmdsTmd$5()
+com.yasee.yasee.core.models.NotifyResp$BleHistoryData: NotifyResp$BleHistoryData(com.yasee.yasee.core.abstracts.Device,java.util.List)
+com.yasee.yasee.platforms.yucheng.CmdsYc$17: CmdsYc$17()
+com.yasee.yasee.core.abstracts.Device: void setUpdateTime(long)
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum fromCode(int)
+com.yasee.yasee.core.tools.ByteTool: java.lang.Integer highLow(byte,byte)
+com.yasee.yasee.platforms.tmd.ErrorTmd$5: ErrorTmd$5()
+com.yasee.yasee.platforms.xm.PlatformXm: PlatformXm()
+com.yasee.yasee.Notify: void onNext(com.yasee.yasee.core.models.NotifyResp)
+com.yasee.yasee.core.models.AdvertisementData: void setkCBAdvDataManufacturerData(byte[])
+com.yasee.yasee.core.models.AdvertisementData: void setkCBAdvDataRxPrimaryPHY(int)
+com.yasee.yasee.protocols.ble.BleDevice: BleDevice(java.lang.String,java.lang.String,com.yasee.yasee.core.models.AdvertisementData)
+com.yasee.yasee.protocols.serial.SerialDevice: java.lang.String getModel()
+com.yasee.yasee.protocols.ble.BleDevice: BleDevice(android.bluetooth.BluetoothDevice,com.yasee.yasee.core.models.AdvertisementData)
+com.yasee.yasee.platforms.tmd.ErrorTmd$1: ErrorTmd$1()
+com.yasee.yasee.core.tools.Products: java.util.List supportChecks(com.yasee.yasee.core.abstracts.Device)
+com.yasee.yasee.core.tools.BleDeviceTypeAdapter: java.lang.Object read(com.google.gson.stream.JsonReader)
+com.yasee.yasee.core.models.AdvertisementData: AdvertisementData(java.util.Map)
+com.yasee.yasee.core.enums.BleState: com.yasee.yasee.core.enums.BleState valueOf(java.lang.String)
+com.yasee.yasee.core.tools.YLocalBroadcast: void receiver(java.lang.String,android.content.BroadcastReceiver)
+com.yasee.yasee.core.models.BleService$BleCharacteristic: java.util.UUID getUuid()
+com.yasee.yasee.core.models.ParmsModel: ParmsModel()
+com.yasee.yasee.core.models.AdvertisementData: java.util.Map toMap()
+com.yasee.yasee.core.abstracts.Device: short getLastState()
+com.yasee.yasee.core.models.NotifyResp: NotifyResp(com.yasee.yasee.core.enums.NotifyType,java.lang.Object)
+com.yasee.yasee.platforms.tmd.ErrorTmd$6: ErrorTmd$6()
+com.yasee.yasee.platforms.tmd.MessageTmd: MessageTmd()
+com.yasee.yasee.core.abstracts.Device: Device()
+com.yasee.yasee.platforms.yucheng.CmdsYc$31: CmdsYc$31()
+com.yasee.yasee.core.abstracts.Platforms: com.yasee.yasee.core.interfaces.BleInterface getBleInterface()
+com.yasee.yasee.protocols.ble.BleDevice: void send(com.yasee.yasee.core.models.Check,java.util.UUID,com.yasee.yasee.core.models.ParmsModel)
+com.yasee.yasee.core.enums.PlatformType: com.yasee.yasee.core.enums.PlatformType valueOf(java.lang.String)
+com.yasee.yasee.platforms.yucheng.CmdsYc$23: CmdsYc$23()
+com.yasee.yasee.core.abstracts.Device: java.lang.String getModel()
+com.yasee.yasee.core.models.BleService$BleCharacteristic: BleService$BleCharacteristic(java.lang.String,java.util.UUID,java.util.List,boolean)
+com.yasee.yasee.platforms.mz.PlatformMz: PlatformMz()
+com.yasee.yasee.protocols.wifi.WifiDevice: void send(byte[],boolean)
+com.yasee.yasee.core.tools.ByteTool: byte[] hexStringToByteArray(java.lang.String)
+com.yasee.yasee.Devices: void allAction(boolean)
+com.yasee.yasee.platforms.ld.model.PlatformLdHistory: PlatformLdHistory()
+com.yasee.yasee.core.enums.ProtocolType: com.yasee.yasee.core.enums.ProtocolType valueOf(java.lang.String)
+com.yasee.yasee.protocols.ble.BleDevice: void setState(short)
+com.yasee.yasee.platforms.yucheng.CmdsYc$5: CmdsYc$5()
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum[] values()
+com.yasee.yasee.platforms.tmd.ServiceTmd: ServiceTmd()
+com.yasee.yasee.platforms.tmd.MessageTmd$4: MessageTmd$4()
+com.yasee.yasee.Yasee: android.content.Context getContext()
+com.yasee.yasee.Devices: com.yasee.yasee.protocols.wifi.WifiDevice getDeviceWithSSID(java.lang.String)
+com.yasee.yasee.protocols.ble.BleDevice: void send(java.util.UUID,java.util.UUID,byte[],com.yasee.yasee.core.interfaces.CommInterface)
+com.yasee.yasee.platforms.ld.PlatformLd: PlatformLd()
+com.yasee.yasee.platforms.yucheng.CmdsYc$25: CmdsYc$25()
+com.yasee.yasee.platforms.yucheng.CmdsYc$34: CmdsYc$34()
+com.yasee.yasee.core.abstracts.Device: void send(com.yasee.yasee.core.models.Check,java.util.UUID,com.yasee.yasee.core.models.ParmsModel)
+com.yasee.yasee.platforms.ld.InfoLd: InfoLd()
+com.yasee.yasee.core.models.NotifyResp: NotifyResp(boolean,java.lang.String,com.yasee.yasee.core.enums.NotifyType,java.lang.Object)
+com.yasee.yasee.Devices: java.util.List bindDevices()
+com.yasee.yasee.protocols.serial.SerialDevice: void ioTest()
+com.yasee.yasee.platforms.yucheng.CmdsYc$13: CmdsYc$13()
+com.yasee.yasee.platforms.yucheng.CmdsYc$15: CmdsYc$15()
+com.yasee.yasee.core.models.AdvertisementData: int getkCBAdvDataRxSecondaryPHY()
+com.yasee.yasee.platforms.yucheng.PlatformYc: PlatformYc()
+com.yasee.yasee.core.models.AdvertisementData: java.lang.String getkCBAdvDataLocalName()
+com.yasee.yasee.core.models.AdvertisementData: void setkCBAdvDataIsConnectable(boolean)
+com.yasee.yasee.core.models.KV: KV(java.lang.String,java.lang.String,java.lang.String)
+com.yasee.yasee.core.models.AdvertisementData: boolean iskCBAdvDataIsConnectable()
+com.yasee.yasee.R$drawable: R$drawable()
+com.yasee.yasee.core.configs.User: User(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+com.yasee.yasee.platforms.ky.PlatformKyModelItem: PlatformKyModelItem()
+com.yasee.yasee.protocols.ble.BleDevice: android.bluetooth.BluetoothGatt getGatt()
+com.yasee.yasee.core.models.BleService$BleCharacteristicPt: com.yasee.yasee.core.models.BleService$BleCharacteristicPt[] values()
+com.yasee.yasee.core.enums.DeviceProcess: com.yasee.yasee.core.enums.DeviceProcess[] values()
+com.yasee.yasee.platforms.tmd.ErrorTmd: ErrorTmd()
+com.yasee.yasee.core.configs.BleConfig: BleConfig(java.lang.Integer)
+com.yasee.yasee.platforms.yucheng.CmdsYc$21: CmdsYc$21()
+com.yasee.yasee.core.enums.LocalCheckEnum: com.yasee.yasee.core.enums.LocalCheckEnum valueOf(java.lang.String)
+com.yasee.yasee.platforms.elva.ServiceElva: ServiceElva()
+com.yasee.yasee.core.enums.NotifyType: com.yasee.yasee.core.enums.NotifyType[] values()
+com.yasee.yasee.platforms.ky.PlatformKyReceiver: PlatformKyReceiver()
+com.yasee.yasee.platforms.ld.model.PlatformLdStatus: PlatformLdStatus()
+com.yasee.yasee.platforms.yucheng.ServiceYc: ServiceYc()
+com.yasee.yasee.platforms.welland.PlatformWl: PlatformWl()
+com.yasee.yasee.platforms.breathalyzer.ServiceBreathalyzer: ServiceBreathalyzer()
+com.yasee.yasee.platforms.tmd.CmdsTmd$3: CmdsTmd$3()
+com.yasee.yasee.core.interfaces.NotifyInterface: com.yasee.yasee.core.enums.NotifyType getType()
+com.yasee.yasee.protocols.serial.SerialDevice: void send(byte[],boolean)
+com.yasee.yasee.core.tools.ByteTool: byte[] zipBytes(byte[][])
+com.yasee.yasee.platforms.tmd.MessageTmd$3: MessageTmd$3()
+com.yasee.yasee.Devices: com.yasee.yasee.protocols.ble.BleDevice getDeviceWithMac(java.lang.String)
+com.yasee.yasee.platforms.tmd.CmdsTmd$2: CmdsTmd$2()
+com.yasee.yasee.platforms.ld.InfoLd$1: InfoLd$1()
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer reGetDataType(java.lang.Integer)
+com.yasee.yasee.platforms.elva.PlatformElva: PlatformElva()
+com.yasee.yasee.core.tools.BleDeviceTypeAdapter: BleDeviceTypeAdapter()
+com.yasee.yasee.R$style: R$style()
+com.yasee.yasee.core.tools.VerifyTool$1: VerifyTool$1()
+com.yasee.yasee.platforms.yucheng.CmdsYc$3: CmdsYc$3()
+com.yasee.yasee.platforms.tmd.MessageTmd$1: MessageTmd$1()
+com.yasee.yasee.platforms.tmd.PlatformTmd: PlatformTmd()
+com.yasee.yasee.Yasee: void setContext(android.content.Context)
+com.yasee.yasee.core.configs.LogConfig: LogConfig(boolean,boolean,boolean,boolean)
+com.yasee.yasee.platforms.xm.ServiceXm: ServiceXm()
+com.yasee.yasee.core.configs.BleConfig: java.util.regex.Pattern getPattern()
+com.yasee.yasee.core.models.Check$4: void send(com.yasee.yasee.core.abstracts.Device,com.yasee.yasee.core.models.ParmsModel)
+com.yasee.yasee.Notify: void clear()
+com.yasee.yasee.platforms.ky.PlatformKyModelRoot: PlatformKyModelRoot()
+com.yasee.yasee.platforms.yucheng.CmdsYc: CmdsYc()
+com.yasee.yasee.R$xml: R$xml()
+com.yasee.yasee.core.abstracts.Device: long getUpdateTime()
+com.yasee.yasee.R: R()
+com.yasee.yasee.core.models.Check: java.util.List getCmds()
+com.yasee.yasee.protocols.serial.SerialDevice: SerialDevice(java.lang.String)
+com.yasee.yasee.platforms.ld.model.PlatformLdVersion: PlatformLdVersion()
+com.yasee.yasee.platforms.xm.InfoXm$1: InfoXm$1()
+com.yasee.yasee.platforms.hlw.ServiceHlw: ServiceHlw()
+com.yasee.yasee.core.abstracts.Platforms: java.lang.String sortName()
+com.yasee.yasee.platforms.yucheng.CmdsYc$10: CmdsYc$10()
+com.yasee.yasee.platforms.xm.CmdsXm$6: CmdsXm$6()
+com.yasee.yasee.core.models.AdvertisementData: int getkCBAdvDataRxPrimaryPHY()
+com.yasee.yasee.core.models.Cmd: Cmd(java.util.UUID,java.lang.String,com.yasee.yasee.core.enums.CmdType,byte[],boolean)
+com.yasee.yasee.platforms.tmd.CmdsTmd: CmdsTmd()
+com.yasee.yasee.platforms.yucheng.CmdsYc$19: CmdsYc$19()
+com.yasee.yasee.core.models.Check$2: void send(com.yasee.yasee.core.abstracts.Device,com.yasee.yasee.core.models.ParmsModel)
+com.yasee.yasee.platforms.ky.PlatformKyEnum: com.yasee.yasee.platforms.ky.PlatformKyEnum valueOf(java.lang.String)
+com.yasee.yasee.core.models.BleService$BleCharacteristic: java.util.List getPts()
+com.yasee.yasee.protocols.wifi.WifiDevice: java.lang.String getModel()
+com.yasee.yasee.platforms.yucheng.CmdsYc$30: CmdsYc$30()
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType valueOf(java.lang.String)
+com.yasee.yasee.core.tools.YLocalBroadcast: YLocalBroadcast()
+com.yasee.yasee.platforms.tmd.DecodeTmd: DecodeTmd()
+com.yasee.yasee.core.tools.ByteTool: java.lang.String bytesToUtf8(byte[])
+com.yasee.yasee.platforms.ld.model.PlatformLdBase: PlatformLdBase()
+com.yasee.yasee.core.abstracts.Device: short getState()
+com.yasee.yasee.platforms.yucheng.CmdsYc$1: CmdsYc$1()
+com.yasee.yasee.core.models.Cmd: Cmd(java.util.UUID,byte[],com.yasee.yasee.core.enums.CmdType,java.lang.String)
+com.yasee.yasee.core.abstracts.AbstractsSerialActivity: boolean onKeyDown(int,android.view.KeyEvent)
+com.yasee.yasee.R$id: R$id()
+com.yasee.yasee.Yasee: void stop()
+com.yasee.yasee.core.tools.ByteTool: java.util.List splitWithLength(byte[],int)
+com.yasee.yasee.platforms.yucheng.DecodeYc: DecodeYc()
+com.yasee.yasee.core.tools.Products: Products()
+com.yasee.yasee.platforms.yucheng.CmdsYc$16: CmdsYc$16()
+com.yasee.yasee.platforms.yucheng.CmdsYc$33: CmdsYc$33()
+com.yasee.yasee.core.models.BleService: BleService(java.util.UUID,java.util.List)
+com.yasee.yasee.Devices: void notifyBindDevices()
+com.yasee.yasee.core.models.BleService$BleCharacteristic: BleService$BleCharacteristic(java.lang.String,java.util.UUID,java.util.List)
+com.yasee.yasee.core.models.ErrorObj: java.util.HashMap toMap()
+com.yasee.yasee.core.models.NotifyResp$BleNotifyData: NotifyResp$BleNotifyData(com.yasee.yasee.core.abstracts.Device,byte[],com.yasee.yasee.core.enums.CmdType,java.lang.Object)
+com.yasee.yasee.core.models.NotifyResp$BleLink: NotifyResp$BleLink(com.yasee.yasee.core.abstracts.Device,com.yasee.yasee.core.enums.DeviceProcess)
+com.yasee.yasee.platforms.xm.CmdsXm: CmdsXm()
+com.yasee.yasee.platforms.yucheng.CmdsYc$28: CmdsYc$28()
+com.yasee.yasee.platforms.tmd.ErrorTmd$4: ErrorTmd$4()
+com.yasee.yasee.Devices: com.yasee.yasee.Devices getSingle()
+com.yasee.yasee.core.models.NotifyResp$BleNotifyData: java.lang.String dataToJson()
+com.yasee.yasee.core.abstracts.Device: com.yasee.yasee.core.abstracts.Platforms getPlatform()
+com.yasee.yasee.platforms.yucheng.ErrorYc$1: ErrorYc$1()
+com.yasee.yasee.core.abstracts.Device: void setState(short)
+com.yasee.yasee.core.tools.Crc16Tool$Crc16Type: com.yasee.yasee.core.tools.Crc16Tool$Crc16Type[] values()
+com.yasee.yasee.Devices: void addSearchDevice(android.bluetooth.le.ScanResult)
+com.yasee.yasee.core.receivers.BleStateReceiver: void onReceive(android.content.Context,android.content.Intent)
+com.yasee.yasee.core.tools.ByteTool: byte[] extractDataByPrefix(byte[],byte[],int)
+com.yasee.yasee.platforms.breathalyzer.PlatformBreathalyzer: PlatformBreathalyzer()
+com.yasee.yasee.platforms.xm.CmdsXm$5: CmdsXm$5()
+com.yasee.yasee.core.abstracts.AbstractsSerialActivity: AbstractsSerialActivity()
+com.yasee.yasee.platforms.yucheng.CmdsYc$26: CmdsYc$26()
+com.yasee.yasee.core.abstracts.AbstractsSerialActivity: boolean onKeyUp(int,android.view.KeyEvent)
+com.yasee.yasee.platforms.yucheng.CmdsYc$8: CmdsYc$8()
+com.yasee.yasee.R$integer: R$integer()
+com.yasee.yasee.platforms.yucheng.CmdsYc$9: CmdsYc$9()
+com.yasee.yasee.core.models.AdvertisementData: void setkCBAdvDataRemoteId(java.lang.String)
+com.yasee.yasee.core.models.AdvertisementData: byte[] getkCBAdvDataManufacturerData()
+com.yasee.yasee.platforms.ky.PlatformKy: PlatformKy()
+com.yasee.yasee.core.abstracts.Platforms: com.yasee.yasee.core.abstracts.ble.ServiceUdid getServiceUdid()
+com.yasee.yasee.platforms.tmd.MessageTmd$2: MessageTmd$2()
+com.yasee.yasee.core.models.Check$3: void send(com.yasee.yasee.core.abstracts.Device,com.yasee.yasee.core.models.ParmsModel)
+com.yasee.yasee.R$styleable: R$styleable()
+com.yasee.yasee.core.configs.User: User(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+com.yasee.yasee.Devices: void addedBindDevice(com.yasee.yasee.protocols.ble.BleDevice)
+com.yasee.yasee.platforms.tmd.CheckSignTMD: CheckSignTMD()
+com.yasee.yasee.core.models.ErrorObj: ErrorObj(java.lang.Integer,java.lang.String,java.lang.String)
+com.yasee.yasee.core.models.AdvertisementData: java.lang.String getkCBAdvDataRemoteId()
+com.yasee.yasee.core.tools.ByteTool: java.util.ArrayList splitWithPrefix(byte[],byte[])
+com.yasee.yasee.core.models.AdvertisementData: java.util.List getkCBAdvDataServiceUUIDs()
+com.yasee.yasee.core.interfaces.NotifyInterface: void message(com.yasee.yasee.core.models.NotifyResp)
+com.yasee.yasee.core.models.AdvertisementData: void setkCBAdvDataLocalName(java.lang.String)
+com.yasee.yasee.core.tools.ByteTool: byte[] map2Bytes(java.util.Map)
+com.yasee.yasee.platforms.yucheng.ErrorYc: ErrorYc()
+com.yasee.yasee.Devices: java.util.List searchDevices()
+com.yasee.yasee.core.enums.LocalCheckEnum: int getCode()
+com.yasee.yasee.core.tools.ByteTool: byte[] now2Bytes()
+com.yasee.yasee.platforms.yucheng.CmdsYc$2: CmdsYc$2()
+com.yasee.yasee.core.enums.PlatformType: com.yasee.yasee.core.enums.PlatformType[] values()
+com.yasee.yasee.platforms.yucheng.CmdsYc$7: CmdsYc$7()
+com.yasee.yasee.protocols.wifi.WifiDevice: void send(com.yasee.yasee.core.models.Check,java.util.UUID,com.yasee.yasee.core.models.ParmsModel)
+com.yasee.yasee.core.models.AdvertisementData: void setkCBAdvDataRxSecondaryPHY(int)
+com.yasee.yasee.platforms.mz.StaticMz: StaticMz()
+com.yasee.yasee.core.tools.ByteTool: com.yasee.yasee.core.tools.HexResult findAA55Segments(byte[])
+com.yasee.yasee.protocols.serial.SerialDevice: void send(com.yasee.yasee.core.models.Check,java.util.UUID,com.yasee.yasee.core.models.ParmsModel)
+com.yasee.yasee.platforms.ky.PlatformKy: com.yasee.yasee.platforms.ky.PlatformKy single()
+com.yasee.yasee.protocols.ble.BleDevice: void send(byte[],boolean)
+com.yasee.yasee.R$color: R$color()
+com.yasee.yasee.platforms.tmd.ErrorTmd$8: ErrorTmd$8()
+com.yasee.yasee.platforms.hlw.PlatformHlw: PlatformHlw()
+com.yasee.yasee.platforms.yucheng.CmdsYc$27: CmdsYc$27()
+com.yasee.yasee.core.models.YWifi: YWifi(java.lang.String,java.lang.String)
+com.yasee.yasee.platforms.yucheng.CmdsYc$29: CmdsYc$29()
+com.yasee.yasee.platforms.yucheng.CmdsYc$20: CmdsYc$20()
+com.yasee.yasee.Yasee: boolean verifyOk()
+com.yasee.yasee.platforms.yucheng.CmdsYc$24: CmdsYc$24()
+com.yasee.yasee.Yasee: void nativeDecodeData(byte[],com.yasee.yasee.core.interfaces.DecodeInterface)
+com.yasee.yasee.Yasee: void setSerialConfig(boolean,com.yasee.yasee.core.configs.SerialConfig)
+com.yasee.yasee.platforms.ky.PlatformKy: void scanTest()
+com.yasee.yasee.platforms.xm.CmdsXm$3: CmdsXm$3()
+com.yasee.yasee.core.receivers.BleStateReceiver: BleStateReceiver()
+com.yasee.yasee.protocols.wifi.WifiDevice: WifiDevice(java.lang.String)
+com.yasee.yasee.core.abstracts.Device: void ioTest()
+com.yasee.yasee.platforms.yucheng.CmdsYc$22: CmdsYc$22()
+com.yasee.yasee.platforms.tmd.ErrorTmd$3: ErrorTmd$3()
+com.yasee.yasee.core.models.BleService$BleCharacteristicPt: com.yasee.yasee.core.models.BleService$BleCharacteristicPt valueOf(java.lang.String)
+com.yasee.yasee.core.tools.ByteTool: byte[] revertBytes(byte[])
+com.yasee.yasee.platforms.xm.CmdsXm$2: CmdsXm$2()
+com.yasee.yasee.protocols.ble.BleDevice: void disConnect()
+com.yasee.yasee.platforms.masschip.PlatformMasschip: PlatformMasschip()
+com.yasee.yasee.platforms.yucheng.CmdsYc$32: CmdsYc$32()
+com.yasee.yasee.core.tools.Products: java.util.List supportChecks(java.lang.String)
+com.yasee.yasee.core.configs.CommConfig: CommConfig()
+com.yasee.yasee.core.enums.CmdType: com.yasee.yasee.core.enums.CmdType[] values()
+com.yasee.yasee.Yasee: void scan()
+com.yasee.yasee.R$layout: R$layout()
+com.yasee.yasee.platforms.yucheng.CmdsYc$4: CmdsYc$4()
+com.yasee.yasee.platforms.ky.PlatformKyEnum: com.yasee.yasee.platforms.ky.PlatformKyEnum[] values()
+com.yasee.yasee.core.models.BleService: java.util.UUID getUuid()
+com.yasee.yasee.core.abstracts.Platforms: com.yasee.yasee.core.abstracts.ble.CheckSign getCheckSign()
+com.yasee.yasee.core.models.AdvertisementData: void setkCBAdvDataServiceUUIDs(java.util.List)
+com.yasee.yasee.core.abstracts.Platforms: com.yasee.yasee.core.abstracts.ble.DecodeCmd getDecodeCmd(com.yasee.yasee.protocols.ble.BleDevice,android.bluetooth.BluetoothGattCharacteristic,byte[])
+com.yasee.yasee.platforms.hlw.DecodeHlw: DecodeHlw()
+com.yasee.yasee.Notify: void remove(com.yasee.yasee.core.interfaces.NotifyInterface)
+com.yasee.yasee.platforms.yucheng.StaticYc: StaticYc()
+com.yasee.yasee.R$attr: R$attr()
+com.yasee.yasee.platforms.tmd.CmdsTmd$6: CmdsTmd$6()
+com.yasee.yasee.Yasee: void enableBle()
+com.yasee.yasee.core.models.ParmsModel: java.lang.Integer getDataType()
+com.yasee.yasee.R$string: R$string()
+com.yasee.yasee.core.tools.Products: java.util.List alls()
