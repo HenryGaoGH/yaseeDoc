@@ -1,0 +1,98 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:2:1-58:12
+INJECTED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:2:1-58:12
+	package
+		INJECTED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:2:70-116
+	xmlns:android
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:6:5-67
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:9:5-76
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:9:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:10:22-73
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:11:22-76
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:12:5-73
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:12:22-70
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:15:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:16:5-79
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:16:22-76
+uses-permission#android.permission.NEARBY_WIFI_DEVICES
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:19:5-20:32
+	tools:targetApi
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:20:9-29
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:19:22-75
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:23:5-95
+	android:maxSdkVersion
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:23:66-92
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:23:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:24:5-101
+	android:maxSdkVersion
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:24:72-98
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:24:22-71
+uses-permission#android.permission.BLUETOOTH_SCAN
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:27:5-28:32
+	tools:targetApi
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:28:9-29
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:27:22-70
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:29:5-30:32
+	tools:targetApi
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:30:9-29
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:29:22-73
+uses-permission#android.permission.BLUETOOTH_ADVERTISE
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:31:5-32:32
+	tools:targetApi
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:32:9-29
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:31:22-75
+uses-permission#android.permission.NEARBY_DEVICES
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:35:5-36:32
+	tools:targetApi
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:36:9-29
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:35:22-70
+application
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:42:5-56:19
+receiver#com.yasee.yasee.core.receivers.BleStateReceiver
+ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:43:9-46:40
+	android:enabled
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:45:13-35
+	android:exported
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml:44:13-60
+uses-sdk
+INJECTED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml
+INJECTED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/AndroidManifest.xml
