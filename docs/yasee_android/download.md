@@ -16,6 +16,36 @@ import Tag from '@site/src/components/Tag';
 
 ## SDK-最新版本
 **建议对接前使用 Demo体验或者查阅本文档**
+### [点击下载: 0.9.337](/files/aar_0_9_337/aar/yasee-release.aar)
+
+#### 新增功能:
+- <Tag text="增加" color="orange" /> 更新增加 盈养搜索、数据收发、连接等 环节
+- <Tag text="增加" color="orange" /> 增加文件压缩工具
+- <Tag text="增加" color="orange" /> 增加byte转文件工具
+- <Tag text="增加" color="orange" /> 增加CheckDecoder 接口(统一分离检测项解析过程)
+- <Tag text="增加" color="orange" /> 增加DecoderRegistry注册解析单元; 减少GC压力
+- <Tag text="增加" color="orange" /> 增加 线程模型 & RingBuffer
+
+
+#### 优化内容:
+- <Tag text="优化" color="green" /> split 工具类; 时间复杂度为O(1)
+- <Tag text="优化" color="green" /> 更新设备基类减少GC
+- <Tag text="优化" color="green" /> 更新蓝牙服务测配置表 & 增加预计算策略
+- <Tag text="优化" color="green" /> 优化BleIoQueue数据内容
+- <Tag text="优化" color="green" /> 优化串行处理设备的IO操作
+
+#### 删除内容:
+- ~**弃用** Stream 高阶方式~
+- ~**弃用** 部分类型推断式声明~
+
+
+
+--- 
+
+
+## SDK-历史版本
+
+
 ### [点击下载: 0.9.300](/files/aar_0_9_300/aar/yasee-release.aar)
 新增功能:
 - <Tag text="优化" color="green" /> 白细胞 WI-FI新权限声明 
@@ -29,8 +59,6 @@ import Tag from '@site/src/components/Tag';
 - <Tag text="增加" color="orange" /> 写入响应超时 (send 指令之后 3s内无任何响应; 报错)
 
 
-
-## SDK-历史版本
 
 ### [点击下载: 0.9.292](/files/yasee-0.9.292.aar)
 新增功能:
@@ -46,20 +74,28 @@ import Tag from '@site/src/components/Tag';
 
 
 
+---
+
 
 ## Demo-工程
+
+### 最新Demo
+- [v0_9_337](/files/demo/0_9_337.zip)
+
+### 历史版本
+- [v0_9_300](/files/demo/android_demo.zip)
+
+
+
 ---
-- [DEMO PROJECT](/files/android_demo.zip)
-
-
 
 
 
 ## DEMO-APK-下载
----
 
+### 最新Apk
+- [APK-0.9.337](/files/apk_0_9_337/app-release.apk)
+
+
+### 历史 Apk
 - [APK-0.9.300](/files/apk_0_9_300/app-release.apk)
-
-
-### 历史版本
-- ...
