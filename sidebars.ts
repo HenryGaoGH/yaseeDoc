@@ -71,6 +71,7 @@ const sidebars: SidebarsConfig = {
         "yasee_ios/demo_en",
         "yasee_ios/power_doc",
         "yasee_ios/power_doc_en",
+        "yasee_ios/download",
       ],
     },
     {
