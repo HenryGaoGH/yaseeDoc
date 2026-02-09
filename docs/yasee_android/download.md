@@ -16,6 +16,19 @@ import Tag from '@site/src/components/Tag';
 
 ## SDK-最新版本
 **建议对接前使用 Demo体验或者查阅本文档**
+### [点击下载: 0.9.338](/files/aar_0_9_338/aar/yasee-release.aar)
+
+#### 优化内容:
+- <Tag text="优化" color="green" /> 血压错误 Code 对应和解决方案说明~
+
+
+
+--- 
+
+
+## SDK-历史版本
+
+
 ### [点击下载: 0.9.337](/files/aar_0_9_337/aar/yasee-release.aar)
 
 #### 新增功能:
@@ -39,11 +52,6 @@ import Tag from '@site/src/components/Tag';
 - ~**弃用** 部分类型推断式声明~
 
 
-
---- 
-
-
-## SDK-历史版本
 
 
 ### [点击下载: 0.9.300](/files/aar_0_9_300/aar/yasee-release.aar)
