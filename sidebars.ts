@@ -135,6 +135,7 @@ const sidebars: SidebarsConfig = {
         "inner/reports/report_maizhen",
         "inner/reports/report_maizhen_luoji",
         "inner/reports/report_sdk_1v1",
+        "inner/reports/report_health",
       ],
     },
     {
