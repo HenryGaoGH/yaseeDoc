@@ -16,10 +16,11 @@ import Tag from '@site/src/components/Tag';
 
 ## SDK-最新版本
 **建议对接前使用 Demo体验或者查阅本文档**
-### [点击下载: 0.9.338](/files/aar_0_9_338/aar/yasee-release.aar)
+### [点击下载: 0.9.347](/files/aar_0_9_347/aar/yasee-release.aar)
 
 #### 优化内容:
-- <Tag text="优化" color="green" /> 血压错误 Code 对应和解决方案说明~
+- <Tag text="优化" color="green" /> 混淆策略更新
+- <Tag text="优化" color="green" /> X86 ABI 删减
 
 
 
@@ -27,6 +28,11 @@ import Tag from '@site/src/components/Tag';
 
 
 ## SDK-历史版本
+
+### [点击下载: 0.9.338](/files/aar_0_9_338/aar/yasee-release.aar)
+
+#### 优化内容:
+- <Tag text="优化" color="green" /> 血压错误 Code 对应和解决方案说明~
 
 
 ### [点击下载: 0.9.337](/files/aar_0_9_337/aar/yasee-release.aar)
