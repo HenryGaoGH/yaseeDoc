@@ -7,7 +7,7 @@ import Tag from '@site/src/components/Tag';
 包含了以下内容:
 
 - [x] SDK(AAR)文件
-- [x] DEMO 工程文件
+<!--- [x] DEMO 工程文件-->
 - [x] DEMO APK 文件
 :::
 
