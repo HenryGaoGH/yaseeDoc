@@ -6,6 +6,12 @@ import HCheckError from '@site/src/components/HCheckError';
 # BLE 检测流程详解
 ---
 
+:::danger
+首先重要的信息:
+1. 关注 step 类型; 为 message 是非中断流程的信息; 做提醒使用
+:::
+
+
 :::info
 以下将按照检测项的分类来说明功能和具体操作.
 
@@ -261,17 +267,45 @@ graph LR
 | error | code<br/>desc<br/>suggestion | 错误代码、详情、建议 | <HCheckError text="血脂" /> |
 
 
-### 数据事例
+### 算法介绍
+血脂产品有如下算法释义:
+1. 单位转换算法
+2. LDL、C/H 算法
+
+#### 单位转换算法
+按照SDK返回的单位情况; 
+
+tg: ` mmol/L = mg/dL / 88.57 `
+
+除tg外: ` mmol/L = mg/dL / 38.67 `
+
+#### LDL、C/H 算法
+
+甘油三酯的测试结果作为计算LDL公式分段的标准：
+
+当甘油三酯（TG）测试结果≤142mg/dL时，LDL=TC-HDL-TG/5mg/dL；
+
+当甘油三酯（TG）测试结果＞142mg/dL时，LDL=0.8*(TC-HDL)-TG/22.8mg/dL。
+
 
 
 ### 业务展示建议
+:::danger
+如遇 HDL、TG、TC、LDL、C/H 为 0 情况: 
+
+主要原因为 `操作滴血方式不对或者血液凝固` 问题. 
+
+LDL、C/H 主要是测算而来; 因此 TC、HDL、TG 的值会影响测算结果!
+
+:::
+
 :::info
 以单位为 mmol/L 为例:
 | 中文 | 子项 | 范围 | 范围外展示 |
 | -- | -- | -- | -- |
 | 高密度脂蛋白胆固醇 | HDL | [0.39, 2.59) | Hi、Lo |
 | 甘油三酯 | TG | [0.51,7.34) | Hi、Lo |
-| 总胆固醇 | CHOL | [2.59, 12.93)] | Hi、Lo |
+| 总胆固醇 | CHOL(TC) | [2.59, 12.93) | Hi、Lo |
 | 低密度脂蛋白胆固醇 | LDL | [0, 655] | 数值 或者 Hi、Lo展示 |
 | 总胆/高密度 | C/H | > 0 | 展示数值即可 |
 :::
