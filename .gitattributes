@@ -1,1 +1,2 @@
+static/files/plugin_0_9_384/yasee_plugin.zip filter=lfs diff=lfs merge=lfs -text
 static/files/thirds.zip filter=lfs diff=lfs merge=lfs -text
