@@ -1,20 +1,20 @@
 #!/bin/zsh
 
 
-echo "Please input Choose with push Choice [1 - all, 2 - only inner, 3 - only github]:" 
+echo "Please input Choose with push Choice [1 - all, 2 - only inner, 3 - only github]:"
 read choose
 
 echo "pushing to ${choose}"
 
 # 先提交目前的内容
 
-git add -A
+# git add -A
 
-git commit -m 'update docs'
+# git commit -m 'update docs'
 
-git pull
+# git pull
 
-git push
+# git push
 
 # 定位到 build 文件夹
 cd build
@@ -45,7 +45,7 @@ push2Inner() {
 
     ssh root@10.0.0.61 "systemctl restart nginx && exit"
 
-    echo "Files have been uploaded to 10.0.0.61:/yasee/page/documents | 处理成功"   
+    echo "Files have been uploaded to 10.0.0.61:/yasee/page/documents | 处理成功"
 }
 
 
