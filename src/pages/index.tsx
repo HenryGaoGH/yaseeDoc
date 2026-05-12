@@ -1,17 +1,40 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
 
-import Block from '@site/src/components/Block';
-import Heading from '@theme/Heading';
+import Block from "@site/src/components/Block";
+import Heading from "@theme/Heading";
 
-import styles from './index.module.css';
+import styles from "./index.module.css";
+
+import { useEffect } from "react";
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        alert("页面进入后台/切走");
+      }
+    };
+
+    const handlePageHide = () => {
+      alert("pagehide：页面被关闭或切走");
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("pagehide", handlePageHide);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("pagehide", handlePageHide);
+    };
+  }, []);
+
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
@@ -30,16 +53,27 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Description will go into a meta tag in <head />"
+    >
       <HomepageHeader />
       <main>
         {/* <HomepageFeatures /> */}
-        <Block right={true} title="更容易使用" desc="Yasee SDK 是 Yasee 移动端 SDK 的 Java、Swift 实现。" color='orange' />
-        <Block right={false} title="更标准的协议集成" desc="在移动端 SDK 的基础上，可以使用 Yasee SDK 进行标准的协议集成。通过 标准协议 更好更快速的集成多家设备" color='black' />
+        <Block
+          right={true}
+          title="更容易使用"
+          desc="Yasee SDK 是 Yasee 移动端 SDK 的 Java、Swift 实现。"
+          color="orange"
+        />
+        <Block
+          right={false}
+          title="更标准的协议集成"
+          desc="在移动端 SDK 的基础上，可以使用 Yasee SDK 进行标准的协议集成。通过 标准协议 更好更快速的集成多家设备"
+          color="black"
+        />
       </main>
     </Layout>
   );
