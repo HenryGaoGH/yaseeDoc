@@ -1,5 +1,5 @@
 
-
+import Tag from '@site/src/components/Tag';
 
 # 流程介绍
 
@@ -61,3 +61,21 @@ https://cdms.yasee.com.cn/tools/sysCodeQrcode/scan?id=xxxxxxxxxxxxxxxxx
 
 
 --- 
+
+
+
+
+## 电量上报流程
+
+:::warning
+
+!! **Yasee 支持设备 暂不提供 获取电量的API** !!
+
+:::
+
+### 上报逻辑
+
+最新的电量上报逻辑是分状态:
+1. <Tag text="充电状态: " color="green" />  **15秒/次**
+2. <Tag text="使用状态: " color="orange" /> **30 秒/次 且 电量变化超过5%**
+3. <Tag text="开机状态: " color="gray" /> **必发一次**

@@ -13,25 +13,25 @@ import { useEffect } from "react";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        alert("页面进入后台/切走");
-      }
-    };
+  // useEffect(() => {
+  //   const handleVisibilityChange = () => {
+  //     if (document.hidden) {
+  //       alert("页面进入后台/切走");
+  //     }
+  //   };
 
-    const handlePageHide = () => {
-      alert("pagehide：页面被关闭或切走");
-    };
+  //   const handlePageHide = () => {
+  //     alert("pagehide：页面被关闭或切走");
+  //   };
 
-    document.addEventListener("visibilitychange", handleVisibilityChange);
-    window.addEventListener("pagehide", handlePageHide);
+  //   document.addEventListener("visibilitychange", handleVisibilityChange);
+  //   window.addEventListener("pagehide", handlePageHide);
 
-    return () => {
-      document.removeEventListener("visibilitychange", handleVisibilityChange);
-      window.removeEventListener("pagehide", handlePageHide);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("visibilitychange", handleVisibilityChange);
+  //     window.removeEventListener("pagehide", handlePageHide);
+  //   };
+  // }, []);
 
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>

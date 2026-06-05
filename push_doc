@@ -41,7 +41,7 @@ push2github() {
 
 # 推送到 10.0.0.61 服务器
 push2Inner() {
-    rsync -avz ./ root@10.0.0.61:/yasee/page/documents
+    rsync -avz --progress --partial --exclude=".DS_Store" --exclude="._*" -e "ssh -o ServerAliveInterval=30 -o ServerAliveCountMax=10" ./ root@10.0.0.61:/yasee/page/documents
 
     ssh root@10.0.0.61 "systemctl restart nginx && exit"
 
