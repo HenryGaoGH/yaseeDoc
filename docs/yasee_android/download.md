@@ -16,11 +16,13 @@ import Tag from '@site/src/components/Tag';
 
 ## SDK-最新版本
 **建议对接前使用 Demo体验或者查阅本文档**
-### [点击下载: 0.9.347](/files/aar_0_9_347/aar/yasee-release.aar)
+### [点击下载: 0.9.384](/files/aar_0_9_384/aar/yasee-release.aar)
 
 #### 优化内容:
-- <Tag text="优化" color="green" /> 混淆策略更新
-- <Tag text="优化" color="green" /> X86 ABI 删减
+- <Tag text="新增" color="green" />  3导心电 断点续测的支持
+- <Tag text="优化" color="orange" /> ECG 整合版本(统一调用体验)
+- <Tag text="优化" color="orange" /> gson循环解析(串口设备)
+- <Tag text="优化" color="orange" /> 更新康云SDK;增加对心opencv库支持
 
 
 
@@ -28,6 +30,13 @@ import Tag from '@site/src/components/Tag';
 
 
 ## SDK-历史版本
+
+### [点击下载: 0.9.347](/files/aar_0_9_347/aar/yasee-release.aar)
+
+#### 优化内容:
+- <Tag text="优化" color="green" /> 混淆策略更新
+- <Tag text="优化" color="green" /> X86 ABI 删减
+
 
 ### [点击下载: 0.9.338](/files/aar_0_9_338/aar/yasee-release.aar)
 

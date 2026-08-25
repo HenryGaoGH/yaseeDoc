@@ -131,6 +131,10 @@ const config: Config = {
               label: "Yasee 慢病管理平台",
               href: "https://wechat.yasee.com.cn",
             },
+            {
+              label: "Yasee 开放平台",
+              href: "https://doc.yasee.com.cn/admin",
+            },
           ],
         },
         {
