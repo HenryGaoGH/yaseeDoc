@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">yasee_plugin</a></li>
-    <li><a href="../yasee/yasee-library.html">yasee.dart</a></li>
+    <li><a href="../yasee/">yasee.dart</a></li>
     <li class="self-crumb">Yasee class</li>
   </ol>
   <div class="self-name">Yasee</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -70,9 +62,8 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="Yasee" class="callable">
+        <dt id="Yasee.new" class="callable">
           <span class="name"><a href="../yasee/Yasee/Yasee.html">Yasee</a></span><span class="signature">()</span>
         </dt>
         <dd>
@@ -112,6 +103,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor inherited"
@@ -170,7 +162,6 @@
     
   <section class="summary offset-anchor" id="static-properties">
     <h2>Static Properties</h2>
-
     <dl class="properties">
         <dt id="info" class="property">
   <span class="name"><a href="../yasee/Yasee/info.html">info</a></span>
@@ -186,7 +177,7 @@
 
         <dt id="notify" class="property">
   <span class="name"><a href="../yasee/Yasee/notify.html">notify</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a></span>
   
 
 </dt>
@@ -198,7 +189,7 @@
 
         <dt id="notifyBindDevices" class="property">
   <span class="name"><a href="../yasee/Yasee/notifyBindDevices.html">notifyBindDevices</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_devices_entity/NotifyDevicesEntity-class.html">NotifyDevicesEntity</a></span>&gt;</span></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_devices_entity/NotifyDevicesEntity-class.html">NotifyDevicesEntity</a></span>&gt;</span></span>
   
 
 </dt>
@@ -210,7 +201,7 @@
 
         <dt id="notifyBleState" class="property">
   <span class="name"><a href="../yasee/Yasee/notifyBleState.html">notifyBleState</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_ble_state_entity/NotifyBleStateEntity-class.html">NotifyBleStateEntity</a></span>&gt;</span></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_ble_state_entity/NotifyBleStateEntity-class.html">NotifyBleStateEntity</a></span>&gt;</span></span>
   
 
 </dt>
@@ -222,7 +213,7 @@
 
         <dt id="notifyDeviceData" class="property">
   <span class="name"><a href="../yasee/Yasee/notifyDeviceData.html">notifyDeviceData</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_device_data_entity/NotifyDeviceDataEntity-class.html">NotifyDeviceDataEntity</a></span>&gt;</span></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_device_data_entity/NotifyDeviceDataEntity-class.html">NotifyDeviceDataEntity</a></span>&gt;</span></span>
   
 
 </dt>
@@ -232,15 +223,51 @@
 
 </dd>
 
+        <dt id="notifyDeviceLink" class="property">
+  <span class="name"><a href="../yasee/Yasee/notifyDeviceLink.html">notifyDeviceLink</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_device_link_entity/NotifyDeviceLinkEntity-class.html">NotifyDeviceLinkEntity</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  监听设备 连接状态
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="notifyHistoryData" class="property">
+  <span class="name"><a href="../yasee/Yasee/notifyHistoryData.html">notifyHistoryData</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_history_data_entity/NotifyHistoryDataEntity-class.html">NotifyHistoryDataEntity</a></span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+  监听设备历史数据
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
         <dt id="notifySearchDevices" class="property">
   <span class="name"><a href="../yasee/Yasee/notifySearchDevices.html">notifySearchDevices</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_devices_entity/NotifyDevicesEntity-class.html">NotifyDevicesEntity</a></span>&gt;</span></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_notify_devices_entity/NotifyDevicesEntity-class.html">NotifyDevicesEntity</a></span>&gt;</span></span>
   
 
 </dt>
 <dd>
   监听搜索设备变化
   <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="openLog" class="property">
+  <span class="name"><a href="../yasee/Yasee/openLog.html">openLog</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+  设置是否开启 日志
+  <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
 
@@ -276,6 +303,19 @@
 
 </dd>
 
+        <dt id="configSerial" class="callable">
+  <span class="name"><a href="../yasee/Yasee/configSerial.html">configSerial</a></span><span class="signature">(<wbr>{<span class="parameter" id="configSerial-param-nodeFile"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">nodeFile</span>, </span><span class="parameter" id="configSerial-param-beadRate"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">beadRate</span> = <span class="default-value">9600</span></span>})
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  串口配置信息 (设置完成默认开始监听)
+  
+
+</dd>
+
         <dt id="configUser" class="callable">
   <span class="name"><a href="../yasee/Yasee/configUser.html">configUser</a></span><span class="signature">(<wbr><span class="parameter" id="configUser-param-sex"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">sex</span>, </span><span class="parameter" id="configUser-param-age"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">age</span>, </span><span class="parameter" id="configUser-param-smoking"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">smoking</span>, </span><span class="parameter" id="configUser-param-height"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">height</span>, </span><span class="parameter" id="configUser-param-weight"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">weight</span></span>)
     <span class="returntype parameter">&#8594; dynamic</span>
@@ -285,6 +325,32 @@
 </dt>
 <dd>
   人员配置信息
+  
+
+</dd>
+
+        <dt id="enable" class="callable">
+  <span class="name"><a href="../yasee/Yasee/enable.html">enable</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  打开蓝牙
+  
+
+</dd>
+
+        <dt id="openColorimetry" class="callable">
+  <span class="name"><a href="../yasee/Yasee/openColorimetry.html">openColorimetry</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  比色法 扫描获取检测结果
   
 
 </dd>
@@ -319,9 +385,7 @@
   </section>
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -329,40 +393,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">yasee_plugin</a></li>
-    <li><a href="../yasee/yasee-library.html">yasee</a></li>
+    <li><a href="../yasee/">yasee</a></li>
     <li class="self-crumb">Yasee class</li>
 </ol>
-
 
     <h5>yasee library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.9.52
+      0.9.384+2
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

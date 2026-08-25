@@ -16,42 +16,35 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">yasee_plugin</a></li>
-    <li><a href="../exts_Device+Ext/exts_Device+Ext-library.html">exts&#47;Device+Ext.dart</a></li>
+    <li><a href="../exts_Device+Ext/">exts&#47;Device+Ext.dart</a></li>
     <li class="self-crumb">DeviceFunc extension</li>
   </ol>
   <div class="self-name">DeviceFunc</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
 <div
     id="dartdoc-main-content"
-    class="main-content"
+    class="main-content extension-page"
     data-above-sidebar="exts_Device+Ext&#47;exts_Device+Ext-library-sidebar.html"
     data-below-sidebar="exts_Device+Ext&#47;DeviceFunc-extension-sidebar.html">
     <div>
@@ -74,7 +67,7 @@
         <dt>on</dt>
         <dd>
           <ul class="comma-separated clazz-relationships">
-              <li><a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a></li>
+            <li><a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a></li>
           </ul>
         </dd>
       </dl>
@@ -82,7 +75,6 @@
 
 
     </section>
-
     
   <section
       class="summary offset-anchor"
@@ -91,11 +83,15 @@
     <dl class="properties">
         <dt id="supportChecks" class="property">
   <span class="name"><a href="../exts_Device+Ext/DeviceFunc/supportChecks.html">supportChecks</a></span>
-  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_check_entity/CheckEntity-class.html">CheckEntity</a></span>&gt;</span>?</span>&gt;</span></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_check_entity/CheckEntity-class.html">CheckEntity</a></span>&gt;</span>?</span>&gt;</span></span>
   
 
 </dt>
 <dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
   获取 检测项目
   <div class="features"><span class="feature">no setter</span></div>
 
@@ -103,6 +99,7 @@
 
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
@@ -110,13 +107,17 @@
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="bind" class="callable">
-  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/bind.html">bind</a></span><span class="signature">(<wbr>)
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/bind.html">bind</a></span><span class="signature">(<wbr>{<span class="parameter" id="bind-param-map"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">map</span></span>})
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
   绑定 设备
   
 
@@ -130,20 +131,79 @@
 
 </dt>
 <dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
   解绑&amp;断开 设备
   
 
 </dd>
 
-        <dt id="send" class="callable">
-  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/send.html">send</a></span><span class="signature">(<wbr><span class="parameter" id="send-param-handwareId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">handwareId</span>, </span><span class="parameter" id="send-param-cmdId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">cmdId</span>, {</span><span class="parameter" id="send-param-obj"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">obj</span></span>})
+        <dt id="reconnect" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/reconnect.html">reconnect</a></span><span class="signature">(<wbr>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  重连设备 (仅限iOS)
+  
+
+</dd>
+
+        <dt id="reqBattery" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/reqBattery.html">reqBattery</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  获取电量 (目前仅限TMD自有设备!)
+  
+
+</dd>
+
+        <dt id="send" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/send.html">send</a></span><span class="signature">(<wbr><span class="parameter" id="send-param-check"><span class="type-annotation"><a href="../models_check_entity/CheckEntity-class.html">CheckEntity</a></span> <span class="parameter-name">check</span>, </span><span class="parameter" id="send-param-cmdId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">cmdId</span>, {</span><span class="parameter" id="send-param-obj"><span class="type-annotation"><a href="../models_req_yasee_req_entity/YaseeReqEntity-class.html">YaseeReqEntity</a>?</span> <span class="parameter-name">obj</span></span>})
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
   发送信息
+  
+
+</dd>
+
+        <dt id="sendCustom" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/sendCustom.html">sendCustom</a></span><span class="signature">(<wbr><span class="parameter" id="sendCustom-param-data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">data</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  发送自定义数据
   
 
 </dd>
@@ -155,9 +215,7 @@
     
     
 
-
 </div> <!-- /.main-content -->
-
 <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
   <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -165,41 +223,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">yasee_plugin</a></li>
-    <li><a href="../exts_Device+Ext/exts_Device+Ext-library.html">Device+Ext</a></li>
+    <li><a href="../exts_Device+Ext/">Device+Ext</a></li>
     <li class="self-crumb">DeviceFunc extension</li>
 </ol>
-
 
   <h5>Device+Ext library</h5>
   <div id="dartdoc-sidebar-left-content"></div>
 </div>
-
 <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.9.52
+      0.9.384+2
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 
 

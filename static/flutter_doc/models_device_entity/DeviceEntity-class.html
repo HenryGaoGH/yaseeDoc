@@ -16,40 +16,32 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">yasee_plugin</a></li>
-    <li><a href="../models_device_entity/models_device_entity-library.html">models&#47;device_entity.dart</a></li>
+    <li><a href="../models_device_entity/">models&#47;device_entity.dart</a></li>
     <li class="self-crumb">DeviceEntity class</li>
   </ol>
   <div class="self-name">DeviceEntity</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
 <div
     id="dartdoc-main-content"
     class="main-content"
@@ -74,17 +66,16 @@
         
 
 
-          <dt>Available Extensions</dt>
-          <dd><ul class="comma-separated clazz-relationships">
-              <li><a href="../generated_json_device_entity.g/DeviceEntityExtension.html">DeviceEntityExtension</a></li>
-              <li><a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a></li>
-          </ul></dd>
-
+        
+  <dt>Available extensions</dt>
+  <dd><ul class="comma-separated clazz-relationships">
+      <li><a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a></li>
+  </ul></dd>
         
   <dt>Annotations</dt>
   <dd>
     <ul class="annotation-list clazz-relationships">
-        <li>@<a href="../generated_json_base_json_field/JsonSerializable-class.html">JsonSerializable</a>()</li>
+        <li>@<a href="https://pub.dev/documentation/json_annotation/4.12.0/json_annotation/JsonSerializable/JsonSerializable.html">JsonSerializable</a>(explicitToJson: true, anyMap: true)</li>
     </ul>
   </dd>
 
@@ -95,16 +86,15 @@
     
   <section class="summary offset-anchor" id="constructors">
     <h2>Constructors</h2>
-
     <dl class="constructor-summary-list">
-        <dt id="DeviceEntity" class="callable">
-          <span class="name"><a href="../models_device_entity/DeviceEntity/DeviceEntity.html">DeviceEntity</a></span><span class="signature">({<span class="parameter" id="-param-model"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">model</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-mac"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">mac</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-cUuid"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">cUuid</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-state"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">state</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-advertisementData"><span class="type-annotation"><a href="../models_device_entity/DeviceAdvertisementData-class.html">DeviceAdvertisementData</a>?</span> <span class="parameter-name">advertisementData</span>, </span><span class="parameter" id="-param-firstLoad"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">firstLoad</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-createTime"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">createTime</span></span>})</span>
+        <dt id="DeviceEntity.new" class="callable">
+          <span class="name"><a href="../models_device_entity/DeviceEntity/DeviceEntity.html">DeviceEntity</a></span><span class="signature">({<span class="parameter" id="-param-model"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">model</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-mac"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">mac</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-cUuid"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">cUuid</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-state"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">state</span> = <span class="default-value">0</span>, </span><span class="parameter" id="-param-advertisementData"><span class="type-annotation"><a href="../models_device_entity/DeviceAdvertisementData-class.html">DeviceAdvertisementData</a>?</span> <span class="parameter-name">advertisementData</span></span>})</span>
         </dt>
         <dd>
           
         </dd>
         <dt id="DeviceEntity.fromJson" class="callable">
-          <span class="name"><a href="../models_device_entity/DeviceEntity/DeviceEntity.fromJson.html">DeviceEntity.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span>)</span>
+          <span class="name"><a href="../models_device_entity/DeviceEntity/DeviceEntity.fromJson.html">DeviceEntity.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a></span> <span class="parameter-name">json</span></span>)</span>
         </dt>
         <dd>
           
@@ -130,18 +120,6 @@
 
 </dd>
 
-        <dt id="createTime" class="property">
-  <span class="name"><a href="../models_device_entity/DeviceEntity/createTime.html">createTime</a></span>
-  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
-  
-
-</dt>
-<dd>
-  绑定时间
-  <div class="features"><span class="feature">getter/setter pair</span></div>
-
-</dd>
-
         <dt id="cUuid" class="property">
   <span class="name"><a href="../models_device_entity/DeviceEntity/cUuid.html">cUuid</a></span>
   <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
@@ -149,20 +127,7 @@
 
 </dt>
 <dd>
-  iOS 端 remoteID
-  <div class="features"><span class="feature">getter/setter pair</span></div>
-
-</dd>
-
-        <dt id="firstLoad" class="property">
-  <span class="name"><a href="../models_device_entity/DeviceEntity/firstLoad.html">firstLoad</a></span>
-  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
-  
-
-</dt>
-<dd>
-  ============================================== 以下是扩展字段
-首次加载 需要展示 倒计时
+  iOS端remoteID
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -179,6 +144,30 @@
 
 </dd>
 
+        <dt id="lastState" class="property">
+  <span class="name"><a href="../models_device_entity/DeviceEntity/lastState.html">lastState</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  上次的连接状态
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
+        <dt id="lastUpdateTime" class="property">
+  <span class="name"><a href="../models_device_entity/DeviceEntity/lastUpdateTime.html">lastUpdateTime</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  上次的更新时间
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
         <dt id="mac" class="property">
   <span class="name"><a href="../models_device_entity/DeviceEntity/mac.html">mac</a></span>
   <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
@@ -186,7 +175,7 @@
 
 </dt>
 <dd>
-  
+  MAC 地址
   <div class="features"><span class="feature">getter/setter pair</span></div>
 
 </dd>
@@ -203,6 +192,18 @@
 
 </dd>
 
+        <dt id="protocolType" class="property">
+  <span class="name"><a href="../models_device_entity/DeviceEntity/protocolType.html">protocolType</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  设备类型
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
         <dt id="runtimeType" class="property inherited">
   <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span>
@@ -215,9 +216,21 @@
 
 </dd>
 
+        <dt id="SSID" class="property">
+  <span class="name"><a href="../models_device_entity/DeviceEntity/SSID.html">SSID</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+  wifi-SSID
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
         <dt id="state" class="property">
   <span class="name"><a href="../models_device_entity/DeviceEntity/state.html">state</a></span>
-  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
   
 
 </dt>
@@ -227,14 +240,77 @@
 
 </dd>
 
+        <dt id="supportChecks" class="property">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/supportChecks.html">supportChecks</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../models_check_entity/CheckEntity-class.html">CheckEntity</a></span>&gt;</span>?</span>&gt;</span></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  获取 检测项目
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="updateTime" class="property">
+  <span class="name"><a href="../models_device_entity/DeviceEntity/updateTime.html">updateTime</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span>
+  
+
+</dt>
+<dd>
+  更新时间
+  <div class="features"><span class="feature">getter/setter pair</span></div>
+
+</dd>
+
     </dl>
   </section>
+
     
   <section
       class="summary offset-anchor"
       id="instance-methods">
     <h2>Methods</h2>
     <dl class="callables">
+        <dt id="bind" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/bind.html">bind</a></span><span class="signature">(<wbr>{<span class="parameter" id="bind-param-map"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">map</span></span>})
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  绑定 设备
+  
+
+</dd>
+
+        <dt id="cancel" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/cancel.html">cancel</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  解绑&amp;断开 设备
+  
+
+</dd>
+
         <dt id="noSuchMethod" class="callable inherited">
   <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
     <span class="returntype parameter">&#8594; dynamic</span>
@@ -245,6 +321,74 @@
 <dd class="inherited">
   Invoked when a nonexistent method or property is accessed.
   <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="reconnect" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/reconnect.html">reconnect</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  重连设备 (仅限iOS)
+  
+
+</dd>
+
+        <dt id="reqBattery" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/reqBattery.html">reqBattery</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  获取电量 (目前仅限TMD自有设备!)
+  
+
+</dd>
+
+        <dt id="send" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/send.html">send</a></span><span class="signature">(<wbr><span class="parameter" id="send-param-check"><span class="type-annotation"><a href="../models_check_entity/CheckEntity-class.html">CheckEntity</a></span> <span class="parameter-name">check</span>, </span><span class="parameter" id="send-param-cmdId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">cmdId</span>, {</span><span class="parameter" id="send-param-obj"><span class="type-annotation"><a href="../models_req_yasee_req_entity/YaseeReqEntity-class.html">YaseeReqEntity</a>?</span> <span class="parameter-name">obj</span></span>})
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  发送信息
+  
+
+</dd>
+
+        <dt id="sendCustom" class="callable">
+  <span class="name"><a href="../exts_Device+Ext/DeviceFunc/sendCustom.html">sendCustom</a></span><span class="signature">(<wbr><span class="parameter" id="sendCustom-param-data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">data</span></span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="../models_device_entity/DeviceEntity-class.html">DeviceEntity</a>,
+        provided by the <a href="../exts_Device+Ext/DeviceFunc.html">DeviceFunc</a> extension</span>
+      </p>
+  发送自定义数据
+  
 
 </dd>
 
@@ -301,9 +445,7 @@
     
     
 
-
   </div> <!-- /.main-content -->
-
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
     <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -311,40 +453,30 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">yasee_plugin</a></li>
-    <li><a href="../models_device_entity/models_device_entity-library.html">device_entity</a></li>
+    <li><a href="../models_device_entity/">device_entity</a></li>
     <li class="self-crumb">DeviceEntity class</li>
 </ol>
-
 
     <h5>device_entity library</h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div>
-
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
   </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.9.52
+      0.9.384+2
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 

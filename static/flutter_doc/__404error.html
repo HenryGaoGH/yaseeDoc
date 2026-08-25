@@ -16,15 +16,11 @@
   <link rel="stylesheet" href="static-assets/github.css?v1">
   <link rel="stylesheet" href="static-assets/styles.css?v1">
   <link rel="icon" href="static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
@@ -34,98 +30,95 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
-
-  <div id="dartdoc-main-content" class="main-content">
-    <h1>404: Something's gone wrong :-(</h1>
-
-    <section class="desc">
-      <p>You've tried to visit a page that doesn't exist.  Luckily this site
-         has other <a href="index.html">pages</a>.</p>
-      <p>If you were looking for something specific, try searching:
+<div id="dartdoc-main-content" class="main-content">
+  <h1>404: Something's gone wrong :-(</h1>
+  <section class="desc">
+    <p>
+      You've tried to visit a page that doesn't exist. Luckily this site has
+      other <a href="index.html">pages</a>.
+    </p>
+    <div>
+      If you were looking for something specific, try searching:
       <form class="search-body" role="search">
-        <input type="text" id="search-body" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+        <input
+          type="text"
+          id="search-body"
+          autocomplete="off"
+          disabled
+          class="form-control typeahead"
+          placeholder="Loading search..."
+        />
       </form>
-      </p>
-
-    </section>
-  </div> <!-- /.main-content -->
-
-  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+    </div>
+  </section>
+</div>
+<!-- /.main-content -->
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li class="self-crumb">yasee_plugin package</li>
 </ol>
 
-
-    <h5><span class="package-name">yasee_plugin</span> <span class="package-kind">package</span></h5>
-    <ol>
+  <h5>
+    <span class="package-name">yasee_plugin</span>
+    <span class="package-kind">package</span>
+  </h5>
+  <ol>
       <li class="section-title">Libraries</li>
-      <li><a href="exts_Check+Ext/exts_Check+Ext-library.html">exts/Check+Ext</a></li>
-      <li><a href="exts_Device+Ext/exts_Device+Ext-library.html">exts/Device+Ext</a></li>
-      <li><a href="generated_json_base_json_convert_content/generated_json_base_json_convert_content-library.html">generated/json/base/json_convert_content</a></li>
-      <li><a href="generated_json_base_json_field/generated_json_base_json_field-library.html">generated/json/base/json_field</a></li>
-      <li><a href="generated_json_check_data_entity.g/generated_json_check_data_entity.g-library.html">generated/json/check_data_entity.g</a></li>
-      <li><a href="generated_json_check_entity.g/generated_json_check_entity.g-library.html">generated/json/check_entity.g</a></li>
-      <li><a href="generated_json_cmd_entity.g/generated_json_cmd_entity.g-library.html">generated/json/cmd_entity.g</a></li>
-      <li><a href="generated_json_device_entity.g/generated_json_device_entity.g-library.html">generated/json/device_entity.g</a></li>
-      <li><a href="generated_json_notify_ble_state_entity.g/generated_json_notify_ble_state_entity.g-library.html">generated/json/notify_ble_state_entity.g</a></li>
-      <li><a href="generated_json_notify_device_data_entity.g/generated_json_notify_device_data_entity.g-library.html">generated/json/notify_device_data_entity.g</a></li>
-      <li><a href="generated_json_notify_devices_entity.g/generated_json_notify_devices_entity.g-library.html">generated/json/notify_devices_entity.g</a></li>
-      <li><a href="models_check_data_entity/models_check_data_entity-library.html">models/check_data_entity</a></li>
-      <li><a href="models_check_entity/models_check_entity-library.html">models/check_entity</a></li>
-      <li><a href="models_cmd_entity/models_cmd_entity-library.html">models/cmd_entity</a></li>
-      <li><a href="models_device_entity/models_device_entity-library.html">models/device_entity</a></li>
-      <li><a href="models_notify_ble_state_entity/models_notify_ble_state_entity-library.html">models/notify_ble_state_entity</a></li>
-      <li><a href="models_notify_device_data_entity/models_notify_device_data_entity-library.html">models/notify_device_data_entity</a></li>
-      <li><a href="models_notify_devices_entity/models_notify_devices_entity-library.html">models/notify_devices_entity</a></li>
-      <li><a href="yasee/yasee-library.html">yasee</a></li>
-      <li><a href="yasee_plugin_method_channel/yasee_plugin_method_channel-library.html">yasee_plugin_method_channel</a></li>
-      <li><a href="yasee_plugin_platform_interface/yasee_plugin_platform_interface-library.html">yasee_plugin_platform_interface</a></li>
+      <li><a href="exts_Check+Ext/">exts/Check+Ext</a></li>
+      <li><a href="exts_Device+Ext/">exts/Device+Ext</a></li>
+      <li><a href="generated_json_base_json_convert_content/">generated/json/base/json_convert_content</a></li>
+      <li><a href="generated_json_base_json_field/">generated/json/base/json_field</a></li>
+      <li><a href="models_check_data_entity/">models/check_data_entity</a></li>
+      <li><a href="models_check_data_history_entity/">models/check_data_history_entity</a></li>
+      <li><a href="models_check_entity/">models/check_entity</a></li>
+      <li><a href="models_cmd_entity/">models/cmd_entity</a></li>
+      <li><a href="models_device_entity/">models/device_entity</a></li>
+      <li><a href="models_kv/">models/kv</a></li>
+      <li><a href="models_notify_ble_state_entity/">models/notify_ble_state_entity</a></li>
+      <li><a href="models_notify_device_data_entity/">models/notify_device_data_entity</a></li>
+      <li><a href="models_notify_device_link_entity/">models/notify_device_link_entity</a></li>
+      <li><a href="models_notify_devices_entity/">models/notify_devices_entity</a></li>
+      <li><a href="models_notify_history_data_entity/">models/notify_history_data_entity</a></li>
+      <li><a href="models_req_yasee_req_entity/">models/req/yasee_req_entity</a></li>
+      <li><a href="models_tmd_history_entity/">models/tmd_history_entity</a></li>
+      <li><a href="models_yc_history_entity/">models/yc_history_entity</a></li>
+      <li><a href="models_yc_history_sleep_data_entity/">models/yc_history_sleep_data_entity</a></li>
+      <li><a href="yasee/">yasee</a></li>
+      <li><a href="yasee_plugin_method_channel/">yasee_plugin_method_channel</a></li>
+      <li><a href="yasee_plugin_platform_interface/">yasee_plugin_platform_interface</a></li>
 </ol>
 
-  </div>
-
-  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
-  </div>
-
+</div>
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right"></div>
 </main>
-
 <footer>
   <span class="no-break">
     yasee_plugin
-      0.9.52
+      0.9.384+2
   </span>
-
   
 </footer>
-
 
 
 <script src="static-assets/highlight.pack.js?v1"></script>
 <script src="static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 
