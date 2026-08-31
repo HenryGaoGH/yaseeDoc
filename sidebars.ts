@@ -83,6 +83,15 @@ const sidebars: SidebarsConfig = {
         "yasee_flutter/download"
       ],
     },
+    {
+      type: "category",
+      label: "Yasee Package(JavaScript)",
+      items: [
+        "yasee_js/wel_doc", 
+        "yasee_js/used_doc",
+        "yasee_js/download"
+      ],
+    },
   ],
   thirdId: [
     {

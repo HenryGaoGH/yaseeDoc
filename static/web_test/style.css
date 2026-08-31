@@ -1,0 +1,67 @@
+:root {
+  color-scheme: light dark;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { max-width: 960px; margin: 0 auto; padding: 20px 20px 280px; }
+header, section { margin-bottom: 16px; padding: 16px; border: 1px solid #8885; border-radius: 10px; }
+h1, h2 { margin-top: 0; }
+.status, .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.case { padding: 12px; border: 1px solid #8883; border-radius: 8px; }
+.case strong { display: block; margin-bottom: 10px; }
+label { display: block; margin: 8px 0; }
+input:not([type="checkbox"]), select, button { min-height: 38px; padding: 8px 10px; }
+input:not([type="checkbox"]), select { width: 100%; margin-top: 4px; }
+button { cursor: pointer; }
+.log-panel {
+  position: fixed;
+  z-index: 1000;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  max-width: 928px;
+  height: 240px;
+  max-height: 50vh;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background: Canvas;
+  box-shadow: 0 8px 30px #0005;
+  transition: height 160ms ease;
+}
+
+.log-panel.expanded { height: 50vh; }
+.log-panel.minimized { height: 52px; }
+.log-panel.minimized #logs { display: none; }
+
+.log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 51px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #8885;
+}
+
+.log-header h2 { margin: 0; font-size: 18px; }
+.log-actions { display: flex; gap: 8px; }
+.log-actions button { min-height: 34px; padding: 5px 10px; }
+
+#logs {
+  height: calc(100% - 52px);
+  overflow: auto;
+  padding: 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 13px ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.success { color: #22a06b; }
+.error { color: #d1242f; }
+
+@media (max-width: 600px) {
+  body { padding: 12px 12px 260px; }
+  .log-panel { right: 8px; bottom: 8px; left: 8px; height: 220px; }
+}
