@@ -38,6 +38,11 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "doc",
+      label: "异常&信息对照表",
+      id: "comm/comm_error_message_reference",
+    },
+    {
+      type: "doc",
       label: "线上分析接口",
       id: "comm/comm_third_api",
     },
@@ -78,7 +83,7 @@ const sidebars: SidebarsConfig = {
       type: "category",
       label: "Yasee Plugin(Flutter)",
       items: [
-        "yasee_flutter/used_doc", 
+        "yasee_flutter/used_doc",
         "yasee_flutter/demo",
         "yasee_flutter/download"
       ],
@@ -87,7 +92,7 @@ const sidebars: SidebarsConfig = {
       type: "category",
       label: "Yasee Package(JavaScript)",
       items: [
-        "yasee_js/wel_doc", 
+        "yasee_js/wel_doc",
         "yasee_js/used_doc",
         "yasee_js/download"
       ],
