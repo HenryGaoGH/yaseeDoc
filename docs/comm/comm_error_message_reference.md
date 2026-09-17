@@ -1,6 +1,13 @@
 # 异常&信息对照表
 
-> 本页数据准确提取自 Android SDK 的 `ErrorTmd.java` 与 `MessageTmd.java`。代码同时以十六进制和十进制展示；运行时应结合 `LocalCheckEnum` 与 `CmdType step` 选择对应映射。
+:::danger
+本错误涵盖SDK 上报错误 和 过程信息; 
+理论上:
+1. 错误 建议中断流程
+2. 信息可 纯做 业务提示
+
+具体业务流程可业务端自行调整
+:::
 
 ## 查询规则
 
