@@ -67,4 +67,4 @@ import ImgText from '@site/src/components/ImgText/ImgText';
 
 ## Demo 工程下载
 
-[Android Demo Apk下载](/files/yasee.apk)
+[Android Demo Apk下载](/files/apk_0_9_394/app-release.apk)

@@ -403,7 +403,7 @@ For the model in the example, if there are any misunderstandings, you can refer 
 
 
 ## Demo download
-- [Android download](/files/yasee.apk)
+- [Android download](/files/apk_0_9_394/app-release.apk)
 
 
 

@@ -392,7 +392,7 @@ single.initDevices(List<BleDevice>);
 
 
 ## Demo 下载
-- [Android下载](/files/yasee.apk)
+- [Android下载](/files/apk_0_9_394/app-release.apk)
 
 
 

@@ -15,21 +15,48 @@ import Tag from '@site/src/components/Tag';
 
 
 ## SDK-最新版本
-**建议对接前使用 Demo体验或者查阅本文档**
+**建议对接前使用 Demo 体验或者查阅本文档**
+
+### [点击下载: 0.9.394](/files/aar_0_9_394/aar/yasee-release.aar)
+
+#### 更新内容
+
+##### 设备与协议支持
+- <Tag text="新增" color="green" /> 增加对 YB15B 设备的支持
+- <Tag text="新增" color="green" /> 支持 EPC01 心电设备
+- <Tag text="新增" color="green" /> 增加串口设备的序列化规范
+- <Tag text="新增" color="green" /> 增加动态地址类型的序列化与解析
+- <Tag text="兼容" color="green" /> 兼容 Android 15 以上的动态地址类型
+
+##### 对码流程
+- <Tag text="修复" color="red" /> 修复三合一设备对码无 code 的问题
+- <Tag text="优化" color="orange" /> 更新血脂对码错误信息
+- <Tag text="优化" color="orange" /> 血脂、糖化在插入流程（83）不再上报 code，统一在 `pwd` 流程上报；三合一设备保持不变
+
+##### 连接与性能
+- <Tag text="优化" color="orange" /> 更新设备基类，移除 loop gson
+- <Tag text="优化" color="orange" /> 将退避策略的初始延迟缩短为 300ms
+- <Tag text="移除" color="red" /> 移除失败次数过多的搜索逻辑
+- <Tag text="优化" color="orange" /> 优化连接流程，针对 GATT 30s 超时提前至 8s 处理
+- <Tag text="优化" color="orange" /> 单设备 IoQueue 独享线程，多设备线程互不 delay，提升处理速度
+- <Tag text="修复" color="red" /> 修复去抖工具在后台线程创建时的异常
+
+##### 构建与依赖
+- <Tag text="新增" color="green" /> 增加混淆规则
+- <Tag text="升级" color="orange" /> 康云 SDK 升级至版本 11，修复闪光灯偏黄时因要求白底而报错的问题
+- <Tag text="其他" color="gray" /> 其他细节优化
+
+---
+
+## SDK-历史版本
+
 ### [点击下载: 0.9.384](/files/aar_0_9_384/aar/yasee-release.aar)
 
 #### 优化内容:
-- <Tag text="新增" color="green" />  3导心电 断点续测的支持
-- <Tag text="优化" color="orange" /> ECG 整合版本(统一调用体验)
-- <Tag text="优化" color="orange" /> gson循环解析(串口设备)
-- <Tag text="优化" color="orange" /> 更新康云SDK;增加对心opencv库支持
-
-
-
---- 
-
-
-## SDK-历史版本
+- <Tag text="新增" color="green" /> 3导心电断点续测的支持
+- <Tag text="优化" color="orange" /> ECG 整合版本（统一调用体验）
+- <Tag text="优化" color="orange" /> gson 循环解析（串口设备）
+- <Tag text="优化" color="orange" /> 更新康云 SDK，增加对新 opencv 库支持
 
 ### [点击下载: 0.9.347](/files/aar_0_9_347/aar/yasee-release.aar)
 
@@ -82,21 +109,6 @@ import Tag from '@site/src/components/Tag';
 - <Tag text="增加" color="orange" /> 写入响应超时 (send 指令之后 3s内无任何响应; 报错)
 
 
-
-### [点击下载: 0.9.292](/files/yasee-0.9.292.aar)
-新增功能:
-- 拍照识别 CRP试纸功能
-- 血脂拔出试纸 不中断测量
-- 动态体温 Y920、YS1
-- 动态血糖 Y921、YC01
-- 脉诊增加型号支持: YMZ01、YMZ02
-- ...  
-
-### [点击下载: 0.9.289](/files/yasee.aar)
-常规优化...
-
-
-
 ---
 
 
@@ -117,10 +129,10 @@ import Tag from '@site/src/components/Tag';
 
 ## DEMO-APK-下载
 
-### 最新Apk
+### 最新 APK
+- [APK-0.9.394](/files/apk_0_9_394/app-release.apk)
+
+### 历史 APK
 - [APK-0.9.338](/files/apk_0_9_338/app-release.apk)
-
-
-### 历史 Apk
 - [APK-0.9.337](/files/apk_0_9_337/app-release.apk)
 - [APK-0.9.300](/files/apk_0_9_300/app-release.apk)

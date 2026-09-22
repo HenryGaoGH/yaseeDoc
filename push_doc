@@ -23,17 +23,17 @@ cd build
 
 # 然后将build内容推送到远程
 push2github() {
-    git init
+    # git init
 
-    git remote add origin https://github.com/HenryGaoGH/yasee.io.git
+    # git remote add origin https://github.com/HenryGaoGH/yasee.io.git
 
-    git add -A
+    # git add -A
 
-    git commit -m 'update docs'
+    # git commit -m 'update docs'
 
     git config http.postBuffer 71943040
 
-    git push -f origin main
+    git push origin main
 
     echo "Github 处理成功"
 }
