@@ -17,6 +17,18 @@ import Tag from '@site/src/components/Tag';
 ## SDK-最新版本
 **建议对接前使用 Demo 体验或者查阅本文档**
 
+### [点击下载: 0.9.395](/files/aar_0_9_395/aar/yasee-release.aar)
+
+#### 更新内容
+- <Tag text="新增" color="green" /> 增加混淆注入规则
+- <Tag text="优化" color="orange" /> Demo 优化 ECG 三导数据的独立展示
+- <Tag text="优化" color="orange" /> 优化心电多通道独立数据处理
+- <Tag text="新增" color="green" /> 增加 ECG 解析策略，实现多端对齐
+
+---
+
+## SDK-历史版本
+
 ### [点击下载: 0.9.394](/files/aar_0_9_394/aar/yasee-release.aar)
 
 #### 更新内容
@@ -45,10 +57,6 @@ import Tag from '@site/src/components/Tag';
 - <Tag text="新增" color="green" /> 增加混淆规则
 - <Tag text="升级" color="orange" /> 康云 SDK 升级至版本 11，修复闪光灯偏黄时因要求白底而报错的问题
 - <Tag text="其他" color="gray" /> 其他细节优化
-
----
-
-## SDK-历史版本
 
 ### [点击下载: 0.9.384](/files/aar_0_9_384/aar/yasee-release.aar)
 
@@ -130,9 +138,10 @@ import Tag from '@site/src/components/Tag';
 ## DEMO-APK-下载
 
 ### 最新 APK
-- [APK-0.9.394](/files/apk_0_9_394/app-release.apk)
+- [APK-0.9.395](/files/apk_0_9_395/app-release.apk)
 
 ### 历史 APK
+- [APK-0.9.394](/files/apk_0_9_394/app-release.apk)
 - [APK-0.9.338](/files/apk_0_9_338/app-release.apk)
 - [APK-0.9.337](/files/apk_0_9_337/app-release.apk)
 - [APK-0.9.300](/files/apk_0_9_300/app-release.apk)

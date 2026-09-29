@@ -16,6 +16,18 @@ import Tag from '@site/src/components/Tag';
 ## SDK-最新版本
 **建议对接前使用 Demo 体验或者查阅本文档**
 
+### [点击下载: 0.9.395](/files/ios_0_9_395/yasee_ios.framework.zip)
+
+#### 更新内容
+- <Tag text="新增" color="green" /> 增加混淆注入规则
+- <Tag text="优化" color="orange" /> Demo 优化 ECG 三导数据的独立展示
+- <Tag text="优化" color="orange" /> 优化心电多通道独立数据处理
+- <Tag text="新增" color="green" /> 增加 ECG 解析策略，实现多端对齐
+
+---
+
+## SDK-历史版本
+
 ### [点击下载: 0.9.394](/files/ios_0_9_394/yasee_ios.framework.zip)
 
 #### 更新内容
@@ -31,10 +43,6 @@ import Tag from '@site/src/components/Tag';
 
 ##### 依赖更新
 - <Tag text="其他" color="gray" /> 其他细节优化
-
----
-
-## SDK-历史版本
 
 ### [点击下载: 0.9.384](/files/ios_0_9_384/yasee_ios.framework.zip)
 
