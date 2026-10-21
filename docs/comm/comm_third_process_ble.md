@@ -30,9 +30,9 @@ import HCheckError from '@site/src/components/HCheckError';
 
 点击下方可直达!
 
-| 血压 | 血糖 | 尿酸 | 血酮 | 血脂 | 血氧 | 体温 | 尿常规 | 肺功能 | 心电 (动态、静态) | C反应蛋白 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [👉 血压](#血压) | [👉 血糖](#tone) | [👉 尿酸](#tone) | [👉 血酮](#tone) | [👉 血脂](#血脂) | 血氧 | 体温 | 尿常规 | 肺功能 | 心电 (动态、静态) | C反应蛋白 |
+| 血压 | 血糖 | 尿酸 | 血酮 | 血脂 | 体脂 | 血氧 | 体温 | 尿常规 | 肺功能 | 心电 (动态、静态) | C反应蛋白 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| [👉 血压](#血压) | [👉 血糖](#tone) | [👉 尿酸](#tone) | [👉 血酮](#tone) | [👉 血脂](#血脂) | [👉 体脂](#体脂) | 血氧 | 体温 | 尿常规 | 肺功能 | 心电 (动态、静态) | C反应蛋白 |
 
 | 糖化血红蛋白 | 动态体温 | 动态血糖 | 脉诊 | 酒精 | 白细胞 | 睡眠监测 |
 | --- | --- | --- | --- | --- | --- | --- | 
@@ -312,6 +312,289 @@ LDL、C/H 主要是测算而来; 因此 TC、HDL、TG 的值会影响测算结�
 
 ---
 
+## 体脂
+
+### 测量前准备
+
+体脂设备通常**不需要**业务端发送“开始测量”指令。用户上秤后，设备会自动开始称重并通过 SDK 持续上报测量数据。
+
+:::warning
+体脂算法依赖用户信息。开始测量前，请先通过 SDK 配置当前用户的性别、年龄、身高和体重；用户信息缺失或不准确会影响 BMI、体脂率、肌肉量等算法结果。
+
+测量时请注意：
+
+1. 保持设备处于已连接状态。(屏幕点亮;并且蓝牙图标亮起)
+2. 用户赤脚站上体脂秤，并按设备要求接触全部电极。
+3. 测量过程中保持身体稳定，不要下秤或移动。
+4. 业务端可实时展示体重，但只有 `isStabilized` 为 `true` 时才应将数据作为最终结果保存。
+5. 部分设备只支持体重，或未检测到有效阻抗，此时体脂、肌肉、水分等算法字段可能为 `0`。
+
+ps: 点亮体脂秤的方式: 可用脚先轻轻踩一下
+:::
+
+### 检测流程
+
+```mermaid
+graph LR
+  style A fill:#4CAF50,color:#fff
+  style G fill:#4CAF50,color:#fff
+  style H fill:#4CAF50,color:#fff
+  style I fill:#4CAF50,color:#fff
+  
+  A[配置用户信息] --> B[点亮体脂秤]
+  B --> C{确认体脂秤已连接}
+  C --> |是|D[上称]
+  C --> |否|E[等待熄屏]
+  E --> B
+  D --> F{等待结果}
+  F --> |有|G[测量完成]
+  F --> |无|E
+  G --> H[有身体成分结果]
+  G --> I[无身体成分结果]
+  
+```
+
+:::info
+示例数据中 `isStabilized` 为 `true`，表示体重已经稳定；但 `imp`、`impendences` 等阻抗数据为 `0`，因此多数身体成分结果也为 `0`。业务端不要把 `0` 自动解释为用户真实测量值，应结合设备能力、阻抗值和稳定状态判断该指标是否有效。
+
+结果类型:
+1. 包含 身体成分结果
+2. 不包含 身体成分结果
+
+两种结果; 不包含的 需要确认是否按照要求 进行测量; 可按照测量要求在此进行测量
+:::
+
+:::danger
+如遇如下问题:
+1. 长时间 未返回结果; 
+2. 体脂秤已熄屏
+
+可等待体脂秤 **熄屏后** 再次尝试;
+:::
+
+### 字段解释
+
+#### 通用与测量状态
+
+| 字段 | 含义 | 单位/说明 |
+| --- | --- | --- |
+| `checkCode` | 检测项 ID | `32` 表示体脂 |
+| `check` | 检测项名称 | `体脂` |
+| `time` | 测量时间 | Unix 时间戳；具体为秒或毫秒以 SDK 实际版本为准 |
+| `userId` | 参与算法计算的用户 ID | 未绑定用户时可能为 `0` |
+| `state` | 设备或测量状态 | 枚举值以具体设备协议和 SDK 版本为准 |
+| `isStabilized` | 当前体重是否已经稳定 | `true` 时可作为最终测量结果处理 |
+| `electrode` | 电极数量 | 示例为 `4`，SDK 同时支持 4 电极和 8 电极设备 |
+| `bfa_type` | 体脂算法/设备类型标识 | 枚举含义以具体 SDK 版本为准 |
+| `data_calc_type` | 数据计算方式标识 | 枚举含义以具体 SDK 版本为准 |
+| `temperature` | 设备返回的温度 | 是否支持及单位以设备为准 |
+| `isSupportHR` | 设备是否支持心率 | 布尔值 |
+| `hr` | 心率 | bpm；不支持或未测得时可能为 `0` |
+
+#### 体重与秤精度
+
+| 字段 | 含义 | 单位/说明 |
+| --- | --- | --- |
+| `weight_g` | 体重 | g |
+| `weight_kg` | 体重 | kg |
+| `weight_lb` | 体重 | lb（磅） |
+| `weight_st` | 体重的英石整数部分 | st（英石） |
+| `weight_st_lb` | 英石制中的剩余磅数 | lb |
+| `precision_kg` | kg 显示精度 | 精度枚举/位数以设备为准 |
+| `precision_lb` | lb 显示精度 | 精度枚举/位数以设备为准 |
+| `precision_st_lb` | st:lb 显示精度 | 精度枚举/位数以设备为准 |
+| `kg_scale_division` | kg 分度值标识 | 枚举含义以设备为准 |
+| `lb_scale_division` | lb 分度值标识 | 枚举含义以设备为准 |
+
+#### 身体成分结果
+
+| 字段 | 含义 | 常用单位/说明 |
+| --- | --- | --- |
+| `bmi` | 身体质量指数 | kg/m² |
+| `bodyFatPercent` | 体脂率 | % |
+| `subcutaneousFatPercent` | 皮下脂肪率 | % |
+| `visceralFat` | 内脏脂肪等级/指数 | 具体量纲以算法为准 |
+| `bfmStandard` | 标准脂肪量 | kg |
+| `bfmControl` | 脂肪控制量 | kg |
+| `moisturePercent` | 水分率 | % |
+| `waterMassMin` / `waterMassMax` | 水分量参考下限/上限 | kg |
+| `proteinPercent` | 蛋白质率 | % |
+| `proteinMassMin` / `proteinMassMax` | 蛋白质量参考下限/上限 | kg |
+| `musclePercent` | 肌肉率 | % |
+| `muscleMassMin` / `muscleMassMax` | 肌肉量参考下限/上限 | kg |
+| `smPercent` | 骨骼肌率 | % |
+| `smmMin` / `smmStandard` / `smmMax` | 骨骼肌量参考下限/标准值/上限 | kg |
+| `smi` | 骨骼肌指数 | kg/m²，具体计算方式以算法为准 |
+| `boneMass` | 骨量 | kg |
+| `boneMin` / `boneMax` | 骨量参考下限/上限 | kg |
+| `bmr` | 基础代谢率 | kcal/day |
+| `bmrMin` / `bmrStandard` / `bmrMax` | 基础代谢参考下限/标准值/上限 | kcal/day |
+| `whr` | 腰臀比 | 无量纲 |
+| `obesityDegree` | 肥胖度 | 通常为百分比，具体口径以算法为准 |
+| `bodyType` | 体型分类 | 枚举值以 SDK 算法为准 |
+| `bodyScore` | 身体评分 | 评分范围以 SDK 算法为准 |
+| `physicalAge` | 身体年龄 | 岁 |
+
+#### 标准值与控制目标
+
+| 字段 | 含义 | 单位/说明 |
+| --- | --- | --- |
+| `weightMin` / `weightStandard` / `weightMax` | 体重参考下限/标准值/上限 | kg |
+| `targetWeight` | 目标体重 | kg |
+| `weightControl` | 建议体重控制量 | kg；正负方向以 SDK 算法定义为准 |
+| `bmiMin` / `bmiStandard` / `bmiMax` | BMI 参考下限/标准值/上限 | kg/m² |
+| `bfpMin` / `bfpStandard` / `bfpMax` | 体脂率参考下限/标准值/上限 | % |
+| `bfmMin` / `bfmStandard` / `bfmMax` | 脂肪量参考下限/标准值/上限 | kg |
+| `ffmStandard` | 标准去脂体重 | kg |
+| `ffmControl` | 去脂体重控制量 | kg |
+
+#### 阻抗数据
+
+| 字段 | 含义 | 说明 |
+| --- | --- | --- |
+| `imp` | 主阻抗值 | 未测得有效阻抗时可能为 `0` |
+| `imp2` ～ `imp5` | 其他通道/频率阻抗值 | 字段是否有效取决于设备电极数和协议能力 |
+| `impendences` | 阻抗值集合 | 数组顺序和通道含义以具体设备协议为准 |
+| `impendenceType` | 阻抗类型 | 枚举值以具体设备协议为准 |
+| `impendenceProperty` | 阻抗属性 | 枚举值以具体设备协议为准 |
+
+#### 分段身体成分 `extData`
+
+8 电极或支持分段测量的设备可能返回 `extData`。字段不受设备支持或未测得有效阻抗时可能为 `0`。
+
+| 字段 | 含义 | 常用单位 |
+| --- | --- | --- |
+| `all_body` / `all_body_kg` | 全身脂肪率 / 全身脂肪量 | % / kg |
+| `left_arm` / `left_arm_kg` | 左臂脂肪率 / 左臂脂肪量 | % / kg |
+| `right_arm` / `right_arm_kg` | 右臂脂肪率 / 右臂脂肪量 | % / kg |
+| `left_leg` / `left_leg_kg` | 左腿脂肪率 / 左腿脂肪量 | % / kg |
+| `right_leg` / `right_leg_kg` | 右腿脂肪率 / 右腿脂肪量 | % / kg |
+| `all_body_muscle` / `all_body_muscle_kg` | 全身肌肉率 / 全身肌肉量 | % / kg |
+| `left_arm_muscle` / `left_arm_muscle_kg` | 左臂肌肉率 / 左臂肌肉量 | % / kg |
+| `right_arm_muscle` / `right_arm_muscle_kg` | 右臂肌肉率 / 右臂肌肉量 | % / kg |
+| `left_leg_muscle` / `left_leg_muscle_kg` | 左腿肌肉率 / 左腿肌肉量 | % / kg |
+| `right_leg_muscle` / `right_leg_muscle_kg` | 右腿肌肉率 / 右腿肌肉量 | % / kg |
+
+### 结果处理建议
+
+1. 使用 `checkCode == "32"` 或 `check == "体脂"` 识别体脂数据。
+2. 测量过程中可以使用 `weight_kg` 实时更新 UI，但不要保存未稳定数据。
+3. 仅在 `isStabilized == true` 时保存最终体重结果，并做好同一次测量重复回调的去重。
+4. 展示身体成分前先检查设备是否取得有效阻抗；未取得阻抗时，不建议直接展示值为 `0` 的身体成分指标。
+5. 体重可根据业务需要选用 `weight_g`、`weight_kg`、`weight_lb` 或 `weight_st` + `weight_st_lb`，不要在不同单位字段之间混用。
+6. 浮点数可能出现 `75.900001525878906` 一类精度尾差，展示时应按产品要求格式化小数位，不要直接展示原始浮点值。
+
+### 数据示例
+
+<HDetail text="Json 数据样例">
+
+```json
+{
+  "lb_scale_division": 4,
+  "proteinMassMin": 9.8000001907348633,
+  "bmr": 0,
+  "proteinPercent": 0,
+  "obesityDegree": 112,
+  "targetWeight": 0,
+  "impendenceProperty": 0,
+  "boneMass": 0,
+  "kg_scale_division": 3,
+  "imp3": 0,
+  "state": 0,
+  "bfa_type": 6,
+  "boneMax": 4.0999999046325684,
+  "smmStandard": 32,
+  "bmrMax": 1767,
+  "bfmStandard": 10.100000381469727,
+  "precision_st_lb": 1,
+  "moisturePercent": 0,
+  "weightStandard": 67.400001525878906,
+  "temperature": 0,
+  "weight_st_lb": 13.199996948242188,
+  "waterMassMax": 44.900001525878906,
+  "time": 1792567553,
+  "ffmStandard": 57.299999237060547,
+  "weight_st": 11,
+  "waterMassMin": 36.099998474121094,
+  "weightMax": 77.5,
+  "impendenceType": 0,
+  "impendences": [0],
+  "bmi": 24.799999237060547,
+  "subcutaneousFatPercent": 0,
+  "proteinMassMax": 12.300000190734863,
+  "muscleMassMax": 57.200000762939453,
+  "precision_lb": 1,
+  "bmiMin": 25,
+  "bodyFatPercent": 0,
+  "weight_kg": 75.900001525878906,
+  "extData": {
+    "all_body": 0,
+    "left_leg_muscle": 0,
+    "all_body_muscle": 0,
+    "right_arm_muscle": 0,
+    "left_leg_kg": 0,
+    "left_arm_muscle_kg": 0,
+    "left_arm_kg": 0,
+    "left_leg_muscle_kg": 0,
+    "right_arm_kg": 0,
+    "right_arm": 0,
+    "left_arm": 0,
+    "right_leg": 0,
+    "left_arm_muscle": 0,
+    "left_leg": 0,
+    "right_arm_muscle_kg": 0,
+    "all_body_kg": 0,
+    "right_leg_muscle": 0,
+    "right_leg_kg": 0,
+    "right_leg_muscle_kg": 0,
+    "all_body_muscle_kg": 0
+  },
+  "electrode": 4,
+  "bmrStandard": 1607,
+  "bfmMax": 16.200000762939453,
+  "imp5": 0,
+  "smPercent": 0,
+  "bmrMin": 1446,
+  "whr": 0,
+  "hr": 0,
+  "isSupportHR": false,
+  "bmiMax": 30,
+  "weight_lb": 167.19999694824219,
+  "muscleMassMin": 45.900001525878906,
+  "bodyScore": 0,
+  "check": "体脂",
+  "bfpStandard": 15,
+  "data_calc_type": 0,
+  "userId": 0,
+  "weight_g": 75880,
+  "boneMin": 3.2999999523162842,
+  "imp4": 0,
+  "bodyType": 0,
+  "imp2": 0,
+  "bfpMin": 10,
+  "weightMin": 57.299999237060547,
+  "imp": 0,
+  "checkCode": "32",
+  "smmMax": 35.200000762939453,
+  "weightControl": 0,
+  "bfpMax": 20,
+  "smi": 0,
+  "bfmControl": 0,
+  "physicalAge": 0,
+  "bfmMin": 8.1000003814697266,
+  "visceralFat": 0,
+  "musclePercent": 0,
+  "ffmControl": 0,
+  "bmiStandard": 22,
+  "isStabilized": true,
+  "smmMin": 28.799999237060547,
+  "precision_kg": 1
+}
+```
+
+</HDetail>
+
+---
 
 ## 脉诊
 
