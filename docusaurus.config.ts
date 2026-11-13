@@ -88,12 +88,12 @@ const config: Config = {
           position: "left",
           label: "对接规范(生态合作伙伴)",
         },
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "innerId",
-        //   position: "left",
-        //   label: "项目计划(内部)",
-        // },
+        {
+          type: "docSidebar",
+          sidebarId: "innerId",
+          position: "left",
+          label: "项目计划(内部)",
+        },
         {
           type: "docSidebar",
           sidebarId: "historyId",

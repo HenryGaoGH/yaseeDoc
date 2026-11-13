@@ -52,6 +52,11 @@ const sidebars: SidebarsConfig = {
       id: "comm/comm_third_demo_process",
     },
     {
+      type: "doc",
+      label: "在线工具集",
+      id: "comm/comm_tools",
+    },
+    {
       type: "category",
       label: "Yasee SDK(Android)",
       items: [
@@ -154,6 +159,9 @@ const sidebars: SidebarsConfig = {
         "inner/reports/report_maizhen_luoji",
         "inner/reports/report_sdk_1v1",
         "inner/reports/report_health",
+        "inner/reports/report_rebuild_ble",
+        "inner/reports/report_rebuild_ble_result",
+        "inner/reports/report_rebuild_ble_performance_2611"
       ],
     },
     {

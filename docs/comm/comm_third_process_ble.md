@@ -475,6 +475,250 @@ graph LR
 | `left_leg_muscle` / `left_leg_muscle_kg` | 左腿肌肉率 / 左腿肌肉量 | % / kg |
 | `right_leg_muscle` / `right_leg_muscle_kg` | 右腿肌肉率 / 右腿肌肉量 | % / kg |
 
+#### 枚举定义
+
+以下枚举参考; 不同 SDK 版本可能调整支持范围，实际使用时请以当前集成版本为准。
+
+##### 设备类型 `ICDeviceType`
+
+| 定义 | 说明 |
+| --- | --- |
+| `ICDeviceTypeUnKnown` | 未知设备 |
+| `ICDeviceTypeWeightScale` | 体重秤 |
+| `ICDeviceTypeFatScale` | 体脂秤 |
+| `ICDeviceTypeFatScaleWithTemperature` | 带温度显示的体脂秤 |
+| `ICDeviceTypeBalance` | 平衡秤 |
+
+##### 设备子类型 `ICDeviceSubType`
+
+| 定义 | 说明 |
+| --- | --- |
+| `ICDeviceSubTypeDefault` | 未知或默认类型 |
+| `ICDeviceSubTypeEightElectrode` | 八电极设备 |
+| `ICDeviceSubTypeEightElectrode2` | 八电极设备 2 |
+| `ICDeviceSubTypeScaleDual` | 双模设备 |
+| `ICDeviceSubTypeColor` | 彩屏秤 |
+| `ICDeviceSubTypeNewScale` | 新秤 |
+| `ICDeviceSubTypeW` | W 秤 |
+
+##### 体脂秤显示项 `ICScaleUIItem`
+
+| 定义 | 显示项 |
+| --- | --- |
+| `ICScaleUIItemWeight` | 体重 |
+| `ICScaleUIItemBMI` | BMI |
+| `ICScaleUIItemBodyFatPercent` | 体脂率 |
+| `ICScaleUIItemMoisturePercent` | 含水率 |
+| `ICScaleUIItemMusclePercent` | 肌肉率 |
+| `ICScaleUIItemBoneMass` | 骨量 |
+| `ICScaleUIItemHR` | 心率 |
+| `ICScaleUIItemSmPercent` | 骨骼肌率 |
+| `ICScaleUIItemVisceralFat` | 内脏脂肪 |
+| `ICScaleUIItemSubcutaneousFatPercent` | 皮下脂肪率 |
+| `ICScaleUIItemProteinPercent` | 蛋白率 |
+| `ICScaleUIItemBodyType` | 体型 |
+| `ICScaleUIItemStageMuscle` | 节段肌肉分析 |
+| `ICScaleUIItemStageFat` | 节段脂肪分析 |
+| `ICScaleUIItemWeightTrends` | 体重趋势 |
+| `ICScaleUIItemBMITrends` | BMI 趋势 |
+| `ICScaleUIItemBodyFatTrends` | 体脂趋势 |
+| `ICScaleUIItemMuscleTrends` | 肌肉趋势 |
+| `ICScaleUIItemBaby` | 抱婴界面 |
+| `ICScaleUIItemPregnant` | 孕妇界面 |
+| `ICScaleUIItemRev` | 预留 |
+
+##### 体重单位 `ICWeightUnit`
+
+| 定义 | 单位 |
+| --- | --- |
+| `ICWeightUnitKg` | 公斤（kg） |
+| `ICWeightUnitLb` | 磅（lb） |
+| `ICWeightUnitSt` | 英石（st） |
+| `ICWeightUnitJin` | 斤 |
+
+##### 用户与算法配置
+
+| 枚举 | 定义 | 说明 |
+| --- | --- | --- |
+| `ICSexType` | `ICSexTypeUnknown` | 未知或保密 |
+| `ICSexType` | `ICSexTypeMale` | 男 |
+| `ICSexType` | `ICSexTypeFemal` | 女；SDK 定义名称为 `Femal` |
+| `ICPeopleType` | `ICPeopleTypeNormal` | 普通人 |
+| `ICPeopleType` | `ICPeopleTypeSportman` | 运动员；仅部分算法支持运动员模式 |
+| `ICBMIStandard` | `ICBMIStandard1` | WHO 标准 |
+| `ICBMIStandard` | `ICBMIStandard2` | 亚洲标准 |
+| `ICBMIStandard` | `ICBMIStandard3` | 欧洲标准 |
+| `ICBMIStandard` | `ICBMIStandard4` | 中国标准 |
+| `ICBMIStandard` | `ICBMIStandard5` | 中国繁体地区标准 |
+| `ICBFAType` | `ICBFATypeWLA01` | WLA01 算法；正常情况下使用 SDK 默认值即可 |
+
+##### 测量步骤 `ICMeasureStep`
+
+`onReceiveMeasureStepData` 回调中的 `step` 使用以下枚举。不同步骤对应的 `data` 类型不同。
+
+| 定义 | 测量阶段与数据类型 |
+| --- | --- |
+| `ICMeasureStepMeasureWeightData` | 测量体重，`data` 为 `ICWeightData` |
+| `ICMeasureStepMeasureCenterData` | 测量平衡，`data` 为 `ICWeightCenterData` |
+| `ICMeasureStepAdcStart` | 开始测量阻抗 |
+| `ICMeasureStepAdcResult` | 阻抗测量结束，`data` 为 `ICWeightData` |
+| `ICMeasureStepHrStart` | 开始测量心率 |
+| `ICMeasureStepHrResult` | 心率测量结束，`data` 为 `ICWeightData` |
+| `ICMeasureStepECGStart` | 开始测量 ECG |
+| `ICMeasureStepECG` | ECG 测量中，`data` 为 `ICECGData` |
+| `ICMeasureStepECGResult` | ECG 测量结束，`data` 为 `ICECGData` |
+| `ICMeasureStepMeasureOver` | 测量结束 |
+
+##### 身体类型 `bodyType`
+
+| 枚举值 | 身体类型 |
+| --- | --- |
+| `0` | 消廋型 |
+| `1` | 偏瘦型 |
+| `2` | 肌肉苗条型 |
+| `3` | 苗条型 |
+| `4` | 肌肉型 |
+| `5` | 匀称型 |
+| `6` | 运动员 |
+| `7` | 略显肥胖型 |
+| `8` | 肥胖型 |
+| `9` | 偏胖型 |
+| `10` | 隐形肥胖型 |
+
+##### 数据计算方式 `data_calc_type`
+
+| 枚举值 | 说明 |
+| --- | --- |
+| `0` | SDK 计算 |
+| `1` | 设备计算 |
+
+#### 子项目范围及说明
+以下范围依据《2024.1.5 算法标准》整理。表格中的 `min`、`max`、标准值及理想值应优先使用 SDK 返回结果；业务端主要负责分级与展示，不建议自行替代 SDK 的身体成分算法。
+
+##### 体重与 BMI
+
+| 子项目 | 取值/公式 | 范围及展示建议 |
+| --- | --- | --- |
+| 体重 | SDK 返回的当前体重 | `< weightMin`：偏低（浅蓝）；`>= weightMin` 且 `< weightMax`：标准（绿）；`>= weightMax`：偏高（红） |
+| BMI | SDK 返回值；原表采用 WHO 标准 | `< 18.5`：偏瘦（浅蓝）；`>= 18.5` 且 `< 25`：正常（绿）；`>= 25` 且 `< 27`：超重（橙）；`>= 27`：严重超重（红） |
+
+:::note
+原表的“肥胖分析/肥胖评估”还区分国内外 BMI 标准：国外标准范围为 `[18.5, 25)`，国内标准范围为 `[18.5, 24)`。业务端应根据产品适用地区选择标准，不要与上表的 WHO 分级混用。
+:::
+
+##### 脂肪相关指标
+
+| 子项目 | 取值/公式 | 范围及展示建议 |
+| --- | --- | --- |
+| 体脂率（男） | SDK 返回 `bodyFatPercent` | `< 10%`：偏瘦（深绿）；`[10%, 20%)`：正常（绿）；`[20%, 25%)`：超重（橙）；`[25%, 35%)`：严重超重（红）；`>= 35%`：警示（深红） |
+| 体脂率（女） | SDK 返回 `bodyFatPercent` | `< 18%`：偏瘦（深绿）；`[18%, 28%)`：正常（绿）；`[28%, 33%)`：超重（橙）；`[33%, 43%)`：严重超重（红）；`>= 43%`：警示（深红） |
+| 脂肪量 | `体重 × 体脂率 / 100` | 分级与对应性别的体脂率范围相同；`bfmMin`、`bfmMax` 为 SDK 返回的参考变量 |
+| 去脂体重 | `体重 - 脂肪量` | 无分级，直接展示具体数值 |
+| 皮下脂肪率（男） | SDK 返回 `subcutaneousFatPercent` | `< 8.6%`：偏低（浅蓝）；`[8.6%, 16.7%)`：标准（绿）；`>= 16.7%`：偏高（红） |
+| 皮下脂肪率（女） | SDK 返回 `subcutaneousFatPercent` | `< 18.5%`：偏低（浅蓝）；`[18.5%, 26.7%)`：标准（绿）；`>= 26.7%`：偏高（红） |
+| 内脏脂肪等级 | SDK 返回 `visceralFat` | `< 10`：标准（绿）；`>= 10`：偏高（红），男女规则相同 |
+
+##### 肌肉与骨量
+
+| 子项目 | 取值/公式 | 范围及展示建议 |
+| --- | --- | --- |
+| 肌肉量 | `体重 × musclePercent / 100` | `< muscleMassMin`：偏低（浅蓝）；`[muscleMassMin, muscleMassMax]`：标准（绿）；`> muscleMassMax`：优（深绿） |
+| 肌肉率 | SDK 返回 `musclePercent` | 沿用肌肉量分级；`min = muscleMassMin / 当前体重 × 100`，`max = muscleMassMax / 当前体重 × 100`。原表要求使用当前体重，不使用标准体重 |
+| 骨骼肌量 | SDK 返回当前骨骼肌量 | `percent = 当前骨骼肌量 / smmStandard × 100`；`< 90%`：偏低（浅蓝）；`[90%, 110%]`：标准（绿）；`> 110%`：偏高（红） |
+| 骨骼肌率 | `骨骼肌量 / 当前体重 × 100` | 沿用骨骼肌量分级，具体分级数值不单独展示 |
+| 骨量 | SDK 返回 `boneMass` | `< boneMin`：偏低（浅蓝）；`[boneMin, boneMax]`：标准（绿）；`> boneMax`：优（深绿） |
+
+##### 蛋白质与体水分
+
+| 子项目 | 取值/公式 | 范围及展示建议 |
+| --- | --- | --- |
+| 蛋白量 | `体重 × proteinPercent / 100` | `< proteinMassMin`：偏低（浅蓝）；`[proteinMassMin, proteinMassMax)`：标准（绿）；`>= proteinMassMax`：优（深绿） |
+| 蛋白质率 | SDK 返回 `proteinPercent` | `min = proteinMassMin / 当前体重 × 100`，`max = proteinMassMax / 当前体重 × 100`；`< min`：偏低；`[min, max]`：标准；`> max`：优 |
+| 含水量 | `体重 × moisturePercent / 100` | `< waterMassMin`：偏低（浅蓝）；`[waterMassMin, waterMassMax]`：标准（绿）；`> waterMassMax`：优（深绿） |
+| 体水分率 | SDK 返回 `moisturePercent` | 沿用含水量分级；`min = waterMassMin / 当前体重 × 100`，`max = waterMassMax / 当前体重 × 100`；`< min`：偏低；`[min, max)`：标准；`>= max`：优。原表要求使用当前体重 |
+
+##### 心率与心脏指数
+
+| 子项目 | 取值/公式 | 范围及展示建议 |
+| --- | --- | --- |
+| 心率 | SDK 返回 `hr` | `< 40 bpm`：不足（深蓝）；`[40, 60) bpm`：偏低（浅蓝）；`[60, 100) bpm`：标准（绿）；`[100, 160) bpm`：偏高（橙）；`>= 160 bpm`：高（红） |
+| 心脏指数 | `hr × (70 / (身高(cm) × 0.0061 + 体重(kg) × 0.0128 - 0.1529)) / 1000` | `< 2.5`：偏低（浅蓝）；`[2.5, 4.2)`：标准（绿）；`>= 4.2`：偏高（红） |
+
+心率适用于支持该能力的四电极和八电极设备。设备返回心率时展示，不支持或未返回时隐藏。
+
+##### 其他身体指标
+
+| 子项目 | 取值/公式 | 范围及展示建议 |
+| --- | --- | --- |
+| 基础代谢 | SDK 返回 `bmr` | 无分级，直接展示具体数值 |
+| 身体年龄 | SDK 返回 `physicalAge`，并与当前用户年龄比较 | 原表记录为“用户年龄 `<` 身体年龄：优；用户年龄 `>=` 身体年龄：偏高”，该规则与常见认知可能相反，应用前需与算法方确认 |
+| 腰臀比（亚洲男性） | SDK 返回 `whr` | `< 0.81`：优；`[0.81, 0.9]`：标准；`(0.9, 0.95]`：偏高；`> 0.95`：高 |
+| 腰臀比（亚洲女性） | SDK 返回 `whr` | `< 0.73`：优；`[0.73, 0.8]`：标准；`(0.8, 0.86]`：偏高；`> 0.86`：高 |
+| 腰臀比（欧美男性） | SDK 返回 `whr` | `< 0.85`：优；`[0.85, 0.9]`：标准；`(0.9, 0.95]`：偏高；`> 0.95`：高 |
+| 腰臀比（欧美女性） | SDK 返回 `whr` | `< 0.75`：优；`[0.75, 0.8]`：标准；`(0.8, 0.86]`：偏高；`> 0.86`：高 |
+| 标准体重（男） | `(身高(cm) / 100)² × 22` | 作为参考值，不单独分级 |
+| 标准体重（女） | `(身高(cm) / 100)² × 20.6` | 作为参考值，不单独分级 |
+
+##### 肥胖分析与评估
+
+| 项目 | 偏低 | 标准 | 偏高 |
+| --- | --- | --- | --- |
+| BMI（国外） | `< 18.5` | `[18.5, 25)` | `>= 25` |
+| BMI（国内） | `< 18.5` | `[18.5, 24)` | `>= 24` |
+| 体脂率（男） | `< 10%` | `[10%, 20%)` | `>= 20%` |
+| 体脂率（女） | `< 18%` | `[18%, 28%)` | `>= 28%` |
+
+体型分类使用 `bodyType` 身体类型枚举；`obesityDegree` 是肥胖度数值，不应按枚举解析：
+
+| 枚举值 | 体型分类 |
+| --- | --- |
+| `0` | 消廋型 |
+| `1` | 偏瘦型 |
+| `2` | 肌肉苗条型 |
+| `3` | 苗条型 |
+| `4` | 肌肉型 |
+| `5` | 匀称型 |
+| `6` | 运动员 |
+| `7` | 略显肥胖型 |
+| `8` | 肥胖型 |
+| `9` | 偏胖型 |
+| `10` | 隐形肥胖型 |
+
+
+肥胖度:
+
+| 判定依据 | 肥胖度显示 |
+| --- | --- |
+| `bmi<18.5	` | 偏瘦 |
+| `bmi>=18.5 && bmi<24.9` | 标准|
+| `bmi>=24.9 && bmi<26.9` | 	偏胖 |
+| `bmi>=26.9 && bmi<29.9` | 	肥胖前期 |
+| `bmi>=29.9 && bmi<34.5` | 	I度肥胖 |
+| `bmi>=34.5 && bmi<39.9`| 	II度肥胖 |
+| `bmi>39.9` | III度肥胖 |
+
+
+##### 节段分析
+
+节段指标适用于支持八电极及分段测量的设备。以下“标准”范围为相对参考值的百分比：
+
+| 子项目 | 部位/性别 | 标准范围 |
+| --- | --- | --- |
+| 节段肌肉 | 左右上肢，男 | `[80%, 115%)` |
+| 节段肌肉 | 左右上肢，女 | `[80%, 120%)` |
+| 节段肌肉 | 躯干、左右下肢，不分性别 | `[90%, 110%)` |
+| 节段脂肪 | 左右上肢、躯干、左右下肢，不分性别 | `[80%, 160%)` |
+
+##### 肌肉脂肪分析
+
+| 子项目 | 计算方式 | 偏低 | 标准 | 偏高 |
+| --- | --- | --- | --- | --- |
+| 体重 | `当前体重 / 理想体重 × 100` | `< 85%` | `[85%, 115%)` | `>= 115%` |
+| 骨骼肌量 | `当前骨骼肌量 / 理想骨骼肌量 × 100` | `< 90%` | `[90%, 110%)` | `>= 110%` |
+| 脂肪量 | `当前脂肪量 / 理想脂肪量 × 100` | `< 80%` | `[80%, 160%)` | `>= 160%` |
+
+其中理想体重、理想骨骼肌量和理想脂肪量应取算法结果或 SDK 提供的标准值，不建议业务端自行估算。
+
 ### 结果处理建议
 
 1. 使用 `checkCode == "32"` 或 `check == "体脂"` 识别体脂数据。
