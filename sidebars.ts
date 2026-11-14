@@ -159,21 +159,21 @@ const sidebars: SidebarsConfig = {
         "inner/reports/report_maizhen_luoji",
         "inner/reports/report_sdk_1v1",
         "inner/reports/report_health",
-        "inner/reports/report_rebuild_ble",
+        // "inner/reports/report_rebuild_ble",
         "inner/reports/report_rebuild_ble_result",
-        "inner/reports/report_rebuild_ble_performance_2611"
+        // "inner/reports/report_rebuild_ble_performance_2611"
       ],
     },
-    {
-      type: "category",
-      label: "项目",
-      items: [
-        "inner/pms/pm_24_10",
-        "inner/pms/pm_24_11",
-        "inner/pms/pm_24_12",
-        "inner/pms/pm_25_02",
-      ],
-    },
+    // {
+    //   type: "category",
+    //   label: "项目",
+    //   items: [
+    //     "inner/pms/pm_24_10",
+    //     "inner/pms/pm_24_11",
+    //     "inner/pms/pm_24_12",
+    //     "inner/pms/pm_25_02",
+    //   ],
+    // },
     {
       type: "category",
       label: "协议",

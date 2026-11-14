@@ -19,7 +19,6 @@ const config: Config = {
   projectName: "yaseeSdk", // Usually your repo name.
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -30,6 +29,9 @@ const config: Config = {
   },
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    }
   },
   themes: ["@docusaurus/theme-mermaid"],
 
@@ -76,36 +78,36 @@ const config: Config = {
         src: "img/logo.png",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "mobileSidebarId",
-          position: "left",
-          label: "集成文档(对客户)",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "thirdId",
-          position: "left",
-          label: "对接规范(生态合作伙伴)",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "innerId",
-          position: "left",
-          label: "项目计划(内部)",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "historyId",
-          position: "left",
-          label: "修订记录",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "widgetsId",
-          position: "right",
-          label: "共建组件",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "mobileSidebarId",
+        //   position: "left",
+        //   label: "集成文档(对客户)",
+        // },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "thirdId",
+        //   position: "left",
+        //   label: "对接规范(生态合作伙伴)",
+        // },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "innerId",
+        //   position: "left",
+        //   label: "项目计划(内部)",
+        // },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "historyId",
+        //   position: "left",
+        //   label: "修订记录",
+        // },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "widgetsId",
+        //   position: "right",
+        //   label: "共建组件",
+        // },
       ],
     },
     footer: {

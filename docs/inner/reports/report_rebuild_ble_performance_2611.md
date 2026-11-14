@@ -10,9 +10,9 @@ import ImgText from '@site/src/components/ImgText/ImgText';
  
 本次 BLE 连接稳定性与性能指标改造主要围绕 **“多设备尽量 3 秒内 ready、设备重启后尽快重连、可观测可追踪”** 三个目标展开。
 
-## 本次优化内容总结
+### 本次优化内容总结
 
-### 1. 多设备连接调度改造
+#### 1. 多设备连接调度改造
 
 新增/改造了 [BlesLinkScheduler.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/protocols/ble/BlesLinkScheduler.java)。
 
@@ -31,17 +31,6 @@ MAX_CONCURRENT_CONNECT = 3
 ```java
 READY_TIMEOUT_MS = 3000
 ```
-
-- 直连重试间隔：
-
-```java
-RECONNECT_DELAY_MS = 200
-```
-
-- 直连重试次数：
-
-```java
-DIRECT_RETRY_COUNT = 30
 ```
 
 整体链路变为：
@@ -60,7 +49,7 @@ BlesLinkScheduler.connectAll(bindDevices)
 
 ---
 
-### 2. 避免多设备同时冲击 Android BLE 栈
+#### 2. 避免多设备同时冲击 Android BLE 栈
 
 修改 [Devices.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/Devices.java)。
 
@@ -82,13 +71,12 @@ BlesLinkScheduler.single().connectAll(bindDevices());
 
 ---
 
-### 3. 断线/超时重连策略优化
+#### 3. 断线/超时重连策略优化
 
 [BlesLinkScheduler.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/protocols/ble/BlesLinkScheduler.java) 现在控制：
 
 - 连接槽释放
 - ready timeout
-- 直连重试
 - 进入定向扫描
 
 当前策略：
@@ -96,9 +84,7 @@ BlesLinkScheduler.single().connectAll(bindDevices());
 ```text
 设备断开 / 3 秒未 ready
 ↓
-先进行最多 30 次 connectGatt 直连重试
-↓
-仍失败后进入 MAC 定向扫描
+失败后进入 MAC 定向扫描
 ↓
 扫描命中目标设备广播
 ↓
@@ -107,7 +93,7 @@ BlesLinkScheduler.single().connectAll(bindDevices());
 
 ---
 
-### 4. 设备关机再开机后的重发现机制
+#### 4. 设备关机再开机后的重发现机制
 
 修改 [Ble.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/protocols/ble/Ble.java)。
 
@@ -130,8 +116,6 @@ BlesLinkScheduler.single().connectAll(bindDevices());
 ```text
 设备离线较久
 ↓
-直连重试达到上限
-↓
 启动 MAC 定向扫描
 ↓
 设备重新开机广播
@@ -145,7 +129,7 @@ BlesLinkScheduler.single().connectAll(bindDevices());
 
 ---
 
-### 5. 移除连接前指数退避
+#### 5. 移除连接前指数退避
 
 用户已在 [BleDevice.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/protocols/ble/BleDevice.java) 中移除：
 
@@ -157,7 +141,7 @@ BlesLinkScheduler.single().connectAll(bindDevices());
 
 ---
 
-### 6. GATT 操作串行化加强
+#### 6. GATT 操作串行化加强
 
 在 [BleDevice.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/protocols/ble/BleDevice.java) 中，多数 GATT 操作已通过 `BleIoQueue` 串行执行，包括：
 
@@ -179,7 +163,7 @@ descriptor/write/read 互相抢占
 
 ---
 
-### 7. 旧 GATT callback 防污染
+#### 7. 旧 GATT callback 防污染
 
 在 [BleDevice.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/protocols/ble/BleDevice.java) 的主要 callback 中加入：
 
@@ -210,7 +194,7 @@ if (gatt != _gatt) return;
 
 ---
 
-### 8. 服务发现失败和 descriptor 写失败立即重连
+#### 8. 服务发现失败和 descriptor 写失败立即重连
 
 在 [BleDevice.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/protocols/ble/BleDevice.java) 中加强失败路径：
 
@@ -240,38 +224,8 @@ if (gatt != _gatt) return;
 
 ---
 
-### 9. Android 12+ BLE 权限检查修复
 
-修改 [PermissionTool.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/core/tools/PermissionTool.java)。
-
-Android 12+ 检查：
-
-- `BLUETOOTH_SCAN`
-- `BLUETOOTH_CONNECT`
-
-Android 12 以下检查：
-
-- `ACCESS_FINE_LOCATION`
-- `BLUETOOTH`
-
-避免权限判断错误导致扫描/连接异常。
-
----
-
-### 10. 扫描状态修复
-
-修改 [Ble.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/protocols/ble/Ble.java)。
-
-优化点：
-
-- 使用 `_ab.compareAndSet(false, true)` 管理扫描状态。
-- `startScan` 异常时恢复 `_ab=false`。
-- `ScanRecord` 判空。
-- 防止重复扫描状态错乱。
-
----
-
-### 11. 新增独立性能指标工具类
+#### 9. 新增独立性能指标工具类
 
 新增 [PerformanceTool.java](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/core/tools/PerformanceTool.java)。
 
@@ -328,13 +282,13 @@ timestamp,mac,model,eventName,startTime,endTime,durationMs,bleScanFoundTime,adde
 
 
 
-## 针对连接提升的影响排名
+### 针对连接提升的影响排名
 
 下面按“对多设备 3 秒 ready、连接稳定性、重连速度”的综合影响排序。
 
 ---
 
-### 第 1 名：多设备连接调度器 BlesLinkScheduler
+#### 第 1 名：多设备连接调度器 BlesLinkScheduler
 
 影响最大。
 
@@ -359,7 +313,7 @@ status 133 概率
 
 ---
 
-### 第 2 名：GATT 操作串行化 + 旧 callback 防污染
+#### 第 2 名：GATT 操作串行化 + 旧 callback 防污染
 
 影响非常大。
 
@@ -389,7 +343,7 @@ notify 订阅成功率
 
 ---
 
-### 第 3 名：移除连接前指数退避
+#### 第 3 名：移除连接前指数退避
 
 影响主要体现在重连速度。
 
@@ -421,7 +375,7 @@ notify 订阅成功率
 
 ---
 
-### 第 4 名：服务发现/descriptor 失败立即释放并重连
+#### 第 4 名：服务发现/descriptor 失败立即释放并重连
 
 影响很实际。
 
@@ -446,89 +400,6 @@ notify 订阅成功率
 
 ---
 
-### 第 5 名：MAC 定向重发现扫描
-
-影响主要体现在外设关机再开机。
-
-原因：
-
-设备长时间关机时，盲目直连不一定能第一时间感知设备恢复。MAC 定向扫描可以在设备重新广播时捕捉到。
-
-当前又使用：
-
-```java
-ScanFilter.setDeviceAddress(mac)
-SCAN_MODE_BALANCED
-```
-
-所以比全量扫描更省电。
-
-影响范围：
-
-```text
-外设重新开机后的发现速度
-后台/长时间离线恢复能力
-降低扫描噪声
-```
-
-但因为当前策略是直连 30 次后才进入扫描，所以它对“第一时间”的提升取决于设备离线时长和重试阶段。
-
----
-
-### 第 6 名：扫描状态和权限修复
-
-影响偏基础，但很关键。
-
-原因：
-
-如果扫描状态 `_ab` 不正确或 Android 12+ 权限判断错误，就会出现：
-
-```text
-以为在扫描，其实没扫描
-有权限却判断失败
-startScan 异常后状态卡死
-```
-
-影响范围：
-
-```text
-扫描可靠性
-重发现能力
-Android 12+ 兼容性
-```
-
----
-
-### 第 7 名：PerformanceTool 性能指标工具
-
-它不是直接提升连接速度，但对后续优化非常关键。
-
-原因：
-
-现在可以通过 CSV 看到每台设备：
-
-- 何时扫描发现
-- 何时绑定
-- 何时开始连接
-- 何时连接成功
-- 何时服务发现
-- 何时 notify 订阅成功
-- 每个事件耗时
-- 失败码和原因
-
-影响范围：
-
-```text
-定位慢点
-统计 3 秒 ready 成功率
-分析 status 分布
-判断瓶颈在 scan/connect/discover/notify 哪一步
-```
-
-它是后续继续优化的基础设施。
-
----
-
 # 最终排序表
 
 | 排名 | 优化项 | 对连接提升影响 |
@@ -537,36 +408,6 @@ Android 12+ 兼容性
 | 2 | GATT 串行化 + 旧 callback 防污染 | 极大，提升 ready 和数据通道稳定性 |
 | 3 | 移除连接前指数退避 | 很大，提升重连响应速度 |
 | 4 | 服务发现/descriptor 失败立即重连 | 很大，减少无效等待 |
-| 5 | MAC 定向重发现扫描 | 中高，提升设备关机再开机恢复 |
-| 6 | 扫描状态/权限修复 | 中等，提升扫描可靠性 |
-| 7 | [PerformanceTool](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/core/tools/PerformanceTool.java) 指标 CSV | 间接提升，支撑后续优化 |
-
----
-
-## 当前仍建议后续继续观察的点
-
-1. `DIRECT_RETRY_COUNT = 30` 是否过大  
-   - 如果目标是设备开机后第一时间连接，30 次直连后才扫描可能偏慢。
-   - 可考虑“直连继续，但第 N 次后并行开启定向扫描”。
-
-2. `linkQueue` 是否继续保留  
-   - 当前有 [BlesLinkScheduler](file:///Users/henrygao/Documents/Work/yaseeJava/yasee/src/main/java/com/yasee/yasee/protocols/ble/BlesLinkScheduler.java) 后，`linkQueue` 价值降低。
-   - 后续可用 `AtomicBoolean connecting` 替代。
-
-3. `PerformanceTool` 后续可增加汇总行  
-   - 例如直接输出：
-     - 3 秒成功率
-     - 平均 connect 耗时
-     - 平均 service discover 耗时
-     - status 133/8/19 分布
-
-目前这轮改造已经形成了：
-
-```text
-调度控制 + GATT 串行 + 快速失败恢复 + 定向重发现 + CSV 可观测
-```
-
-这套结构对 BLE 多设备稳定性提升是比较系统的。
 
 
 

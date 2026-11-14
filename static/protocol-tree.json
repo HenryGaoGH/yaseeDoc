@@ -1,0 +1,660 @@
+[
+  {
+    "name": "1.T系列外挂协议包_260811",
+    "type": "directory",
+    "path": "1.T系列外挂协议包_260811",
+    "children": [
+      {
+        "name": "额温",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/额温",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/额温/历史",
+            "children": [
+              {
+                "name": "PJ11 温度计通讯协议规划 V1.3（参考，正在后续调整）_20211229_220531.xlsx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/额温/历史/PJ11 温度计通讯协议规划 V1.3（参考，正在后续调整）_20211229_220531.xlsx",
+                "extension": ".xlsx",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "PJ11 温度计通讯协议规划 V1.8.xlsx",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/额温/PJ11 温度计通讯协议规划 V1.8.xlsx",
+            "extension": ".xlsx",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "肺功能",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/肺功能",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/肺功能/历史",
+            "children": [
+              {
+                "name": "肺功能通信协议V1.5-20220511.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/肺功能/历史/肺功能通信协议V1.5-20220511.docx",
+                "extension": ".docx",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "肺功能通信协议V1.6-20240720.docx",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/肺功能/肺功能通信协议V1.6-20240720.docx",
+            "extension": ".docx",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "尿液",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/尿液",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/尿液/历史",
+            "children": [
+              {
+                "name": "尿液分析仪通信协议 - V1.5.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/尿液/历史/尿液分析仪通信协议 - V1.5.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "尿液分析仪通信协议 - V1.6.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/尿液/历史/尿液分析仪通信协议 - V1.6.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "尿液分析仪通信协议 - V1.7.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/尿液/历史/尿液分析仪通信协议 - V1.7.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "尿液分析仪通信协议 - V1.8.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/尿液/历史/尿液分析仪通信协议 - V1.8.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "尿液分析仪通信协议 - V1.9.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/尿液/历史/尿液分析仪通信协议 - V1.9.docx",
+                "extension": ".docx",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "251125.png",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/尿液/251125.png",
+            "extension": ".png",
+            "supported": true
+          },
+          {
+            "name": "尿液分析仪通信协议 - V2.0.docx",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/尿液/尿液分析仪通信协议 - V2.0.docx",
+            "extension": ".docx",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "三合一",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/三合一",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/三合一/历史",
+            "children": [
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.15_20230202.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.15_20230202.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.17_20230918.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.17_20230918.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.18_20231018.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.18_20231018.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.19_20231221.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.19_20231221.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.20_20240111.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.20_20240111.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.21.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.21.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.22.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.22.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.28.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.28.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.29.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.29.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.30.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.30.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "血糖尿酸血酮测试模块通讯协议-V1.0.31.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/三合一/历史/血糖尿酸血酮测试模块通讯协议-V1.0.31.docx",
+                "extension": ".docx",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "血糖尿酸血酮测试模块通讯协议-V1.0.32.docx",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/三合一/血糖尿酸血酮测试模块通讯协议-V1.0.32.docx",
+            "extension": ".docx",
+            "supported": true
+          },
+          {
+            "name": "血糖尿酸血酮单位转换上传数据计算.xlsx",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/三合一/血糖尿酸血酮单位转换上传数据计算.xlsx",
+            "extension": ".xlsx",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "糖化",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/糖化",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/糖化/历史",
+            "children": [
+              {
+                "name": "糖化血红蛋白分析仪通信协议-V1.13.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/糖化/历史/糖化血红蛋白分析仪通信协议-V1.13.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "糖化血红蛋白分析仪通信协议-V1.15.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/糖化/历史/糖化血红蛋白分析仪通信协议-V1.15.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "糖化血红蛋白分析仪通信协议-V1.5.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/糖化/历史/糖化血红蛋白分析仪通信协议-V1.5.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "糖化血红蛋白分析仪通信协议-V1.6_1.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/糖化/历史/糖化血红蛋白分析仪通信协议-V1.6_1.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "糖化血红蛋白分析仪通信协议-V1.8.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/糖化/历史/糖化血红蛋白分析仪通信协议-V1.8.docx",
+                "extension": ".docx",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "糖化血红蛋白分析仪通信协议-V1.17.docx",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/糖化/糖化血红蛋白分析仪通信协议-V1.17.docx",
+            "extension": ".docx",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "听诊器",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/听诊器",
+        "children": [
+          {
+            "name": "听诊器通信协议 - V1.2.docx",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/听诊器/听诊器通信协议 - V1.2.docx",
+            "extension": ".docx",
+            "supported": true
+          },
+          {
+            "name": "听诊器通信协议 - V1.2.pages",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/听诊器/听诊器通信协议 - V1.2.pages",
+            "extension": ".pages",
+            "supported": false
+          },
+          {
+            "name": "听诊器通信协议 - V1.2.pdf",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/听诊器/听诊器通信协议 - V1.2.pdf",
+            "extension": ".pdf",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "心电",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/心电",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/心电/历史",
+            "children": [
+              {
+                "name": "未启用",
+                "type": "directory",
+                "path": "1.T系列外挂协议包_260811/心电/历史/未启用",
+                "children": [
+                  {
+                    "name": "ECG蓝牙协议V0.9_260608_1-高工已审核未启用.docx",
+                    "type": "file",
+                    "path": "1.T系列外挂协议包_260811/心电/历史/未启用/ECG蓝牙协议V0.9_260608_1-高工已审核未启用.docx",
+                    "extension": ".docx",
+                    "supported": true
+                  }
+                ]
+              },
+              {
+                "name": "ECG-单导蓝牙协议V0.9.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/心电/历史/ECG-单导蓝牙协议V0.9.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "ECG蓝牙协议V0.9_260401.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/心电/历史/ECG蓝牙协议V0.9_260401.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "ECG蓝牙协议V0.9_260507.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/心电/历史/ECG蓝牙协议V0.9_260507.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "ECG蓝牙协议V0.9_260508.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/心电/历史/ECG蓝牙协议V0.9_260508.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "ECG蓝牙协议V0.9.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/心电/历史/ECG蓝牙协议V0.9.docx",
+                "extension": ".docx",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "心电协议优化规划_230912（未进行）.txt",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/心电/心电协议优化规划_230912（未进行）.txt",
+            "extension": ".txt",
+            "supported": true
+          },
+          {
+            "name": "ECG蓝牙协议V0.9_260509_1.docx",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/心电/ECG蓝牙协议V0.9_260509_1.docx",
+            "extension": ".docx",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "血压",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/血压",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/血压/历史",
+            "children": [
+              {
+                "name": "血压标定_230608.png",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血压/历史/血压标定_230608.png",
+                "extension": ".png",
+                "supported": true
+              },
+              {
+                "name": "血压串口控制协议规划V3.3_221128.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血压/历史/血压串口控制协议规划V3.3_221128.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "血压串口控制协议规划V3.6_230919.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血压/历史/血压串口控制协议规划V3.6_230919.doc",
+                "extension": ".doc",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "血压串口控制协议规划V3.8_231104.doc",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/血压/血压串口控制协议规划V3.8_231104.doc",
+            "extension": ".doc",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "血氧",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/血氧",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/血氧/历史",
+            "children": [
+              {
+                "name": "外挂血氧仪说明_20220513_1.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血氧/历史/外挂血氧仪说明_20220513_1.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "外挂血氧仪说明_V1.1.0_20230821.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血氧/历史/外挂血氧仪说明_V1.1.0_20230821.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "外挂血氧仪说明_V1.1.2_20230913.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血氧/历史/外挂血氧仪说明_V1.1.2_20230913.docx",
+                "extension": ".docx",
+                "supported": true
+              },
+              {
+                "name": "外挂血氧仪说明_V1.1.6_250227.docx",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血氧/历史/外挂血氧仪说明_V1.1.6_250227.docx",
+                "extension": ".docx",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "外挂血氧仪说明_V1.1.7_250228.docx",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/血氧/外挂血氧仪说明_V1.1.7_250228.docx",
+            "extension": ".docx",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "血脂",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/血脂",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/血脂/历史",
+            "children": [
+              {
+                "name": "血脂血糖模块通信_V1.5.1_1.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血脂/历史/血脂血糖模块通信_V1.5.1_1.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "血脂血糖模块通信_V1.7.5.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血脂/历史/血脂血糖模块通信_V1.7.5.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "血脂血糖模块通信_V1.7.6.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血脂/历史/血脂血糖模块通信_V1.7.6.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "血脂血糖模块通信_V1.7.7.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血脂/历史/血脂血糖模块通信_V1.7.7.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "血脂血糖模块通信_V1.7.8.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血脂/历史/血脂血糖模块通信_V1.7.8.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "血脂血糖模块通信_V1.7.9.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血脂/历史/血脂血糖模块通信_V1.7.9.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "血脂血糖模块通信_V1.8.1.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血脂/历史/血脂血糖模块通信_V1.8.1.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "血脂血糖模块通信_V1.8.2.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/血脂/历史/血脂血糖模块通信_V1.8.2.doc",
+                "extension": ".doc",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "血脂血糖模块通信_V1.8.4.doc",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/血脂/血脂血糖模块通信_V1.8.4.doc",
+            "extension": ".doc",
+            "supported": true
+          }
+        ]
+      },
+      {
+        "name": "荧光胶体金",
+        "type": "directory",
+        "path": "1.T系列外挂协议包_260811/荧光胶体金",
+        "children": [
+          {
+            "name": "历史",
+            "type": "directory",
+            "path": "1.T系列外挂协议包_260811/荧光胶体金/历史",
+            "children": [
+              {
+                "name": "荧光二号模块通信协议_V0.0.1.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/荧光胶体金/历史/荧光二号模块通信协议_V0.0.1.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "荧光三号模块通信协议_V0.0.12.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/荧光胶体金/历史/荧光三号模块通信协议_V0.0.12.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "mini荧光 胶体金模块通信_V1.7.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/荧光胶体金/历史/mini荧光 胶体金模块通信_V1.7.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "mini荧光 胶体金模块通信_V1.8.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/荧光胶体金/历史/mini荧光 胶体金模块通信_V1.8.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "mini荧光 胶体金模块通信_V1.9.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/荧光胶体金/历史/mini荧光 胶体金模块通信_V1.9.doc",
+                "extension": ".doc",
+                "supported": true
+              },
+              {
+                "name": "mini荧光模块通信_V1.6_1.doc",
+                "type": "file",
+                "path": "1.T系列外挂协议包_260811/荧光胶体金/历史/mini荧光模块通信_V1.6_1.doc",
+                "extension": ".doc",
+                "supported": true
+              }
+            ]
+          },
+          {
+            "name": "荧光三号模块通信协议_V0.0.13.doc",
+            "type": "file",
+            "path": "1.T系列外挂协议包_260811/荧光胶体金/荧光三号模块通信协议_V0.0.13.doc",
+            "extension": ".doc",
+            "supported": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2.D系列蓝牙通讯协议_V1.0.20.docx",
+    "type": "file",
+    "path": "2.D系列蓝牙通讯协议_V1.0.20.docx",
+    "extension": ".docx",
+    "supported": true
+  },
+  {
+    "name": "3.外挂产品通讯流程图_240424.xlsx",
+    "type": "file",
+    "path": "3.外挂产品通讯流程图_240424.xlsx",
+    "extension": ".xlsx",
+    "supported": true
+  },
+  {
+    "name": "4.主机与从机TYPE-C引脚定义_V0.2.2_240929.doc",
+    "type": "file",
+    "path": "4.主机与从机TYPE-C引脚定义_V0.2.2_240929.doc",
+    "extension": ".doc",
+    "supported": true
+  },
+  {
+    "name": "百合医物料寄送规范，文件中内容为必读！！！.txt",
+    "type": "file",
+    "path": "百合医物料寄送规范，文件中内容为必读！！！.txt",
+    "extension": ".txt",
+    "supported": true
+  },
+  {
+    "name": "readme.docx",
+    "type": "file",
+    "path": "readme.docx",
+    "extension": ".docx",
+    "supported": true
+  }
+]

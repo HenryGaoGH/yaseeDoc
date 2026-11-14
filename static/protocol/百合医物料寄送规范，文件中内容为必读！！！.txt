@@ -1,0 +1,2 @@
+规范参考如下链接内容：
+https://doc.yasee.com.cn/docs/third/yasee_ship_spec
