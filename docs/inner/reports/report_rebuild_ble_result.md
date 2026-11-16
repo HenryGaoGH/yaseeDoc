@@ -22,7 +22,6 @@ import ChartBar from '@site/src/components/ChartBar';
 
 1. 3秒内设备连接并可用
 2. 稳定性(长时间驻留、后台、可用性) - 扩展
-3. 耗电量(均衡、暴力) - 扩展
 
 
 ## 现状分析
@@ -170,12 +169,6 @@ flowchart TD
 3. 重连管理 各设备兼管; 无统筹调度
 4. 退避策略; 无间隙、无熔断, (最大影响项), 
   <br/>⚠️ `如: 长时间未连接; 之前为了 省电 做了 指数退避; 最长 60s. 造成 60秒内 不去尝试重连`
-
-
-### 数据分析
-
-原始数据: [CSV-连接数据](/excel/1113_clear.csv)
-
 
 
 
@@ -542,14 +535,6 @@ flowchart TD
 
 
 
-### 数据分析
-
-原始数据: [CSV-连接日志-13号](/excel/1113_clear.csv)
-
-原始数据: [CSV-连接日志-14号](/excel/1114_ble_performance_metrics.csv)
-
-
-
 
 
 ---
@@ -579,10 +564,302 @@ flowchart TD
 
 ### 数据 VS.
 
+- 原始数据: [CSV-连接日志-13号](/excel/1113_clear.csv)
+- 原始数据: [CSV-连接日志-14号](/excel/1114_ble_performance_metrics.csv)
+- 原始数据: [CSV-连接日志-14号-android13](/excel/1114_android13_ble_performance_metrics.csv)
+- 原始数据: [old_new](/excel/yx_old_new.xlsx)
+
 *遵循如下一致性信息:*
 1. 同机型 (红米 Pad)
 2. 同时间; > 8h | 短时
 3. 同设备: D1、D6、D8、M9
+4. 样本数: 40组/每设备
+
+#### 短时间连接情况
+
+*连接速度 情况(avg)*
+
+- 首次绑定 - 平均 时间减少 **800ms** 左右 - 完整数据
+
+  <ChartBar
+    data={[
+      { 
+        label: 'D6(AA23)', 
+        measurements: [
+          {name: "新",value: 2.23,color: 'green'},
+          {name: "老",value: 3.05, color: 'red' },
+        ] 
+      },
+      { 
+        label: 'D8(0311)', 
+        measurements: [
+          {name: "新",value: 3.15,color: 'green'},
+          {name: "老",value: 10.05, color: 'red' },
+        ] 
+      },
+    ]}
+  />
+
+
+冷启动重连 - 平均 时间减少 **1000ms** 左右
+去除 最大、最小值 几乎持平
+<ChartBar
+    data={[
+      { 
+        label: 'D6(AA23)', 
+        measurements: [
+          {name: "新",value: 2.05,color: 'green'},
+          {name: "新(去nx)",value: 2,color: 'green'},
+          {name: "老",value: 2.05, color: 'red' },
+          {name: "老(去nx)",value: 2, color: 'red' },
+        ] 
+      },
+      { 
+        label: 'D8(0311)', 
+        measurements: [
+          {name: "新",value: 2.05,color: 'green'},
+          {name: "新(去nx)",value: 1,color: 'green'},
+          {name: "老",value: 4.05, color: 'red' },
+          {name: "老(去nx)",value: 1, color: 'red' },
+        ] 
+      },
+    ]}
+  />
+
+
+
+
+*各个设备情况*
+<ChartBar
+  height={400}
+  data={[
+    { 
+      label: 'D6(AA23) - 老', 
+      measurements: [
+        {name: "首绑1",value: 2, color: 'red' },
+        {name: "首绑2",value: 1, color: 'red' },
+        {name: "首绑3",value: 1, color: 'red' },
+        {name: "首绑4",value: 1, color: 'red' },
+        {name: "首绑5",value: 5, color: 'red' },
+        {name: "首绑6",value: 2, color: 'red' },
+        {name: "首绑7",value: 1, color: 'red' },
+        {name: "首绑8",value: 2, color: 'red' },
+        {name: "首绑9",value: 1, color: 'red' },
+        {name: "首绑10",value: 2, color: 'red' },
+        {name: "首绑11",value: 4, color: 'red' },
+        {name: "首绑12",value: 3, color: 'red' },
+        {name: "首绑13",value: 2, color: 'red' },
+        {name: "首绑14",value: 3, color: 'red' },
+        {name: "首绑15",value: 5, color: 'red' },
+        {name: "首绑16",value: 2, color: 'red' },
+        {name: "首绑17",value: 8, color: 'red' },
+        {name: "首绑18",value: 11, color: 'red' },
+        {name: "首绑19",value: 2, color: 'red' },
+        {name: "首绑20",value: 1, color: 'red' },
+        {name: "重连01",value: 1, color: 'orange' },
+        {name: "重连02",value: 3, color: 'orange' },
+        {name: "重连03",value: 2, color: 'orange' },
+        {name: "重连04",value: 2, color: 'orange' },
+        {name: "重连05",value: 2, color: 'orange' },
+        {name: "重连06",value: 2, color: 'orange' },
+        {name: "重连07",value: 2, color: 'orange' },
+        {name: "重连08",value: 2, color: 'orange' },
+        {name: "重连09",value: 2, color: 'orange' },
+        {name: "重连10",value: 2, color: 'orange' },
+        {name: "重连11",value: 2, color: 'orange' },
+        {name: "重连12",value: 2, color: 'orange' },
+        {name: "重连13",value: 3, color: 'orange' },
+        {name: "重连14",value: 2, color: 'orange' },
+        {name: "重连15",value: 2, color: 'orange' },
+        {name: "重连16",value: 2, color: 'orange' },
+        {name: "重连17",value: 1, color: 'orange' },
+        {name: "重连18",value: 2, color: 'orange' },
+        {name: "重连19",value: 4, color: 'orange' },
+        {name: "重连20",value: 2, color: 'orange' },
+      ] 
+    },
+    { 
+      label: 'D6(AA23) - 新', 
+      measurements: [
+        {name: "首绑1",value: 3, color: 'green' },
+        {name: "首绑2",value: 1, color: 'green' },
+        {name: "首绑3",value: 2, color: 'green' },
+        {name: "首绑4",value: 1, color: 'green' },
+        {name: "首绑5",value: 3, color: 'green' },
+        {name: "首绑6",value: 1, color: 'green' },
+        {name: "首绑7",value: 2, color: 'green' },
+        {name: "首绑8",value: 1, color: 'green' },
+        {name: "首绑9",value: 2, color: 'green' },
+        {name: "首绑10",value: 1, color: 'green' },
+        {name: "首绑11",value: 2, color: 'green' },
+        {name: "首绑12",value: 2, color: 'green' },
+        {name: "首绑13",value: 5, color: 'green' },
+        {name: "首绑14",value: 1, color: 'green' },
+        {name: "首绑15",value: 2, color: 'green' },
+        {name: "首绑16",value: 1, color: 'green' },
+        {name: "首绑17",value: 2, color: 'green' },
+        {name: "首绑18",value: 3, color: 'green' },
+        {name: "首绑19",value: 4, color: 'green' },
+        {name: "首绑20",value: 2, color: 'green' },
+        {name: "重连01",value: 1, color: 'orange' },
+        {name: "重连02",value: 2, color: 'orange' },
+        {name: "重连03",value: 2, color: 'orange' },
+        {name: "重连04",value: 2, color: 'orange' },
+        {name: "重连05",value: 2, color: 'orange' },
+        {name: "重连06",value: 2, color: 'orange' },
+        {name: "重连07",value: 4, color: 'orange' },
+        {name: "重连08",value: 2, color: 'orange' },
+        {name: "重连09",value: 2, color: 'orange' },
+        {name: "重连10",value: 1, color: 'orange' },
+        {name: "重连11",value: 2, color: 'orange' },
+        {name: "重连12",value: 1, color: 'orange' },
+        {name: "重连13",value: 7, color: 'orange' },
+        {name: "重连14",value: 1, color: 'orange' },
+        {name: "重连15",value: 2, color: 'orange' },
+        {name: "重连16",value: 1, color: 'orange' },
+        {name: "重连17",value: 2, color: 'orange' },
+        {name: "重连18",value: 2, color: 'orange' },
+        {name: "重连19",value: 2, color: 'orange' },
+        {name: "重连20",value: 1, color: 'orange' },
+      ] 
+    },
+  ]}
+/>
+
+<ChartBar
+  height={600}
+  data={[
+    { 
+      label: 'D8(0311) - 老', 
+      measurements: [
+        {name: "首绑1",value: 1, color: 'red' },
+        {name: "首绑2",value: 1, color: 'red' },
+        {name: "首绑3",value: 2, color: 'red' },
+        {name: "首绑4",value: 2, color: 'red' },
+        {name: "首绑5",value: 2, color: 'red' },
+        {name: "首绑6",value: 2, color: 'red' },
+        {name: "首绑7",value: 2, color: 'red' },
+        {name: "首绑8",value: 33, color: 'red' },
+        {name: "首绑9",value: 2, color: 'red' },
+        {name: "首绑10",value: 2, color: 'red' },
+        {name: "首绑11",value: 35, color: 'red' },
+        {name: "首绑12",value: 2, color: 'red' },
+        {name: "首绑13",value: 2, color: 'red' },
+        {name: "首绑14",value: 2, color: 'red' },
+        {name: "首绑15",value: 2, color: 'red' },
+        {name: "首绑16",value: 37, color: 'red' },
+        {name: "首绑17",value: 2, color: 'red' },
+        {name: "首绑18",value: 58, color: 'red' },
+        {name: "首绑19",value: 1, color: 'red' },
+        {name: "首绑20",value: 2, color: 'red' },
+        {name: "重连01",value: 1, color: 'orange' },
+        {name: "重连02",value: 1, color: 'orange' },
+        {name: "重连03",value: 1, color: 'orange' },
+        {name: "重连04",value: 2, color: 'orange' },
+        {name: "重连05",value: 2, color: 'orange' },
+        {name: "重连06",value: 2, color: 'orange' },
+        {name: "重连07",value: 2, color: 'orange' },
+        {name: "重连08",value: 2, color: 'orange' },
+        {name: "重连09",value: 2, color: 'orange' },
+        {name: "重连10",value: 2, color: 'orange' },
+        {name: "重连11",value: 2, color: 'orange' },
+        {name: "重连12",value: 1, color: 'orange' },
+        {name: "重连13",value: 1, color: 'orange' },
+        {name: "重连14",value: 1, color: 'orange' },
+        {name: "重连15",value: 1, color: 'orange' },
+        {name: "重连16",value: 1, color: 'orange' },
+        {name: "重连17",value: 60, color: 'orange' },
+        {name: "重连18",value: 1, color: 'orange' },
+        {name: "重连19",value: 1, color: 'orange' },
+        {name: "重连20",value: 1, color: 'orange' },
+      ] 
+    },
+    { 
+      label: 'D8(0311) - 新', 
+      measurements: [
+        {name: "首绑1",value: 1, color: 'green' },
+        {name: "首绑2",value: 1, color: 'green' },
+        {name: "首绑3",value: 1, color: 'green' },
+        {name: "首绑4",value: 1, color: 'green' },
+        {name: "首绑5",value: 1, color: 'green' },
+        {name: "首绑6",value: 2, color: 'green' },
+        {name: "首绑7",value: 2, color: 'green' },
+        {name: "首绑8",value: 2, color: 'green' },
+        {name: "首绑9",value: 1, color: 'green' },
+        {name: "首绑10",value: 2, color: 'green' },
+        {name: "首绑11",value: 1, color: 'green' },
+        {name: "首绑12",value: 3, color: 'green' },
+        {name: "首绑13",value: 4, color: 'green' },
+        {name: "首绑14",value: 1, color: 'green' },
+        {name: "首绑15",value: 2, color: 'green' },
+        {name: "首绑16",value: 2, color: 'green' },
+        {name: "首绑17",value: 1, color: 'green' },
+        {name: "首绑18",value: 1, color: 'green' },
+        {name: "首绑19",value: 2, color: 'green' },
+        {name: "首绑20",value: 22, color: 'green' },
+        {name: "重连01",value: 2, color: 'orange' },
+        {name: "重连02",value: 1, color: 'orange' },
+        {name: "重连03",value: 1, color: 'orange' },
+        {name: "重连04",value: 1, color: 'orange' },
+        {name: "重连05",value: 1, color: 'orange' },
+        {name: "重连06",value: 1, color: 'orange' },
+        {name: "重连07",value: 1, color: 'orange' },
+        {name: "重连08",value: 1, color: 'orange' },
+        {name: "重连09",value: 1, color: 'orange' },
+        {name: "重连10",value: 3, color: 'orange' },
+        {name: "重连11",value: 2, color: 'orange' },
+        {name: "重连12",value: 9, color: 'orange' },
+        {name: "重连13",value: 1, color: 'orange' },
+        {name: "重连14",value: 2, color: 'orange' },
+        {name: "重连15",value: 1, color: 'orange' },
+        {name: "重连16",value: 2, color: 'orange' },
+        {name: "重连17",value: 1, color: 'orange' },
+        {name: "重连18",value: 1, color: 'orange' },
+        {name: "重连19",value: 1, color: 'orange' },
+        {name: "重连20",value: 1, color: 'orange' },
+      ] 
+    },
+  ]}
+/>
+
+
+
+*连接时长占比*
+两台D1; 每台60次测试.
+老SDK `> 3` 的占比约为 33%; 
+新SDK `> 3` 的占比约为 33%; 
+<ChartBar
+  height={400}
+  data={[
+    { 
+      label: '< 3s', 
+      measurements: [
+        {name: "新首",value: 37,color: 'green'},
+        {name: "新重",value: 37,color: 'green'},
+        {name: "老首",value: 31, color: 'red' },
+        {name: "老重",value: 38, color: 'red' },
+      ] 
+    },
+    { 
+      label: '3 ~ 10s', 
+      measurements: [
+        {name: "新首",value: 2,color: 'green'},
+        {name: "新重",value: 3,color: 'green'},
+        {name: "老首",value: 4, color: 'red' },
+        {name: "老重",value: 1, color: 'red' },
+      ] 
+    },
+    { 
+      label: '> 10s', 
+      measurements: [
+        {name: "新首",value: 1,color: 'green'},
+        {name: "新重",value: 0,color: 'green'},
+        {name: "老首",value: 5, color: 'red' },
+        {name: "老重",value: 1, color: 'red' },
+      ] 
+    },
+  ]}
+/>
 
 
 #### 长时间持续连接情况
@@ -645,72 +922,6 @@ flowchart TD
 
 
 
-#### 短时间连接情况
-
-*连接速度 情况(avg)*
-
-平均 时间减少 **800ms** 左右
-<ChartBar datas={[
-{name: "新",value: 1.91,color: 'green'},
-{name: "老",value: 2.75, color: 'red' },
-]} />
-
-*各个设备情况*
-<ChartBar
-  data={[
-    { 
-      label: 'D1', 
-      measurements: [
-        {name: "新",value: 0,color: 'green'},
-        {name: "老",value: 1.85, color: 'red' },
-      ] 
-    },
-    { 
-      label: 'D6', 
-      measurements: [
-        {name: "新",value: 2.13,color: 'green'},
-        {name: "老",value: 0, color: 'red' },
-      ] 
-    },
-    { 
-      label: 'D8', 
-      measurements: [
-        {name: "新",value: 2.34,color: 'green'},
-        {name: "老",value: 2.75, color: 'red' },
-      ] 
-    },
-  ]}
-/>
-
-*连接时长占比*
-两台D1; 每台60次测试.
-老SDK `> 3` 的占比约为 33%; 
-新SDK `> 3` 的占比约为 33%; 
-<ChartBar
-  data={[
-    { 
-      label: '< 3s', 
-      measurements: [
-        {name: "新",value: 0,color: 'green'},
-        {name: "老",value: 80, color: 'red' },
-      ] 
-    },
-    { 
-      label: '3 ~ 10s', 
-      measurements: [
-        {name: "新",value: 0,color: 'green'},
-        {name: "老",value: 37, color: 'red' },
-      ] 
-    },
-    { 
-      label: '> 10s', 
-      measurements: [
-        {name: "新",value: 0,color: 'green'},
-        {name: "老",value: 3, color: 'red' },
-      ] 
-    },
-  ]}
-/>
 
 
 
