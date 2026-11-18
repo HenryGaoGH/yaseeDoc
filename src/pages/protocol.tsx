@@ -198,7 +198,7 @@ function TreeNode({
    主页面
 ========================= */
 
-export default function ProtocolPage(): JSX.Element {
+export default function ProtocolPage(): React.JSX.Element {
   const [tree, setTree] = useState<ProtocolNode[]>([]);
 
   const [loading, setLoading] = useState(true);
@@ -286,6 +286,21 @@ export default function ProtocolPage(): JSX.Element {
       selectedFile.path
     )}`;
   }, [selectedFile, protocolBaseUrl]);
+
+  const docPreviewUrl = useMemo(() => {
+    if (!isDoc || !fileUrl || typeof window === 'undefined') {
+      return '';
+    }
+
+    const absoluteFileUrl = new URL(
+      fileUrl,
+      window.location.origin
+    ).href;
+
+    return `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(
+      absoluteFileUrl
+    )}`;
+  }, [fileUrl, isDoc]);
 
   /* =========================
      选择文件
@@ -650,33 +665,20 @@ export default function ProtocolPage(): JSX.Element {
 
                   {/* DOC */}
 
-                  {isDoc && (
-                    <div className={styles.unsupported}>
-                      <div className={styles.unsupportedIcon}>
-                        📘
+                  {isDoc &&
+                    (docPreviewUrl ? (
+                      <iframe
+                        key={docPreviewUrl}
+                        src={docPreviewUrl}
+                        className={styles.pdfViewer}
+                        title={`${selectedFile.name} 在线预览`}
+                        allowFullScreen
+                      />
+                    ) : (
+                      <div className={styles.previewStatus}>
+                        正在准备 Word 文档预览...
                       </div>
-
-                      <h3>
-                        暂不支持旧版 Word 在线预览
-                      </h3>
-
-                      <p>
-                        当前文件为 .doc 格式。
-                      </p>
-
-                      <p>
-                        请下载后使用 Microsoft Word 或 WPS 打开。
-                      </p>
-
-                      <a
-                        href={fileUrl}
-                        download={selectedFile.name}
-                        className={styles.downloadButton}
-                      >
-                        ↓ 下载 Word 文档
-                      </a>
-                    </div>
-                  )}
+                    ))}
 
                   {/* 其他格式 */}
 

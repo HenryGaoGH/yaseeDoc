@@ -161,7 +161,8 @@ const sidebars: SidebarsConfig = {
         "inner/reports/report_health",
         // "inner/reports/report_rebuild_ble",
         "inner/reports/report_rebuild_ble_result",
-        // "inner/reports/report_rebuild_ble_performance_2611"
+        // "inner/reports/report_rebuild_ble_performance_2611",
+        "inner/reports/report_rebuild_ble_result2",
       ],
     },
     // {
