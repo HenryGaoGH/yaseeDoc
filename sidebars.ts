@@ -148,7 +148,6 @@ const sidebars: SidebarsConfig = {
       label: "报告",
       items: [
         "inner/reports/replace_yasee_sdk",
-        "inner/reports/replace_yasee",
         "inner/reports/report_yucheng",
         "inner/reports/report_battery_pullout",
         "inner/reports/replace_merge_bhy",
@@ -160,7 +159,7 @@ const sidebars: SidebarsConfig = {
         "inner/reports/report_sdk_1v1",
         "inner/reports/report_health",
         // "inner/reports/report_rebuild_ble",
-        "inner/reports/report_rebuild_ble_result",
+        // "inner/reports/report_rebuild_ble_result",
         // "inner/reports/report_rebuild_ble_performance_2611",
         "inner/reports/report_rebuild_ble_result2",
       ],
@@ -169,6 +168,7 @@ const sidebars: SidebarsConfig = {
     //   type: "category",
     //   label: "项目",
     //   items: [
+    //      "inner/pms/replace_yasee",
     //     "inner/pms/pm_24_10",
     //     "inner/pms/pm_24_11",
     //     "inner/pms/pm_24_12",

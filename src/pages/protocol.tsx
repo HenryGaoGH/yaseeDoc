@@ -234,6 +234,18 @@ export default function ProtocolPage(): React.JSX.Element {
 
   const isDoc = extension === '.doc';
 
+  const isXlsx = extension === '.xlsx';
+
+  const isImage = [
+    '.png',
+    '.jpg',
+    '.jpeg',
+    '.gif',
+    '.webp',
+    '.bmp',
+    '.svg',
+  ].includes(extension || '');
+
   /* =========================
      加载文件树
   ========================= */
@@ -287,8 +299,12 @@ export default function ProtocolPage(): React.JSX.Element {
     )}`;
   }, [selectedFile, protocolBaseUrl]);
 
-  const docPreviewUrl = useMemo(() => {
-    if (!isDoc || !fileUrl || typeof window === 'undefined') {
+  const officePreviewUrl = useMemo(() => {
+    if (
+      (!isDoc && !isXlsx) ||
+      !fileUrl ||
+      typeof window === 'undefined'
+    ) {
       return '';
     }
 
@@ -300,7 +316,7 @@ export default function ProtocolPage(): React.JSX.Element {
     return `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(
       absoluteFileUrl
     )}`;
-  }, [fileUrl, isDoc]);
+  }, [fileUrl, isDoc, isXlsx]);
 
   /* =========================
      选择文件
@@ -666,10 +682,10 @@ export default function ProtocolPage(): React.JSX.Element {
                   {/* DOC */}
 
                   {isDoc &&
-                    (docPreviewUrl ? (
+                    (officePreviewUrl ? (
                       <iframe
-                        key={docPreviewUrl}
-                        src={docPreviewUrl}
+                        key={officePreviewUrl}
+                        src={officePreviewUrl}
                         className={styles.pdfViewer}
                         title={`${selectedFile.name} 在线预览`}
                         allowFullScreen
@@ -680,12 +696,44 @@ export default function ProtocolPage(): React.JSX.Element {
                       </div>
                     ))}
 
+                  {/* XLSX */}
+
+                  {isXlsx &&
+                    (officePreviewUrl ? (
+                      <iframe
+                        key={officePreviewUrl}
+                        src={officePreviewUrl}
+                        className={styles.pdfViewer}
+                        title={`${selectedFile.name} 在线预览`}
+                        allowFullScreen
+                      />
+                    ) : (
+                      <div className={styles.previewStatus}>
+                        正在准备 Excel 文档预览...
+                      </div>
+                    ))}
+
+                  {/* 图片 */}
+
+                  {isImage && (
+                    <div className={styles.imagePreview}>
+                      <img
+                        key={fileUrl}
+                        src={fileUrl}
+                        alt={selectedFile.name}
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+
                   {/* 其他格式 */}
 
                   {!isDocx &&
                     !isPdf &&
                     !isTxt &&
-                    !isDoc && (
+                    !isDoc &&
+                    !isXlsx &&
+                    !isImage && (
                       <div className={styles.unsupported}>
                         <div className={styles.unsupportedIcon}>
                           {getFileIcon(selectedFile)}
